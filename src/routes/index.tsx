@@ -81,7 +81,9 @@ const premiumCards = [
 
 function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const whyRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
+  const [whyVisible, setWhyVisible] = useState(false);
   const autoplay = useRef(
     Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
   );
@@ -89,6 +91,22 @@ function Home() {
   useEffect(() => {
     setMounted(true);
     videoRef.current?.play().catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    const el = whyRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setWhyVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   return (
