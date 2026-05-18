@@ -61,13 +61,22 @@ const testimonials = [
   },
 ];
 
-const whyCards = [
-  { icon: Users, title: "Expert Stylists", desc: "Certified specialists with years of dedicated loc expertise" },
-  { icon: Leaf, title: "Premium Products", desc: "Natural, salon-grade products that nourish every strand" },
-  { icon: Heart, title: "Healthy Hair Focus", desc: "Techniques designed to protect and strengthen your hair" },
-  { icon: Sparkles, title: "Personalized Experience", desc: "Bespoke consultations tailored to your hair journey" },
-  { icon: Gem, title: "Modern Techniques", desc: "The latest installation and maintenance methods" },
-  { icon: Award, title: "Trusted Results", desc: "Hundreds of happy clients and beautiful transformations" },
+const premiumCards = [
+  {
+    icon: Users,
+    title: "Expert Stylists",
+    desc: "Certified loc specialists with years of dedicated expertise in every technique.",
+  },
+  {
+    icon: Gem,
+    title: "Premium Loc Care Products",
+    desc: "Salon-grade, natural formulations that nourish, protect, and elevate your hair.",
+  },
+  {
+    icon: Sparkles,
+    title: "Personalized Hair Experience",
+    desc: "Bespoke consultations and treatments tailored to your unique hair journey.",
+  },
 ];
 
 function Home() {
