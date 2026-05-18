@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, Leaf, Gem, ChevronLeft, ChevronRight, Users, Heart, Award } from "lucide-react";
+import { ArrowRight, Sparkles, Leaf, Gem, Users, Heart, Award } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -72,7 +72,6 @@ const whyCards = [
 
 function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [api, setApi] = useState<CarouselApi>();
   const [mounted, setMounted] = useState(false);
   const autoplay = useRef(
     Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
@@ -183,33 +182,15 @@ function Home() {
       {/* Services Carousel */}
       <section className="bg-secondary/40 py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
-            <div>
-              <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Services</p>
-              <h2 className="text-3xl md:text-5xl max-w-2xl leading-tight">
-                Expert care for every stage of your hair journey
-              </h2>
-            </div>
-            <div className="flex gap-3">
-              <button
-                onClick={() => api?.scrollPrev()}
-                aria-label="Previous service"
-                className="h-11 w-11 rounded-full border border-border bg-card hover:bg-gold hover:text-gold-foreground hover:border-gold transition flex items-center justify-center"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <button
-                onClick={() => api?.scrollNext()}
-                aria-label="Next service"
-                className="h-11 w-11 rounded-full border border-border bg-card hover:bg-gold hover:text-gold-foreground hover:border-gold transition flex items-center justify-center"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
-            </div>
+          <div className="mb-12 text-center">
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Services</p>
+            <h2 className="text-3xl md:text-5xl max-w-2xl mx-auto leading-tight">
+              Expert care for every stage of your hair journey
+            </h2>
           </div>
 
+
           <Carousel
-            setApi={setApi}
             opts={{ align: "start", loop: true, dragFree: false }}
             plugins={[autoplay.current]}
             className="w-full"
