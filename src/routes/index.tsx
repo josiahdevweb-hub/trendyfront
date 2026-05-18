@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, Leaf, Gem, ChevronLeft, ChevronRight, Users, Heart, Award } from "lucide-react";
+import { ArrowRight, Sparkles, Leaf, Gem, Users, Heart, Award } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const Route = createFileRoute("/")({ component: Home });
