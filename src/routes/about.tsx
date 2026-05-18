@@ -30,7 +30,7 @@ function About() {
 
       <section className="mx-auto max-w-7xl px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
         <div className="aspect-[4/5] overflow-hidden rounded-md">
-          <img src="https://images.unsplash.com/photo-1653263176001-c38579e250df?w=900&q=85" alt="Founder" className="w-full h-full object-cover" />
+          <img src="/images/salon/founder.jpg" alt="Founder" loading="lazy" decoding="async" onError={(e)=>{if(e.currentTarget.src.indexOf('/images/fallback.jpg')===-1)e.currentTarget.src='/images/fallback.jpg';}} className="w-full h-full object-cover" />
         </div>
         <div>
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Story</p>

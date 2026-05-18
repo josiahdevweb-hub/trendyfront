@@ -7,39 +7,18 @@ import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const Route = createFileRoute("/")({ component: Home });
 
-const heroPoster = "https://images.unsplash.com/photo-1653263176001-c38579e250df?w=1920&q=85";
+const FALLBACK_IMG = "/images/fallback.jpg";
+const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+  if (e.currentTarget.src.indexOf(FALLBACK_IMG) === -1) e.currentTarget.src = FALLBACK_IMG;
+};
+const heroPoster = "/images/salon/interior.jpg";
 
 const services = [
-  {
-    title: "Sisterlocks",
-    price: "From £350",
-    desc: "Precision micro locs for a versatile, manageable style",
-    img: "https://images.unsplash.com/photo-1653263171083-71aad2fc6dfb?w=800&q=80",
-  },
-  {
-    title: "Microlocs",
-    price: "From £280",
-    desc: "Small, uniform locs perfect for styling flexibility",
-    img: "https://images.unsplash.com/photo-1653263176001-c38579e250df?w=800&q=80",
-  },
-  {
-    title: "Traditional Locs",
-    price: "From £180",
-    desc: "Classic freeform or cultivated dreadlocks",
-    img: "https://images.unsplash.com/photo-1653263171267-1cf1776f04d2?w=800&q=80",
-  },
-  {
-    title: "Retightening",
-    price: "From £85",
-    desc: "Maintenance for healthy, neat locs",
-    img: "https://images.unsplash.com/photo-1653263169788-9332cdbf07f5?w=800&q=80",
-  },
-  {
-    title: "Loc Styling",
-    price: "From £120",
-    desc: "Special occasion updos and creative styling",
-    img: "https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=600&q=80",
-  },
+  { title: "Sisterlocks", price: "From £350", desc: "Precision micro locs for a versatile, manageable style", img: "/images/styles/sisterlocks.jpg" },
+  { title: "Microlocs", price: "From £280", desc: "Small, uniform locs perfect for styling flexibility", img: "/images/styles/microlocs.jpg" },
+  { title: "Traditional Locs", price: "From £180", desc: "Classic freeform or cultivated dreadlocks", img: "/images/styles/traditional-locs.jpg" },
+  { title: "Retightening", price: "From £85", desc: "Maintenance for healthy, neat locs", img: "/images/styles/retightening.jpg" },
+  { title: "Loc Styling", price: "From £120", desc: "Special occasion updos and creative styling", img: "/images/styles/styling.jpg" },
 ];
 
 const testimonials = [
@@ -150,25 +129,31 @@ function Home() {
           <div className="grid grid-cols-2 gap-4">
             <div className="aspect-[3/4] overflow-hidden rounded-md row-span-2">
               <img
-                src="https://images.unsplash.com/photo-1653263176001-c38579e250df?w=700&q=85"
+                src="/images/salon/stylist-work.jpg"
                 alt="Stylist at work"
                 loading="lazy"
+                decoding="async"
+                onError={onImgError}
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-md">
               <img
-                src="https://images.unsplash.com/photo-1653263171083-71aad2fc6dfb?w=500&q=85"
+                src="/images/salon/loc-detail.jpg"
                 alt="Loc detail"
                 loading="lazy"
+                decoding="async"
+                onError={onImgError}
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-md">
               <img
-                src="https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=500&q=85"
+                src="/images/salon/interior.jpg"
                 alt="Salon interior"
                 loading="lazy"
+                decoding="async"
+                onError={onImgError}
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
             </div>
@@ -200,6 +185,8 @@ function Home() {
                         src={s.img}
                         alt={s.title}
                         loading="lazy"
+                        decoding="async"
+                        onError={onImgError}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
