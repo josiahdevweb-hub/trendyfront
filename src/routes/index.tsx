@@ -88,6 +88,9 @@ function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [api, setApi] = useState<CarouselApi>();
   const [mounted, setMounted] = useState(false);
+  const autoplay = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  );
 
   useEffect(() => {
     setMounted(true);
