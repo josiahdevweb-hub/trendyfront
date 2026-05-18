@@ -281,29 +281,50 @@ function Home() {
         </div>
       </section>
 
-      {/* Why — premium cards */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="text-center mb-14">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Why Choose Trendylocs</p>
-          <h2 className="text-3xl md:text-5xl mb-4">A premium experience</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-light">
-            Every visit is crafted around your hair, your time, and your comfort.
-          </p>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {whyCards.map(({ icon: Icon, title, desc }, i) => (
-            <div
-              key={title}
-              style={{ animationDelay: `${i * 100}ms` }}
-              className="group bg-card border border-border rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-gold/40 animate-fade-in"
-            >
-              <div className="inline-flex h-14 w-14 rounded-xl bg-gold/15 items-center justify-center mb-5 group-hover:bg-gold group-hover:text-gold-foreground transition-colors">
-                <Icon className="h-6 w-6 text-gold group-hover:text-gold-foreground transition-colors" />
-              </div>
-              <h3 className="text-xl mb-2 font-semibold">{title}</h3>
-              <p className="text-muted-foreground font-light leading-relaxed">{desc}</p>
-            </div>
-          ))}
+      {/* Why — premium 3-card showcase */}
+      <section className="relative overflow-hidden py-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-transparent to-secondary/30 pointer-events-none" />
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Why Choose Trendylocs</p>
+            <h2 className="text-4xl md:text-5xl mb-5 font-serif">A premium experience</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto font-light text-lg leading-relaxed">
+              Every visit is crafted around your hair, your time, and your comfort.
+            </p>
+          </div>
+
+          <div ref={whyRef} className="grid md:grid-cols-3 gap-8">
+            {premiumCards.map((card, i) => {
+              const Icon = card.icon;
+              return (
+                <div
+                  key={card.title}
+                  className={`group transition-all duration-700 ease-out hover:-translate-y-2.5 hover:scale-[1.03] ${
+                    whyVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+                  style={{ transitionDelay: `${i * 150}ms` }}
+                >
+                  <div className="relative rounded-[20px] p-[1px] bg-gradient-to-br from-gold/30 via-border/40 to-gold/20 transition-all duration-500 group-hover:from-gold/50 group-hover:via-gold/30 group-hover:to-gold/40 group-hover:shadow-[0_0_50px_-15px_rgba(200,160,80,0.25)]">
+                    <div className="relative h-full rounded-[19px] bg-gradient-to-br from-card/95 via-card/80 to-card/60 backdrop-blur-2xl p-8 md:p-10 overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                      <div className="absolute top-8 left-8 w-24 h-24 rounded-full bg-gold/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                      <div className="relative mb-6 inline-flex h-16 w-16 rounded-2xl bg-gradient-to-br from-gold/15 to-transparent items-center justify-center border border-gold/10 group-hover:from-gold/25 group-hover:border-gold/20 transition-all duration-500">
+                        <Icon className="h-7 w-7 text-gold" />
+                      </div>
+
+                      <h3 className="relative text-xl md:text-2xl mb-3 font-semibold tracking-tight">
+                        {card.title}
+                      </h3>
+                      <p className="relative text-muted-foreground font-light leading-relaxed text-sm md:text-base">
+                        {card.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
