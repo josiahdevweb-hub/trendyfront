@@ -83,7 +83,7 @@ function Home() {
     <>
       {/* Hero with local video */}
       <section className="relative h-[calc(100vh-5rem)] min-h-[600px] w-full overflow-hidden">
-        {/* <video
+        <video
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -95,7 +95,7 @@ function Home() {
         >
           <source src="/videos/hero.webm" type="video/webm" />
           <source src="/videos/hero.mp4" type="video/mp4" />
-        </video> */}
+        </video>
         <video
           autoPlay
           muted
