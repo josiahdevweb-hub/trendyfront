@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Leaf, Gem, ChevronLeft, ChevronRight, Users, Heart, Award } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -284,6 +285,9 @@ function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Before & After Showcase */}
+      <BeforeAfterShowcase />
 
       {/* Testimonials */}
       <section className="bg-dark text-primary-foreground py-20">
