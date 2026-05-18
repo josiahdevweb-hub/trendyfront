@@ -286,6 +286,9 @@ function Home() {
         </div>
       </section>
 
+      {/* Before & After Showcase */}
+      <BeforeAfterShowcase />
+
       {/* Testimonials */}
       <section className="bg-dark text-primary-foreground py-20">
         <div className="mx-auto max-w-7xl px-6">
