@@ -19,8 +19,8 @@ const transformations: Transformation[] = [
     style: "Sisterlocks",
     duration: "8–10 hours",
     maintenance: "Every 4–6 weeks",
-    before: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80",
-    after: "https://images.unsplash.com/photo-1653263171083-71aad2fc6dfb?w=900&q=80",
+    before: "/images/transformations/before-natural-1.jpg",
+    after: "/images/styles/sisterlocks.jpg",
   },
   {
     title: "Microlocs Journey",
@@ -28,8 +28,8 @@ const transformations: Transformation[] = [
     style: "Microlocs",
     duration: "6–8 hours",
     maintenance: "Every 5–7 weeks",
-    before: "https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=900&q=80",
-    after: "https://images.unsplash.com/photo-1653263176001-c38579e250df?w=900&q=80",
+    before: "/images/transformations/before-natural-2.jpg",
+    after: "/images/styles/microlocs.jpg",
   },
   {
     title: "Traditional Locs Maturity",
@@ -37,8 +37,8 @@ const transformations: Transformation[] = [
     style: "Traditional Locs",
     duration: "4–6 hours",
     maintenance: "Every 6–8 weeks",
-    before: "https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=900&q=80",
-    after: "https://images.unsplash.com/photo-1653263171267-1cf1776f04d2?w=900&q=80",
+    before: "/images/transformations/before-natural-3.jpg",
+    after: "/images/styles/traditional-locs.jpg",
   },
 ];
 
@@ -49,8 +49,8 @@ const sideBySide: Transformation[] = [
     style: "Retightening",
     duration: "2–3 hours",
     maintenance: "Every 4 weeks",
-    before: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
-    after: "https://images.unsplash.com/photo-1653263169788-9332cdbf07f5?w=800&q=80",
+    before: "/images/transformations/before-retighten.jpg",
+    after: "/images/styles/retightening.jpg",
   },
   {
     title: "Loc Styling Upgrade",
@@ -58,8 +58,8 @@ const sideBySide: Transformation[] = [
     style: "Styling",
     duration: "1–2 hours",
     maintenance: "As desired",
-    before: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&q=80",
-    after: "https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=800&q=80",
+    before: "/images/transformations/before-styling.jpg",
+    after: "/images/styles/updo.jpg",
   },
 ];
 

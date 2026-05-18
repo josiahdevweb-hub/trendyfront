@@ -17,17 +17,17 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const items = [
-  { title: "Sisterlocks Installation", desc: "Fresh sisterlocks with precision parting", cat: "Sisterlocks", img: "https://images.unsplash.com/photo-1653263171083-71aad2fc6dfb?w=900&q=80" },
-  { title: "Microlocs Transformation", desc: "Beautiful microlocs after 6 months", cat: "Microlocs", img: "https://images.unsplash.com/photo-1653263176001-c38579e250df?w=900&q=80" },
-  { title: "Traditional Locs", desc: "Mature locs with healthy shine", cat: "Traditional Locs", img: "https://images.unsplash.com/photo-1653263171267-1cf1776f04d2?w=900&q=80" },
-  { title: "Elegant Updo", desc: "Special occasion loc styling", cat: "Styling", img: "https://images.unsplash.com/photo-1653263169788-9332cdbf07f5?w=900&q=80" },
-  { title: "Sisterlocks Styling", desc: "Versatile sisterlocks everyday wear", cat: "Sisterlocks", img: "https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=900&q=80" },
-  { title: "Microlocs Journey", desc: "1-year microlocs growth progress", cat: "Microlocs", img: "https://images.unsplash.com/photo-1653263169791-d1b35abd8f89?w=900&q=80" },
-  { title: "Freeform Locs", desc: "Natural freeform organic texture", cat: "Traditional Locs", img: "https://images.unsplash.com/photo-1653263170120-573922b5b820?w=900&q=80" },
-  { title: "Half-Up Style", desc: "Casual half-up loc styling", cat: "Styling", img: "https://images.unsplash.com/photo-1653263171094-0ca6b47047ac?w=900&q=80" },
-  { title: "Mature Sisterlocks", desc: "3-year sisterlocks beautiful texture", cat: "Sisterlocks", img: "https://images.unsplash.com/photo-1653263171082-73c98f40edd1?w=900&q=80" },
-  { title: "Long Locs", desc: "Long, healthy traditional locs", cat: "Traditional Locs", img: "https://images.unsplash.com/photo-1653263169792-ee58037099c5?w=900&q=80" },
-  { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "https://images.unsplash.com/photo-1653263169791-d1b35abd8f89?w=900&q=80" },
+  { title: "Sisterlocks Installation", desc: "Fresh sisterlocks with precision parting", cat: "Sisterlocks", img: "/images/styles/sisterlocks.jpg" },
+  { title: "Microlocs Transformation", desc: "Beautiful microlocs after 6 months", cat: "Microlocs", img: "/images/styles/microlocs.jpg" },
+  { title: "Traditional Locs", desc: "Mature locs with healthy shine", cat: "Traditional Locs", img: "/images/styles/traditional-locs.jpg" },
+  { title: "Elegant Updo", desc: "Special occasion loc styling", cat: "Styling", img: "/images/styles/styling.jpg" },
+  { title: "Sisterlocks Styling", desc: "Versatile sisterlocks everyday wear", cat: "Sisterlocks", img: "/images/styles/mature-locs.jpg" },
+  { title: "Microlocs Journey", desc: "1-year microlocs growth progress", cat: "Microlocs", img: "/images/transformations/before-natural-3.jpg" },
+  { title: "Freeform Locs", desc: "Natural freeform organic texture", cat: "Traditional Locs", img: "/images/styles/long-locs.jpg" },
+  { title: "Half-Up Style", desc: "Casual half-up loc styling", cat: "Styling", img: "/images/styles/updo.jpg" },
+  { title: "Mature Sisterlocks", desc: "3-year sisterlocks beautiful texture", cat: "Sisterlocks", img: "/images/salon/loc-detail.jpg" },
+  { title: "Long Locs", desc: "Long, healthy traditional locs", cat: "Traditional Locs", img: "/images/styles/color.jpg" },
+  { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "/images/salon/interior.jpg" },
 ];
 const cats = ["All", "Sisterlocks", "Microlocs", "Traditional Locs", "Styling"];
 

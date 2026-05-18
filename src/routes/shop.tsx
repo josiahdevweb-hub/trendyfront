@@ -10,14 +10,14 @@ export const Route = createFileRoute("/shop")({
 });
 
 const products = [
-  { name: "Loc Growth Oil", cat: "Hair Care", desc: "Nourishing blend of natural oils to promote healthy loc growth", reviews: 127, price: "£24.99", img: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80" },
-  { name: "Moisturizing Shampoo", cat: "Hair Care", desc: "Gentle, sulfate-free shampoo for locs and natural hair", reviews: 94, price: "£18.99", img: "https://images.unsplash.com/photo-1556228578-dd3a6b729aa8?w=600&q=80" },
-  { name: "Satin Bonnet", cat: "Accessories", desc: "Premium satin bonnet to protect your locs while sleeping", reviews: 203, price: "£12.99", img: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80" },
-  { name: "Loc Retwist Gel", cat: "Hair Care", desc: "Strong hold gel for clean, defined retwists", reviews: 156, price: "£16.99", img: "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=600&q=80" },
-  { name: "Edge Control", cat: "Hair Care", desc: "Natural edge control for sleek, lasting hold", reviews: 88, price: "£14.99", img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80" },
-  { name: "Satin Pillowcase", cat: "Accessories", desc: "Luxurious satin pillowcase to reduce friction and breakage", reviews: 142, price: "£22.99", img: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=600&q=80" },
-  { name: "Loc Jewelry Set", cat: "Accessories", desc: "Beautiful gold-tone loc jewelry for special occasions", reviews: 67, price: "£29.99", img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80" },
-  { name: "Hair Care Bundle", cat: "Bundles", desc: "Complete care set: shampoo, oil, and gel", reviews: 231, price: "£54.99", img: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80", badge: "Best Value" },
+  { name: "Loc Growth Oil", cat: "Hair Care", desc: "Nourishing blend of natural oils to promote healthy loc growth", reviews: 127, price: "£24.99", img: "/images/products/growth-oil.jpg" },
+  { name: "Moisturizing Shampoo", cat: "Hair Care", desc: "Gentle, sulfate-free shampoo for locs and natural hair", reviews: 94, price: "£18.99", img: "/images/products/shampoo.jpg" },
+  { name: "Satin Bonnet", cat: "Accessories", desc: "Premium satin bonnet to protect your locs while sleeping", reviews: 203, price: "£12.99", img: "/images/products/bonnet.jpg" },
+  { name: "Loc Retwist Gel", cat: "Hair Care", desc: "Strong hold gel for clean, defined retwists", reviews: 156, price: "£16.99", img: "/images/products/retwist-gel.jpg" },
+  { name: "Edge Control", cat: "Hair Care", desc: "Natural edge control for sleek, lasting hold", reviews: 88, price: "£14.99", img: "/images/products/edge-control.jpg" },
+  { name: "Satin Pillowcase", cat: "Accessories", desc: "Luxurious satin pillowcase to reduce friction and breakage", reviews: 142, price: "£22.99", img: "/images/products/pillowcase.jpg" },
+  { name: "Loc Jewelry Set", cat: "Accessories", desc: "Beautiful gold-tone loc jewelry for special occasions", reviews: 67, price: "£29.99", img: "/images/products/jewelry.jpg" },
+  { name: "Hair Care Bundle", cat: "Bundles", desc: "Complete care set: shampoo, oil, and gel", reviews: 231, price: "£54.99", img: "/images/products/bundle.jpg", badge: "Best Value" },
 ];
 
 function Shop() {
