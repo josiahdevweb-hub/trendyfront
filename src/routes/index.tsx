@@ -42,20 +42,6 @@ const services = [
   },
 ];
 
-const featuredGallery = [
-  {
-    img: "https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=900&q=85",
-    label: "Sisterlocks",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1653263171094-0ca6b47047ac?w=900&q=85",
-    label: "Microlocs",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1653263170120-573922b5b820?w=900&q=85",
-    label: "Traditional Locs",
-  },
-];
 
 const testimonials = [
   {
