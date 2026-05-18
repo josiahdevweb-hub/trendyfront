@@ -185,6 +185,8 @@ function Home() {
                         src={s.img}
                         alt={s.title}
                         loading="lazy"
+                        decoding="async"
+                        onError={onImgError}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
