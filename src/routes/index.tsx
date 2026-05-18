@@ -96,16 +96,6 @@ function Home() {
           <source src="/videos/hero.webm" type="video/webm" />
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="https://images.unsplash.com/photo-1653263176001-c38579e250df?w=1920&q=80"
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src="/__l5e/assets-v1/71f75198-dd07-488e-b870-4240b563a416/hero-bg.mp4" type="video/mp4" />
-        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/75" />
         <div
           className={`relative h-full flex flex-col items-center justify-center text-center px-6 text-white transition-all duration-1000 ${
