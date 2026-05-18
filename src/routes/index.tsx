@@ -62,11 +62,11 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative h-[calc(100vh-5rem)] min-h-[600px] w-full overflow-hidden">
-        <img
+        {/* <img
           src="https://images.unsplash.com/photo-1653263176001-c38579e250df?w=1920&q=85"
           alt="Natural hair specialist"
           className="absolute inset-0 w-full h-full object-cover"
-        />
+        /> */}
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative h-full flex flex-col items-center justify-center text-center px-6 text-white">
           <h1 className="font-serif text-6xl md:text-8xl mb-6">Proudly Natural.</h1>
