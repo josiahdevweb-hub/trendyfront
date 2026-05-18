@@ -191,7 +191,6 @@ function Home() {
 
 
           <Carousel
-            setApi={setApi}
             opts={{ align: "start", loop: true, dragFree: false }}
             plugins={[autoplay.current]}
             className="w-full"
