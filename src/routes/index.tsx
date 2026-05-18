@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Leaf, Gem, ChevronLeft, ChevronRight, Users, Heart, Award } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
@@ -41,20 +42,6 @@ const services = [
   },
 ];
 
-const featuredGallery = [
-  {
-    img: "https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=900&q=85",
-    label: "Sisterlocks",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1653263171094-0ca6b47047ac?w=900&q=85",
-    label: "Microlocs",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1653263170120-573922b5b820?w=900&q=85",
-    label: "Traditional Locs",
-  },
-];
 
 const testimonials = [
   {
@@ -87,6 +74,9 @@ function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [api, setApi] = useState<CarouselApi>();
   const [mounted, setMounted] = useState(false);
+  const autoplay = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -218,7 +208,12 @@ function Home() {
             </div>
           </div>
 
-          <Carousel setApi={setApi} opts={{ align: "start", loop: true, dragFree: false }} className="w-full">
+          <Carousel
+            setApi={setApi}
+            opts={{ align: "start", loop: true, dragFree: false }}
+            plugins={[autoplay.current]}
+            className="w-full"
+          >
             <CarouselContent className="-ml-4">
               {services.map((s) => (
                 <CarouselItem key={s.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
@@ -253,40 +248,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Transformation — 3 featured */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="text-center mb-14">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Transformations</p>
-          <h2 className="text-3xl md:text-5xl">See the beauty we create</h2>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredGallery.map((g) => (
-            <figure key={g.label} className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-md group">
-              <img
-                src={g.img}
-                alt={g.label}
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-90" />
-              <figcaption className="absolute bottom-5 left-5 right-5 text-white">
-                <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-1">Featured</p>
-                <p className="font-serif text-2xl">{g.label}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="text-center mt-12">
-          <Link
-            to="/gallery"
-            className="inline-flex items-center gap-2 bg-dark text-primary-foreground px-7 py-3.5 rounded-md hover:bg-dark/90 hover:scale-[1.03] transition-all"
-          >
-            View Full Gallery <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </section>
-
-      {/* Before & After Showcase */}
+      {/* Before & After Transformations */}
       <BeforeAfterShowcase />
 
       {/* Testimonials */}

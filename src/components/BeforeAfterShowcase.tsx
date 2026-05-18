@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 
 type Transformation = {
@@ -168,6 +170,15 @@ export default function BeforeAfterShowcase() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="text-center mt-14">
+          <Link
+            to="/gallery"
+            className="inline-flex items-center gap-2 bg-dark text-primary-foreground px-7 py-3.5 rounded-md hover:bg-dark/90 hover:scale-[1.03] transition-all"
+          >
+            View Full Gallery <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>
