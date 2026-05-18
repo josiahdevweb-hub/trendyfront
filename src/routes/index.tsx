@@ -1,7 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, Leaf, Gem } from "lucide-react";
+import { ArrowRight, Sparkles, Leaf, Gem, ChevronLeft, ChevronRight, Users, Heart, Award } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/")({ component: Home });
+
+const heroPoster =
+  "https://images.unsplash.com/photo-1653263176001-c38579e250df?w=1920&q=85";
 
 const services = [
   {
@@ -28,25 +38,39 @@ const services = [
     desc: "Maintenance for healthy, neat locs",
     img: "https://images.unsplash.com/photo-1653263169788-9332cdbf07f5?w=800&q=80",
   },
+  {
+    title: "Loc Styling",
+    price: "From £120",
+    desc: "Special occasion updos and creative styling",
+    img: "https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=600&q=80",
+  },
 ];
 
-const gallery = [
-  "https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=600&q=80",
-  "https://images.unsplash.com/photo-1653263169791-d1b35abd8f89?w=600&q=80",
-  "https://images.unsplash.com/photo-1653263170120-573922b5b820?w=600&q=80",
-  "https://images.unsplash.com/photo-1653263171094-0ca6b47047ac?w=600&q=80",
-  "https://images.unsplash.com/photo-1653263171082-73c98f40edd1?w=600&q=80",
-  "https://images.unsplash.com/photo-1653263169792-ee58037099c5?w=600&q=80",
+const featuredGallery = [
+  {
+    img: "https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=900&q=85",
+    label: "Sisterlocks",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1653263171094-0ca6b47047ac?w=900&q=85",
+    label: "Microlocs",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1653263170120-573922b5b820?w=900&q=85",
+    label: "Traditional Locs",
+  },
 ];
 
 const testimonials = [
   {
-    quote: "The best decision I ever made! My sisterlocks are beautiful and the service was exceptional.",
+    quote:
+      "The best decision I ever made! My sisterlocks are beautiful and the service was exceptional.",
     name: "Amara Johnson",
     service: "Sisterlocks",
   },
   {
-    quote: "Professional, knowledgeable, and so welcoming. I finally found my loc specialist!",
+    quote:
+      "Professional, knowledgeable, and so welcoming. I finally found my loc specialist!",
     name: "Kendra Williams",
     service: "Microlocs",
   },
@@ -57,24 +81,61 @@ const testimonials = [
   },
 ];
 
+const whyCards = [
+  { icon: Users, title: "Expert Stylists", desc: "Certified specialists with years of dedicated loc expertise" },
+  { icon: Leaf, title: "Premium Products", desc: "Natural, salon-grade products that nourish every strand" },
+  { icon: Heart, title: "Healthy Hair Focus", desc: "Techniques designed to protect and strengthen your hair" },
+  { icon: Sparkles, title: "Personalized Experience", desc: "Bespoke consultations tailored to your hair journey" },
+  { icon: Gem, title: "Modern Techniques", desc: "The latest installation and maintenance methods" },
+  { icon: Award, title: "Trusted Results", desc: "Hundreds of happy clients and beautiful transformations" },
+];
+
 function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [api, setApi] = useState<CarouselApi>();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    videoRef.current?.play().catch(() => {});
+  }, []);
+
   return (
     <>
-      {/* Hero */}
+      {/* Hero with local video */}
       <section className="relative h-[calc(100vh-5rem)] min-h-[600px] w-full overflow-hidden">
-        {/* <img
-          src="https://images.unsplash.com/photo-1653263176001-c38579e250df?w=1920&q=85"
-          alt="Natural hair specialist"
+        <video
+          ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
-        /> */}
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="relative h-full flex flex-col items-center justify-center text-center px-6 text-white">
-          <h1 className="font-serif text-6xl md:text-8xl mb-6">Proudly Natural.</h1>
-          <p className="text-lg md:text-xl text-white/90 mb-10">Nairobi Premier Locs & Natural Hair Specialist</p>
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroPoster}
+        >
+          <source src="/videos/hero.webm" type="video/webm" />
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/75" />
+        <div
+          className={`relative h-full flex flex-col items-center justify-center text-center px-6 text-white transition-all duration-1000 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <p className="uppercase tracking-[0.4em] text-xs text-gold mb-6">
+            Trendylocs Salon
+          </p>
+          <h1 className="font-serif text-6xl md:text-8xl mb-6 leading-tight">
+            Proudly Natural.
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl">
+            Nairobi's Premier Locs &amp; Natural Hair Specialist
+          </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md hover:opacity-90 transition"
+              className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md hover:opacity-90 hover:scale-[1.03] transition-all"
             >
               Book Appointment <ArrowRight className="h-4 w-4" />
             </Link>
@@ -88,68 +149,126 @@ function Home() {
         </div>
       </section>
 
-      {/* Welcome */}
-      <section className="mx-auto max-w-7xl px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Welcome to Trendylocs</p>
-          <h2 className="text-4xl md:text-5xl mb-6">Where natural hair is celebrated.</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            We are a premium natural hair and locs salon dedicated to celebrating and nurturing the beauty of textured
-            hair. Our expertise spans Sisterlocks, Microlocs, Traditional Locs, and comprehensive natural hair care.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-8">
-            With certified training and years of experience, we provide personalized care in a luxury, welcoming
-            environment.
-          </p>
-          <Link
-            to="/about"
-            className="inline-flex items-center gap-2 text-foreground border-b border-gold pb-1 hover:gap-3 transition-all"
-          >
-            Learn More About Us <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-        <div className="aspect-[4/5] overflow-hidden rounded-md">
-          <img
-            src="https://images.unsplash.com/photo-1653263176001-c38579e250df?w=900&q=85"
-            alt="Natural hair specialist"
-            className="w-full h-full object-cover"
-          />
+      {/* Compact Welcome */}
+      <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+          <div>
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">
+              Welcome to Trendylocs
+            </p>
+            <h2 className="text-3xl md:text-4xl mb-5 leading-tight">
+              Where natural hair is celebrated.
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              A premium natural hair and locs salon dedicated to nurturing the
+              beauty of textured hair — Sisterlocks, Microlocs, Traditional
+              Locs, and comprehensive natural hair care, delivered in a luxury,
+              welcoming environment.
+            </p>
+            <Link
+              to="/about"
+              className="group inline-flex items-center gap-2 bg-dark text-primary-foreground px-6 py-3 rounded-md transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_var(--gold)] hover:bg-dark/90"
+            >
+              Learn More About Us
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="aspect-[3/4] overflow-hidden rounded-md row-span-2">
+              <img
+                src="https://images.unsplash.com/photo-1653263176001-c38579e250df?w=700&q=85"
+                alt="Stylist at work"
+                loading="lazy"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-md">
+              <img
+                src="https://images.unsplash.com/photo-1653263171083-71aad2fc6dfb?w=500&q=85"
+                alt="Loc detail"
+                loading="lazy"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-md">
+              <img
+                src="https://images.unsplash.com/photo-1653263169989-f696b66fedd7?w=500&q=85"
+                alt="Salon interior"
+                loading="lazy"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="bg-secondary/40 py-24">
+      {/* Services Carousel */}
+      <section className="bg-secondary/40 py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Services</p>
-            <h2 className="text-4xl md:text-5xl">
-              Expert care for every stage
-              <br />
-              of your natural hair journey
-            </h2>
+          <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+            <div>
+              <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">
+                Our Services
+              </p>
+              <h2 className="text-3xl md:text-5xl max-w-2xl leading-tight">
+                Expert care for every stage of your hair journey
+              </h2>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={() => api?.scrollPrev()}
+                aria-label="Previous service"
+                className="h-11 w-11 rounded-full border border-border bg-card hover:bg-gold hover:text-gold-foreground hover:border-gold transition flex items-center justify-center"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => api?.scrollNext()}
+                aria-label="Next service"
+                className="h-11 w-11 rounded-full border border-border bg-card hover:bg-gold hover:text-gold-foreground hover:border-gold transition flex items-center justify-center"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            </div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <div key={s.title} className="bg-card rounded-md overflow-hidden group">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={s.img}
-                    alt={s.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl mb-2">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{s.desc}</p>
-                  <p className="text-gold font-medium">{s.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+
+          <Carousel
+            setApi={setApi}
+            opts={{ align: "start", loop: true, dragFree: false }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {services.map((s) => (
+                <CarouselItem
+                  key={s.title}
+                  className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="bg-card rounded-md overflow-hidden group transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl h-full">
+                    <div className="aspect-[4/5] overflow-hidden">
+                      <img
+                        src={s.img}
+                        alt={s.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl mb-2">{s.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        {s.desc}
+                      </p>
+                      <p className="text-gold font-medium">{s.price}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-dark text-primary-foreground px-7 py-3.5 rounded-md hover:bg-dark/90 transition"
+              className="inline-flex items-center gap-2 bg-dark text-primary-foreground px-7 py-3.5 rounded-md hover:bg-dark/90 hover:scale-[1.03] transition-all"
             >
               View All Services <ArrowRight className="h-4 w-4" />
             </Link>
@@ -157,41 +276,64 @@ function Home() {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Transformations</p>
-          <h2 className="text-4xl md:text-5xl">See the beauty we help create</h2>
+      {/* Transformation — 3 featured */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="text-center mb-14">
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">
+            Our Transformations
+          </p>
+          <h2 className="text-3xl md:text-5xl">See the beauty we create</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {gallery.map((src, i) => (
-            <div key={i} className="aspect-square overflow-hidden rounded-md">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredGallery.map((g) => (
+            <figure
+              key={g.label}
+              className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-md group"
+            >
               <img
-                src={src}
-                alt={`Transformation ${i + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                src={g.img}
+                alt={g.label}
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-90" />
+              <figcaption className="absolute bottom-5 left-5 right-5 text-white">
+                <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-1">
+                  Featured
+                </p>
+                <p className="font-serif text-2xl">{g.label}</p>
+              </figcaption>
+            </figure>
           ))}
         </div>
         <div className="text-center mt-12">
-          <Link to="/gallery" className="inline-flex items-center gap-2 text-foreground border-b border-gold pb-1">
+          <Link
+            to="/gallery"
+            className="inline-flex items-center gap-2 bg-dark text-primary-foreground px-7 py-3.5 rounded-md hover:bg-dark/90 hover:scale-[1.03] transition-all"
+          >
             View Full Gallery <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-dark text-primary-foreground py-24">
+      <section className="bg-dark text-primary-foreground py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Testimonials</p>
-            <h2 className="text-4xl md:text-5xl">What our clients say</h2>
+          <div className="text-center mb-14">
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">
+              Testimonials
+            </p>
+            <h2 className="text-3xl md:text-5xl">What our clients say</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((t) => (
-              <div key={t.name} className="border border-primary-foreground/10 rounded-md p-8">
-                <p className="font-serif italic text-lg mb-6 leading-relaxed">"{t.quote}"</p>
+              <div
+                key={t.name}
+                className="border border-primary-foreground/10 rounded-md p-8 hover:border-gold/50 transition"
+              >
+                <p className="font-serif italic text-lg mb-6 leading-relaxed">
+                  "{t.quote}"
+                </p>
                 <p className="font-medium">{t.name}</p>
                 <p className="text-sm text-gold">{t.service}</p>
               </div>
@@ -200,36 +342,31 @@ function Home() {
         </div>
       </section>
 
-      {/* Why */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Why Choose Trendylocs</p>
-          <h2 className="text-4xl md:text-5xl">A premium experience</h2>
+      {/* Why — premium cards */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="text-center mb-14">
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">
+            Why Choose Trendylocs
+          </p>
+          <h2 className="text-3xl md:text-5xl mb-4">A premium experience</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-light">
+            Every visit is crafted around your hair, your time, and your comfort.
+          </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: Sparkles,
-              title: "Certified Expertise",
-              desc: "Fully trained and certified in Sisterlocks, Microlocs, and natural hair care techniques",
-            },
-            {
-              icon: Leaf,
-              title: "Natural Products",
-              desc: "We use premium, natural products that nourish and protect your hair",
-            },
-            {
-              icon: Gem,
-              title: "Luxury Experience",
-              desc: "Enjoy a premium, relaxing salon experience tailored to your needs",
-            },
-          ].map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="text-center p-8">
-              <div className="inline-flex h-16 w-16 rounded-full bg-gold/20 items-center justify-center mb-6">
-                <Icon className="h-7 w-7 text-gold" />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whyCards.map(({ icon: Icon, title, desc }, i) => (
+            <div
+              key={title}
+              style={{ animationDelay: `${i * 100}ms` }}
+              className="group bg-card border border-border rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-gold/40 animate-fade-in"
+            >
+              <div className="inline-flex h-14 w-14 rounded-xl bg-gold/15 items-center justify-center mb-5 group-hover:bg-gold group-hover:text-gold-foreground transition-colors">
+                <Icon className="h-6 w-6 text-gold group-hover:text-gold-foreground transition-colors" />
               </div>
-              <h3 className="text-xl mb-3">{title}</h3>
-              <p className="text-muted-foreground">{desc}</p>
+              <h3 className="text-xl mb-2 font-semibold">{title}</h3>
+              <p className="text-muted-foreground font-light leading-relaxed">
+                {desc}
+              </p>
             </div>
           ))}
         </div>
@@ -239,14 +376,18 @@ function Home() {
       <section className="bg-secondary/60 py-20">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="text-4xl mb-4">Stay Connected</h2>
-          <p className="text-muted-foreground mb-8">Subscribe for hair care tips, exclusive offers, and updates</p>
+          <p className="text-muted-foreground mb-8">
+            Subscribe for hair care tips, exclusive offers, and updates
+          </p>
           <form className="flex gap-3 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Your email"
               className="flex-1 px-4 py-3 rounded-md bg-background border border-border focus:outline-none focus:border-gold"
             />
-            <button className="bg-dark text-primary-foreground px-6 rounded-md hover:bg-dark/90">Subscribe</button>
+            <button className="bg-dark text-primary-foreground px-6 rounded-md hover:bg-dark/90">
+              Subscribe
+            </button>
           </form>
         </div>
       </section>
