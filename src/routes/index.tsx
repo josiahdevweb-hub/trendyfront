@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, Leaf, Gem, Users, Heart, Award } from "lucide-react";
+import { ArrowRight, Leaf, Users, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -68,9 +68,6 @@ const whyCards = [
   { icon: Users, title: "Expert Stylists", desc: "Certified specialists with years of dedicated loc expertise" },
   { icon: Leaf, title: "Premium Products", desc: "Natural, salon-grade products that nourish every strand" },
   { icon: Heart, title: "Healthy Hair Focus", desc: "Techniques designed to protect and strengthen your hair" },
-  { icon: Sparkles, title: "Personalized Experience", desc: "Bespoke consultations tailored to your hair journey" },
-  { icon: Gem, title: "Modern Techniques", desc: "The latest installation and maintenance methods" },
-  { icon: Award, title: "Trusted Results", desc: "Hundreds of happy clients and beautiful transformations" },
 ];
 
 function Home() {
