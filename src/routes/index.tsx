@@ -7,7 +7,7 @@ import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const Route = createFileRoute("/")({ component: Home });
 
-const FALLBACK_IMG = "/images/Interiar.jpg";
+// const FALLBACK_IMG = "/images/Interiar.jpg";
 const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   if (e.currentTarget.src.indexOf(FALLBACK_IMG) === -1) e.currentTarget.src = FALLBACK_IMG;
 };
@@ -187,11 +187,7 @@ function Home() {
             </h2>
           </div>
 
-          <Carousel
-            opts={{ align: "start", loop: true, dragFree: false }}
-            plugins={[autoplay]}
-            className="w-full"
-          >
+          <Carousel opts={{ align: "start", loop: true, dragFree: false }} plugins={[autoplay]} className="w-full">
             <CarouselContent className="-ml-4">
               {services.map((s) => (
                 <CarouselItem key={s.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
