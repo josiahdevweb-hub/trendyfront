@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Leaf, Gem, Users, Heart, Award } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
@@ -74,32 +74,23 @@ const whyCards = [
 ];
 
 function Home() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [mounted, setMounted] = useState(false);
-  const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
+  const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true });
 
   useEffect(() => {
     setMounted(true);
-    videoRef.current?.play().catch(() => {});
   }, []);
 
   return (
     <>
-      {/* Hero with local video */}
+      {/* Hero with local image */}
       <section className="relative h-[calc(100vh-5rem)] min-h-[600px] w-full overflow-hidden">
-        <video
-          ref={videoRef}
+        <img
+          src="/images/salon/Interiar.jpg"
+          alt="Salon interior"
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={heroPoster}
-        >
-          <source src="/videos/hero.webm" type="video/webm" />
-          <source src="/videos/salon-hero.mp4" type="video/mp4" />
-        </video>
+          onError={onImgError}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/75" />
         <div
           className={`relative h-full flex flex-col items-center justify-center text-center px-6 text-white transition-all duration-1000 ${
@@ -198,7 +189,7 @@ function Home() {
 
           <Carousel
             opts={{ align: "start", loop: true, dragFree: false }}
-            plugins={[autoplay.current]}
+            plugins={[autoplay]}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
