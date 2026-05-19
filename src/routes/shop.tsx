@@ -23,11 +23,11 @@ const products = [
 function Shop() {
   return (
     <>
-      <section className="bg-dark text-primary-foreground py-24">
+      <section className="bg-dark text-primary-foreground py-8">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Curated Essentials</p>
-          <h1 className="text-5xl md:text-7xl mb-6">Shop</h1>
-          <p className="text-lg text-primary-foreground/70">Premium hair care products for healthy, beautiful locs and natural hair</p>
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Curated Essentials</p>
+          <h1 className="text-3xl md:text-4xl mb-3">Shop</h1>
+          <p className="text-base text-primary-foreground/70">Premium hair care products for healthy, beautiful locs and natural hair</p>
         </div>
       </section>
 

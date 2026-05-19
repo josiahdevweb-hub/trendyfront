@@ -20,11 +20,11 @@ function About() {
 
   return (
     <>
-      <section className="bg-dark text-primary-foreground py-24">
+      <section className="bg-dark text-primary-foreground py-8">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Journey</p>
-          <h1 className="text-5xl md:text-7xl mb-6">About Trendylocs</h1>
-          <p className="text-lg text-primary-foreground/70">Celebrating Natural Beauty Since 2015</p>
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Journey</p>
+          <h1 className="text-3xl md:text-4xl mb-3">About Trendylocs</h1>
+          <p className="text-base text-primary-foreground/70">Celebrating Natural Beauty Since 2015</p>
         </div>
       </section>
 
@@ -33,7 +33,7 @@ function About() {
           <img src="/images/salon/founder.jpg" alt="Founder" loading="lazy" decoding="async" onError={(e)=>{if(e.currentTarget.src.indexOf('/images/fallback.jpg')===-1)e.currentTarget.src='/images/fallback.jpg';}} className="w-full h-full object-cover" />
         </div>
         <div>
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Story</p>
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Story</p>
           <h2 className="text-4xl mb-6">A passion built into a craft.</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>Trendylocs was founded with a simple yet powerful mission: to provide exceptional natural hair and locs care in a space that celebrates the beauty and versatility of textured hair.</p>
@@ -58,7 +58,7 @@ function About() {
 
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="text-center mb-16">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Values</p>
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Values</p>
           <h2 className="text-4xl md:text-5xl">The principles that guide us</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -73,7 +73,7 @@ function About() {
 
       <section className="bg-secondary/40 py-24">
         <div className="mx-auto max-w-5xl px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Credentials</p>
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Credentials</p>
           <h2 className="text-4xl mb-12">Certifications & Expertise</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {certs.map(c => <span key={c} className="bg-card border border-border px-5 py-3 rounded-full text-sm">{c}</span>)}
@@ -82,7 +82,7 @@ function About() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-24 text-center">
-        <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Philosophy</p>
+        <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Philosophy</p>
         <p className="font-serif italic text-2xl md:text-3xl leading-relaxed mb-12">"Your hair is your crown. We're here to help you wear it with pride."</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map(([n, l]) => (
