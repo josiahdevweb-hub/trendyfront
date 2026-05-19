@@ -152,7 +152,7 @@ export default function BeforeAfterShowcase() {
                     Before
                   </figcaption>
                 </figure>
-                <figure className="relative aspect-square overflow-hidden">
+                <figure className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={t.after}
                     alt={`${t.title} after`}
