@@ -83,7 +83,7 @@ export default function BeforeAfterShowcase() {
               style={{ animationDelay: `${i * 120}ms` }}
               className="animate-fade-in bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
             >
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <ReactCompareSlider
                   itemOne={
                     <ReactCompareSliderImage
