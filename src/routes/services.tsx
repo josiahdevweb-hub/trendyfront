@@ -23,13 +23,13 @@ const services = [
 function Services() {
   return (
     <>
-      <section className="bg-dark text-primary-foreground py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">What We Offer</p>
-          <h1 className="text-5xl md:text-7xl mb-6">Our Services</h1>
-          <p className="text-lg text-primary-foreground/70">Expert care for every stage of your natural hair journey. Each service is personalized to your unique needs and goals.</p>
-        </div>
-      </section>
+      section className="bg-dark text-primary-foreground py-12">
+  <div className="mx-auto max-w-4xl px-6 text-center">
+    <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">What We Offer</p>
+    <h1 className="text-4xl md:text-5xl mb-4">Our Services</h1>
+    <p className="text-base text-primary-foreground/70">Expert care for every stage of your natural hair journey. Each service is personalized to your unique needs and goals.</p>
+  </div>
+</section>
 
       <div className="mx-auto max-w-7xl px-6 py-24 space-y-24">
         {services.map((s, i) => (
