@@ -74,13 +74,11 @@ const whyCards = [
 ];
 
 function Home() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [mounted, setMounted] = useState(false);
-  const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
+  const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true });
 
   useEffect(() => {
     setMounted(true);
-    videoRef.current?.play().catch(() => {});
   }, []);
 
   return (
