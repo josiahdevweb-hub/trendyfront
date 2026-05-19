@@ -189,17 +189,15 @@ function Home() {
               {services.map((s) => (
                 <CarouselItem key={s.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="bg-card rounded-md overflow-hidden group transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl h-full">
-                    <div className="aspect-[3/4] overflow-hidden max-h-80">
+                    <div className="aspect-[4/5] w-full overflow-hidden bg-secondary/40">
                       <img
                         src={s.img}
                         alt={s.title}
-                        width={480}
-                        height={640}
                         loading="lazy"
                         decoding="async"
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         onError={onImgError}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <div className="p-6">
