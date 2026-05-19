@@ -35,7 +35,7 @@ function Services() {
         {services.map((s) => (
           <section key={s.title} className="flex flex-col h-full">
             <div className="w-full aspect-[4/3] overflow-hidden rounded-md mb-6 bg-secondary/40">
-              <img src={s.img} alt={s.title} loading="lazy" decoding="async" onError={(e)=>{if(e.currentTarget.src.indexOf('/images/fallback.jpg')===-1)e.currentTarget.src='/images/fallback.jpg';}} className="w-full h-full object-contain" />
+              <img src={s.img} alt={s.title} loading="lazy" decoding="async" onError={(e)=>{if(e.currentTarget.src.indexOf('/images/fallback.jpg')===-1)e.currentTarget.src='/images/fallback.jpg';}} className="block w-full h-full object-cover object-center" />
             </div>
             <div className="flex flex-col flex-1">
               <h2 className="text-4xl md:text-5xl mb-4">{s.title}</h2>
