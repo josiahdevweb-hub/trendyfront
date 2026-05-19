@@ -274,7 +274,7 @@ function Home() {
       </section>
 
       {/* Newsletter */}
-      <section className="bg-secondary/60 py-10 md:py-14">
+      {/* <section className="bg-secondary/60 py-10 md:py-14">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="text-4xl mb-4">Stay Connected</h2>
           <p className="text-muted-foreground mb-8">Subscribe for hair care tips, exclusive offers, and updates</p>
@@ -285,7 +285,7 @@ function Home() {
               className="flex-1 px-4 py-3 rounded-md bg-background border border-border focus:outline-none focus:border-gold"
             />
             <button className="bg-dark text-primary-foreground px-6 rounded-md hover:bg-dark/90">Subscribe</button>
-          </form>
+          </form> */}
         </div>
       </section>
     </>
