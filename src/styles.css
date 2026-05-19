@@ -39,28 +39,34 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.97 0.008 80);
-  --foreground: oklch(0.22 0.012 60);
-  --card: oklch(0.985 0.005 80);
-  --card-foreground: oklch(0.22 0.012 60);
-  --popover: oklch(0.985 0.005 80);
-  --popover-foreground: oklch(0.22 0.012 60);
-  --primary: oklch(0.22 0.012 60);
-  --primary-foreground: oklch(0.97 0.008 80);
-  --secondary: oklch(0.93 0.012 80);
-  --secondary-foreground: oklch(0.22 0.012 60);
-  --muted: oklch(0.93 0.012 80);
-  --muted-foreground: oklch(0.5 0.015 60);
-  --accent: oklch(0.78 0.09 75);
-  --accent-foreground: oklch(0.22 0.012 60);
+  /* Cream #FAF6F0 */
+  --background: oklch(0.969 0.012 80);
+  /* Deep espresso #3D1F00 */
+  --foreground: oklch(0.24 0.05 55);
+  --card: oklch(0.985 0.008 80);
+  --card-foreground: oklch(0.24 0.05 55);
+  --popover: oklch(0.985 0.008 80);
+  --popover-foreground: oklch(0.24 0.05 55);
+  /* Burnt sienna #8B4500 — primary accent */
+  --primary: oklch(0.48 0.13 50);
+  --primary-foreground: oklch(0.969 0.012 80);
+  --secondary: oklch(0.92 0.02 70);
+  --secondary-foreground: oklch(0.24 0.05 55);
+  --muted: oklch(0.92 0.02 70);
+  --muted-foreground: oklch(0.5 0.04 55);
+  /* Warm sand/gold #D4A574 */
+  --accent: oklch(0.76 0.08 70);
+  --accent-foreground: oklch(0.24 0.05 55);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.88 0.012 80);
-  --input: oklch(0.88 0.012 80);
-  --ring: oklch(0.78 0.09 75);
-  --gold: oklch(0.78 0.09 75);
-  --gold-foreground: oklch(0.22 0.012 60);
-  --dark: oklch(0.35 0.012 60)
+  --border: oklch(0.87 0.02 70);
+  --input: oklch(0.87 0.02 70);
+  --ring: oklch(0.76 0.08 70);
+  /* Gold CTA accent — warm sand #D4A574 */
+  --gold: oklch(0.76 0.08 70);
+  --gold-foreground: oklch(0.24 0.05 55);
+  /* Deep espresso #3D1F00 */
+  --dark: oklch(0.24 0.05 55);
 }
 
 @layer base {
