@@ -83,7 +83,7 @@ export default function BeforeAfterShowcase() {
               style={{ animationDelay: `${i * 120}ms` }}
               className="animate-fade-in bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[8/3] overflow-hidden">
                 <ReactCompareSlider
                   itemOne={
                     <ReactCompareSliderImage
@@ -141,7 +141,7 @@ export default function BeforeAfterShowcase() {
               className="animate-fade-in bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2">
-                <figure className="relative aspect-[4/3] overflow-hidden">
+                <figure className="relative aspect-[8/3] overflow-hidden">
                   <img
                     src={t.before}
                     alt={`${t.title} before`}
@@ -152,7 +152,7 @@ export default function BeforeAfterShowcase() {
                     Before
                   </figcaption>
                 </figure>
-                <figure className="relative aspect-[4/3] overflow-hidden">
+                <figure className="relative aspect-[8/3] overflow-hidden">
                   <img
                     src={t.after}
                     alt={`${t.title} after`}
