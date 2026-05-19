@@ -11,14 +11,39 @@ const FALLBACK_IMG = "/images/fallback.jpg";
 const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   if (e.currentTarget.src.indexOf(FALLBACK_IMG) === -1) e.currentTarget.src = FALLBACK_IMG;
 };
-const heroPoster = "/images/salon/interior.jpg";
+const heroPoster = "/images/salon/interiar.jpg";
 
 const services = [
-  { title: "Sisterlocks", price: "From £350", desc: "Precision micro locs for a versatile, manageable style", img: "/images/styles/sisterlocks.jpg" },
-  { title: "Microlocs", price: "From £280", desc: "Small, uniform locs perfect for styling flexibility", img: "/images/styles/microlocs.jpg" },
-  { title: "Traditional Locs", price: "From £180", desc: "Classic freeform or cultivated dreadlocks", img: "/images/styles/traditional-locs.jpg" },
-  { title: "Retightening", price: "From £85", desc: "Maintenance for healthy, neat locs", img: "/images/styles/retightening.jpg" },
-  { title: "Loc Styling", price: "From £120", desc: "Special occasion updos and creative styling", img: "/images/styles/styling.jpg" },
+  {
+    title: "Sisterlocks",
+    price: "From £350",
+    desc: "Precision micro locs for a versatile, manageable style",
+    img: "/images/styles/sisterlocks.jpg",
+  },
+  {
+    title: "Microlocs",
+    price: "From £280",
+    desc: "Small, uniform locs perfect for styling flexibility",
+    img: "/images/styles/microlocs.jpg",
+  },
+  {
+    title: "Traditional Locs",
+    price: "From £180",
+    desc: "Classic freeform or cultivated dreadlocks",
+    img: "/images/styles/traditional-locs.jpg",
+  },
+  {
+    title: "Retightening",
+    price: "From £85",
+    desc: "Maintenance for healthy, neat locs",
+    img: "/images/styles/retightening.jpg",
+  },
+  {
+    title: "Loc Styling",
+    price: "From £120",
+    desc: "Special occasion updos and creative styling",
+    img: "/images/styles/styling.jpg",
+  },
 ];
 
 const testimonials = [
