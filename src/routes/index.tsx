@@ -11,7 +11,7 @@ const FALLBACK_IMG = "/images/fallback.jpg";
 const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   if (e.currentTarget.src.indexOf(FALLBACK_IMG) === -1) e.currentTarget.src = FALLBACK_IMG;
 };
-const heroPoster = "/images/salon/Interiar.jpg";
+const heroPoster = "/images/salon/interior.jpg";
 
 const services = [
   {
@@ -86,7 +86,7 @@ function Home() {
       {/* Hero with local image */}
       <section className="relative h-[calc(100vh-5rem)] min-h-[600px] w-full overflow-hidden">
         <img
-          src="/images/salon/Interiar.jpg"
+          src="/images/salon/interior.jpg"
           alt="Salon interior"
           className="absolute inset-0 w-full h-full object-cover"
           onError={onImgError}
