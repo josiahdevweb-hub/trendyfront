@@ -189,7 +189,7 @@ function Home() {
               {services.map((s) => (
                 <CarouselItem key={s.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="bg-card rounded-md overflow-hidden group transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl h-full">
-                    <div className="aspect-[4/5] w-full overflow-hidden bg-secondary/40">
+                    <div className="aspect-[5/3] w-full overflow-hidden bg-secondary/40">
                       <img
                         src={s.img}
                         alt={s.title}
