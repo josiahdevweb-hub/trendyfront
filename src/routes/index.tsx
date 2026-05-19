@@ -72,7 +72,7 @@ const whyCards = [
 
 function Home() {
   const [mounted, setMounted] = useState(false);
-  const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true });
+  const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
   useEffect(() => {
     setMounted(true);
