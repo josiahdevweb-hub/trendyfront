@@ -60,7 +60,7 @@
   --ring: oklch(0.78 0.09 75);
   --gold: oklch(0.78 0.09 75);
   --gold-foreground: oklch(0.22 0.012 60);
-  --dark: oklch(0.25 0.012 60);
+  --dark: oklch(0.35 0.012 60)
 }
 
 @layer base {
