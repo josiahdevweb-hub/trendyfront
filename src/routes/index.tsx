@@ -83,21 +83,14 @@ function Home() {
 
   return (
     <>
-      {/* Hero with local video */}
+      {/* Hero with local image */}
       <section className="relative h-[calc(100vh-5rem)] min-h-[600px] w-full overflow-hidden">
-        <video
-          ref={videoRef}
+        <img
+          src="/images/salon/Interiar.jpg"
+          alt="Salon interior"
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={heroPoster}
-        >
-          <source src="/videos/hero.webm" type="video/webm" />
-          <source src="/videos/salon-hero.mp4" type="video/mp4" />
-        </video>
+          onError={onImgError}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/75" />
         <div
           className={`relative h-full flex flex-col items-center justify-center text-center px-6 text-white transition-all duration-1000 ${
