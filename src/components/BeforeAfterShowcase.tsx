@@ -65,7 +65,7 @@ const sideBySide: Transformation[] = [
 
 export default function BeforeAfterShowcase() {
   return (
-    <section className="bg-secondary/40 py-20">
+    <section className="bg-secondary/40 py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-14">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Before &amp; After</p>
