@@ -145,7 +145,7 @@ function Home() {
           <div className="grid grid-cols-2 gap-4">
             <div className="aspect-[3/4] overflow-hidden rounded-md row-span-2">
               <img
-                src="/images/salon/stylist-work.jpg"
+                src="/images/salon/stylish-work.jpg"
                 alt="Stylist at work"
                 loading="lazy"
                 decoding="async"
