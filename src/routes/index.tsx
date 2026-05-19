@@ -117,7 +117,7 @@ function Home() {
       </section>
 
       {/* Compact Welcome */}
-      <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <section className="mx-auto max-w-7xl px-6 py-10 md:py-14">
         <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
           <div>
             <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Welcome to Trendylocs</p>
@@ -175,7 +175,7 @@ function Home() {
       </section>
 
       {/* Services Carousel */}
-      <section className="bg-secondary/40 py-20">
+      <section className="bg-secondary/40 py-10 md:py-14">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 text-center">
             <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Services</p>
@@ -226,7 +226,7 @@ function Home() {
       <BeforeAfterShowcase />
 
       {/* Testimonials */}
-      <section className="bg-dark text-primary-foreground py-20">
+      <section className="bg-dark text-primary-foreground py-10 md:py-14">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-14">
             <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Testimonials</p>
@@ -248,7 +248,7 @@ function Home() {
       </section>
 
       {/* Why — premium cards */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-10 md:py-14">
         <div className="text-center mb-14">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Why Choose Trendylocs</p>
           <h2 className="text-3xl md:text-5xl mb-4">A premium experience</h2>
@@ -274,7 +274,7 @@ function Home() {
       </section>
 
       {/* Newsletter */}
-      <section className="bg-secondary/60 py-20">
+      <section className="bg-secondary/60 py-10 md:py-14">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="text-4xl mb-4">Stay Connected</h2>
           <p className="text-muted-foreground mb-8">Subscribe for hair care tips, exclusive offers, and updates</p>
