@@ -7,7 +7,7 @@ import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const Route = createFileRoute("/")({ component: Home });
 
-const FALLBACK_IMG = "/images/Interior.jpg";
+const FALLBACK_IMG = "/images/Interiar.jpg";
 const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   if (e.currentTarget.src.indexOf(FALLBACK_IMG) === -1) e.currentTarget.src = FALLBACK_IMG;
 };
