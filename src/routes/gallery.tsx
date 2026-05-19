@@ -38,11 +38,11 @@ function Gallery() {
 
   return (
     <>
-      <section className="bg-dark text-primary-foreground py-24">
+      <section className="bg-dark text-primary-foreground py-8">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Portfolio</p>
-          <h1 className="text-5xl md:text-7xl mb-6">Our Gallery</h1>
-          <p className="text-lg text-primary-foreground/70">
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Portfolio</p>
+          <h1 className="text-3xl md:text-4xl mb-3">Our Gallery</h1>
+          <p className="text-base text-primary-foreground/70">
             Explore our portfolio of beautiful transformations and styling work
           </p>
         </div>

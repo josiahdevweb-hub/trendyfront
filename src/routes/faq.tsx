@@ -42,11 +42,11 @@ const sections = [
 function FAQ() {
   return (
     <>
-      <section className="bg-dark text-primary-foreground py-24">
+      <section className="bg-dark text-primary-foreground py-8">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Answers</p>
-          <h1 className="text-5xl md:text-7xl mb-6">Frequently Asked Questions</h1>
-          <p className="text-lg text-primary-foreground/70">Find answers to common questions about locs, our services, and your hair journey</p>
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Answers</p>
+          <h1 className="text-3xl md:text-4xl mb-3">Frequently Asked Questions</h1>
+          <p className="text-base text-primary-foreground/70">Find answers to common questions about locs, our services, and your hair journey</p>
         </div>
       </section>
 
