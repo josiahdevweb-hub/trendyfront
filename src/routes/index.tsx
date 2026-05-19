@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Leaf, Users, Heart } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
@@ -72,7 +72,7 @@ const whyCards = [
 
 function Home() {
   const [mounted, setMounted] = useState(false);
-  const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true });
+  const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
   useEffect(() => {
     setMounted(true);
@@ -184,7 +184,7 @@ function Home() {
             </h2>
           </div>
 
-          <Carousel opts={{ align: "start", loop: true, dragFree: false }} plugins={[autoplay]} className="w-full">
+          <Carousel opts={{ align: "start", loop: true, dragFree: false }} plugins={[autoplay.current]} className="w-full">
             <CarouselContent className="-ml-4">
               {services.map((s) => (
                 <CarouselItem key={s.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
