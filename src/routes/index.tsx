@@ -11,7 +11,7 @@ const FALLBACK_IMG = "/images/Interior.jpg";
 const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   if (e.currentTarget.src.indexOf(FALLBACK_IMG) === -1) e.currentTarget.src = FALLBACK_IMG;
 };
-const heroPoster = "/images/salon/interiar.jpg";
+const heroPoster = "/images/salon/Interiar.jpg";
 
 const services = [
   {
