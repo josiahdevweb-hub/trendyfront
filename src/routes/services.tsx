@@ -34,7 +34,7 @@ function Services() {
       <div className="mx-auto max-w-7xl px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {services.map((s) => (
           <section key={s.title} className="flex flex-col h-full">
-            <div className="aspect-[4/5] overflow-hidden rounded-md mb-6">
+            <div className="aspect-[4/5] max-w-[50%] mx-auto overflow-hidden rounded-md mb-6">
               <img src={s.img} alt={s.title} loading="lazy" decoding="async" onError={(e)=>{if(e.currentTarget.src.indexOf('/images/fallback.jpg')===-1)e.currentTarget.src='/images/fallback.jpg';}} className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col flex-1">
