@@ -141,7 +141,7 @@ export default function BeforeAfterShowcase() {
               className="animate-fade-in bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2">
-                <figure className="relative aspect-square overflow-hidden">
+                <figure className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={t.before}
                     alt={`${t.title} before`}
