@@ -537,7 +537,7 @@ function Home() {
       </section>
 
       {/* ── 10. NEWSLETTER ────────────────────────────────────────────── */}
-      <section className="bg-dark text-primary-foreground py-16 md:py-20">
+      {/* <section className="bg-dark text-primary-foreground py-16 md:py-20">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Stay Connected</p>
           <h2 className="font-serif text-3xl md:text-4xl mb-3">Hair tips, offers &amp; first access</h2>
@@ -575,7 +575,7 @@ function Home() {
           )}
           <p className="mt-4 text-primary-foreground/30 text-xs">No spam. Unsubscribe anytime.</p>
         </div>
-      </section>
+      </section> */}
 
       {/* ── 11. BOOKING CTA BANNER ────────────────────────────────────── */}
       <section className="bg-gold py-14">
