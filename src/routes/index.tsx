@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Star, Instagram, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
+import { ArrowRight, Star, Instagram, Phone, Mail, MapPin, ChevronDown, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
@@ -70,7 +70,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Manchester.",
+    quote: "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Nairobi.",
     name: "Nia Thompson",
     service: "Natural Hair Care",
     initials: "NT",
@@ -147,50 +147,72 @@ function Home() {
   return (
     <>
       {/* ── 1. HERO ────────────────────────────────────────────────────── */}
-      <section className="relative h-[80dvh] md:h-[80vh] w-full overflow-hidden">
+      <section className="relative h-[calc(100vh-5rem)] min-h-[620px] w-full overflow-hidden">
         <img
           src="/images/salon/interior.jpg"
-          alt="Trendylocs salon interior — Manchester's premier locs specialist"
+          alt="Trendylocs salon interior — Nairobi's premier locs specialist"
           className="absolute inset-0 w-full h-full object-cover"
           onError={onImgError}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/85" />
+        {/* Layered gradient for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/80" />
+        {/* Subtle grain overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+          }}
+        />
 
         <div
           className={`relative h-full flex flex-col items-center justify-center text-center px-6 text-white transition-all duration-1000 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <h1
-            className="font-serif text-5xl sm:text-6xl md:text-7xl mb-6 leading-[1.05] max-w-3xl tracking-tight"
-            style={{ textShadow: "0 2px 24px rgba(0,0,0,0.5)" }}
-          >
+          {/* Trust badge */}
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 rounded-full px-4 py-1.5 mb-8">
+            <Sparkles className="h-3 w-3 text-gold" />
+            <span className="text-xs tracking-widest uppercase text-white/80">Nairobi's #1 Loc Specialist</span>
+          </div>
+
+          <h1 className="font-serif text-6xl md:text-8xl mb-5 leading-[1.05] max-w-3xl">
             Proudly
             <br />
             <span className="italic text-gold">Natural.</span>
           </h1>
 
-          <p
-            className="text-base sm:text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed"
-            style={{ textShadow: "0 1px 12px rgba(0,0,0,0.6)" }}
-          >
+          <p className="text-lg md:text-xl text-white/85 mb-3 max-w-xl leading-relaxed">
             Premium Sisterlocks, Microlocs &amp; Traditional Locs — crafted with precision for every hair journey.
           </p>
 
-          <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
+          {/* Social proof strip */}
+          <div className="flex items-center gap-1 mb-10">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <Star key={i} className="h-3 w-3 fill-gold text-gold" />
+            ))}
+            <span className="text-white/70 text-xs ml-2">4.9 · 500+ happy clients</span>
+          </div>
+
+          <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-md font-medium text-sm sm:text-base hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-8 py-4 rounded-md font-medium hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
               Book Appointment <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/gallery"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-6 sm:px-8 py-3 sm:py-4 rounded-md text-sm sm:text-base hover:bg-white/20 transition focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-8 py-4 rounded-md hover:bg-white/20 transition focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
             >
               View Transformations
             </Link>
           </div>
+        </div>
+
+        {/* Scroll cue */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="h-5 w-5 text-white/40" />
         </div>
       </section>
 
@@ -217,7 +239,7 @@ function Home() {
               Your hair. <span className="italic">Our expertise.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              We are Manchester's premier locs and natural hair salon — specialising in Sisterlocks, Microlocs, and
+              We are Nairobi's premier locs and natural hair salon — specialising in Sisterlocks, Microlocs, and
               Traditional Locs. Every visit is a personalised journey toward healthy, thriving hair.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -266,7 +288,7 @@ function Home() {
             <div className="aspect-square overflow-hidden rounded-md">
               <img
                 src="/images/salon/interior.jpg"
-                alt="Trendylocs salon interior in Manchester"
+                alt="Trendylocs salon interior in Nairobi"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
@@ -305,7 +327,7 @@ function Home() {
                       <div className="aspect-[4/3] w-full overflow-hidden bg-secondary/40">
                         <img
                           src={s.img}
-                          alt={`${s.title} at Trendylocs salon Manchester`}
+                          alt={`${s.title} at Trendylocs salon Nairobi`}
                           loading="lazy"
                           decoding="async"
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -487,7 +509,7 @@ function Home() {
 
         <div className="text-center">
           <a
-            href="https://instagram.com/trendylocs"
+            href="https://www.instagram.com/trendylocs_uk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border border-border rounded-md px-6 py-3 text-sm hover:border-gold hover:text-gold transition-all"
@@ -497,7 +519,6 @@ function Home() {
           </a>
         </div>
       </section>
-
 
       {/* ── 11. BOOKING CTA BANNER ────────────────────────────────────── */}
       <section className="bg-gold py-14">
