@@ -4,8 +4,6 @@ import {
   Award,
   Users,
   TrendingUp,
-  Target,
-  Eye,
   BadgeCheck,
   Scissors,
   HeartHandshake,
