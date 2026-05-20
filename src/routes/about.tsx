@@ -92,7 +92,7 @@ function About() {
         <div className="md:col-span-3">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Story</p>
           <h2 className="text-4xl mb-6">A passion built into a craft.</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
+          <div className="space-y-4 text-muted-foreground leading-relaxed overflow-y-auto pr-4 max-h-[520px] md:max-h-[450px] scroll-smooth founder-scroll">
             <p>
               I am a Sisterlocks (TM) Consultant. I do Sisterlocks installations, re-tightenings and styling. I also
               install, retighten and style dreadlocks and micro locks. I’m based in East Manchester, a 5 minute bus/car
