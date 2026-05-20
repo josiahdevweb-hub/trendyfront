@@ -170,11 +170,8 @@ function Home() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          {/* Trust badge */}
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 rounded-full px-4 py-1.5 mb-8">
-            <Sparkles className="h-3 w-3 text-gold" />
-            <span className="text-xs tracking-widest uppercase text-white/80">Nairobi's #1 Loc Specialist</span>
-          </div>
+
+
 
           <h1 className="font-serif text-6xl md:text-8xl mb-5 leading-[1.05] max-w-3xl">
             Proudly
