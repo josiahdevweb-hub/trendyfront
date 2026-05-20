@@ -196,7 +196,7 @@ function Home() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              to="/services"
+              to="/book"
               className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-8 py-4 rounded-md font-medium hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
               Book Appointment <ArrowRight className="h-4 w-4" />
@@ -341,7 +341,7 @@ function Home() {
                         <div className="flex items-center justify-between">
                           <p className="text-gold font-medium">{s.price}</p>
                           <Link
-                            to="/services"
+                            to="/book"
                             className="text-xs text-muted-foreground hover:text-gold transition-colors inline-flex items-center gap-1"
                           >
                             Book <ArrowRight className="h-3 w-3" />
@@ -531,7 +531,8 @@ function Home() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              to="/services"
+              to="/book"
+              search={{ service: "consultation" }}
               className="inline-flex items-center gap-2 bg-gold-foreground text-primary-foreground px-8 py-4 rounded-md font-medium hover:opacity-90 transition-all hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-gold-foreground focus-visible:ring-offset-2"
             >
               Book Free Consultation <ArrowRight className="h-4 w-4" />

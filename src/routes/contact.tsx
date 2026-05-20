@@ -46,7 +46,7 @@ function Contact() {
             </div>
             <h4 className="text-lg mb-2">Book Online</h4>
             <p className="text-sm text-muted-foreground mb-4">Use our Setmore booking system to schedule your appointment 24/7</p>
-            <button className="bg-gold text-gold-foreground px-6 py-2.5 rounded-md text-sm hover:opacity-90">Book Now via Setmore</button>
+            <Link to="/book" className="inline-flex bg-gold text-gold-foreground px-6 py-2.5 rounded-md text-sm hover:opacity-90">Book Now</Link>
           </div>
         </div>
 

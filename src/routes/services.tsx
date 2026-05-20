@@ -10,14 +10,14 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { title: "Sisterlocks", price: "From £350", time: "8-12 hours", desc: "Precision micro locs created using a specialized tool and technique. Perfect for those seeking a versatile, low-manipulation protective style.", img: "/images/styles/sisterlocks.jpg", features: ["Initial consultation included", "Precision parting and installation", "Aftercare kit and instructions", "Follow-up appointment guidance", "Lifetime installation warranty"] },
-  { title: "Microlocs", price: "From £280", time: "6-10 hours", desc: "Small, uniform locs installed using coiling, braiding, or interlocking. Offers styling flexibility with manageability.", img: "/images/styles/microlocs.jpg", features: ["Consultation to determine best method", "Professional installation", "Styling recommendations", "Maintenance schedule planning", "Product recommendations"] },
-  { title: "Traditional Locs", price: "From £180", time: "4-8 hours", desc: "Classic dreadlocks created through various methods including two-strand twists, coils, or freeform. A timeless protective style.", img: "/images/styles/traditional-locs.jpg", features: ["Multiple installation methods available", "Customized parting pattern", "Natural or cultivated options", "Maintenance guidance", "Growth tracking"] },
-  { title: "Retightening", price: "From £85", time: "2-4 hours", desc: "Essential maintenance service to keep your locs neat, healthy, and mature properly. Recommended every 4-6 weeks.", img: "/images/styles/retightening.jpg", features: ["Root maintenance", "Scalp cleansing and treatment", "Loc health assessment", "Styling included", "Next appointment scheduling"] },
-  { title: "Starter Locs", price: "From £150", time: "3-6 hours", desc: "Begin your loc journey with professional starter locs using your preferred method. Includes full consultation.", img: "/images/transformations/before-natural-3.jpg", features: ["In-depth consultation", "Method selection guidance", "Professional installation", "Starter care package", "Educational resources"] },
-  { title: "Loc Styling", price: "From £45", time: "1-2 hours", desc: "Creative styling services for special occasions or everyday wear. From updos to intricate designs.", img: "/images/styles/styling.jpg", features: ["Consultation on desired style", "Professional styling", "Loc-safe accessories", "Style longevity tips", "Photo-ready finish"] },
-  { title: "Loc Colour", price: "From £120", time: "3-5 hours", desc: "Safe, professional colour services for locs. From subtle highlights to bold transformations.", img: "/images/styles/color.jpg", features: ["Colour consultation", "Strand testing", "Professional application", "Deep conditioning treatment", "Colour maintenance guidance"] },
-  { title: "Consultation", price: "Free", time: "30-45 minutes", desc: "Personalized one-on-one consultation to discuss your hair goals, assess your hair, and create a care plan.", img: "/images/styles/consultation.jpg", features: ["Hair and scalp assessment", "Goal discussion", "Method recommendations", "Timeline and pricing", "Question and answer session"] },
+  { slug: "sisterlocks", title: "Sisterlocks", price: "From £350", time: "8-12 hours", desc: "Precision micro locs created using a specialized tool and technique. Perfect for those seeking a versatile, low-manipulation protective style.", img: "/images/styles/sisterlocks.jpg", features: ["Initial consultation included", "Precision parting and installation", "Aftercare kit and instructions", "Follow-up appointment guidance", "Lifetime installation warranty"] },
+  { slug: "microlocs", title: "Microlocs", price: "From £280", time: "6-10 hours", desc: "Small, uniform locs installed using coiling, braiding, or interlocking. Offers styling flexibility with manageability.", img: "/images/styles/microlocs.jpg", features: ["Consultation to determine best method", "Professional installation", "Styling recommendations", "Maintenance schedule planning", "Product recommendations"] },
+  { slug: "traditional-locs", title: "Traditional Locs", price: "From £180", time: "4-8 hours", desc: "Classic dreadlocks created through various methods including two-strand twists, coils, or freeform. A timeless protective style.", img: "/images/styles/traditional-locs.jpg", features: ["Multiple installation methods available", "Customized parting pattern", "Natural or cultivated options", "Maintenance guidance", "Growth tracking"] },
+  { slug: "retightening", title: "Retightening", price: "From £85", time: "2-4 hours", desc: "Essential maintenance service to keep your locs neat, healthy, and mature properly. Recommended every 4-6 weeks.", img: "/images/styles/retightening.jpg", features: ["Root maintenance", "Scalp cleansing and treatment", "Loc health assessment", "Styling included", "Next appointment scheduling"] },
+  { slug: "starter-locs", title: "Starter Locs", price: "From £150", time: "3-6 hours", desc: "Begin your loc journey with professional starter locs using your preferred method. Includes full consultation.", img: "/images/transformations/before-natural-3.jpg", features: ["In-depth consultation", "Method selection guidance", "Professional installation", "Starter care package", "Educational resources"] },
+  { slug: "loc-styling", title: "Loc Styling", price: "From £45", time: "1-2 hours", desc: "Creative styling services for special occasions or everyday wear. From updos to intricate designs.", img: "/images/styles/styling.jpg", features: ["Consultation on desired style", "Professional styling", "Loc-safe accessories", "Style longevity tips", "Photo-ready finish"] },
+  { slug: "loc-colour", title: "Loc Colour", price: "From £120", time: "3-5 hours", desc: "Safe, professional colour services for locs. From subtle highlights to bold transformations.", img: "/images/styles/color.jpg", features: ["Colour consultation", "Strand testing", "Professional application", "Deep conditioning treatment", "Colour maintenance guidance"] },
+  { slug: "consultation", title: "Consultation", price: "Free", time: "30-45 minutes", desc: "Personalized one-on-one consultation to discuss your hair goals, assess your hair, and create a care plan.", img: "/images/styles/consultation.jpg", features: ["Hair and scalp assessment", "Goal discussion", "Method recommendations", "Timeline and pricing", "Question and answer session"] },
 ];
 
 function Services() {
@@ -60,7 +60,7 @@ function Services() {
                 </ul>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="font-medium text-lg text-gold">{s.price}</span>
-                  <Link to="/contact" className="bg-dark text-primary-foreground px-4 py-2 rounded-md text-sm hover:bg-dark/90">Book</Link>
+                  <Link to="/book" search={{ service: s.slug }} className="bg-dark text-primary-foreground px-4 py-2 rounded-md text-sm hover:bg-dark/90">Book</Link>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@ function Services() {
         <div className="mx-auto max-w-3xl px-6">
           <h2 className="text-4xl md:text-5xl mb-6">Ready to Get Started?</h2>
           <p className="text-primary-foreground/70 mb-8">Book your free consultation today and let's discuss your hair goals</p>
-          <Link to="/contact" className="inline-flex bg-gold text-gold-foreground px-8 py-3.5 rounded-md hover:opacity-90">Book Free Consultation</Link>
+          <Link to="/book" search={{ service: "consultation" }} className="inline-flex bg-gold text-gold-foreground px-8 py-3.5 rounded-md hover:opacity-90">Book Free Consultation</Link>
         </div>
       </section>
     </>
