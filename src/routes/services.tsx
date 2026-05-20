@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({ meta: [
