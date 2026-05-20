@@ -34,7 +34,7 @@ function Services() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s) => (
-            <div className="bg-card rounded-md overflow-hidden group flex flex-col">
+            <div key={s.title} className="bg-card rounded-md overflow-hidden group flex flex-col">
               <div className="relative overflow-hidden">
                 <img
                   src={s.img}
