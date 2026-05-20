@@ -452,9 +452,7 @@ function Home() {
             { emoji: "🎓", title: "Certified Specialists", desc: "Our stylists hold formal certification in Sisterlocks and are trained in the latest loc techniques — not self-taught." },
             { emoji: "🌿", title: "Natural Products Only", desc: "Every product we use is free from sulphates, parabens, and harmful chemicals. Your hair's health always comes first." },
             { emoji: "💛", title: "Personalised Consultations", desc: "We start every new client relationship with a free consultation — because your hair journey is unique to you." },
-            { emoji: "✂️", title: "Expert Maintenance", desc: "Regular retightening by a specialist makes a measurable difference to the health and longevity of your locs." },
-            { emoji: "🏆", title: "8+ Years of Excellence", desc: "Over eight years serving Nairobi's natural hair community, with hundreds of successful transformations." },
-            { emoji: "🔁", title: "Loyalty Rewards", desc: "Regular clients enjoy priority booking, exclusive discounts, and rewards that grow with every visit." },
+            
           ].map(({ emoji, title, desc }, i) => (
             <div
               key={title}
