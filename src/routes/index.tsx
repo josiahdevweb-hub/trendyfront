@@ -2,13 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Star, Instagram, Phone, Mail, MapPin, ChevronDown, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -60,14 +54,16 @@ const services = [
 
 const testimonials = [
   {
-    quote: "The best decision I ever made. My sisterlocks are absolutely beautiful — I get compliments everywhere I go.",
+    quote:
+      "The best decision I ever made. My sisterlocks are absolutely beautiful — I get compliments everywhere I go.",
     name: "Amara Johnson",
     service: "Sisterlocks",
     initials: "AJ",
     rating: 5,
   },
   {
-    quote: "Professional, knowledgeable, and so welcoming. I finally found my loc specialist and I'm never going anywhere else.",
+    quote:
+      "Professional, knowledgeable, and so welcoming. I finally found my loc specialist and I'm never going anywhere else.",
     name: "Kendra Williams",
     service: "Microlocs",
     initials: "KW",
@@ -133,9 +129,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
           className={`h-4 w-4 text-gold flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
         />
       </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ${open ? "max-h-48 pb-5" : "max-h-0"}`}
-      >
+      <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-48 pb-5" : "max-h-0"}`}>
         <p className="text-muted-foreground text-sm leading-relaxed">{a}</p>
       </div>
     </div>
@@ -181,7 +175,10 @@ function Home() {
         {/* Subtle grain overlay */}
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
-          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }}
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+          }}
         />
 
         <div
@@ -196,7 +193,8 @@ function Home() {
           </div>
 
           <h1 className="font-serif text-6xl md:text-8xl mb-5 leading-[1.05] max-w-3xl">
-            Proudly<br />
+            Proudly
+            <br />
             <span className="italic text-gold">Natural.</span>
           </h1>
 
@@ -206,7 +204,9 @@ function Home() {
 
           {/* Social proof strip */}
           <div className="flex items-center gap-1 mb-10">
-            {[1,2,3,4,5].map(i => <Star key={i} className="h-3 w-3 fill-gold text-gold" />)}
+            {[1, 2, 3, 4, 5].map((i) => (
+              <Star key={i} className="h-3 w-3 fill-gold text-gold" />
+            ))}
             <span className="text-white/70 text-xs ml-2">4.9 · 500+ happy clients</span>
           </div>
 
@@ -265,10 +265,7 @@ function Home() {
             {/* Mini trust signals */}
             <div className="flex flex-wrap gap-3 mb-8">
               {["Certified Loc Specialists", "Natural Products Only", "Free Consultation"].map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs px-3 py-1.5 border border-gold/30 rounded-full text-gold bg-gold/5"
-                >
+                <span key={tag} className="text-xs px-3 py-1.5 border border-gold/30 rounded-full text-gold bg-gold/5">
                   ✓ {tag}
                 </span>
               ))}
@@ -406,9 +403,7 @@ function Home() {
                 className="border border-primary-foreground/10 rounded-xl p-8 hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
                 <StarRating count={t.rating} />
-                <p className="font-serif italic text-base mb-6 leading-relaxed flex-1">
-                  "{t.quote}"
-                </p>
+                <p className="font-serif italic text-base mb-6 leading-relaxed flex-1">"{t.quote}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t border-primary-foreground/10">
                   <div className="h-9 w-9 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center text-gold text-xs font-semibold flex-shrink-0">
                     {t.initials}
@@ -449,10 +444,21 @@ function Home() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { emoji: "🎓", title: "Certified Specialists", desc: "Our stylists hold formal certification in Sisterlocks and are trained in the latest loc techniques — not self-taught." },
-            { emoji: "🌿", title: "Natural Products Only", desc: "Every product we use is free from sulphates, parabens, and harmful chemicals. Your hair's health always comes first." },
-            { emoji: "💛", title: "Personalised Consultations", desc: "We start every new client relationship with a free consultation — because your hair journey is unique to you." },
-            
+            {
+              emoji: "🎓",
+              title: "Certified Specialists",
+              desc: "Our stylists hold formal certification in Sisterlocks and are trained in the latest loc techniques — not self-taught.",
+            },
+            {
+              emoji: "🌿",
+              title: "Natural Products Only",
+              desc: "Every product we use is free from sulphates, parabens, and harmful chemicals. Your hair's health always comes first.",
+            },
+            {
+              emoji: "💛",
+              title: "Personalised Consultations",
+              desc: "We start every new client relationship with a free consultation — because your hair journey is unique to you.",
+            },
           ].map(({ emoji, title, desc }, i) => (
             <div
               key={title}
@@ -468,25 +474,6 @@ function Home() {
       </section>
 
       {/* ── 8. FAQ ────────────────────────────────────────────────────── */}
-      <section className="bg-secondary/40 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl px-6">
-          <div className="text-center mb-12">
-            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">FAQ</p>
-            <h2 className="text-3xl md:text-4xl">Common questions</h2>
-          </div>
-          <div className="bg-card border border-border rounded-xl px-8 divide-y divide-border">
-            {faqs.map((faq) => (
-              <FaqItem key={faq.q} q={faq.q} a={faq.a} />
-            ))}
-          </div>
-          <p className="text-center mt-6 text-sm text-muted-foreground">
-            More questions?{" "}
-            <Link to="/contact" className="text-gold hover:underline">
-              Get in touch →
-            </Link>
-          </p>
-        </div>
-      </section>
 
       {/* ── 9. SOCIAL MEDIA ───────────────────────────────────────────── */}
       <section className="py-16 md:py-20 mx-auto max-w-7xl px-6">
@@ -553,12 +540,10 @@ function Home() {
       <section className="bg-dark text-primary-foreground py-16 md:py-20">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Stay Connected</p>
-          <h2 className="font-serif text-3xl md:text-4xl mb-3">
-            Hair tips, offers &amp; first access
-          </h2>
+          <h2 className="font-serif text-3xl md:text-4xl mb-3">Hair tips, offers &amp; first access</h2>
           <p className="text-primary-foreground/60 mb-8 text-sm leading-relaxed">
-            Join 300+ clients who get expert hair care advice, exclusive promotions, and priority booking
-            windows delivered straight to their inbox.
+            Join 300+ clients who get expert hair care advice, exclusive promotions, and priority booking windows
+            delivered straight to their inbox.
           </p>
 
           {emailStatus === "success" ? (
