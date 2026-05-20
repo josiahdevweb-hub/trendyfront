@@ -537,45 +537,7 @@ function Home() {
       </section>
 
       {/* ── 10. NEWSLETTER ────────────────────────────────────────────── */}
-      {/* <section className="bg-dark text-primary-foreground py-16 md:py-20">
-        <div className="mx-auto max-w-2xl px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Stay Connected</p>
-          <h2 className="font-serif text-3xl md:text-4xl mb-3">Hair tips, offers &amp; first access</h2>
-          <p className="text-primary-foreground/60 mb-8 text-sm leading-relaxed">
-            Join 300+ clients who get expert hair care advice, exclusive promotions, and priority booking windows
-            delivered straight to their inbox.
-          </p>
-
-          {emailStatus === "success" ? (
-            <div className="bg-gold/10 border border-gold/30 rounded-md px-6 py-4 text-gold text-sm font-medium">
-              ✓ You're on the list! We'll be in touch soon.
-            </div>
-          ) : (
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email address"
-                required
-                aria-label="Email address for newsletter"
-                className="flex-1 px-4 py-3 rounded-md bg-primary-foreground/5 border border-primary-foreground/15 focus:outline-none focus:border-gold text-primary-foreground placeholder:text-primary-foreground/30 text-sm"
-              />
-              <button
-                type="submit"
-                disabled={emailStatus === "loading"}
-                className="bg-gold text-gold-foreground px-6 py-3 rounded-md font-medium text-sm hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-              >
-                {emailStatus === "loading" ? "Subscribing…" : "Subscribe Free"}
-              </button>
-            </form>
-          )}
-          {emailStatus === "error" && (
-            <p className="mt-3 text-red-400 text-xs">Something went wrong — please try again.</p>
-          )}
-          <p className="mt-4 text-primary-foreground/30 text-xs">No spam. Unsubscribe anytime.</p>
-        </div>
-      </section> */}
+     */}
 
       {/* ── 11. BOOKING CTA BANNER ────────────────────────────────────── */}
       <section className="bg-gold py-14">
