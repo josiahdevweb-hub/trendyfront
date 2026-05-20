@@ -607,29 +607,6 @@ function Home() {
       </section>
 
       {/* ── 12. CONTACT STRIP ─────────────────────────────────────────── */}
-      <section className="bg-secondary/30 py-10 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
-            <a href="tel:+254700000000" className="flex items-center gap-2 hover:text-gold transition-colors">
-              <Phone className="h-4 w-4" /> +254 700 000 000
-            </a>
-            <a href="mailto:hello@trendylocs.com" className="flex items-center gap-2 hover:text-gold transition-colors">
-              <Mail className="h-4 w-4" /> hello@trendylocs.com
-            </a>
-            <span className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-gold" /> Nairobi, Kenya
-            </span>
-            <a
-              href="https://instagram.com/trendylocs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-gold transition-colors"
-            >
-              <Instagram className="h-4 w-4" /> @trendylocs
-            </a>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
