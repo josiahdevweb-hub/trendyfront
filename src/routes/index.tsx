@@ -138,27 +138,11 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 function Home() {
   const [mounted, setMounted] = useState(false);
-  const [email, setEmail] = useState("");
-  const [emailStatus, setEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  async function handleSubscribe(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email) return;
-    setEmailStatus("loading");
-    try {
-      // Replace with your email service endpoint (Mailchimp / Resend / etc.)
-      await new Promise((r) => setTimeout(r, 1000)); // placeholder
-      setEmailStatus("success");
-      setEmail("");
-    } catch {
-      setEmailStatus("error");
-    }
-  }
 
   return (
     <>
@@ -536,8 +520,6 @@ function Home() {
         </div>
       </section>
 
-      {/* ── 10. NEWSLETTER ────────────────────────────────────────────── */}
-     */}
 
       {/* ── 11. BOOKING CTA BANNER ────────────────────────────────────── */}
       <section className="bg-gold py-14">
