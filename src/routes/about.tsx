@@ -104,14 +104,15 @@ function About() {
               next day install new ones. Once the hair was too damaged for braids I had weaves on. While doing all this I still 
               kept on relaxing my hair.
             </p>
-            <p>
             
+            <p>
               A wake-up call came when I had my first baby and I made the mistake of retouching my hair and girl did
               it fall out. From then on I stopped relaxing my hair and kept it natural. I however made sure it was 
               hidden by braiding it, weaving and using crotchet braids. When I stopped relaxing my hair I thought if 
               I braided it would not break as much. Wrong again; the tension with braiding and styling had damaged my 
               natural hair.
             <p>
+              <p>
               A dear friend suggested I do dreadlocks. Knowing I could braid the locks I did it. I had not embraced 
               and accepted my natural hair so I had extensions attached to my locks which obviously damaged my hair. 
               After going through this hair journey I knew I did not want my two little girls to go through the same 
