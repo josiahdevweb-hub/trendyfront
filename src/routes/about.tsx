@@ -4,8 +4,6 @@ import {
   Award,
   Users,
   TrendingUp,
-  Target,
-  Eye,
   BadgeCheck,
   Scissors,
   HeartHandshake,
@@ -25,10 +23,16 @@ export const Route = createFileRoute("/about")({
 
 function About() {
   const values = [
-    { icon: Sparkles, title: "Authenticity", desc: "We celebrate natural beauty and embrace cultural heritage through our craft." },
-    { icon: Award, title: "Excellence", desc: "Certified expertise and continuous education ensure the highest quality service." },
-    { icon: Users, title: "Community", desc: "Building a supportive space where natural hair is celebrated and nurtured." },
-    { icon: TrendingUp, title: "Growth", desc: "Empowering clients on their journey to healthy, beautiful natural hair." },
+    { icon: Sparkles, title: "Authenticity", desc: "We celebrate natural beauty and embrace cultural heritage." },
+    { icon: Award, title: "Excellence", desc: "Certified expertise and continuous education in every service." },
+    { icon: Users, title: "Community", desc: "A supportive space where natural hair is celebrated." },
+    { icon: TrendingUp, title: "Growth", desc: "Empowering clients on their natural hair journey." },
+  ];
+  const history = [
+    { year: "4 Years Ago", title: "The Beginning", desc: "Trendylocs opened in Manchester with a single chair and a clear vision." },
+    { year: "Growth", title: "Building the Craft", desc: "Expanded into Sisterlocks, Microlocs and Traditional Locs as the client family grew." },
+    { year: "Milestones", title: "500+ Clients Served", desc: "Crossed 1000+ installations and earned trust across the North West." },
+    { year: "Today", title: "Manchester's Premier Studio", desc: "A dedicated team, refined techniques, and a loyal, growing community." },
   ];
   const certs = [
     { icon: BadgeCheck, label: "Certified Sisterlocks Consultant" },
@@ -90,71 +94,73 @@ function About() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="bg-secondary/40 py-24">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-8">
-          {[
-            { icon: Target, title: "Our Mission", text: "To provide premium, personalized natural hair and locs services that honor cultural heritage while embracing modern techniques. We create a welcoming, educational environment where every client feels valued." },
-            { icon: Eye, title: "Our Vision", text: "To be recognized as the leading natural hair and locs specialist in the UK, setting the standard for excellence in technique, client care, and education." },
-          ].map(({ icon: Icon, title, text }) => (
-            <div
-              key={title}
-              className="bg-card/60 backdrop-blur-md border border-gold/20 shadow-xl rounded-2xl p-10 hover:scale-[1.02] hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="w-14 h-14 rounded-xl bg-gold/15 flex items-center justify-center mb-5">
-                <Icon className="w-7 h-7 text-gold" />
-              </div>
-              <h3 className="text-2xl mb-4 text-gold">{title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Our Values — Glass cards */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Values</p>
-          <h2 className="text-4xl md:text-5xl">The principles that guide us</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {values.map(({ icon: Icon, title, desc }) => (
-            <div
-              key={title}
-              className="bg-card/50 backdrop-blur-md border border-white/30 shadow-xl rounded-2xl p-8 hover:scale-105 hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-4">
-                <Icon className="w-6 h-6 text-gold" />
-              </div>
-              <h3 className="text-xl mb-3">{title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section className="bg-secondary/40 py-24">
-        <div className="mx-auto max-w-6xl px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Credentials</p>
-          <h2 className="text-4xl mb-12">Certifications & Expertise</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {certs.map(({ icon: Icon, label }) => (
-              <div
-                key={label}
-                className="bg-card/60 backdrop-blur-md border border-gold/20 shadow-lg rounded-2xl px-6 py-5 flex items-center gap-4 hover:scale-105 hover:border-gold/50 transition-all duration-300"
-              >
-                <div className="w-11 h-11 rounded-lg bg-gold/15 flex items-center justify-center shrink-0">
-                  <Icon className="w-5 h-5 text-gold" />
+      {/* History + Certifications — two columns */}
+      <section className="bg-secondary/40 py-16">
+        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-10">
+          {/* Our History */}
+          <div>
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our History</p>
+            <h2 className="text-3xl md:text-4xl mb-8">A journey of craft & growth</h2>
+            <div className="space-y-4">
+              {history.map(({ year, title, desc }) => (
+                <div
+                  key={title}
+                  className="bg-card/60 backdrop-blur-md border border-gold/20 shadow-sm rounded-xl p-5 hover:border-gold/40 transition-all duration-300"
+                >
+                  <div className="flex items-baseline gap-3 mb-1">
+                    <span className="text-xs uppercase tracking-[0.2em] text-gold font-medium">{year}</span>
+                    <span className="h-px flex-1 bg-gold/20" />
+                  </div>
+                  <h3 className="text-lg font-medium mb-1">{title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
                 </div>
-                <span className="text-sm text-left font-medium">{label}</span>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div>
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Credentials</p>
+            <h2 className="text-3xl md:text-4xl mb-8">Certifications & expertise</h2>
+            <div className="space-y-3">
+              {certs.map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="bg-card/60 backdrop-blur-md border border-gold/20 shadow-sm rounded-xl px-5 py-4 flex items-center gap-4 hover:border-gold/40 transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-gold/15 flex items-center justify-center shrink-0">
+                    <Icon className="w-5 h-5 text-gold" />
+                  </div>
+                  <span className="text-sm font-medium">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy — match homepage aesthetic */}
+      {/* Principles — compact */}
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="text-center mb-10">
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-2">Our Values</p>
+          <h2 className="text-2xl md:text-3xl">The principles that guide us</h2>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {values.map(({ icon: Icon, title, desc }) => (
+            <div
+              key={title}
+              className="bg-card/50 backdrop-blur-md border border-white/20 shadow-sm rounded-xl p-5 hover:border-gold/40 transition-all duration-300"
+            >
+              <div className="w-9 h-9 rounded-lg bg-gold/15 flex items-center justify-center mb-3">
+                <Icon className="w-4 h-4 text-gold" />
+              </div>
+              <h3 className="text-base font-medium mb-1">{title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="bg-dark text-primary-foreground py-24">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Philosophy</p>
