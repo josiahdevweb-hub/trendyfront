@@ -25,10 +25,16 @@ export const Route = createFileRoute("/about")({
 
 function About() {
   const values = [
-    { icon: Sparkles, title: "Authenticity", desc: "We celebrate natural beauty and embrace cultural heritage through our craft." },
-    { icon: Award, title: "Excellence", desc: "Certified expertise and continuous education ensure the highest quality service." },
-    { icon: Users, title: "Community", desc: "Building a supportive space where natural hair is celebrated and nurtured." },
-    { icon: TrendingUp, title: "Growth", desc: "Empowering clients on their journey to healthy, beautiful natural hair." },
+    { icon: Sparkles, title: "Authenticity", desc: "We celebrate natural beauty and embrace cultural heritage." },
+    { icon: Award, title: "Excellence", desc: "Certified expertise and continuous education in every service." },
+    { icon: Users, title: "Community", desc: "A supportive space where natural hair is celebrated." },
+    { icon: TrendingUp, title: "Growth", desc: "Empowering clients on their natural hair journey." },
+  ];
+  const history = [
+    { year: "4 Years Ago", title: "The Beginning", desc: "Trendylocs opened in Manchester with a single chair and a clear vision." },
+    { year: "Growth", title: "Building the Craft", desc: "Expanded into Sisterlocks, Microlocs and Traditional Locs as the client family grew." },
+    { year: "Milestones", title: "500+ Clients Served", desc: "Crossed 1000+ installations and earned trust across the North West." },
+    { year: "Today", title: "Manchester's Premier Studio", desc: "A dedicated team, refined techniques, and a loyal, growing community." },
   ];
   const certs = [
     { icon: BadgeCheck, label: "Certified Sisterlocks Consultant" },
