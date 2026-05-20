@@ -147,40 +147,46 @@ function Home() {
   return (
     <>
       {/* ── 1. HERO ────────────────────────────────────────────────────── */}
-      <section className="relative h-[90dvh] md:h-[90vh] w-full overflow-hidden">
+      <section className="relative h-[80dvh] md:h-[80vh] w-full overflow-hidden">
         <img
           src="/images/salon/interior.jpg"
           alt="Trendylocs salon interior — Manchester's premier locs specialist"
           className="absolute inset-0 w-full h-full object-cover"
           onError={onImgError}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/85" />
 
         <div
           className={`relative h-full flex flex-col items-center justify-center text-center px-6 text-white transition-all duration-1000 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <h1 className="font-serif text-6xl md:text-8xl mb-5 leading-[1.05] max-w-3xl">
+          <h1
+            className="font-serif text-5xl sm:text-6xl md:text-7xl mb-6 leading-[1.05] max-w-3xl tracking-tight"
+            style={{ textShadow: "0 2px 24px rgba(0,0,0,0.5)" }}
+          >
             Proudly
             <br />
             <span className="italic text-gold">Natural.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/85 mb-10 max-w-xl leading-relaxed">
+          <p
+            className="text-base sm:text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed"
+            style={{ textShadow: "0 1px 12px rgba(0,0,0,0.6)" }}
+          >
             Premium Sisterlocks, Microlocs &amp; Traditional Locs — crafted with precision for every hair journey.
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-8 py-4 rounded-md font-medium hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-md font-medium text-sm sm:text-base hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
               Book Appointment <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/gallery"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-8 py-4 rounded-md hover:bg-white/20 transition focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-6 sm:px-8 py-3 sm:py-4 rounded-md text-sm sm:text-base hover:bg-white/20 transition focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
             >
               View Transformations
             </Link>
