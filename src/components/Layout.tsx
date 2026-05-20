@@ -39,7 +39,7 @@ function Header() {
             <ShoppingBag className="h-5 w-5" />
             <span className="absolute -top-2 -right-2 h-4 w-4 rounded-full bg-gold text-[10px] flex items-center justify-center text-gold-foreground">0</span>
           </button>
-          <Link to="/contact" className="hidden md:inline-flex bg-dark text-primary-foreground px-5 py-2.5 rounded-md text-sm hover:bg-dark/90 transition-colors">
+          <Link to="/book" className="hidden md:inline-flex bg-dark text-primary-foreground px-5 py-2.5 rounded-md text-sm hover:bg-dark/90 transition-colors">
             Book Appointment
           </Link>
           <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
@@ -102,12 +102,23 @@ function Footer() {
   );
 }
 
+function MobileBookBar() {
+  return (
+    <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-background/95 backdrop-blur border-t border-border px-4 py-3">
+      <Link to="/book" className="block w-full text-center bg-gold text-gold-foreground py-3 rounded-md text-sm font-medium hover:opacity-90">
+        Book Appointment
+      </Link>
+    </div>
+  );
+}
+
 export function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1"><Outlet /></main>
+      <main className="flex-1 pb-20 md:pb-0"><Outlet /></main>
       <Footer />
+      <MobileBookBar />
     </div>
   );
 }
