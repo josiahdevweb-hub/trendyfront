@@ -121,8 +121,8 @@ function About() {
 
               <p>
               I got introduced to sisterlocks and got hooked. I love that it is versatile. I feel I have come full 
-                circle and could not wait to have my sisterlocks installed after the damage caused by years of 
-                braiding. I then trained as as sisterlocks practioner and I have since become a sisterlocks consultant.
+              circle and could not wait to have my sisterlocks installed after the damage caused by years of 
+              braiding. I then trained as as sisterlocks practioner and I have since become a sisterlocks consultant.
             </p>
 
               <p>
