@@ -70,7 +70,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Nairobi.",
+    quote: "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Manchester.",
     name: "Nia Thompson",
     service: "Natural Hair Care",
     initials: "NT",
@@ -150,7 +150,7 @@ function Home() {
       <section className="relative h-[calc(100vh-5rem)] min-h-[620px] w-full overflow-hidden">
         <img
           src="/images/salon/interior.jpg"
-          alt="Trendylocs salon interior — Nairobi's premier locs specialist"
+          alt="Trendylocs salon interior — Manchester's premier locs specialist"
           className="absolute inset-0 w-full h-full object-cover"
           onError={onImgError}
         />
@@ -236,7 +236,7 @@ function Home() {
               Your hair. <span className="italic">Our expertise.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              We are Nairobi's premier locs and natural hair salon — specialising in Sisterlocks, Microlocs, and
+              We are Manchester's premier locs and natural hair salon — specialising in Sisterlocks, Microlocs, and
               Traditional Locs. Every visit is a personalised journey toward healthy, thriving hair.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -285,7 +285,7 @@ function Home() {
             <div className="aspect-square overflow-hidden rounded-md">
               <img
                 src="/images/salon/interior.jpg"
-                alt="Trendylocs salon interior in Nairobi"
+                alt="Trendylocs salon interior in Manchester, UK"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
@@ -324,7 +324,7 @@ function Home() {
                       <div className="aspect-[4/3] w-full overflow-hidden bg-secondary/40">
                         <img
                           src={s.img}
-                          alt={`${s.title} at Trendylocs salon Nairobi`}
+                          alt={`${s.title} at Trendylocs salon Manchester`}
                           loading="lazy"
                           decoding="async"
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
