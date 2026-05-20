@@ -506,9 +506,16 @@ function Home() {
           </a>
         </div>
 
-        {/* Instagram grid placeholder — replace with real embed or API feed */}
+        {/* Instagram grid — drop files in public/images/instagram/ as post-1.jpg…post-6.jpg to replace */}
         <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-8">
-          {Array.from({ length: 6 }).map((_, i) => (
+          {[
+            "/images/styles/goddess-locs.jpg",
+            "/images/styles/microlocs.jpg",
+            "/images/styles/loc-color.jpg",
+            "/images/styles/sisterlocks.jpg",
+            "/images/styles/updo.jpg",
+            "/images/styles/traditional-locs.jpg",
+          ].map((src, i) => (
             <a
               key={i}
               href="https://instagram.com/trendylocs"
@@ -517,7 +524,7 @@ function Home() {
               className="aspect-square overflow-hidden rounded-md bg-secondary/60 relative group"
             >
               <img
-                src={`/images/instagram/post-${i + 1}.jpg`}
+                src={src}
                 alt={`Trendylocs Instagram post ${i + 1} — loc styles and transformations`}
                 loading="lazy"
                 decoding="async"
