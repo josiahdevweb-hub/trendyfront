@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({ meta: [
@@ -31,36 +31,38 @@ function Services() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {services.map((s) => (
-            <div key={s.title} className="bg-card rounded-md overflow-hidden group flex flex-col">
-              <div className="relative overflow-hidden">
+            <div
+              key={s.title}
+              className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col w-full max-w-sm text-center"
+            >
+              <div className="overflow-hidden">
                 <img
                   src={s.img}
                   alt={s.title}
                   loading="lazy"
                   decoding="async"
                   onError={(e) => { if (e.currentTarget.src.indexOf('/images/fallback.jpg') === -1) e.currentTarget.src = '/images/fallback.jpg'; }}
-                  className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-5 flex-1 flex flex-col">
-                <p className="text-xs uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
-                  <Clock className="h-3.5 w-3.5" /> {s.time}
+              <div className="p-6 flex-1 flex flex-col items-center">
+                <p className="text-[11px] uppercase tracking-[0.2em] text-gold mb-2 flex items-center gap-1.5">
+                  <Clock className="h-3 w-3" /> {s.time}
                 </p>
-                <h3 className="text-lg mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground mb-3 flex-1 line-clamp-3">{s.desc}</p>
-                <ul className="space-y-1.5 mb-4">
-                  {s.features.slice(0, 3).map(f => (
-                    <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground">
-                      <Check className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center justify-between mt-auto">
-                  <span className="font-medium text-lg text-gold">{s.price}</span>
-                  <Link to="/book" search={{ service: s.slug }} className="bg-dark text-primary-foreground px-4 py-2 rounded-md text-sm hover:bg-dark/90">Book</Link>
+                <h3 className="font-serif text-xl mb-2">{s.title}</h3>
+                <p className="text-sm text-muted-foreground mb-5 line-clamp-3 max-w-xs">{s.desc}</p>
+                <div className="mt-auto flex flex-col items-center gap-3">
+                  <span className="text-base font-medium text-gold">{s.price}</span>
+                  <Link
+                    to="/book"
+                    search={{ service: s.slug }}
+                    className="inline-flex items-center justify-center bg-dark text-primary-foreground px-6 py-2.5 rounded-full text-sm hover:bg-dark/90 transition-colors"
+                  >
+                    Book Now
+                  </Link>
                 </div>
               </div>
             </div>
