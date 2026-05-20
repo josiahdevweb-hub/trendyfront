@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Star, Instagram, Phone, Mail, MapPin, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowRight, Star, Instagram, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
@@ -70,7 +70,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Nairobi.",
+    quote: "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Manchester.",
     name: "Nia Thompson",
     service: "Natural Hair Care",
     initials: "NT",
@@ -150,7 +150,7 @@ function Home() {
       <section className="relative h-[calc(100vh-5rem)] min-h-[620px] w-full overflow-hidden">
         <img
           src="/images/salon/interior.jpg"
-          alt="Trendylocs salon interior — Nairobi's premier locs specialist"
+          alt="Trendylocs salon interior — Manchester's premier locs specialist"
           className="absolute inset-0 w-full h-full object-cover"
           onError={onImgError}
         />
@@ -170,11 +170,8 @@ function Home() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          {/* Trust badge */}
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 rounded-full px-4 py-1.5 mb-8">
-            <Sparkles className="h-3 w-3 text-gold" />
-            <span className="text-xs tracking-widest uppercase text-white/80">Nairobi's #1 Loc Specialist</span>
-          </div>
+
+
 
           <h1 className="font-serif text-6xl md:text-8xl mb-5 leading-[1.05] max-w-3xl">
             Proudly
@@ -239,7 +236,7 @@ function Home() {
               Your hair. <span className="italic">Our expertise.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              We are Nairobi's premier locs and natural hair salon — specialising in Sisterlocks, Microlocs, and
+              We are Manchester's premier locs and natural hair salon — specialising in Sisterlocks, Microlocs, and
               Traditional Locs. Every visit is a personalised journey toward healthy, thriving hair.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -288,7 +285,7 @@ function Home() {
             <div className="aspect-square overflow-hidden rounded-md">
               <img
                 src="/images/salon/interior.jpg"
-                alt="Trendylocs salon interior in Nairobi"
+                alt="Trendylocs salon interior in Manchester, UK"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
@@ -327,7 +324,7 @@ function Home() {
                       <div className="aspect-[4/3] w-full overflow-hidden bg-secondary/40">
                         <img
                           src={s.img}
-                          alt={`${s.title} at Trendylocs salon Nairobi`}
+                          alt={`${s.title} at Trendylocs salon Manchester`}
                           loading="lazy"
                           decoding="async"
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
