@@ -111,27 +111,23 @@ function About() {
               hidden by braiding it, weaving and using crotchet braids. When I stopped relaxing my hair I thought if 
               I braided it would not break as much. Wrong again; the tension with braiding and styling had damaged my 
               natural hair.
+            </p>
             <p>
-              <p>
               A dear friend suggested I do dreadlocks. Knowing I could braid the locks I did it. I had not embraced 
               and accepted my natural hair so I had extensions attached to my locks which obviously damaged my hair. 
               After going through this hair journey I knew I did not want my two little girls to go through the same 
               experience. I want to teach them to love their natural hair. I cannot do that while braiding or relaxing my hair.
             </p>
-
-              <p>
+            <p>
               I got introduced to sisterlocks and got hooked. I love that it is versatile. I feel I have come full 
               circle and could not wait to have my sisterlocks installed after the damage caused by years of 
               braiding. I then trained as as sisterlocks practioner and I have since become a sisterlocks consultant.
             </p>
-
-              <p>
+            <p>
               That is how I began my hair journey, let me help you start yours!
             </p>
+            <h3 className="text-xl text-foreground pt-2">Ginna, Owner, Trendylocs</h3>
 
-              <p>
-              <h2>Ginna, Owner, Trendylocs</h2>
-            </p>
               
           </div>
         </div>
