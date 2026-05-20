@@ -56,7 +56,7 @@ function About() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <div className="h-[220px] md:h-[320px] overflow-hidden rounded-2xl shadow-xl">
+        <div className="aspect-[4/5] md:aspect-[4/5] max-h-[600px] overflow-hidden rounded-2xl shadow-xl">
           <img
             src="/images/salon/founder.jpg"
             alt="Founder"
