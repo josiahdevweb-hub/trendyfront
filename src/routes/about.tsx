@@ -29,10 +29,26 @@ function About() {
     { icon: TrendingUp, title: "Growth", desc: "Empowering clients on their natural hair journey." },
   ];
   const history = [
-    { year: "4 Years Ago", title: "The Beginning", desc: "Trendylocs opened in Manchester with a single chair and a clear vision." },
-    { year: "Growth", title: "Building the Craft", desc: "Expanded into Sisterlocks, Microlocs and Traditional Locs as the client family grew." },
-    { year: "Milestones", title: "500+ Clients Served", desc: "Crossed 1000+ installations and earned trust across the North West." },
-    { year: "Today", title: "Manchester's Premier Studio", desc: "A dedicated team, refined techniques, and a loyal, growing community." },
+    {
+      year: "4 Years Ago",
+      title: "The Beginning",
+      desc: "Trendylocs opened in Manchester with a single chair and a clear vision.",
+    },
+    {
+      year: "Growth",
+      title: "Building the Craft",
+      desc: "Expanded into Sisterlocks, Microlocs and Traditional Locs as the client family grew.",
+    },
+    {
+      year: "Milestones",
+      title: "500+ Clients Served",
+      desc: "Crossed 1000+ installations and earned trust across the North West.",
+    },
+    {
+      year: "Today",
+      title: "Manchester's Premier Studio",
+      desc: "A dedicated team, refined techniques, and a loyal, growing community.",
+    },
   ];
   const certs = [
     { icon: BadgeCheck, label: "Certified Sisterlocks Consultant" },
@@ -78,17 +94,28 @@ function About() {
           <h2 className="text-4xl mb-6">A passion built into a craft.</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Trendylocs was founded with a simple yet powerful mission: to provide exceptional natural hair and locs
-              care in a space that celebrates the beauty and versatility of textured hair.
+              I am a Sisterlocks (TM) Consultant. I do Sisterlocks installations, re-tightenings and styling. I also
+              install, retighten and style dreadlocks and micro locks. I’m based in East Manchester, a 5 minute bus/car
+              drive from Manchester Piccadilly station.
             </p>
             <p>
-              Our founder's personal journey with locs inspired the creation of a salon where expertise meets passion.
-              After years of struggling to find quality loc maintenance, she decided to become the specialist she wished
-              she'd had.
+              I have been running away from my hair for as long as I can remember. I have gone through relaxers and
+              braiding tiny winy braids for years! The addiction to braiding was bad in such a way that I would undo the
+              braids and the next day install new ones. Once the hair was too damaged for braids I had weaves on. While
+              doing all this I still kept on relaxing my hair. A wake-up call came when I had my first baby and I made
+              the mistake of retouching my hair and girl did it fall out. From then on I stopped relaxing my hair and
+              kept it natural. I however made sure it was hidden by braiding it, weaving and using crotchet braids. When
+              I stopped relaxing my hair I thought if I braided it would not break as much. Wrong again; the tension
+              with braiding and styling had damaged my natural hair.
             </p>
             <p>
-              Today, Trendylocs stands as Manchester's premier destination for Sisterlocks, Microlocs, Traditional Locs,
-              and comprehensive natural hair care.
+              A dear friend suggested I do dreadlocks. Knowing I could braid the locks I did it. I had not embraced and
+              accepted my natural hair so I had extensions attached to my locks which obviously damaged my hair. After
+              going through this hair journey I knew I did not want my two little girls to go through the same
+              experience. I want to teach them to love their natural hair. I cannot do that while braiding or relaxing
+              my hair. I got introduced to sisterlocks and got hooked. I love that it is versatile. I feel I have come
+              full circle and could not wait to have my sisterlocks installed after the damage caused by years of
+              braiding. I then trained as as sisterlocks practioner and I have since become a sisterlocks consultant.
             </p>
           </div>
         </div>
