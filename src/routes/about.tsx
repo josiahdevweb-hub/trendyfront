@@ -99,24 +99,39 @@ function About() {
               drive from Manchester Piccadilly station.
             </p>
             <p>
-              I have been running away from my hair for as long as I can remember. I have gone through relaxers and
-              braiding tiny winy braids for years! The addiction to braiding was bad in such a way that I would undo the
-              braids and the next day install new ones. Once the hair was too damaged for braids I had weaves on. While
-              doing all this I still kept on relaxing my hair. A wake-up call came when I had my first baby and I made
-              the mistake of retouching my hair and girl did it fall out. From then on I stopped relaxing my hair and
-              kept it natural. I however made sure it was hidden by braiding it, weaving and using crotchet braids. When
-              I stopped relaxing my hair I thought if I braided it would not break as much. Wrong again; the tension
-              with braiding and styling had damaged my natural hair.
+              I have been running away from my hair for as long as I can remember. I have gone through relaxers and braiding 
+              tiny winy braids for years! The addiction to braiding was bad in such a way that I would undo the braids and the 
+              next day install new ones. Once the hair was too damaged for braids I had weaves on. While doing all this I still 
+              kept on relaxing my hair.
             </p>
             <p>
-              A dear friend suggested I do dreadlocks. Knowing I could braid the locks I did it. I had not embraced and
-              accepted my natural hair so I had extensions attached to my locks which obviously damaged my hair. After
-              going through this hair journey I knew I did not want my two little girls to go through the same
-              experience. I want to teach them to love their natural hair. I cannot do that while braiding or relaxing
-              my hair. I got introduced to sisterlocks and got hooked. I love that it is versatile. I feel I have come
-              full circle and could not wait to have my sisterlocks installed after the damage caused by years of
-              braiding. I then trained as as sisterlocks practioner and I have since become a sisterlocks consultant.
+            
+              A wake-up call came when I had my first baby and I made the mistake of retouching my hair and girl did
+              it fall out. From then on I stopped relaxing my hair and kept it natural. I however made sure it was 
+              hidden by braiding it, weaving and using crotchet braids. When I stopped relaxing my hair I thought if 
+              I braided it would not break as much. Wrong again; the tension with braiding and styling had damaged my 
+              natural hair.
+            <p>
+              A dear friend suggested I do dreadlocks. Knowing I could braid the locks I did it. I had not embraced 
+              and accepted my natural hair so I had extensions attached to my locks which obviously damaged my hair. 
+              After going through this hair journey I knew I did not want my two little girls to go through the same 
+              experience. I want to teach them to love their natural hair. I cannot do that while braiding or relaxing my hair.
             </p>
+
+              <p>
+              I got introduced to sisterlocks and got hooked. I love that it is versatile. I feel I have come full 
+                circle and could not wait to have my sisterlocks installed after the damage caused by years of 
+                braiding. I then trained as as sisterlocks practioner and I have since become a sisterlocks consultant.
+            </p>
+
+              <p>
+              That is how I began my hair journey, let me help you start yours!
+            </p>
+
+              <p>
+              <h2>Ginna, Owner, Trendylocs</h2>
+            </p>
+              
           </div>
         </div>
       </section>
