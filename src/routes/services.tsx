@@ -31,37 +31,42 @@ function Services() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-        {services.map((s) => (
-          <section key={s.title} className="flex flex-col h-full">
-            <div className="w-full aspect-[4/3] overflow-hidden rounded-md mb-6 bg-secondary/40">
-              <img src={s.img} alt={s.title} loading="lazy" decoding="async" onError={(e)=>{if(e.currentTarget.src.indexOf('/images/fallback.jpg')===-1)e.currentTarget.src='/images/fallback.jpg';}} className="block w-full h-full object-cover object-center" />
-            </div>
-            <div className="flex flex-col flex-1">
-              <h2 className="text-4xl md:text-5xl mb-4">{s.title}</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
-              <div className="flex gap-6 mb-6">
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground">Price</p>
-                  <p className="text-gold text-xl font-medium">{s.price}</p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground">Duration</p>
-                  <p className="text-xl flex items-center gap-2"><Clock className="h-4 w-4" />{s.time}</p>
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((s) => (
+            <div key={s.title} className="bg-card rounded-md overflow-hidden group flex flex-col">
+              <div className="relative aspect-square overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => { if (e.currentTarget.src.indexOf('/images/fallback.jpg') === -1) e.currentTarget.src = '/images/fallback.jpg'; }}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5 flex-1 flex flex-col">
+                <p className="text-xs uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
+                  <Clock className="h-3.5 w-3.5" /> {s.time}
+                </p>
+                <h3 className="text-lg mb-2">{s.title}</h3>
+                <p className="text-sm text-muted-foreground mb-3 flex-1 line-clamp-3">{s.desc}</p>
+                <ul className="space-y-1.5 mb-4">
+                  {s.features.slice(0, 3).map(f => (
+                    <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground">
+                      <Check className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> {f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="font-medium text-lg text-gold">{s.price}</span>
+                  <Link to="/contact" className="bg-dark text-primary-foreground px-4 py-2 rounded-md text-sm hover:bg-dark/90">Book</Link>
                 </div>
               </div>
-              <ul className="space-y-2 mb-8">
-                {s.features.map(f => (
-                  <li key={f} className="flex items-start gap-2 text-sm">
-                    <Check className="h-4 w-4 text-gold mt-0.5 shrink-0" /> {f}
-                  </li>
-                ))}
-              </ul>
-              <Link to="/contact" className="inline-flex self-start mt-auto bg-dark text-primary-foreground px-6 py-3 rounded-md hover:bg-dark/90">Book This Service</Link>
             </div>
-          </section>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
 
       <section className="bg-secondary/40 py-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
