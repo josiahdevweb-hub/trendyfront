@@ -75,8 +75,8 @@ function About() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <div className="aspect-[4/5] md:aspect-[4/5] max-h-[600px] overflow-hidden rounded-2xl shadow-xl">
+      <section className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-5 gap-12 items-start">
+        <div className="md:col-span-2 aspect-[4/5] max-h-[600px] overflow-hidden rounded-2xl shadow-xl md:sticky md:top-24">
           <img
             src="/images/salon/founder.jpg"
             alt="Founder"
@@ -89,7 +89,7 @@ function About() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div>
+        <div className="md:col-span-3">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Story</p>
           <h2 className="text-4xl mb-6">A passion built into a craft.</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
