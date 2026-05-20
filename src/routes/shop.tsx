@@ -35,8 +35,8 @@ function Shop() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map(p => (
             <div key={p.name} className="bg-card rounded-md overflow-hidden group flex flex-col">
-              <div className="relative aspect-square overflow-hidden">
-                <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="relative overflow-hidden">
+                <img src={p.img} alt={p.name} loading="lazy" decoding="async" className="w-full h-auto block group-hover:scale-105 transition-transform duration-500" />
                 {p.badge && <span className="absolute top-3 left-3 bg-gold text-gold-foreground text-xs px-3 py-1 rounded-full">{p.badge}</span>}
               </div>
               <div className="p-5 flex-1 flex flex-col">
