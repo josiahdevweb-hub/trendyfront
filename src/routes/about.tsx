@@ -76,7 +76,7 @@ function About() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 grid md:grid-cols-5 gap-12 items-start">
-        <div className="md:col-span-2 aspect-[4/5] max-h-[600px] overflow-hidden rounded-2xl shadow-xl md:sticky md:top-24">
+        <div className="md:col-span-2 aspect-[4/5] max-h-[450px] overflow-hidden rounded-2xl shadow-xl md:sticky md:top-24">
           <img
             src="/images/salon/founder.jpg"
             alt="Founder"
@@ -92,7 +92,7 @@ function About() {
         <div className="md:col-span-3">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Story</p>
           <h2 className="text-4xl mb-6">A passion built into a craft.</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
+          <div className="space-y-4 text-muted-foreground leading-relaxed overflow-y-auto pr-4 max-h-[520px] md:max-h-[450px] scroll-smooth founder-scroll">
             <p>
               I am a Sisterlocks (TM) Consultant. I do Sisterlocks installations, re-tightenings and styling. I also
               install, retighten and style dreadlocks and micro locks. I’m based in East Manchester, a 5 minute bus/car
