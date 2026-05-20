@@ -22,18 +22,50 @@ export const Route = createFileRoute("/about")({
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const timeline = [
-  { year: "2015", title: "The Beginning", desc: "Founded from a personal journey — our founder couldn't find a quality loc specialist in Nairobi, so she became one." },
-  { year: "2017", title: "First Certifications", desc: "Achieved official Sisterlocks Consultant certification and expanded to Microlocs services." },
-  { year: "2019", title: "Growing Community", desc: "Passed 200 happy clients and launched our monthly natural hair education workshops." },
-  { year: "2021", title: "Full Team", desc: "Grew to a team of 3 certified specialists, each with a distinct area of expertise." },
-  { year: "2024", title: "500+ Transformations", desc: "Nairobi's most trusted locs salon — and still growing, one crown at a time." },
+  {
+    year: "2015",
+    title: "The Beginning",
+    desc: "Founded from a personal journey — our founder couldn't find a quality loc specialist in Nairobi, so she became one.",
+  },
+  {
+    year: "2017",
+    title: "First Certifications",
+    desc: "Achieved official Sisterlocks Consultant certification and expanded to Microlocs services.",
+  },
+  {
+    year: "2019",
+    title: "Growing Community",
+    desc: "Passed 200 happy clients and launched our monthly natural hair education workshops.",
+  },
+  {
+    year: "2021",
+    title: "Full Team",
+    desc: "Grew to a team of 3 certified specialists, each with a distinct area of expertise.",
+  },
+  {
+    year: "2024",
+    title: "500+ Transformations",
+    desc: "Nairobi's most trusted locs salon — and still growing, one crown at a time.",
+  },
 ];
 
 const values = [
-  { title: "Authenticity", desc: "We celebrate natural beauty and honour cultural heritage through our craft. Every loc is a statement of self." },
-  { title: "Excellence", desc: "Certified expertise, continuous education, and meticulous technique ensure every client leaves better than they arrived." },
-  { title: "Community", desc: "We've built more than a salon — a welcoming space where the natural hair community in Nairobi finds home." },
-  { title: "Growth", desc: "Your hair journey is ongoing. We empower clients with knowledge, products, and maintenance plans that grow with you." },
+  {
+    title: "Authenticity",
+    desc: "We celebrate natural beauty and honour cultural heritage through our craft. Every loc is a statement of self.",
+  },
+  {
+    title: "Excellence",
+    desc: "Certified expertise, continuous education, and meticulous technique ensure every client leaves better than they arrived.",
+  },
+  {
+    title: "Community",
+    desc: "We've built more than a salon — a welcoming space where the natural hair community in Nairobi finds home.",
+  },
+  {
+    title: "Growth",
+    desc: "Your hair journey is ongoing. We empower clients with knowledge, products, and maintenance plans that grow with you.",
+  },
 ];
 
 const team = [
@@ -66,10 +98,10 @@ const certs = [
 ];
 
 const stats = [
-  { number: "8+",    label: "Years of Experience" },
-  { number: "500+",  label: "Happy Clients" },
+  { number: "8+", label: "Years of Experience" },
+  { number: "500+", label: "Happy Clients" },
   { number: "1,000+", label: "Installations" },
-  { number: "4.9★",  label: "Client Rating" },
+  { number: "4.9★", label: "Client Rating" },
 ];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -102,7 +134,7 @@ function AnimatedNumber({ target }: { target: string }) {
           requestAnimationFrame((t) => step(t, t));
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -130,12 +162,14 @@ function About() {
           >
             <p className="uppercase tracking-[0.4em] text-[10px] text-gold mb-6">Est. 2015 · Nairobi, Kenya</p>
             <h1 className="font-serif text-5xl md:text-7xl leading-[1.02] mb-6">
-              The craft behind<br />
+              The craft behind
+              <br />
               <span className="italic text-gold">every crown.</span>
             </h1>
             <p className="text-primary-foreground/55 text-lg max-w-xl leading-relaxed">
-              Trendylocs was built on a single belief — that every person with natural hair deserves a specialist
-              who truly understands it. Eight years and 500 transformations later, that belief still drives everything we do.
+              Trendylocs was built on a single belief — that every person with natural hair deserves a specialist who
+              truly understands it. Eight years and 500 transformations later, that belief still drives everything we
+              do.
             </p>
           </div>
 
@@ -176,7 +210,6 @@ function About() {
       {/* ── 3. FOUNDER STORY ──────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid md:grid-cols-[5fr_6fr] gap-14 md:gap-20 items-start">
-
           {/* Image — clean, no decorative gimmicks */}
           <div className="relative group">
             <div className="aspect-[3/4] overflow-hidden rounded-lg bg-secondary/50">
@@ -197,7 +230,9 @@ function About() {
           <div className="md:pt-4">
             <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-5">Our Story</p>
             <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-8">
-              A passion transformed<br />into a profession.
+              A passion transformed
+              <br />
+              into a profession.
             </h2>
 
             <div className="space-y-5 text-muted-foreground leading-relaxed text-[15px]">
@@ -208,12 +243,12 @@ function About() {
               </p>
               <p>
                 So she became one. After formal Sisterlocks certification and hundreds of hours of dedicated practice,
-                Trendylocs opened its doors in 2015 with a single mission: to give every natural hair client the
-                quality and expertise they deserve.
+                Trendylocs opened its doors in 2015 with a single mission: to give every natural hair client the quality
+                and expertise they deserve.
               </p>
               <p>
-                Today, our certified team serves 500+ clients, offering Sisterlocks, Microlocs, Traditional Locs,
-                and natural hair care in a space that genuinely celebrates your crown.
+                Today, our certified team serves 500+ clients, offering Sisterlocks, Microlocs, Traditional Locs, and
+                natural hair care in a space that genuinely celebrates your crown.
               </p>
             </div>
 
@@ -239,9 +274,7 @@ function About() {
           <div className="grid md:grid-cols-2 gap-px bg-border rounded-xl overflow-hidden shadow-sm">
             <div className="bg-card p-10 md:p-12">
               <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-4">Mission</p>
-              <h3 className="font-serif text-2xl mb-5 leading-snug">
-                Expertise that honours your heritage.
-              </h3>
+              <h3 className="font-serif text-2xl mb-5 leading-snug">Expertise that honours your heritage.</h3>
               <p className="text-muted-foreground leading-relaxed text-[15px]">
                 To provide premium, personalised natural hair and locs services that honour cultural heritage while
                 embracing modern techniques — in a welcoming environment where every client feels truly valued.
@@ -249,9 +282,7 @@ function About() {
             </div>
             <div className="bg-card p-10 md:p-12">
               <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-4">Vision</p>
-              <h3 className="font-serif text-2xl mb-5 leading-snug">
-                Nairobi's gold standard for natural hair.
-              </h3>
+              <h3 className="font-serif text-2xl mb-5 leading-snug">Nairobi's gold standard for natural hair.</h3>
               <p className="text-muted-foreground leading-relaxed text-[15px]">
                 To be recognised as Nairobi's leading natural hair and locs specialist — setting the standard for
                 expertise, client care, and education in the natural hair community across Kenya and beyond.
@@ -294,7 +325,9 @@ function About() {
           <div className="mb-14">
             <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-4">What Drives Us</p>
             <h2 className="font-serif text-3xl md:text-5xl text-primary-foreground">
-              The principles<br />that guide us.
+              The principles
+              <br />
+              that guide us.
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/8 rounded-xl overflow-hidden">
@@ -319,11 +352,13 @@ function About() {
           <div className="md:sticky md:top-28">
             <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-4">The Specialists</p>
             <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6">
-              Meet<br />your team.
+              Meet
+              <br />
+              your team.
             </h2>
             <p className="text-muted-foreground text-[14px] leading-relaxed max-w-xs">
-              Every stylist at Trendylocs is formally certified, continuously trained, and genuinely passionate
-              about natural hair.
+              Every stylist at Trendylocs is formally certified, continuously trained, and genuinely passionate about
+              natural hair.
             </p>
           </div>
 
@@ -362,15 +397,16 @@ function About() {
             <div>
               <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-4">Credentials</p>
               <h2 className="font-serif text-2xl md:text-3xl leading-tight">
-                Certified.<br />Qualified.<br />Trusted.
+                Certified.
+                <br />
+                Qualified.
+                <br />
+                Trusted.
               </h2>
             </div>
             <div className="space-y-3">
               {certs.map((c) => (
-                <div
-                  key={c}
-                  className="flex items-center gap-3 py-4 border-b border-border last:border-0 group"
-                >
+                <div key={c} className="flex items-center gap-3 py-4 border-b border-border last:border-0 group">
                   <CheckCircle2 className="h-4 w-4 text-gold flex-shrink-0" />
                   <span className="text-[14px] font-medium">{c}</span>
                 </div>
@@ -384,7 +420,8 @@ function About() {
       <section className="mx-auto max-w-4xl px-6 py-24 md:py-32 text-center">
         <Quote className="h-7 w-7 text-gold mx-auto mb-8 opacity-50" />
         <p className="font-serif italic text-2xl md:text-4xl leading-relaxed text-foreground mb-8">
-          "Your hair is your crown.<br />
+          "Your hair is your crown.
+          <br />
           We're here to help you wear it with pride."
         </p>
         <div className="w-12 h-px bg-gold/40 mx-auto" />
@@ -399,7 +436,9 @@ function About() {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <p className="uppercase tracking-[0.3em] text-[10px] text-gold mb-5">Begin Your Journey</p>
           <h2 className="font-serif text-3xl md:text-5xl mb-5 leading-tight">
-            Ready to meet<br />your specialist?
+            Ready to meet
+            <br />
+            your specialist?
           </h2>
           <p className="text-primary-foreground/50 text-[15px] mb-10 max-w-md mx-auto leading-relaxed">
             Start with a free consultation — we'll assess your hair and map out a personalised care plan.
