@@ -35,14 +35,14 @@ function Services() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s) => (
             <div key={s.title} className="bg-card rounded-md overflow-hidden group flex flex-col">
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative overflow-hidden">
                 <img
                   src={s.img}
                   alt={s.title}
                   loading="lazy"
                   decoding="async"
                   onError={(e) => { if (e.currentTarget.src.indexOf('/images/fallback.jpg') === -1) e.currentTarget.src = '/images/fallback.jpg'; }}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-5 flex-1 flex flex-col">
