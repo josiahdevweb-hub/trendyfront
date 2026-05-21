@@ -38,14 +38,14 @@ function Services() {
               key={s.title}
               className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col w-full max-w-sm text-center"
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden bg-secondary/30 aspect-[4/3]">
                 <img
                   src={s.img}
                   alt={s.title}
                   loading="lazy"
                   decoding="async"
                   onError={(e) => { if (e.currentTarget.src.indexOf('/images/fallback.jpg') === -1) e.currentTarget.src = '/images/fallback.jpg'; }}
-                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col items-center">
