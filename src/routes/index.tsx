@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Star, Instagram, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
+import { ArrowRight, Star, Instagram, Phone, Mail, MapPin, ChevronDown, GraduationCap, Leaf, Heart } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
