@@ -426,27 +426,29 @@ function Home() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
-              emoji: "🎓",
+              icon: GraduationCap,
               title: "Certified Specialists",
               desc: "Our stylists hold formal certification in Sisterlocks and are trained in the latest loc techniques — not self-taught.",
             },
             {
-              emoji: "🌿",
+              icon: Leaf,
               title: "Natural Products Only",
               desc: "Every product we use is free from sulphates, parabens, and harmful chemicals. Your hair's health always comes first.",
             },
             {
-              emoji: "💛",
+              icon: Heart,
               title: "Personalised Consultations",
               desc: "We start every new client relationship with a free consultation — because your hair journey is unique to you.",
             },
-          ].map(({ emoji, title, desc }, i) => (
+          ].map(({ icon: Icon, title, desc }, i) => (
             <div
               key={title}
               style={{ animationDelay: `${i * 80}ms` }}
               className="group bg-card border border-border rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-gold/40 animate-fade-in"
             >
-              <div className="text-3xl mb-5">{emoji}</div>
+              <div className="w-12 h-12 rounded-lg bg-gold/15 flex items-center justify-center mb-5">
+                <Icon className="w-6 h-6 text-gold" />
+              </div>
               <h3 className="text-lg mb-2 font-semibold">{title}</h3>
               <p className="text-muted-foreground font-light leading-relaxed text-sm">{desc}</p>
             </div>
