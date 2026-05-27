@@ -366,14 +366,14 @@ function Home() {
       </section>
 
 
-      {/* ── 2. STATS STRIP ────────────────────────────────────────────── */}
+      {/* ── 2. STATS STRIP (compact) ──────────────────────────────────── */}
       <section className="bg-dark text-primary-foreground">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-primary-foreground/10">
+          <div className="grid grid-cols-4 divide-x divide-primary-foreground/10">
             {stats.map(({ number, label }) => (
-              <div key={label} className="py-8 px-6 text-center">
-                <p className="font-serif text-3xl md:text-4xl text-gold mb-1">{number}</p>
-                <p className="text-xs uppercase tracking-widest text-primary-foreground/50">{label}</p>
+              <div key={label} className="py-4 md:py-5 px-2 md:px-6 text-center">
+                <p className="font-serif text-lg md:text-2xl text-gold leading-none mb-1">{number}</p>
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50">{label}</p>
               </div>
             ))}
           </div>
