@@ -146,72 +146,110 @@ function Home() {
 
   return (
     <>
-      {/* ── 1. HERO ────────────────────────────────────────────────────── */}
-      <section className="relative h-[calc(100vh-5rem)] min-h-[620px] w-full overflow-hidden">
-        <img
-          src="/images/salon/interior.jpg"
-          alt="Trendylocs salon interior — Manchester's premier locs specialist"
-          className="absolute inset-0 w-full h-full object-cover"
-          onError={onImgError}
-        />
-        {/* Layered gradient for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/80" />
-        {/* Subtle grain overlay */}
+      {/* ── 1. HERO (Diptych: wide salon + tight craft detail) ───────── */}
+      <section className="relative h-[calc(100vh-5rem)] min-h-[620px] w-full overflow-hidden bg-dark">
+        {/* Diptych — two real photos sharing one warm tonal grade */}
+        <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-[60fr_40fr]">
+          {/* LEFT — wide environmental */}
+          <div className="relative overflow-hidden">
+            <img
+              src="/images/hero/wide.jpg"
+              alt="Trendylocs Manchester salon — client mid-service"
+              className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1400ms] ease-out ${
+                mounted ? "opacity-100 scale-100" : "opacity-0 scale-105"
+              }`}
+              style={{ filter: "saturate(0.78) contrast(1.08) brightness(0.92) sepia(0.18)" }}
+              onError={onImgError}
+            />
+            {/* Darken bottom-left so headline reads */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-black/40 to-transparent" />
+          </div>
+
+          {/* RIGHT — tight craft detail (hidden on mobile, hero image takes over) */}
+          <div className="relative overflow-hidden hidden md:block">
+            <img
+              src="/images/hero/detail.jpg"
+              alt="Precision microlocs being installed — close-up craftsmanship"
+              className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1400ms] ease-out delay-200 ${
+                mounted ? "opacity-100 scale-100" : "opacity-0 scale-105"
+              }`}
+              style={{ filter: "saturate(0.78) contrast(1.08) brightness(0.85) sepia(0.18)" }}
+              onError={onImgError}
+            />
+            <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/25 to-black/45" />
+          </div>
+        </div>
+
+        {/* Gold hairline seam (desktop only) */}
         <div
-          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          className="hidden md:block absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/50 to-transparent pointer-events-none"
+          style={{ left: "60%" }}
+        />
+
+        {/* Grain */}
+        <div
+          className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
           style={{
             backgroundImage:
               "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
           }}
         />
 
-        <div
-          className={`relative h-full flex flex-col items-center justify-center text-center px-6 text-white transition-all duration-1000 ${
-            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
+        {/* Headline — anchored bottom-left in the "quiet zone" of the wide photo */}
+        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-20 md:pb-28">
+          <div
+            className={`max-w-xl text-white transition-all duration-1000 ${
+              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
+          >
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-gold" />
+              <span className="text-[11px] uppercase tracking-[0.25em] text-gold/90">
+                Manchester · Locs Specialists
+              </span>
+            </div>
 
+            <h1 className="font-serif text-5xl md:text-7xl mb-5 leading-[1.05]">
+              Proudly
+              <br />
+              <span className="italic text-gold">Natural.</span>
+            </h1>
 
+            <p className="text-base md:text-lg text-white/85 mb-5 max-w-md leading-relaxed">
+              Premium Sisterlocks, Microlocs &amp; Traditional Locs — crafted with precision for every hair journey.
+            </p>
 
-          <h1 className="font-serif text-6xl md:text-8xl mb-5 leading-[1.05] max-w-3xl">
-            Proudly
-            <br />
-            <span className="italic text-gold">Natural.</span>
-          </h1>
+            <div className="flex items-center gap-1 mb-8">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} className="h-3 w-3 fill-gold text-gold" />
+              ))}
+              <span className="text-white/70 text-xs ml-2">4.9 · 500+ happy clients</span>
+            </div>
 
-          <p className="text-lg md:text-xl text-white/85 mb-3 max-w-xl leading-relaxed">
-            Premium Sisterlocks, Microlocs &amp; Traditional Locs — crafted with precision for every hair journey.
-          </p>
-
-          {/* Social proof strip */}
-          <div className="flex items-center gap-1 mb-10">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <Star key={i} className="h-3 w-3 fill-gold text-gold" />
-            ))}
-            <span className="text-white/70 text-xs ml-2">4.9 · 500+ happy clients</span>
-          </div>
-
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              to="/book"
-              className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-8 py-4 rounded-md font-medium hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            >
-              Book Appointment <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/gallery"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-8 py-4 rounded-md hover:bg-white/20 transition focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-            >
-              View Transformations
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/book"
+                className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md font-medium hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              >
+                Book Appointment <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/gallery"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-7 py-3.5 rounded-md hover:bg-white/20 transition focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+              >
+                View Transformations
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Scroll cue */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown className="h-5 w-5 text-white/40" />
         </div>
       </section>
+
 
       {/* ── 2. STATS STRIP ────────────────────────────────────────────── */}
       <section className="bg-dark text-primary-foreground">
