@@ -164,79 +164,52 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
   }, []);
   const split = HERO_PAIRS[idx].split;
 
+  // Diagonal split — line goes from (top%, 0) to (bottom%, 100%) for a subtle tilt
+  const topPct = split;
+  const bottomPct = Math.max(0, split - 15);
+  const leftClip = `polygon(0 0, ${topPct}% 0, ${bottomPct}% 100%, 0 100%)`;
+  const rightClip = `polygon(${topPct}% 0, 100% 0, 100% 100%, ${bottomPct}% 100%)`;
+
   return (
     <div className="absolute inset-0">
       {HERO_PAIRS.map((p, i) => {
         const active = i === idx;
-        // Mobile diagonal — alternate diagonal direction per pair for the morph
-        const mobileLeftClip =
-          i === 0 ? "polygon(0 0, 100% 0, 0 100%)" : "polygon(0 0, 60% 0, 0 100%)";
-        const mobileRightClip =
-          i === 0 ? "polygon(100% 0, 100% 100%, 0 100%)" : "polygon(60% 0, 100% 0, 100% 100%, 0 100%)";
         return (
           <div
             key={i}
             className="absolute inset-0 transition-opacity duration-[1600ms] ease-in-out"
             style={{ opacity: active ? 1 : 0 }}
           >
-            {/* DESKTOP — LEFT */}
-            <div
-              className="absolute inset-y-0 left-0 overflow-hidden transition-[width] duration-[1600ms] ease-in-out hidden md:block"
-              style={{ width: `${p.split}%` }}
-            >
-              <img
-                src={p.left}
-                alt={p.leftAlt}
-                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
-                  mounted && active ? "scale-100" : "scale-105"
-                }`}
-                style={{ filter: HERO_GRADE }}
-                onError={onImgError}
-              />
-            </div>
-            {/* DESKTOP — RIGHT */}
-            <div
-              className="absolute inset-y-0 right-0 overflow-hidden transition-[width] duration-[1600ms] ease-in-out hidden md:block"
-              style={{ width: `${100 - p.split}%` }}
-            >
-              <img
-                src={p.right}
-                alt={p.rightAlt}
-                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
-                  mounted && active ? "scale-100" : "scale-105"
-                }`}
-                style={{ filter: HERO_GRADE }}
-                onError={onImgError}
-              />
-            </div>
-
-            {/* MOBILE — diagonal diptych */}
-            <div className="md:hidden absolute inset-0">
-              <img
-                src={p.right}
-                alt={p.rightAlt}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{
-                  filter: HERO_GRADE,
-                  clipPath: mobileRightClip,
-                  WebkitClipPath: mobileRightClip,
-                  transition: "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out",
-                }}
-                onError={onImgError}
-              />
-              <img
-                src={p.left}
-                alt={p.leftAlt}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{
-                  filter: HERO_GRADE,
-                  clipPath: mobileLeftClip,
-                  WebkitClipPath: mobileLeftClip,
-                  transition: "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out",
-                }}
-                onError={onImgError}
-              />
-            </div>
+            <img
+              src={p.left}
+              alt={p.leftAlt}
+              className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                mounted && active ? "scale-100" : "scale-105"
+              }`}
+              style={{
+                filter: HERO_GRADE,
+                clipPath: leftClip,
+                WebkitClipPath: leftClip,
+                transition:
+                  "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out, transform 6500ms ease-out",
+              }}
+              onError={onImgError}
+            />
+            <img
+              src={p.right}
+              alt={p.rightAlt}
+              className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                mounted && active ? "scale-100" : "scale-105"
+              }`}
+              style={{
+                filter: HERO_GRADE,
+                clipPath: rightClip,
+                WebkitClipPath: rightClip,
+                transition:
+                  "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out, transform 6500ms ease-out",
+              }}
+              onError={onImgError}
+            />
           </div>
         );
       })}
@@ -253,31 +226,23 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
       {/* Readability gradient — bottom-left dark anchor for headline */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/85 via-black/35 to-transparent" />
 
-      {/* Mobile diagonal gold seams — fade between pair A and pair B */}
-      <div
-        className="md:hidden absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to top right, transparent calc(50% - 0.6px), color-mix(in oklab, var(--gold) 55%, transparent) 50%, transparent calc(50% + 0.6px))",
-          opacity: idx === 0 ? 1 : 0,
-          transition: "opacity 1600ms ease-in-out",
-        }}
-      />
-      <div
-        className="md:hidden absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to bottom right, transparent calc(60% - 0.6px), color-mix(in oklab, var(--gold) 55%, transparent) 60%, transparent calc(60% + 0.6px))",
-          opacity: idx === 1 ? 1 : 0,
-          transition: "opacity 1600ms ease-in-out",
-        }}
-      />
-
-      {/* Desktop gold hairline seam — slides with split ratio */}
-      <div
-        className="hidden md:block absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/55 to-transparent pointer-events-none transition-[left] duration-[1600ms] ease-in-out"
-        style={{ left: `${split}%` }}
-      />
+      {/* Gold diagonal seam — morphs with the split ratio */}
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        preserveAspectRatio="none"
+        viewBox="0 0 100 100"
+      >
+        <line
+          x1={topPct}
+          y1="0"
+          x2={bottomPct}
+          y2="100"
+          stroke="color-mix(in oklab, var(--gold) 55%, transparent)"
+          strokeWidth="0.25"
+          vectorEffect="non-scaling-stroke"
+          style={{ transition: "all 1600ms ease-in-out" }}
+        />
+      </svg>
 
       {/* Bottom fade — blends hero into the dark stats section below */}
       <div
