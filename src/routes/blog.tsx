@@ -33,7 +33,14 @@ function articleBody(p: typeof posts[number]) {
 
 function Blog() {
   const [activeId, setActiveId] = useState<number | null>(null);
+  const [featuredIdx, setFeaturedIdx] = useState(0);
   const active = activeId ? posts.find(p => p.id === activeId) ?? null : null;
+
+  useEffect(() => {
+    if (active) return;
+    const t = setInterval(() => setFeaturedIdx(i => (i + 1) % posts.length), 5000);
+    return () => clearInterval(t);
+  }, [active]);
 
   return (
     <>
