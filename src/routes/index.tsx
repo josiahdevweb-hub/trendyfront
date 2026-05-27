@@ -146,10 +146,10 @@ const HERO_PAIRS = [
     split: 60, // left %
   },
   {
-    left: "/images/salon/loc-detail.jpg",
-    leftAlt: "Loc craftsmanship close-up",
-    right: "/images/salon/stylish-work.jpg",
-    rightAlt: "Trendylocs stylist at work",
+    left: "/images/hero/wide-2.jpg",
+    leftAlt: "Trendylocs salon ambient — plants, natural light, finished sisterlocks",
+    right: "/images/hero/detail-2.jpg",
+    rightAlt: "Long flowing finished locs — honey highlights",
     split: 40,
   },
 ] as const;
