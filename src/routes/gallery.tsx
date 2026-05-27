@@ -119,3 +119,76 @@ function Gallery() {
     </>
   );
 }
+
+function Lightbox({
+  items,
+  index,
+  onClose,
+  onPrev,
+  onNext,
+}: {
+  items: { title: string; desc: string; img: string }[];
+  index: number;
+  onClose: () => void;
+  onPrev: () => void;
+  onNext: () => void;
+}) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrev();
+      if (e.key === "ArrowRight") onNext();
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose, onPrev, onNext]);
+
+  const item = items[index];
+  return (
+    <div
+      className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center animate-in fade-in duration-200"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute top-4 right-4 md:top-6 md:right-6 z-10 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
+      >
+        <X className="h-5 w-5" />
+      </button>
+      <button
+        onClick={(e) => { e.stopPropagation(); onPrev(); }}
+        aria-label="Previous"
+        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      <button
+        onClick={(e) => { e.stopPropagation(); onNext(); }}
+        aria-label="Next"
+        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
+      <div
+        className="relative w-full h-full flex flex-col items-center justify-center px-4 py-16 md:py-20"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <img
+          src={item.img}
+          alt={item.title}
+          className="max-w-full max-h-[calc(100vh-9rem)] object-contain rounded-md shadow-2xl"
+        />
+        <div className="text-center text-white pt-5">
+          <p className="font-serif text-xl md:text-2xl">{item.title}</p>
+          <p className="text-sm text-white/70 mt-1">{item.desc}</p>
+          <p className="text-[11px] text-white/40 mt-2">{index + 1} / {items.length}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
