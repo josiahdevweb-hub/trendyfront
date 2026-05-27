@@ -136,6 +136,107 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
+// Morphing diptych — two pairs cross-fade with split ratio + gold seam animating
+const HERO_PAIRS = [
+  {
+    left: "/images/hero/wide.jpg",
+    leftAlt: "Trendylocs Manchester salon — client mid-service",
+    right: "/images/hero/detail.jpg",
+    rightAlt: "Precision microlocs being installed — close-up craftsmanship",
+    split: 60, // left %
+  },
+  {
+    left: "/images/salon/loc-detail.jpg",
+    leftAlt: "Loc craftsmanship close-up",
+    right: "/images/salon/stylish-work.jpg",
+    rightAlt: "Trendylocs stylist at work",
+    split: 40,
+  },
+] as const;
+
+const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
+
+function HeroDiptych({ mounted }: { mounted: boolean }) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setIdx((i) => (i + 1) % HERO_PAIRS.length), 6500);
+    return () => clearInterval(t);
+  }, []);
+  const split = HERO_PAIRS[idx].split;
+
+  return (
+    <div className="absolute inset-0">
+      {HERO_PAIRS.map((p, i) => {
+        const active = i === idx;
+        return (
+          <div
+            key={i}
+            className="absolute inset-0 transition-opacity duration-[1600ms] ease-in-out"
+            style={{ opacity: active ? 1 : 0 }}
+          >
+            {/* LEFT */}
+            <div
+              className="absolute inset-y-0 left-0 overflow-hidden transition-[width] duration-[1600ms] ease-in-out hidden md:block"
+              style={{ width: `${p.split}%` }}
+            >
+              <img
+                src={p.left}
+                alt={p.leftAlt}
+                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                  mounted && active ? "scale-100" : "scale-105"
+                }`}
+                style={{ filter: HERO_GRADE }}
+                onError={onImgError}
+              />
+            </div>
+            {/* RIGHT */}
+            <div
+              className="absolute inset-y-0 right-0 overflow-hidden transition-[width] duration-[1600ms] ease-in-out hidden md:block"
+              style={{ width: `${100 - p.split}%` }}
+            >
+              <img
+                src={p.right}
+                alt={p.rightAlt}
+                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                  mounted && active ? "scale-100" : "scale-105"
+                }`}
+                style={{ filter: HERO_GRADE }}
+                onError={onImgError}
+              />
+            </div>
+            {/* MOBILE — just the left image full-bleed */}
+            <img
+              src={p.left}
+              alt=""
+              className="md:hidden absolute inset-0 w-full h-full object-cover"
+              style={{ filter: HERO_GRADE }}
+              onError={onImgError}
+            />
+          </div>
+        );
+      })}
+
+      {/* Brand-tinted blend overlay — ties both pairs to the espresso/gold palette */}
+      <div
+        className="absolute inset-0 pointer-events-none mix-blend-color opacity-40"
+        style={{ background: "linear-gradient(135deg, var(--dark) 0%, var(--gold) 100%)" }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-30"
+        style={{ background: "linear-gradient(180deg, transparent 0%, var(--dark) 100%)" }}
+      />
+      {/* Readability gradient — bottom-left dark anchor for headline */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/85 via-black/35 to-transparent" />
+
+      {/* Gold hairline seam — slides with split ratio */}
+      <div
+        className="hidden md:block absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/55 to-transparent pointer-events-none transition-[left] duration-[1600ms] ease-in-out"
+        style={{ left: `${split}%` }}
+      />
+    </div>
+  );
+}
+
 function Home() {
   const [mounted, setMounted] = useState(false);
   const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
