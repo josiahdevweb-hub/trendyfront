@@ -360,11 +360,10 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Trendylocs on Instagram"
-                className="inline-flex items-center gap-2 bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white px-5 py-3.5 rounded-md hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 shadow-lg"
+                className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-md border border-gold/40 bg-white/5 backdrop-blur text-white hover:bg-gold/10 hover:border-gold transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
               >
-                <Instagram className="h-4 w-4" />
-                <span className="hidden sm:inline">Follow on Instagram</span>
-                <span className="sm:hidden">Instagram</span>
+                <Instagram className="h-4 w-4 text-gold transition-transform group-hover:scale-110" />
+                <span className="text-sm tracking-wide">Follow on Instagram</span>
               </a>
             </div>
           </div>
