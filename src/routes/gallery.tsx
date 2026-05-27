@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
