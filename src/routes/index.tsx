@@ -147,7 +147,8 @@ function Home() {
   return (
     <>
       {/* ── 1. HERO (Morphing diptych: 60/40 ↔ 40/60) ───────── */}
-      <HeroDiptych mounted={mounted} />
+      <section className="relative w-full overflow-hidden bg-dark" style={{ height: "min(80vh, 80dvh)", minHeight: 520 }}>
+        <HeroDiptych mounted={mounted} />
 
         {/* Grain */}
         <div
@@ -158,14 +159,13 @@ function Home() {
           }}
         />
 
-        {/* Headline — anchored bottom-left in the "quiet zone" of the wide photo */}
-        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-20 md:pb-28">
+        {/* Headline — anchored bottom-left in the "quiet zone" */}
+        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-16 md:pb-20">
           <div
             className={`max-w-xl text-white transition-all duration-1000 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-10 bg-gold" />
               <span className="text-[11px] uppercase tracking-[0.25em] text-gold/90">
