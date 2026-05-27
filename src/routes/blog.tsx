@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({ meta: [
@@ -33,7 +33,14 @@ function articleBody(p: typeof posts[number]) {
 
 function Blog() {
   const [activeId, setActiveId] = useState<number | null>(null);
+  const [featuredIdx, setFeaturedIdx] = useState(0);
   const active = activeId ? posts.find(p => p.id === activeId) ?? null : null;
+
+  useEffect(() => {
+    if (active) return;
+    const t = setInterval(() => setFeaturedIdx(i => (i + 1) % posts.length), 5000);
+    return () => clearInterval(t);
+  }, [active]);
 
   return (
     <>
@@ -95,14 +102,19 @@ function Blog() {
       ) : (
         <section className="mx-auto max-w-7xl px-6 py-20">
           {(() => {
-            const [featured, ...rest] = posts;
+            const featured = posts[featuredIdx];
+            const rest = posts.filter((_, i) => i !== featuredIdx);
             return (
               <>
-                <article className="grid md:grid-cols-2 gap-10 mb-20 items-center">
-                  <button onClick={() => setActiveId(featured.id)} className="aspect-[4/3] overflow-hidden rounded-md block">
+                <article className="grid md:grid-cols-2 gap-10 mb-12 items-center">
+                  <button
+                    key={`img-${featured.id}`}
+                    onClick={() => setActiveId(featured.id)}
+                    className="aspect-[4/3] overflow-hidden rounded-md block animate-fade-in"
+                  >
                     <img src={featured.img} alt={featured.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </button>
-                  <div>
+                  <div key={`txt-${featured.id}`} className="animate-fade-in">
                     <span className="inline-block bg-gold text-gold-foreground text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4">Featured · {featured.cat}</span>
                     <h2 className="text-4xl mb-4">{featured.title}</h2>
                     <p className="text-muted-foreground mb-6 leading-relaxed">{featured.excerpt}</p>
@@ -114,6 +126,17 @@ function Blog() {
                     </button>
                   </div>
                 </article>
+
+                <div className="flex justify-center gap-2 mb-16">
+                  {posts.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setFeaturedIdx(i)}
+                      aria-label={`Featured post ${i + 1}`}
+                      className={`h-1.5 rounded-full transition-all ${i === featuredIdx ? "w-8 bg-gold" : "w-2 bg-muted-foreground/30"}`}
+                    />
+                  ))}
+                </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {rest.map(p => (
