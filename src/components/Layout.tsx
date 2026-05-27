@@ -1,6 +1,39 @@
 import { Link, Outlet } from "@tanstack/react-router";
-import { ShoppingBag, Instagram, Facebook, MessageCircle } from "lucide-react";
+import { ShoppingBag, Instagram, Facebook, MessageCircle, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+
+function TopBar() {
+  return (
+    <div className="hidden md:block bg-dark text-primary-foreground/80 border-b border-primary-foreground/10">
+      <div className="mx-auto max-w-7xl px-6 h-9 flex items-center justify-between text-[11px] tracking-wide">
+        <div className="flex items-center gap-5">
+          <a href="tel:+44123456789" className="flex items-center gap-1.5 hover:text-gold transition-colors">
+            <Phone className="h-3 w-3 text-gold" /> +44 123 456 789
+          </a>
+          <a href="mailto:info@trendylocs.com" className="hidden lg:flex items-center gap-1.5 hover:text-gold transition-colors">
+            <Mail className="h-3 w-3 text-gold" /> info@trendylocs.com
+          </a>
+          <span className="hidden lg:flex items-center gap-1.5">
+            <MapPin className="h-3 w-3 text-gold" /> Manchester, UK
+          </span>
+        </div>
+        <div className="flex items-center gap-5">
+          <span className="flex items-center gap-1.5">
+            <Clock className="h-3 w-3 text-gold" /> Tue–Sat · 9am–7pm
+          </span>
+          <div className="flex items-center gap-3">
+            <a href="https://instagram.com/trendylocs" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors">
+              <Instagram className="h-3.5 w-3.5" />
+            </a>
+            <a href="#" aria-label="WhatsApp" className="hover:text-gold transition-colors">
+              <MessageCircle className="h-3.5 w-3.5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const nav = [
   { to: "/", label: "Home" },
