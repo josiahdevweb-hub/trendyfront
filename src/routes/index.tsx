@@ -149,7 +149,7 @@ const HERO_PAIRS = [
     left: "/images/hero/wide-2.jpg",
     leftAlt: "Trendylocs salon ambient — plants, natural light, finished sisterlocks",
     right: "/images/hero/detail-2.jpg",
-    rightAlt: "Long flowing finished locs — honey highlights",
+    rightAlt: "Microloc parting craftsmanship — top-down precision detail",
     split: 40,
   },
 ] as const;
