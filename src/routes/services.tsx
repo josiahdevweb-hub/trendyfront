@@ -45,7 +45,7 @@ function Services() {
                   loading="lazy"
                   decoding="async"
                   onError={(e) => { if (e.currentTarget.src.indexOf('/images/fallback.jpg') === -1) e.currentTarget.src = '/images/fallback.jpg'; }}
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col items-center">
