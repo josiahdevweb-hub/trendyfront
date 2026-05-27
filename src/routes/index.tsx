@@ -146,45 +146,8 @@ function Home() {
 
   return (
     <>
-      {/* ── 1. HERO (Diptych: wide salon + tight craft detail) ───────── */}
-      <section className="relative h-[calc(100vh-5rem)] min-h-[620px] w-full overflow-hidden bg-dark">
-        {/* Diptych — two real photos sharing one warm tonal grade */}
-        <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-[60fr_40fr]">
-          {/* LEFT — wide environmental */}
-          <div className="relative overflow-hidden">
-            <img
-              src="/images/hero/wide.jpg"
-              alt="Trendylocs Manchester salon — client mid-service"
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1400ms] ease-out ${
-                mounted ? "opacity-100 scale-100" : "opacity-0 scale-105"
-              }`}
-              style={{ filter: "saturate(0.78) contrast(1.08) brightness(0.92) sepia(0.18)" }}
-              onError={onImgError}
-            />
-            {/* Darken bottom-left so headline reads */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-black/40 to-transparent" />
-          </div>
-
-          {/* RIGHT — tight craft detail (hidden on mobile, hero image takes over) */}
-          <div className="relative overflow-hidden hidden md:block">
-            <img
-              src="/images/hero/detail.jpg"
-              alt="Precision microlocs being installed — close-up craftsmanship"
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1400ms] ease-out delay-200 ${
-                mounted ? "opacity-100 scale-100" : "opacity-0 scale-105"
-              }`}
-              style={{ filter: "saturate(0.78) contrast(1.08) brightness(0.85) sepia(0.18)" }}
-              onError={onImgError}
-            />
-            <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/25 to-black/45" />
-          </div>
-        </div>
-
-        {/* Gold hairline seam (desktop only) */}
-        <div
-          className="hidden md:block absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/50 to-transparent pointer-events-none"
-          style={{ left: "60%" }}
-        />
+      {/* ── 1. HERO (Morphing diptych: 60/40 ↔ 40/60) ───────── */}
+      <HeroDiptych mounted={mounted} />
 
         {/* Grain */}
         <div
