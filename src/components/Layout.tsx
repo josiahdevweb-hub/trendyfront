@@ -69,6 +69,9 @@ function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
+          <a href="tel:+44123456789" aria-label="Call Trendylocs" className="md:hidden text-foreground/80 hover:text-gold transition-colors">
+            <Phone className="h-5 w-5" />
+          </a>
           <button className="relative" aria-label="Cart">
             <ShoppingBag className="h-5 w-5" />
             <span className="absolute -top-2 -right-2 h-4 w-4 rounded-full bg-gold text-[10px] flex items-center justify-center text-gold-foreground">0</span>
