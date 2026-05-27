@@ -1,6 +1,39 @@
 import { Link, Outlet } from "@tanstack/react-router";
-import { ShoppingBag, Instagram, Facebook, MessageCircle } from "lucide-react";
+import { ShoppingBag, Instagram, Facebook, MessageCircle, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+
+function TopBar() {
+  return (
+    <div className="hidden md:block bg-dark text-primary-foreground/80 border-b border-primary-foreground/10">
+      <div className="mx-auto max-w-7xl px-6 h-9 flex items-center justify-between text-[11px] tracking-wide">
+        <div className="flex items-center gap-5">
+          <a href="tel:+44123456789" className="flex items-center gap-1.5 hover:text-gold transition-colors">
+            <Phone className="h-3 w-3 text-gold" /> +44 123 456 789
+          </a>
+          <a href="mailto:info@trendylocs.com" className="hidden lg:flex items-center gap-1.5 hover:text-gold transition-colors">
+            <Mail className="h-3 w-3 text-gold" /> info@trendylocs.com
+          </a>
+          <span className="hidden lg:flex items-center gap-1.5">
+            <MapPin className="h-3 w-3 text-gold" /> Manchester, UK
+          </span>
+        </div>
+        <div className="flex items-center gap-5">
+          <span className="flex items-center gap-1.5">
+            <Clock className="h-3 w-3 text-gold" /> Tue–Sat · 9am–7pm
+          </span>
+          <div className="flex items-center gap-3">
+            <a href="https://instagram.com/trendylocs" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold transition-colors">
+              <Instagram className="h-3.5 w-3.5" />
+            </a>
+            <a href="#" aria-label="WhatsApp" className="hover:text-gold transition-colors">
+              <MessageCircle className="h-3.5 w-3.5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const nav = [
   { to: "/", label: "Home" },
@@ -17,6 +50,7 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 bg-background/90 backdrop-blur border-b border-border">
+      <TopBar />
       <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
         <Link to="/" className="font-serif text-xl tracking-[0.25em] text-foreground">
           TRENDYLOCS
@@ -35,6 +69,9 @@ function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
+          <a href="tel:+44123456789" aria-label="Call Trendylocs" className="md:hidden text-foreground/80 hover:text-gold transition-colors">
+            <Phone className="h-5 w-5" />
+          </a>
           <button className="relative" aria-label="Cart">
             <ShoppingBag className="h-5 w-5" />
             <span className="absolute -top-2 -right-2 h-4 w-4 rounded-full bg-gold text-[10px] flex items-center justify-center text-gold-foreground">0</span>
@@ -52,6 +89,12 @@ function Header() {
           {nav.map((n) => (
             <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="text-sm py-1">{n.label}</Link>
           ))}
+          <div className="mt-3 pt-4 border-t border-border flex flex-col gap-2 text-xs text-muted-foreground">
+            <a href="tel:+44123456789" className="flex items-center gap-2 hover:text-gold"><Phone className="h-3.5 w-3.5 text-gold" /> +44 123 456 789</a>
+            <a href="mailto:info@trendylocs.com" className="flex items-center gap-2 hover:text-gold"><Mail className="h-3.5 w-3.5 text-gold" /> info@trendylocs.com</a>
+            <span className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-gold" /> Manchester, UK</span>
+            <span className="flex items-center gap-2"><Clock className="h-3.5 w-3.5 text-gold" /> Tue–Sat · 9am–7pm</span>
+          </div>
         </div>
       )}
     </header>
