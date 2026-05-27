@@ -136,6 +136,107 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
+// Morphing diptych — two pairs cross-fade with split ratio + gold seam animating
+const HERO_PAIRS = [
+  {
+    left: "/images/hero/wide.jpg",
+    leftAlt: "Trendylocs Manchester salon — client mid-service",
+    right: "/images/hero/detail.jpg",
+    rightAlt: "Precision microlocs being installed — close-up craftsmanship",
+    split: 60, // left %
+  },
+  {
+    left: "/images/salon/loc-detail.jpg",
+    leftAlt: "Loc craftsmanship close-up",
+    right: "/images/salon/stylish-work.jpg",
+    rightAlt: "Trendylocs stylist at work",
+    split: 40,
+  },
+] as const;
+
+const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
+
+function HeroDiptych({ mounted }: { mounted: boolean }) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setIdx((i) => (i + 1) % HERO_PAIRS.length), 6500);
+    return () => clearInterval(t);
+  }, []);
+  const split = HERO_PAIRS[idx].split;
+
+  return (
+    <div className="absolute inset-0">
+      {HERO_PAIRS.map((p, i) => {
+        const active = i === idx;
+        return (
+          <div
+            key={i}
+            className="absolute inset-0 transition-opacity duration-[1600ms] ease-in-out"
+            style={{ opacity: active ? 1 : 0 }}
+          >
+            {/* LEFT */}
+            <div
+              className="absolute inset-y-0 left-0 overflow-hidden transition-[width] duration-[1600ms] ease-in-out hidden md:block"
+              style={{ width: `${p.split}%` }}
+            >
+              <img
+                src={p.left}
+                alt={p.leftAlt}
+                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                  mounted && active ? "scale-100" : "scale-105"
+                }`}
+                style={{ filter: HERO_GRADE }}
+                onError={onImgError}
+              />
+            </div>
+            {/* RIGHT */}
+            <div
+              className="absolute inset-y-0 right-0 overflow-hidden transition-[width] duration-[1600ms] ease-in-out hidden md:block"
+              style={{ width: `${100 - p.split}%` }}
+            >
+              <img
+                src={p.right}
+                alt={p.rightAlt}
+                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                  mounted && active ? "scale-100" : "scale-105"
+                }`}
+                style={{ filter: HERO_GRADE }}
+                onError={onImgError}
+              />
+            </div>
+            {/* MOBILE — just the left image full-bleed */}
+            <img
+              src={p.left}
+              alt=""
+              className="md:hidden absolute inset-0 w-full h-full object-cover"
+              style={{ filter: HERO_GRADE }}
+              onError={onImgError}
+            />
+          </div>
+        );
+      })}
+
+      {/* Brand-tinted blend overlay — ties both pairs to the espresso/gold palette */}
+      <div
+        className="absolute inset-0 pointer-events-none mix-blend-color opacity-40"
+        style={{ background: "linear-gradient(135deg, var(--dark) 0%, var(--gold) 100%)" }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-30"
+        style={{ background: "linear-gradient(180deg, transparent 0%, var(--dark) 100%)" }}
+      />
+      {/* Readability gradient — bottom-left dark anchor for headline */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/85 via-black/35 to-transparent" />
+
+      {/* Gold hairline seam — slides with split ratio */}
+      <div
+        className="hidden md:block absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/55 to-transparent pointer-events-none transition-[left] duration-[1600ms] ease-in-out"
+        style={{ left: `${split}%` }}
+      />
+    </div>
+  );
+}
+
 function Home() {
   const [mounted, setMounted] = useState(false);
   const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
@@ -146,45 +247,9 @@ function Home() {
 
   return (
     <>
-      {/* ── 1. HERO (Diptych: wide salon + tight craft detail) ───────── */}
-      <section className="relative h-[calc(100vh-5rem)] min-h-[620px] w-full overflow-hidden bg-dark">
-        {/* Diptych — two real photos sharing one warm tonal grade */}
-        <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-[60fr_40fr]">
-          {/* LEFT — wide environmental */}
-          <div className="relative overflow-hidden">
-            <img
-              src="/images/hero/wide.jpg"
-              alt="Trendylocs Manchester salon — client mid-service"
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1400ms] ease-out ${
-                mounted ? "opacity-100 scale-100" : "opacity-0 scale-105"
-              }`}
-              style={{ filter: "saturate(0.78) contrast(1.08) brightness(0.92) sepia(0.18)" }}
-              onError={onImgError}
-            />
-            {/* Darken bottom-left so headline reads */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-black/40 to-transparent" />
-          </div>
-
-          {/* RIGHT — tight craft detail (hidden on mobile, hero image takes over) */}
-          <div className="relative overflow-hidden hidden md:block">
-            <img
-              src="/images/hero/detail.jpg"
-              alt="Precision microlocs being installed — close-up craftsmanship"
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1400ms] ease-out delay-200 ${
-                mounted ? "opacity-100 scale-100" : "opacity-0 scale-105"
-              }`}
-              style={{ filter: "saturate(0.78) contrast(1.08) brightness(0.85) sepia(0.18)" }}
-              onError={onImgError}
-            />
-            <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/25 to-black/45" />
-          </div>
-        </div>
-
-        {/* Gold hairline seam (desktop only) */}
-        <div
-          className="hidden md:block absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/50 to-transparent pointer-events-none"
-          style={{ left: "60%" }}
-        />
+      {/* ── 1. HERO (Morphing diptych: 60/40 ↔ 40/60) ───────── */}
+      <section className="relative w-full overflow-hidden bg-dark" style={{ height: "min(80vh, 80dvh)", minHeight: 520 }}>
+        <HeroDiptych mounted={mounted} />
 
         {/* Grain */}
         <div
@@ -195,14 +260,13 @@ function Home() {
           }}
         />
 
-        {/* Headline — anchored bottom-left in the "quiet zone" of the wide photo */}
-        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-20 md:pb-28">
+        {/* Headline — anchored bottom-left in the "quiet zone" */}
+        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-16 md:pb-20">
           <div
             className={`max-w-xl text-white transition-all duration-1000 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-10 bg-gold" />
               <span className="text-[11px] uppercase tracking-[0.25em] text-gold/90">
