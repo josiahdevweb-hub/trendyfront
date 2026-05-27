@@ -32,13 +32,13 @@ const transformations: Transformation[] = [
     after: "/images/styles/microlocs.jpg",
   },
   {
-    title: "Traditional Locs Maturity",
-    note: "Cultivated traditional locs with healthy shine",
-    style: "Traditional Locs",
-    duration: "4–6 hours",
+    title: "Coloured Locs Transformation",
+    note: "From natural coils to long, dimensional coloured locs",
+    style: "Loc Colour",
+    duration: "8–10 hours",
     maintenance: "Every 6–8 weeks",
     before: "/images/transformations/before-natural-3.jpg",
-    after: "/images/styles/traditional-locs.jpg",
+    after: "/images/styles/color.jpg",
   },
 ];
 
