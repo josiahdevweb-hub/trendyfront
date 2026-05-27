@@ -355,6 +355,17 @@ function Home() {
               >
                 View Transformations
               </Link>
+              <a
+                href="https://instagram.com/trendylocs"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Trendylocs on Instagram"
+                className="inline-flex items-center gap-2 bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white px-5 py-3.5 rounded-md hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 shadow-lg"
+              >
+                <Instagram className="h-4 w-4" />
+                <span className="hidden sm:inline">Follow on Instagram</span>
+                <span className="sm:hidden">Instagram</span>
+              </a>
             </div>
           </div>
         </div>
