@@ -50,6 +50,7 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 bg-background/90 backdrop-blur border-b border-border">
+      <TopBar />
       <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
         <Link to="/" className="font-serif text-xl tracking-[0.25em] text-foreground">
           TRENDYLOCS
