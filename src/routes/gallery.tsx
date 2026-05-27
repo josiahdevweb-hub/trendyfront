@@ -66,48 +66,41 @@ function Gallery() {
           ))}
         </div>
 
-        {/* Masonry via CSS columns */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-5 [column-fill:_balance]">
+        {/* Masonry via CSS columns — denser, smaller tiles */}
+        <div className="columns-2 sm:columns-3 lg:columns-4 xl:columns-5 gap-3 sm:gap-4 [column-fill:_balance]">
           {filtered.map((i, idx) => (
             <figure
               key={i.title}
-              className="mb-4 sm:mb-5 break-inside-avoid group cursor-pointer"
+              className="mb-3 sm:mb-4 break-inside-avoid group cursor-zoom-in"
               onClick={() => setOpen(idx)}
             >
-              <div className="overflow-hidden rounded-md shadow-sm">
+              <div className="overflow-hidden rounded-md shadow-sm relative">
                 <img
                   src={i.img}
                   alt={i.title}
                   loading="lazy"
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
               </div>
-              <figcaption className="pt-3">
-                <h3 className="text-base">{i.title}</h3>
-                <p className="text-xs text-muted-foreground">{i.desc}</p>
+              <figcaption className="pt-2">
+                <h3 className="text-sm">{i.title}</h3>
+                <p className="text-[11px] text-muted-foreground">{i.desc}</p>
               </figcaption>
             </figure>
           ))}
         </div>
       </section>
 
-      <Dialog open={open !== null} onOpenChange={(v) => !v && setOpen(null)}>
-        <DialogContent className="max-w-5xl p-0 bg-transparent border-0 shadow-none">
-          {open !== null && (
-            <div className="relative">
-              <img
-                src={filtered[open].img}
-                alt={filtered[open].title}
-                className="w-full h-auto max-h-[85vh] object-contain rounded-md"
-              />
-              <div className="text-center text-white pt-4">
-                <p className="font-serif text-xl">{filtered[open].title}</p>
-                <p className="text-sm text-white/70">{filtered[open].desc}</p>
-              </div>
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
+      {open !== null && (
+        <Lightbox
+          items={filtered}
+          index={open}
+          onClose={() => setOpen(null)}
+          onPrev={() => setOpen((o) => (o === null ? o : (o - 1 + filtered.length) % filtered.length))}
+          onNext={() => setOpen((o) => (o === null ? o : (o + 1) % filtered.length))}
+        />
+      )}
 
       <section className="bg-secondary/40 py-20 text-center">
         <div className="mx-auto max-w-2xl px-6">
