@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({ meta: [
@@ -21,8 +22,19 @@ const posts = [
   { id: 9, title: "Transitioning to Natural Hair: Your Complete Guide", excerpt: "Everything you need to know about transitioning from relaxed to natural hair successfully.", cat: "Getting Started", date: "April 7, 2026", read: "9 min read", img: "/images/styles/long-locs.jpg" },
 ];
 
+function articleBody(p: typeof posts[number]) {
+  return [
+    `${p.excerpt}`,
+    `In this guide we go deep on ${p.title.toLowerCase()}. Whether you're new to your natural hair journey or a seasoned loc-wearer, the tips below will help you get the most from your routine.`,
+    `Our stylists at Trendylocs have spent years refining these techniques in the salon. We've pulled together the most important takeaways so you can apply them at home between appointments.`,
+    `If you'd like a personalised plan, book a consultation and we'll tailor everything in this article to your hair type, lifestyle, and goals.`,
+  ];
+}
+
 function Blog() {
-  const [featured, ...rest] = posts;
+  const [activeId, setActiveId] = useState<number | null>(null);
+  const active = activeId ? posts.find(p => p.id === activeId) ?? null : null;
+
   return (
     <>
       <section className="bg-dark text-primary-foreground py-8">
@@ -33,50 +45,110 @@ function Blog() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <article className="grid md:grid-cols-2 gap-10 mb-20 items-center">
-          <div className="aspect-[4/3] overflow-hidden rounded-md">
-            <img src={featured.img} alt={featured.title} className="w-full h-full object-cover" />
-          </div>
-          <div>
-            <span className="inline-block bg-gold text-gold-foreground text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4">Featured · {featured.cat}</span>
-            <h2 className="text-4xl mb-4">{featured.title}</h2>
-            <p className="text-muted-foreground mb-6 leading-relaxed">{featured.excerpt}</p>
-            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-              <span>{featured.date}</span><span>·</span><span>{featured.read}</span>
-            </div>
-            <a href="#" className="inline-flex items-center gap-2 border-b border-gold pb-1">Read More <ArrowRight className="h-4 w-4" /></a>
-          </div>
-        </article>
+      {active ? (
+        <section className="mx-auto max-w-7xl px-6 py-16">
+          <button
+            onClick={() => setActiveId(null)}
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8"
+          >
+            <ArrowLeft className="h-4 w-4" /> Back to all posts
+          </button>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {rest.map(p => (
-            <article key={p.id} className="group">
-              <div className="aspect-[4/3] overflow-hidden rounded-md mb-4">
-                <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div className="grid lg:grid-cols-[1fr_360px] gap-12">
+            <article>
+              <span className="inline-block bg-gold text-gold-foreground text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4">{active.cat}</span>
+              <h2 className="text-4xl mb-4">{active.title}</h2>
+              <div className="flex items-center gap-3 text-sm text-muted-foreground mb-8">
+                <span>{active.date}</span><span>·</span><span>{active.read}</span>
               </div>
-              <p className="text-xs uppercase tracking-wider text-gold mb-2">{p.cat}</p>
-              <h3 className="text-xl mb-2">{p.title}</h3>
-              <p className="text-sm text-muted-foreground mb-3">{p.excerpt}</p>
-              <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span>{p.date} · {p.read}</span>
-                <a href="#" className="text-foreground hover:text-gold">Read →</a>
+              <div className="aspect-[16/9] overflow-hidden rounded-md mb-8">
+                <img src={active.img} alt={active.title} className="w-full h-full object-cover" />
+              </div>
+              <div className="prose max-w-none space-y-5 text-base leading-relaxed text-foreground/90">
+                {articleBody(active).map((para, i) => <p key={i}>{para}</p>)}
               </div>
             </article>
-          ))}
-        </div>
-      </section>
 
-      <section className="bg-secondary/60 py-20">
-        <div className="mx-auto max-w-2xl px-6 text-center">
-          <h2 className="text-4xl mb-4">Never Miss a Post</h2>
-          <p className="text-muted-foreground mb-8">Subscribe to our newsletter for weekly hair care tips and exclusive content</p>
-          <form className="flex gap-3 max-w-md mx-auto">
-            <input type="email" placeholder="Your email" className="flex-1 px-4 py-3 rounded-md bg-background border border-border focus:outline-none focus:border-gold" />
-            <button className="bg-dark text-primary-foreground px-6 rounded-md hover:bg-dark/90">Subscribe</button>
-          </form>
-        </div>
-      </section>
+            <aside className="lg:border-l lg:pl-8 border-border">
+              <h3 className="font-serif text-lg mb-6 uppercase tracking-widest text-xs text-muted-foreground">More posts</h3>
+              <div className="space-y-5">
+                {posts.filter(p => p.id !== active.id).map(p => (
+                  <button
+                    key={p.id}
+                    onClick={() => { setActiveId(p.id); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                    className="flex gap-3 text-left group w-full"
+                  >
+                    <div className="w-24 h-20 flex-shrink-0 overflow-hidden rounded-md">
+                      <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[10px] uppercase tracking-wider text-gold mb-1">{p.cat}</p>
+                      <p className="text-sm leading-snug group-hover:text-gold line-clamp-2">{p.title}</p>
+                      <p className="text-xs text-muted-foreground mt-1">{p.read}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </aside>
+          </div>
+        </section>
+      ) : (
+        <section className="mx-auto max-w-7xl px-6 py-20">
+          {(() => {
+            const [featured, ...rest] = posts;
+            return (
+              <>
+                <article className="grid md:grid-cols-2 gap-10 mb-20 items-center">
+                  <button onClick={() => setActiveId(featured.id)} className="aspect-[4/3] overflow-hidden rounded-md block">
+                    <img src={featured.img} alt={featured.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </button>
+                  <div>
+                    <span className="inline-block bg-gold text-gold-foreground text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4">Featured · {featured.cat}</span>
+                    <h2 className="text-4xl mb-4">{featured.title}</h2>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">{featured.excerpt}</p>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                      <span>{featured.date}</span><span>·</span><span>{featured.read}</span>
+                    </div>
+                    <button onClick={() => setActiveId(featured.id)} className="inline-flex items-center gap-2 border-b border-gold pb-1">
+                      Read More <ArrowRight className="h-4 w-4" />
+                    </button>
+                  </div>
+                </article>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {rest.map(p => (
+                    <article key={p.id} className="group cursor-pointer" onClick={() => setActiveId(p.id)}>
+                      <div className="aspect-[4/3] overflow-hidden rounded-md mb-4">
+                        <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      </div>
+                      <p className="text-xs uppercase tracking-wider text-gold mb-2">{p.cat}</p>
+                      <h3 className="text-xl mb-2">{p.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-3">{p.excerpt}</p>
+                      <div className="flex items-center justify-between text-xs text-muted-foreground">
+                        <span>{p.date} · {p.read}</span>
+                        <span className="text-foreground group-hover:text-gold">Read →</span>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </>
+            );
+          })()}
+        </section>
+      )}
+
+      {!active && (
+        <section className="bg-secondary/60 py-20">
+          <div className="mx-auto max-w-2xl px-6 text-center">
+            <h2 className="text-4xl mb-4">Never Miss a Post</h2>
+            <p className="text-muted-foreground mb-8">Subscribe to our newsletter for weekly hair care tips and exclusive content</p>
+            <form className="flex gap-3 max-w-md mx-auto">
+              <input type="email" placeholder="Your email" className="flex-1 px-4 py-3 rounded-md bg-background border border-border focus:outline-none focus:border-gold" />
+              <button className="bg-dark text-primary-foreground px-6 rounded-md hover:bg-dark/90">Subscribe</button>
+            </form>
+          </div>
+        </section>
+      )}
     </>
   );
 }
