@@ -192,7 +192,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
                 className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
                   mounted && active ? "scale-100" : "scale-105"
                 }`}
-                style={{ filter: HERO_GRADE }}
+                style={{ filter: HERO_GRADE, objectPosition: (p as any).leftObjectPosition ?? "center" }}
                 onError={onImgError}
               />
             </div>
@@ -207,7 +207,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
                 className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
                   mounted && active ? "scale-100" : "scale-105"
                 }`}
-                style={{ filter: HERO_GRADE }}
+                style={{ filter: HERO_GRADE, objectPosition: (p as any).rightObjectPosition ?? "center" }}
                 onError={onImgError}
               />
             </div>
