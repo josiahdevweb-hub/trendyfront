@@ -147,9 +147,11 @@ const HERO_PAIRS = [
   },
   {
     left: "/images/hero/wide-2.jpg",
-    leftAlt: "Trendylocs salon ambient — plants, natural light, finished sisterlocks",
+    leftAlt: "Trendylocs Manchester studio — natural light, plants, styling chair",
+    leftObjectPosition: "50% 55%",
     right: "/images/hero/detail-2.jpg",
-    rightAlt: "Microloc parting craftsmanship — top-down precision detail",
+    rightAlt: "Stylist's hands working microlocs — craftsmanship close-up",
+    rightObjectPosition: "72% 45%",
     split: 40,
   },
 ] as const;
