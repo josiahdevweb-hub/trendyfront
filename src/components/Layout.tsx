@@ -117,7 +117,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="Trendylocs logo" width={48} height={48} loading="lazy" className="h-12 w-12 object-contain brightness-0 invert opacity-90" />
+            <img src={logo} alt="Trendylocs logo" width={48} height={48} loading="lazy" className="h-12 w-12 object-contain" />
             <div className="font-serif text-lg tracking-[0.28em]">TRENDYLOCS</div>
           </div>
           <p className="text-sm text-primary-foreground/70 leading-relaxed">
