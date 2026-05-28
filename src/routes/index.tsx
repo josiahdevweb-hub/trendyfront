@@ -356,7 +356,8 @@ function Home() {
                 View Transformations
               </Link>
               <a
-                href="https://instagram.com/trendylocs"
+            target="_blank"
+                href="https://www.instagram.com/trendylocs_uk"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Trendylocs on Instagram"
@@ -700,7 +701,7 @@ function Home() {
               Book Free Consultation <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="https://wa.me/254700000000"
+              href="https://wa.me/44123456789"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/20 border border-gold-foreground/30 text-gold-foreground px-8 py-4 rounded-md hover:bg-white/30 transition focus-visible:ring-2 focus-visible:ring-gold-foreground"
