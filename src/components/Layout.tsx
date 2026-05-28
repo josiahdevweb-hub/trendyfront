@@ -1,6 +1,7 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { ShoppingBag, Instagram, Facebook, MessageCircle, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/trendylocs-logo.png";
 
 function TopBar() {
   return (
@@ -52,8 +53,17 @@ function Header() {
     <header className="sticky top-0 z-40 bg-background/90 backdrop-blur border-b border-border">
       <TopBar />
       <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="font-serif text-xl tracking-[0.25em] text-foreground">
-          TRENDYLOCS
+        <Link to="/" aria-label="Trendylocs — home" className="flex items-center gap-3 group">
+          <img
+            src={logo}
+            alt="Trendylocs logo"
+            width={56}
+            height={56}
+            className="h-12 w-12 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105"
+          />
+          <span className="hidden sm:inline font-serif text-base md:text-lg tracking-[0.28em] text-foreground">
+            TRENDYLOCS
+          </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
           {nav.map((n) => (
@@ -106,7 +116,10 @@ function Footer() {
     <footer className="bg-dark text-primary-foreground mt-24">
       <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-4 gap-10">
         <div>
-          <div className="font-serif text-xl tracking-[0.25em] mb-4">TRENDYLOCS</div>
+          <div className="flex items-center gap-3 mb-4">
+            <img src={logo} alt="Trendylocs logo" width={48} height={48} loading="lazy" className="h-12 w-12 object-contain" />
+            <div className="font-serif text-lg tracking-[0.28em]">TRENDYLOCS</div>
+          </div>
           <p className="text-sm text-primary-foreground/70 leading-relaxed">
             Manchester's premier natural hair and locs salon. Celebrating the beauty of textured hair.
           </p>

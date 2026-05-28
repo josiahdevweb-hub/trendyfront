@@ -356,7 +356,6 @@ function Home() {
                 View Transformations
               </Link>
               <a
-            target="_blank"
                 href="https://www.instagram.com/trendylocs_uk"
                 target="_blank"
                 rel="noopener noreferrer"
