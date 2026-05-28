@@ -29,8 +29,8 @@ function BookPage() {
         <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Book in 30 seconds</p>
         <h1 className="font-serif text-3xl md:text-5xl mb-4">Reserve Your Appointment</h1>
         <p className="text-sm md:text-base text-primary-foreground/70 max-w-lg mx-auto mb-8">
-          Pick your service, stylist and time on our live calendar. Confirmation and reminders
-          are sent automatically — no account needed.
+          Pick your service, stylist and time on our live calendar. Confirmation and reminders are sent automatically —
+          no account needed.
         </p>
 
         <a
@@ -45,8 +45,12 @@ function BookPage() {
         </a>
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/60">
-          <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-gold" /> Tue–Sat · 9am–7pm</span>
-          <span className="flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-gold" /> Free cancellation 24h before</span>
+          <span className="flex items-center gap-1.5">
+            <Clock className="h-3.5 w-3.5 text-gold" /> Tue–Sat · 9am–7pm
+          </span>
+          <span className="flex items-center gap-1.5">
+            <ShieldCheck className="h-3.5 w-3.5 text-gold" /> Free cancellation 24h before
+          </span>
         </div>
 
         <div className="mt-10 pt-8 border-t border-primary-foreground/10">
@@ -58,7 +62,7 @@ function BookPage() {
               href="tel:+44123456789"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-primary-foreground/20 text-sm hover:border-gold hover:text-gold transition-colors"
             >
-              <Phone className="h-4 w-4" /> +44 123 456 789
+              <Phone className="h-4 w-4" /> +447983818010
             </a>
             <a
               href="https://wa.me/44123456789"
