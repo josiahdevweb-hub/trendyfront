@@ -52,8 +52,17 @@ function Header() {
     <header className="sticky top-0 z-40 bg-background/90 backdrop-blur border-b border-border">
       <TopBar />
       <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="font-serif text-xl tracking-[0.25em] text-foreground">
-          TRENDYLOCS
+        <Link to="/" aria-label="Trendylocs — home" className="flex items-center gap-3 group">
+          <img
+            src={logo}
+            alt="Trendylocs logo"
+            width={56}
+            height={56}
+            className="h-12 w-12 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105"
+          />
+          <span className="hidden sm:inline font-serif text-base md:text-lg tracking-[0.28em] text-foreground">
+            TRENDYLOCS
+          </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
           {nav.map((n) => (
