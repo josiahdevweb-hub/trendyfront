@@ -100,10 +100,10 @@ function Header() {
             <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="text-sm py-1">{n.label}</Link>
           ))}
           <div className="mt-3 pt-4 border-t border-border flex flex-col gap-2 text-xs text-muted-foreground">
-            <a href="tel:+44123456789" className="flex items-center gap-2 hover:text-gold"><Phone className="h-3.5 w-3.5 text-gold" /> +44 123 456 789</a>
-            <a href="mailto:info@trendylocs.com" className="flex items-center gap-2 hover:text-gold"><Mail className="h-3.5 w-3.5 text-gold" /> info@trendylocs.com</a>
-            <span className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-gold" /> Manchester, UK</span>
-            <span className="flex items-center gap-2"><Clock className="h-3.5 w-3.5 text-gold" /> Tue–Sat · 9am–7pm</span>
+            <a href="tel:+44123456789" className="flex items-center gap-2 hover:text-gold"><Phone className="h-3.5 w-3.5 text-gold" /><span>+44 123 456 789</span></a>
+            <a href="mailto:info@trendylocs.com" className="flex items-center gap-2 hover:text-gold"><Mail className="h-3.5 w-3.5 text-gold" /><span>info@trendylocs.com</span></a>
+            <span className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-gold" /><span>Manchester, UK</span></span>
+            <span className="flex items-center gap-2"><Clock className="h-3.5 w-3.5 text-gold" /><span>Tue–Sat · 9am–7pm</span></span>
           </div>
         </div>
       )}
