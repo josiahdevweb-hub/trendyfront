@@ -1,5 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Star, Instagram, Phone, Mail, MapPin, ChevronDown, GraduationCap, Leaf, Heart } from "lucide-react";
+import {
+  ArrowRight,
+  Star,
+  Instagram,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronDown,
+  GraduationCap,
+  Leaf,
+  Heart,
+} from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
@@ -70,7 +81,8 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Manchester.",
+    quote:
+      "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Manchester.",
     name: "Nia Thompson",
     service: "Natural Hair Care",
     initials: "NT",
@@ -171,8 +183,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
       {HERO_PAIRS.map((p, i) => {
         const active = i === idx;
         // Mobile diagonal — alternate diagonal direction per pair for the morph
-        const mobileLeftClip =
-          i === 0 ? "polygon(0 0, 100% 0, 0 100%)" : "polygon(0 0, 60% 0, 0 100%)";
+        const mobileLeftClip = i === 0 ? "polygon(0 0, 100% 0, 0 100%)" : "polygon(0 0, 60% 0, 0 100%)";
         const mobileRightClip =
           i === 0 ? "polygon(100% 0, 100% 100%, 0 100%)" : "polygon(60% 0, 100% 0, 100% 100%, 0 100%)";
         return (
@@ -303,7 +314,10 @@ function Home() {
   return (
     <>
       {/* ── 1. HERO (Morphing diptych: 60/40 ↔ 40/60) ───────── */}
-      <section className="relative w-full overflow-hidden bg-dark" style={{ height: "min(80vh, 80dvh)", minHeight: 520 }}>
+      <section
+        className="relative w-full overflow-hidden bg-dark"
+        style={{ height: "min(80vh, 80dvh)", minHeight: 520 }}
+      >
         <HeroDiptych mounted={mounted} />
 
         {/* Grain */}
@@ -379,7 +393,6 @@ function Home() {
         </div>
       </section>
 
-
       {/* ── 2. STATS STRIP (compact) ──────────────────────────────────── */}
       <section className="bg-dark text-primary-foreground">
         <div className="mx-auto max-w-7xl px-6">
@@ -387,7 +400,9 @@ function Home() {
             {stats.map(({ number, label }) => (
               <div key={label} className="py-4 md:py-5 px-2 md:px-6 text-center">
                 <p className="font-serif text-lg md:text-2xl text-gold leading-none mb-1">{number}</p>
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50">{label}</p>
+                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50">
+                  {label}
+                </p>
               </div>
             ))}
           </div>
@@ -595,7 +610,7 @@ function Home() {
             {
               icon: GraduationCap,
               title: "Certified Specialists",
-              desc: "Our stylists hold formal certification in Sisterlocks and are trained in the latest loc techniques — not self-taught.",
+              desc: "Our stylists hold formal certification in Sisterlocks and are trained in the latest loc techniques not self-taught.",
             },
             {
               icon: Leaf,
@@ -693,7 +708,7 @@ function Home() {
             Ready to start your loc journey?
           </h2>
           <p className="text-gold-foreground/70 mb-8 text-sm">
-            Book a free consultation today — no commitment, just great advice.
+            Book a free consultation today no commitment, just great advice.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
