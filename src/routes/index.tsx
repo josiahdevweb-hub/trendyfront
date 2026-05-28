@@ -220,6 +220,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
                   filter: HERO_GRADE,
+                  objectPosition: (p as any).rightObjectPosition ?? "center",
                   clipPath: mobileRightClip,
                   WebkitClipPath: mobileRightClip,
                   transition: "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out",
@@ -232,6 +233,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
                   filter: HERO_GRADE,
+                  objectPosition: (p as any).leftObjectPosition ?? "center",
                   clipPath: mobileLeftClip,
                   WebkitClipPath: mobileLeftClip,
                   transition: "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out",
