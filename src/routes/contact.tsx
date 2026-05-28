@@ -29,7 +29,7 @@ function Contact() {
           <div className="grid sm:grid-cols-2 gap-6 mb-10">
             {[
               { icon: MapPin, title: "Location", lines: ["Manchester", "United Kingdom"] },
-              { icon: Phone, title: "Phone", lines: ["+447983818010"] },
+              { icon: Phone, title: "Phone", lines: ["+44 7 983 818 010"] },
               { icon: Mail, title: "Email", lines: ["gina@trendylocs.com"] },
               { icon: Clock, title: "Hours", lines: ["Tue–Sat: 9am–7pm", "Sun–Mon: Closed"] },
             ].map(({ icon: Icon, title, lines }) => (
