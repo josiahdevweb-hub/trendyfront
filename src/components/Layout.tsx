@@ -1,6 +1,7 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { ShoppingBag, Instagram, Facebook, MessageCircle, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/trendylocs-logo.png";
 
 function TopBar() {
   return (
