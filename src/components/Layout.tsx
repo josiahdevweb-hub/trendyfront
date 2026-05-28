@@ -223,7 +223,7 @@ function Footer() {
                 gina@trendylocs.com
               </a>
             </li>
-            <li>Tue–Sat: 9:30am–5:30pm</li>
+            <li>Mon – Fri: 9:30am–5:30pm</li>
           </ul>
         </div>
       </div>
