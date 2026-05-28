@@ -350,7 +350,7 @@ function Home() {
             </h1>
 
             <p className="text-base md:text-lg text-white/85 mb-5 max-w-md leading-relaxed">
-              Premium Sisterlocks, Microlocs &amp; Traditional Locs — crafted with precision for every hair journey.
+              Premium Sisterlocks, Microlocs &amp; Traditional Locs crafted with precision for every hair journey.
             </p>
 
             <div className="flex items-center gap-1 mb-8">
