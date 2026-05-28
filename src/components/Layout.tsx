@@ -50,18 +50,20 @@ const nav = [
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 bg-background/90 backdrop-blur border-b border-border">
+    <header className="sticky top-0 z-40 bg-dark text-primary-foreground border-b border-primary-foreground/10 shadow-sm">
       <TopBar />
       <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
         <Link to="/" aria-label="Trendylocs — home" className="flex items-center gap-3 group">
-          <img
-            src={logo}
-            alt="Trendylocs logo"
-            width={56}
-            height={56}
-            className="h-12 w-12 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105"
-          />
-          <span className="hidden sm:inline font-serif text-base md:text-lg tracking-[0.28em] text-foreground">
+          <span className="inline-flex items-center justify-center h-12 w-12 md:h-14 md:w-14 rounded-full bg-primary-foreground/95 ring-1 ring-gold/40 shadow-md transition-transform group-hover:scale-105">
+            <img
+              src={logo}
+              alt="Trendylocs logo"
+              width={48}
+              height={48}
+              className="h-10 w-10 md:h-12 md:w-12 object-contain"
+            />
+          </span>
+          <span className="hidden sm:inline font-serif text-base md:text-lg tracking-[0.28em] text-primary-foreground">
             TRENDYLOCS
           </span>
         </Link>
