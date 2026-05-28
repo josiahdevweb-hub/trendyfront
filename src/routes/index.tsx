@@ -418,12 +418,12 @@ function Home() {
               Your hair. <span className="italic">Our expertise.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              We are Manchester's premier locs and natural hair salon — specialising in Sisterlocks, Microlocs, and
+              We are Manchester's premier locs and natural hair salon specialising in Sisterlocks, Microlocs, and
               Traditional Locs. Every visit is a personalised journey toward healthy, thriving hair.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Our certified specialists combine proven techniques, premium natural products, and genuine care to give
-              your hair the attention it deserves — in a warm, welcoming atmosphere where you always feel at home.
+              your hair the attention it deserves in a warm, welcoming atmosphere where you always feel at home.
             </p>
             {/* Mini trust signals */}
             <div className="flex flex-wrap gap-3 mb-8">
