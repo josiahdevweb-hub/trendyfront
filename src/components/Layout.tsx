@@ -72,36 +72,36 @@ function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm text-foreground/80 hover:text-foreground transition-colors"
-              activeProps={{ className: "text-foreground border-b-2 border-gold pb-1" }}
+              className="text-sm text-primary-foreground/75 hover:text-gold transition-colors"
+              activeProps={{ className: "text-gold border-b-2 border-gold pb-1" }}
               activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
-          <a href="tel:+44123456789" aria-label="Call Trendylocs" className="md:hidden text-foreground/80 hover:text-gold transition-colors">
+        <div className="flex items-center gap-4 text-primary-foreground">
+          <a href="tel:+44123456789" aria-label="Call Trendylocs" className="md:hidden hover:text-gold transition-colors">
             <Phone className="h-5 w-5" />
           </a>
           <button className="relative" aria-label="Cart">
             <ShoppingBag className="h-5 w-5" />
             <span className="absolute -top-2 -right-2 h-4 w-4 rounded-full bg-gold text-[10px] flex items-center justify-center text-gold-foreground">0</span>
           </button>
-          <Link to="/book" className="hidden md:inline-flex bg-dark text-primary-foreground px-5 py-2.5 rounded-md text-sm hover:bg-dark/90 transition-colors">
+          <Link to="/book" className="hidden md:inline-flex bg-gold text-gold-foreground px-5 py-2.5 rounded-md text-sm hover:opacity-90 transition-opacity">
             Book Appointment
           </Link>
           <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
-            <div className="space-y-1.5"><span className="block w-5 h-px bg-foreground"/><span className="block w-5 h-px bg-foreground"/></div>
+            <div className="space-y-1.5"><span className="block w-5 h-px bg-primary-foreground"/><span className="block w-5 h-px bg-primary-foreground"/></div>
           </button>
         </div>
       </div>
       {open && (
-        <div className="lg:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-3">
+        <div className="lg:hidden border-t border-primary-foreground/10 bg-dark px-6 py-4 flex flex-col gap-3">
           {nav.map((n) => (
-            <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="text-sm py-1">{n.label}</Link>
+            <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="text-sm py-1 text-primary-foreground/80 hover:text-gold">{n.label}</Link>
           ))}
-          <div className="mt-3 pt-4 border-t border-border flex flex-col gap-2 text-xs text-muted-foreground">
+          <div className="mt-3 pt-4 border-t border-primary-foreground/10 flex flex-col gap-2 text-xs text-primary-foreground/60">
             <a href="tel:+44123456789" className="flex items-center gap-2 hover:text-gold"><Phone className="h-3.5 w-3.5 text-gold" /><span>+44 123 456 789</span></a>
             <a href="mailto:info@trendylocs.com" className="flex items-center gap-2 hover:text-gold"><Mail className="h-3.5 w-3.5 text-gold" /><span>info@trendylocs.com</span></a>
             <span className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-gold" /><span>Manchester, UK</span></span>
