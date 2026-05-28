@@ -147,9 +147,11 @@ const HERO_PAIRS = [
   },
   {
     left: "/images/hero/wide-2.jpg",
-    leftAlt: "Trendylocs salon ambient — plants, natural light, finished sisterlocks",
+    leftAlt: "Trendylocs Manchester studio — natural light, plants, styling chair",
+    leftObjectPosition: "50% 55%",
     right: "/images/hero/detail-2.jpg",
-    rightAlt: "Microloc parting craftsmanship — top-down precision detail",
+    rightAlt: "Stylist's hands working microlocs — craftsmanship close-up",
+    rightObjectPosition: "72% 45%",
     split: 40,
   },
 ] as const;
@@ -190,7 +192,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
                 className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
                   mounted && active ? "scale-100" : "scale-105"
                 }`}
-                style={{ filter: HERO_GRADE }}
+                style={{ filter: HERO_GRADE, objectPosition: (p as any).leftObjectPosition ?? "center" }}
                 onError={onImgError}
               />
             </div>
@@ -205,7 +207,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
                 className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
                   mounted && active ? "scale-100" : "scale-105"
                 }`}
-                style={{ filter: HERO_GRADE }}
+                style={{ filter: HERO_GRADE, objectPosition: (p as any).rightObjectPosition ?? "center" }}
                 onError={onImgError}
               />
             </div>
@@ -218,6 +220,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
                   filter: HERO_GRADE,
+                  objectPosition: (p as any).rightObjectPosition ?? "center",
                   clipPath: mobileRightClip,
                   WebkitClipPath: mobileRightClip,
                   transition: "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out",
@@ -230,6 +233,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
                   filter: HERO_GRADE,
+                  objectPosition: (p as any).leftObjectPosition ?? "center",
                   clipPath: mobileLeftClip,
                   WebkitClipPath: mobileLeftClip,
                   transition: "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out",
