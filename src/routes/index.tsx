@@ -191,10 +191,6 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
     <div className="absolute inset-0">
       {HERO_PAIRS.map((p, i) => {
         const active = i === idx;
-        // Mobile diagonal — alternate diagonal direction per pair for the morph
-        const mobileLeftClip = i === 0 ? "polygon(0 0, 100% 0, 0 100%)" : "polygon(0 0, 60% 0, 0 100%)";
-        const mobileRightClip =
-          i === 0 ? "polygon(100% 0, 100% 100%, 0 100%)" : "polygon(60% 0, 100% 0, 100% 100%, 0 100%)";
         return (
           <div
             key={i}
@@ -232,31 +228,15 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
               />
             </div>
 
-            {/* MOBILE — diagonal diptych */}
-            <div className="md:hidden absolute inset-0">
+            {/* MOBILE — single full-bleed Ken-Burns image (detail crop) */}
+            <div className="md:hidden absolute inset-0 overflow-hidden">
               <img
                 src={p.right}
                 alt={p.rightAlt}
-                className="absolute inset-0 w-full h-full object-cover"
+                className={`absolute inset-0 w-full h-full object-cover ${active ? "hero-kenburns" : ""}`}
                 style={{
                   filter: HERO_GRADE,
                   objectPosition: (p as any).rightObjectPosition ?? "center",
-                  clipPath: mobileRightClip,
-                  WebkitClipPath: mobileRightClip,
-                  transition: "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out",
-                }}
-                onError={onImgError}
-              />
-              <img
-                src={p.left}
-                alt={p.leftAlt}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{
-                  filter: HERO_GRADE,
-                  objectPosition: (p as any).leftObjectPosition ?? "center",
-                  clipPath: mobileLeftClip,
-                  WebkitClipPath: mobileLeftClip,
-                  transition: "clip-path 1600ms ease-in-out, -webkit-clip-path 1600ms ease-in-out",
                 }}
                 onError={onImgError}
               />
@@ -265,7 +245,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
         );
       })}
 
-      {/* Brand-tinted blend overlay — ties both pairs to the espresso/gold palette */}
+      {/* Brand-tinted blend overlay — ties pairs to the espresso/gold palette */}
       <div
         className="absolute inset-0 pointer-events-none mix-blend-color opacity-40"
         style={{ background: "linear-gradient(135deg, var(--dark) 0%, var(--gold) 100%)" }}
@@ -277,25 +257,8 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
       {/* Readability gradient — bottom-left dark anchor for headline */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/85 via-black/35 to-transparent" />
 
-      {/* Mobile diagonal gold seams — fade between pair A and pair B */}
-      <div
-        className="md:hidden absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to top right, transparent calc(50% - 0.6px), color-mix(in oklab, var(--gold) 55%, transparent) 50%, transparent calc(50% + 0.6px))",
-          opacity: idx === 0 ? 1 : 0,
-          transition: "opacity 1600ms ease-in-out",
-        }}
-      />
-      <div
-        className="md:hidden absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to bottom right, transparent calc(60% - 0.6px), color-mix(in oklab, var(--gold) 55%, transparent) 60%, transparent calc(60% + 0.6px))",
-          opacity: idx === 1 ? 1 : 0,
-          transition: "opacity 1600ms ease-in-out",
-        }}
-      />
+      {/* Mobile-only stronger bottom vignette for headline legibility over single image */}
+      <div className="md:hidden absolute inset-0 pointer-events-none bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
       {/* Desktop gold hairline seam — slides with split ratio */}
       <div
