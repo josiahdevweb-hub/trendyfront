@@ -82,7 +82,7 @@ const testimonials = [
   },
   {
     quote:
-      "Great service, accessible location, comfortable environment. I tried a few others before settling on Trendylocs and so far it’s been grea.",
+      "Great service, accessible location, comfortable environment. I tried a few others before settling on Trendylocs and so far it’s been great.",
     name: "Yinks x",
     service: "Natural Hair Care",
     initials: "NT",
