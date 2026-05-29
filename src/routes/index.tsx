@@ -333,7 +333,7 @@ function Home() {
         />
 
         {/* Headline — anchored bottom-left in the "quiet zone" */}
-        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-16 md:pb-20">
+        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-10 md:pb-20">
           <div
             className={`max-w-xl text-white transition-all duration-1000 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
