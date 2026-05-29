@@ -351,29 +351,31 @@ function Home() {
               <span className="text-white/70 text-xs ml-2">4.9 · 500+ happy clients</span>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
               <Link
                 to="/book"
-                className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md font-medium hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-6 py-3.5 rounded-md font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
               >
                 Book Appointment <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link
-                to="/gallery"
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-7 py-3.5 rounded-md hover:bg-white/20 transition focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-              >
-                View Transformations
-              </Link>
-              <a
-                href="https://www.instagram.com/trendylocs_uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow Trendylocs on Instagram"
-                className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-md border border-gold/40 bg-white/5 backdrop-blur text-white hover:bg-gold/10 hover:border-gold transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-              >
-                <Instagram className="h-4 w-4 text-gold transition-transform group-hover:scale-110" />
-                <span className="text-sm tracking-wide">Follow on Instagram</span>
-              </a>
+              <div className="flex gap-2">
+                <Link
+                  to="/gallery"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-4 py-3 rounded-md hover:bg-white/20 transition text-sm"
+                >
+                  View Transformations
+                </Link>
+                <a
+                  href="https://www.instagram.com/trendylocs_uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Trendylocs on Instagram"
+                  className="inline-flex items-center gap-2 px-4 py-3 rounded-md border border-gold/40 bg-white/5 backdrop-blur text-white hover:bg-gold/10 hover:border-gold transition-all text-sm"
+                >
+                  <Instagram className="h-4 w-4 text-gold" />
+                  <span className="hidden xs:inline">Instagram</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
