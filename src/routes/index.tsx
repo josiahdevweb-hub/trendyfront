@@ -166,6 +166,15 @@ const HERO_PAIRS = [
     rightObjectPosition: "72% 45%",
     split: 40,
   },
+  {
+    left: "/images/hero/wide-3.jpg",
+    leftAlt: "Fresh microlocs install — clean uniform parting lines down the back",
+    leftObjectPosition: "50% 55%",
+    right: "/images/hero/detail-3.jpg",
+    rightAlt: "Close-up of precise grid partings on microlocs with copper-tipped ends",
+    rightObjectPosition: "50% 50%",
+    split: 55,
+  },
 ] as const;
 
 const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
