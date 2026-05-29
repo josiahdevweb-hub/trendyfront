@@ -228,37 +228,68 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
               />
             </div>
 
-            {/* MOBILE — single full-bleed Ken-Burns image (detail crop) */}
-            <div className="md:hidden absolute inset-0 overflow-hidden">
-              <img
-                src={p.right}
-                alt={p.rightAlt}
-                className={`absolute inset-0 w-full h-full object-cover ${active ? "hero-kenburns" : ""}`}
-                style={{
-                  filter: HERO_GRADE,
-                  objectPosition: (p as any).rightObjectPosition ?? "center",
-                }}
-                onError={onImgError}
-              />
+            {/* MOBILE — magazine-cover split: ken-burns image on top, deep brand panel on bottom */}
+            <div className="md:hidden absolute inset-0">
+              {/* Top 58% — ken-burns detail image */}
+              <div className="absolute top-0 inset-x-0 h-[58%] overflow-hidden">
+                <img
+                  src={p.right}
+                  alt={p.rightAlt}
+                  className={`absolute inset-0 w-full h-full object-cover ${active ? "hero-kenburns" : ""}`}
+                  style={{
+                    filter: HERO_GRADE,
+                    objectPosition: (p as any).rightObjectPosition ?? "center",
+                  }}
+                  onError={onImgError}
+                />
+                {/* Soft fade into the dark panel */}
+                <div className="absolute inset-x-0 bottom-0 h-24 pointer-events-none bg-gradient-to-b from-transparent to-dark" />
+
+                {/* Floating diptych thumbnail (top-right) — keeps the "wide view" story */}
+                <div className="absolute top-4 right-4 w-20 h-28 rounded-md overflow-hidden ring-1 ring-gold/60 shadow-lg shadow-black/40">
+                  <img
+                    src={p.left}
+                    alt={p.leftAlt}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    style={{
+                      filter: HERO_GRADE,
+                      objectPosition: (p as any).leftObjectPosition ?? "center",
+                    }}
+                    onError={onImgError}
+                  />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+                </div>
+              </div>
+
+              {/* Bottom 42% — deep brand panel for headline */}
+              <div className="absolute bottom-0 inset-x-0 h-[42%] bg-dark">
+                {/* Hairline gold rule at the seam */}
+                <div className="absolute top-0 inset-x-6 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
+                {/* Soft gold glow rising into the panel */}
+                <div
+                  className="absolute inset-0 pointer-events-none opacity-40"
+                  style={{
+                    background:
+                      "radial-gradient(120% 80% at 10% 0%, color-mix(in oklab, var(--gold) 28%, transparent) 0%, transparent 55%)",
+                  }}
+                />
+              </div>
             </div>
           </div>
         );
       })}
 
-      {/* Brand-tinted blend overlay — ties pairs to the espresso/gold palette */}
+      {/* Brand-tinted blend overlay — desktop only (mobile uses split panel) */}
       <div
-        className="absolute inset-0 pointer-events-none mix-blend-color opacity-40"
+        className="hidden md:block absolute inset-0 pointer-events-none mix-blend-color opacity-40"
         style={{ background: "linear-gradient(135deg, var(--dark) 0%, var(--gold) 100%)" }}
       />
       <div
-        className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-30"
+        className="hidden md:block absolute inset-0 pointer-events-none mix-blend-multiply opacity-30"
         style={{ background: "linear-gradient(180deg, transparent 0%, var(--dark) 100%)" }}
       />
-      {/* Readability gradient — bottom-left dark anchor for headline */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/85 via-black/35 to-transparent" />
-
-      {/* Mobile-only stronger bottom vignette for headline legibility over single image */}
-      <div className="md:hidden absolute inset-0 pointer-events-none bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+      {/* Desktop readability gradient — bottom-left dark anchor for headline */}
+      <div className="hidden md:block absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/85 via-black/35 to-transparent" />
 
       {/* Desktop gold hairline seam — slides with split ratio */}
       <div
@@ -302,7 +333,7 @@ function Home() {
         />
 
         {/* Headline — anchored bottom-left in the "quiet zone" */}
-        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-16 md:pb-20">
+        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-10 md:pb-20">
           <div
             className={`max-w-xl text-white transition-all duration-1000 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
