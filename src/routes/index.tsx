@@ -228,52 +228,40 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
               />
             </div>
 
-            {/* MOBILE — magazine-cover split: ken-burns image on top, deep brand panel on bottom */}
+            {/* MOBILE — full-screen diagonal diptych */}
             <div className="md:hidden absolute inset-0">
-              {/* Top 58% — ken-burns detail image */}
-              <div className="absolute top-0 inset-x-0 h-[58%] overflow-hidden">
-                <img
-                  src={p.right}
-                  alt={p.rightAlt}
-                  className={`absolute inset-0 w-full h-full object-cover ${active ? "hero-kenburns" : ""}`}
-                  style={{
-                    filter: HERO_GRADE,
-                    objectPosition: (p as any).rightObjectPosition ?? "center",
-                  }}
-                  onError={onImgError}
-                />
-                {/* Soft fade into the dark panel */}
-                <div className="absolute inset-x-0 bottom-0 h-24 pointer-events-none bg-gradient-to-b from-transparent to-dark" />
-
-                {/* Floating diptych thumbnail (top-right) — keeps the "wide view" story */}
-                <div className="absolute top-4 right-4 w-20 h-28 rounded-md overflow-hidden ring-1 ring-gold/60 shadow-lg shadow-black/40">
-                  <img
-                    src={p.left}
-                    alt={p.leftAlt}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    style={{
-                      filter: HERO_GRADE,
-                      objectPosition: (p as any).leftObjectPosition ?? "center",
-                    }}
-                    onError={onImgError}
-                  />
-                  <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
-                </div>
-              </div>
-
-              {/* Bottom 42% — deep brand panel for headline */}
-              <div className="absolute bottom-0 inset-x-0 h-[42%] bg-dark">
-                {/* Hairline gold rule at the seam */}
-                <div className="absolute top-0 inset-x-6 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
-                {/* Soft gold glow rising into the panel */}
-                <div
-                  className="absolute inset-0 pointer-events-none opacity-40"
-                  style={{
-                    background:
-                      "radial-gradient(120% 80% at 10% 0%, color-mix(in oklab, var(--gold) 28%, transparent) 0%, transparent 55%)",
-                  }}
-                />
-              </div>
+              {/* Back layer: right image fills full screen */}
+              <img
+                src={p.right}
+                alt={p.rightAlt}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  filter: HERO_GRADE,
+                  objectPosition: (p as any).rightObjectPosition ?? "center",
+                }}
+                onError={onImgError}
+              />
+              {/* Front layer: left image clipped to upper-left triangle */}
+              <img
+                src={p.left}
+                alt={p.leftAlt}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  filter: HERO_GRADE,
+                  objectPosition: (p as any).leftObjectPosition ?? "center",
+                  clipPath: "polygon(0 0, 100% 0, 0 85%)",
+                  WebkitClipPath: "polygon(0 0, 100% 0, 0 85%)",
+                }}
+                onError={onImgError}
+              />
+              {/* Gold seam rendered as a precise CSS diagonal line */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to bottom right, transparent calc(85% - 1px), rgba(201,169,110,0.65) calc(85% - 1px), rgba(201,169,110,0.65) 85%, transparent 85%)",
+                }}
+              />
             </div>
           </div>
         );
