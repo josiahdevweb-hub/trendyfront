@@ -307,7 +307,7 @@ function Home() {
       {/* ── 1. HERO (Morphing diptych: 60/40 ↔ 40/60) ───────── */}
       <section
         className="relative w-full overflow-hidden bg-dark"
-        style={{ height: "min(80vh, 80dvh)", minHeight: 520 }}
+        style={{ height: "min(92dvh, 92vh)", minHeight: 580 }}
       >
         <HeroDiptych mounted={mounted} />
 
