@@ -337,7 +337,7 @@ function Home() {
             <h1 className="font-serif text-5xl md:text-7xl mb-5 leading-[1.05]">
               Trendylocs
               <br />
-              {/* <span className="italic text-gold">Natural.</span> */}
+              <span className="italic text-gold/90 text-4xl md:text-5xl">Manchester.</span>
             </h1>
 
             <p className="text-base md:text-lg text-white/85 mb-5 max-w-md leading-relaxed">
