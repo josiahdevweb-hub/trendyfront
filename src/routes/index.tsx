@@ -66,24 +66,24 @@ const services = [
 const testimonials = [
   {
     quote:
-      "The best decision I ever made. My sisterlocks are absolutely beautiful — I get compliments everywhere I go.",
-    name: "Amara Johnson",
+      "I have been with Trendylocs since my installation in November 2018 and my daughter had her install in February February 2020. We are so pleased with Gina’s services. My eldest daughter has also decided she wants Sister locks so she will be going to Trendylocs.",
+    name: "Edinah Ngwarati",
     service: "Sisterlocks",
     initials: "AJ",
     rating: 5,
   },
   {
     quote:
-      "Professional, knowledgeable, and so welcoming. I finally found my loc specialist and I'm never going anywhere else.",
-    name: "Kendra Williams",
-    service: "Microlocs",
+      "Gina is an amazing! Professional, knowledge and absolutely top tier customer service. I've been using her service for over 5 years as she was the person who installed my current set of locs. Higy recommend..",
+    name: "Maisha Marsh",
+    service: "SisterLocs",
     initials: "KW",
     rating: 5,
   },
   {
     quote:
-      "My hair has never been healthier or more beautiful. The expertise here is genuinely unmatched in Manchester.",
-    name: "Nia Thompson",
+      "Great service, accessible location, comfortable environment. I tried a few others before settling on Trendylocs and so far it’s been grea.",
+    name: "Yinks x",
     service: "Natural Hair Care",
     initials: "NT",
     rating: 5,
