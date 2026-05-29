@@ -168,7 +168,7 @@ const HERO_PAIRS = [
   },
 ] as const;
 
-const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
+// const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
 
 function HeroDiptych({ mounted }: { mounted: boolean }) {
   const [idx, setIdx] = useState(0);
