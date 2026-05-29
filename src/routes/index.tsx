@@ -228,52 +228,40 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
               />
             </div>
 
-            {/* MOBILE — magazine-cover split: ken-burns image on top, deep brand panel on bottom */}
+            {/* MOBILE — full-screen diagonal diptych */}
             <div className="md:hidden absolute inset-0">
-              {/* Top 58% — ken-burns detail image */}
-              <div className="absolute top-0 inset-x-0 h-[58%] overflow-hidden">
-                <img
-                  src={p.right}
-                  alt={p.rightAlt}
-                  className={`absolute inset-0 w-full h-full object-cover ${active ? "hero-kenburns" : ""}`}
-                  style={{
-                    filter: HERO_GRADE,
-                    objectPosition: (p as any).rightObjectPosition ?? "center",
-                  }}
-                  onError={onImgError}
-                />
-                {/* Soft fade into the dark panel */}
-                <div className="absolute inset-x-0 bottom-0 h-24 pointer-events-none bg-gradient-to-b from-transparent to-dark" />
-
-                {/* Floating diptych thumbnail (top-right) — keeps the "wide view" story */}
-                <div className="absolute top-4 right-4 w-20 h-28 rounded-md overflow-hidden ring-1 ring-gold/60 shadow-lg shadow-black/40">
-                  <img
-                    src={p.left}
-                    alt={p.leftAlt}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    style={{
-                      filter: HERO_GRADE,
-                      objectPosition: (p as any).leftObjectPosition ?? "center",
-                    }}
-                    onError={onImgError}
-                  />
-                  <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
-                </div>
-              </div>
-
-              {/* Bottom 42% — deep brand panel for headline */}
-              <div className="absolute bottom-0 inset-x-0 h-[42%] bg-dark">
-                {/* Hairline gold rule at the seam */}
-                <div className="absolute top-0 inset-x-6 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
-                {/* Soft gold glow rising into the panel */}
-                <div
-                  className="absolute inset-0 pointer-events-none opacity-40"
-                  style={{
-                    background:
-                      "radial-gradient(120% 80% at 10% 0%, color-mix(in oklab, var(--gold) 28%, transparent) 0%, transparent 55%)",
-                  }}
-                />
-              </div>
+              {/* Back layer: right image fills full screen */}
+              <img
+                src={p.right}
+                alt={p.rightAlt}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  filter: HERO_GRADE,
+                  objectPosition: (p as any).rightObjectPosition ?? "center",
+                }}
+                onError={onImgError}
+              />
+              {/* Front layer: left image clipped to upper-left triangle */}
+              <img
+                src={p.left}
+                alt={p.leftAlt}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  filter: HERO_GRADE,
+                  objectPosition: (p as any).leftObjectPosition ?? "center",
+                  clipPath: "polygon(0 0, 100% 0, 0 85%)",
+                  WebkitClipPath: "polygon(0 0, 100% 0, 0 85%)",
+                }}
+                onError={onImgError}
+              />
+              {/* Gold seam rendered as a precise CSS diagonal line */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to bottom right, transparent calc(85% - 1px), rgba(201,169,110,0.65) calc(85% - 1px), rgba(201,169,110,0.65) 85%, transparent 85%)",
+                }}
+              />
             </div>
           </div>
         );
@@ -319,7 +307,7 @@ function Home() {
       {/* ── 1. HERO (Morphing diptych: 60/40 ↔ 40/60) ───────── */}
       <section
         className="relative w-full overflow-hidden bg-dark"
-        style={{ height: "min(80vh, 80dvh)", minHeight: 520 }}
+        style={{ height: "min(92dvh, 92vh)", minHeight: 580 }}
       >
         <HeroDiptych mounted={mounted} />
 
@@ -349,7 +337,7 @@ function Home() {
             <h1 className="font-serif text-5xl md:text-7xl mb-5 leading-[1.05]">
               Trendylocs
               <br />
-              {/* <span className="italic text-gold">Natural.</span> */}
+              <span className="italic text-gold/90 text-4xl md:text-5xl">Manchester.</span>
             </h1>
 
             <p className="text-base md:text-lg text-white/85 mb-5 max-w-md leading-relaxed">
@@ -363,29 +351,31 @@ function Home() {
               <span className="text-white/70 text-xs ml-2">4.9 · 500+ happy clients</span>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
               <Link
                 to="/book"
-                className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md font-medium hover:opacity-90 hover:scale-[1.03] transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-6 py-3.5 rounded-md font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
               >
                 Book Appointment <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link
-                to="/gallery"
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-7 py-3.5 rounded-md hover:bg-white/20 transition focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-              >
-                View Transformations
-              </Link>
-              <a
-                href="https://www.instagram.com/trendylocs_uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow Trendylocs on Instagram"
-                className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-md border border-gold/40 bg-white/5 backdrop-blur text-white hover:bg-gold/10 hover:border-gold transition-all focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-              >
-                <Instagram className="h-4 w-4 text-gold transition-transform group-hover:scale-110" />
-                <span className="text-sm tracking-wide">Follow on Instagram</span>
-              </a>
+              <div className="flex gap-2">
+                <Link
+                  to="/gallery"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-4 py-3 rounded-md hover:bg-white/20 transition text-sm"
+                >
+                  View Transformations
+                </Link>
+                <a
+                  href="https://www.instagram.com/trendylocs_uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Trendylocs on Instagram"
+                  className="inline-flex items-center gap-2 px-4 py-3 rounded-md border border-gold/40 bg-white/5 backdrop-blur text-white hover:bg-gold/10 hover:border-gold transition-all text-sm"
+                >
+                  <Instagram className="h-4 w-4 text-gold" />
+                  <span className="hidden xs:inline">Instagram</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
