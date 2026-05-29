@@ -583,7 +583,7 @@ function Home() {
           {/* Google review CTA */}
           <div className="text-center mt-10">
             <a
-              href="https://g.page/trendylocs/review"
+              href="https://share.google/3nMtasjIEjeuD7AnL"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-primary-foreground/50 hover:text-gold transition-colors"
