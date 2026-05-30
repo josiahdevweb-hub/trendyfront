@@ -27,7 +27,7 @@ function TopBar() {
         <div className="flex items-center gap-5">
           <span className="flex items-center gap-1.5">
             <Clock className="h-3 w-3 text-gold" />
-            <span>Mon–FRI · 9:30am–5:30pm</span>
+            <span>Mon - Fri · 9:30am–5:30pm</span>
           </span>
           <div className="flex items-center gap-3">
             <a
@@ -148,7 +148,7 @@ function Header() {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-3.5 w-3.5 text-gold" />
-              <span>Mon–Fri · 9:30am–5:30pm</span>
+              <span>Mon–Fri · 9:30am – 5:30pm</span>
             </span>
           </div>
         </div>
