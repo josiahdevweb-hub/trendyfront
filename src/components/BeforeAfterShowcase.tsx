@@ -35,13 +35,14 @@ const transformations: Transformation[] = [
     single: true,
   },
   {
-    title: "Coloured Locs Transformation",
-    note: "From natural coils to long, dimensional coloured locs",
-    style: "Loc Colour",
+    title: "Traditional Locs Transformation",
+    note: "From natural coils to long, healthy traditional locs",
+    style: "Traditional Locs",
     duration: "8–10 hours",
     maintenance: "Every 6–8 weeks",
-    before: "/images/transformations/before-natural-3.jpg",
-    after: "/images/styles/color.jpg",
+    before: "/images/transformations/traditional-locs-before-after.jpg",
+    after: "/images/transformations/traditional-locs-before-after.jpg",
+    single: true,
   },
 ];
 
