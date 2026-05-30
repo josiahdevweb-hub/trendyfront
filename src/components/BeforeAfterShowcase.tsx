@@ -20,8 +20,9 @@ const transformations: Transformation[] = [
     style: "Sisterlocks™",
     duration: "8–10 hours",
     maintenance: "Every 4–6 weeks",
-    before: "/images/transformations/before-natural-1.jpg",
-    after: "/images/styles/sisterlocks.jpg",
+    before: "/images/transformations/sisterlocks-before-after.jpg",
+    after: "/images/transformations/sisterlocks-before-after.jpg",
+    single: true,
   },
   {
     title: "Microlocs Journey",
