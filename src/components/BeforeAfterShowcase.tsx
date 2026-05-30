@@ -10,6 +10,7 @@ type Transformation = {
   maintenance: string;
   before: string;
   after: string;
+  single?: boolean;
 };
 
 const transformations: Transformation[] = [
