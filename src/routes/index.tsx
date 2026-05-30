@@ -352,11 +352,11 @@ function Home() {
                 </span>
               </div>
 
-              <div className="relative inline-block text-gold font-serif text-lg md:text-xl lg:text-[22px] tracking-[0.04em] mb-2 md:mb-3 pb-1.5">
+              <div className="relative inline-block text-gold font-serif text-3xl sm:text-4xl md:text-4xl lg:text-[40px] tracking-[0.02em] mb-3 md:mb-4 pb-2 leading-none">
                 <span className="italic">Trendy</span>
                 <span className="font-semibold">Locs</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
-                <span className="absolute -bottom-[2px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rotate-45 bg-gold" />
+                <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-gold" />
               </div>
 
               <h1 className="font-serif text-[26px] sm:text-3xl md:text-[34px] lg:text-[42px] leading-[1.08] tracking-tight mb-3 md:mb-4">
