@@ -317,7 +317,7 @@ function Home() {
     <>
       {/* ── 1. HERO (Split: Text Left, Portrait Right) ───────── */}
       <section
-        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-center"
+        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center"
         style={{ height: "min(80dvh, 80vh)", minHeight: 480 }}
       >
         {/* Subtle dot pattern background */}
@@ -337,7 +337,7 @@ function Home() {
           }}
         />
 
-        <div className="relative w-full mx-auto max-w-7xl px-6 md:px-10 py-6 md:py-8">
+        <div className="relative w-full mx-auto max-w-7xl px-6 md:px-10 pt-24 pb-6 md:py-8">
           <div className="grid md:grid-cols-2 gap-5 md:gap-8 items-center">
             {/* LEFT — copy + CTAs + stats */}
             <div
