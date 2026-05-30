@@ -203,7 +203,7 @@ function Footer() {
         <div>
           <h4 className="font-serif text-lg mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
-            <li>Sisterlocks</li>
+            <li>Sisterlocks™</li>
             <li>Microlocs</li>
             <li>Traditional Locs</li>
             <li>Retightening</li>

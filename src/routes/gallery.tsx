@@ -18,19 +18,19 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const items = [
-  { title: "Sisterlocks Installation", desc: "Fresh sisterlocks with precision parting", cat: "Sisterlocks", img: "/images/styles/sisterlocks.jpg" },
+  { title: "Sisterlocks™ Installation", desc: "Fresh sisterlocks with precision parting", cat: "Sisterlocks™", img: "/images/styles/sisterlocks.jpg" },
   { title: "Microlocs Transformation", desc: "Beautiful microlocs after 6 months", cat: "Microlocs", img: "/images/styles/microlocs.jpg" },
   { title: "Traditional Locs", desc: "Mature locs with healthy shine", cat: "Traditional Locs", img: "/images/styles/traditional-locs.jpg" },
   { title: "Elegant Updo", desc: "Special occasion loc styling", cat: "Styling", img: "/images/styles/styling.jpg" },
-  { title: "Sisterlocks Styling", desc: "Versatile sisterlocks everyday wear", cat: "Sisterlocks", img: "/images/styles/sisterlocks.jpg" },
+  { title: "Sisterlocks™ Styling", desc: "Versatile sisterlocks everyday wear", cat: "Sisterlocks™", img: "/images/styles/sisterlocks.jpg" },
   { title: "Microlocs Journey", desc: "1-year microlocs growth progress", cat: "Microlocs", img: "/images/styles/microlocs.jpg" },
   { title: "Freeform Locs", desc: "Natural freeform organic texture", cat: "Traditional Locs", img: "/images/styles/traditional-locs.jpg" },
   { title: "Half-Up Style", desc: "Casual half-up loc styling", cat: "Styling", img: "/images/styles/updo.jpg" },
-  { title: "Mature Sisterlocks", desc: "3-year sisterlocks beautiful texture", cat: "Sisterlocks", img: "/images/styles/mature-locs.jpg" },
+  { title: "Mature Sisterlocks™", desc: "3-year sisterlocks beautiful texture", cat: "Sisterlocks™", img: "/images/styles/mature-locs.jpg" },
   { title: "Long Locs", desc: "Long, healthy traditional locs", cat: "Traditional Locs", img: "/images/styles/long-locs.jpg" },
   { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "/images/salon/interior.jpg" },
 ];
-const cats = ["All", "Sisterlocks", "Microlocs", "Traditional Locs", "Styling"];
+const cats = ["All", "Sisterlocks™", "Microlocs", "Traditional Locs", "Styling"];
 
 function Gallery() {
   const [cat, setCat] = useState("All");

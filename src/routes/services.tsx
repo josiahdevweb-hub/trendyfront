@@ -4,13 +4,13 @@ import { Clock } from "lucide-react";
 export const Route = createFileRoute("/services")({
   head: () => ({ meta: [
     { title: "Services — Trendylocs" },
-    { name: "description", content: "Sisterlocks, Microlocs, Traditional Locs, retightening, styling and more." },
+    { name: "description", content: "Sisterlocks™, Microlocs, Traditional Locs, retightening, styling and more." },
   ]}),
   component: Services,
 });
 
 const services = [
-  { slug: "sisterlocks", title: "Sisterlocks", price: "From £350", time: "8-12 hours", desc: "Precision micro locs created using a specialized tool and technique. Perfect for those seeking a versatile, low-manipulation protective style.", img: "/images/styles/sisterlocks.jpg", features: ["Initial consultation included", "Precision parting and installation", "Aftercare kit and instructions", "Follow-up appointment guidance", "Lifetime installation warranty"] },
+  { slug: "sisterlocks", title: "Sisterlocks™", price: "From £350", time: "8-12 hours", desc: "Precision micro locs created using a specialized tool and technique. Perfect for those seeking a versatile, low-manipulation protective style.", img: "/images/styles/sisterlocks.jpg", features: ["Initial consultation included", "Precision parting and installation", "Aftercare kit and instructions", "Follow-up appointment guidance", "Lifetime installation warranty"] },
   { slug: "microlocs", title: "Microlocs", price: "From £280", time: "6-10 hours", desc: "Small, uniform locs installed using coiling, braiding, or interlocking. Offers styling flexibility with manageability.", img: "/images/styles/microlocs.jpg", features: ["Consultation to determine best method", "Professional installation", "Styling recommendations", "Maintenance schedule planning", "Product recommendations"] },
   { slug: "traditional-locs", title: "Traditional Locs", price: "From £180", time: "4-8 hours", desc: "Classic dreadlocks created through various methods including two-strand twists, coils, or freeform. A timeless protective style.", img: "/images/styles/traditional-locs.jpg", features: ["Multiple installation methods available", "Customized parting pattern", "Natural or cultivated options", "Maintenance guidance", "Growth tracking"] },
   { slug: "retightening", title: "Retightening", price: "From £85", time: "2-4 hours", desc: "Essential maintenance service to keep your locs neat, healthy, and mature properly. Recommended every 4-6 weeks.", img: "/images/styles/retightening.jpg", features: ["Root maintenance", "Scalp cleansing and treatment", "Loc health assessment", "Styling included", "Next appointment scheduling"] },

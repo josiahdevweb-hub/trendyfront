@@ -13,10 +13,10 @@ const sections = [
   { title: "Getting Started", items: [
     ["What are locs and how are they different from dreadlocks?", "Locs (short for locked hair) and dreadlocks refer to the same hairstyle where hair is intentionally matted and rope-like. \"Locs\" is the preferred modern term as it's more respectful and doesn't carry the historical negative connotations of \"dreadlocks.\""],
     ["Which loc method is best for me?", "It depends on your hair type, lifestyle, and the look you want. We recommend a free consultation so we can assess your hair and discuss your goals before recommending a method."],
-    ["How long does my hair need to be to start locs?", "Most methods require at least 2–4 inches of hair. Sisterlocks and microlocs can sometimes be started on shorter hair depending on texture."],
+    ["How long does my hair need to be to start locs?", "Most methods require at least 2–4 inches of hair. Sisterlocks™ and microlocs can sometimes be started on shorter hair depending on texture."],
   ]},
   { title: "Pricing & Appointments", items: [
-    ["How much do locs cost?", "Prices start from £150 for starter locs and £350 for Sisterlocks. Final pricing depends on hair length, density, and complexity — we provide a detailed quote at consultation."],
+    ["How much do locs cost?", "Prices start from £150 for starter locs and £350 for Sisterlocks™. Final pricing depends on hair length, density, and complexity — we provide a detailed quote at consultation."],
     ["Do you offer payment plans?", "Yes, payment plans are available for installation services. Ask us at your consultation."],
     ["How do I book an appointment?", "Book via the Contact page, the Setmore booking system, or directly by phone/WhatsApp."],
     ["What is your cancellation policy?", "We ask for at least 48 hours notice for cancellations or rescheduling."],

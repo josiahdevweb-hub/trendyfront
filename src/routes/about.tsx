@@ -37,7 +37,7 @@ function About() {
     {
       year: "Growth",
       title: "Building the Craft",
-      desc: "Expanded into Sisterlocks, Microlocs and Traditional Locs as the client family grew.",
+      desc: "Expanded into Sisterlocks™, Microlocs and Traditional Locs as the client family grew.",
     },
     {
       year: "Milestones",
@@ -51,7 +51,7 @@ function About() {
     },
   ];
   const certs = [
-    { icon: BadgeCheck, label: "Certified Sisterlocks Consultant" },
+    { icon: BadgeCheck, label: "Certified Sisterlocks™ Consultant" },
     { icon: Scissors, label: "Advanced Microlocs Specialist" },
     { icon: Sparkles, label: "Natural Hair Care Professional" },
     { icon: HeartHandshake, label: "Loc Maintenance Expert" },
@@ -94,7 +94,7 @@ function About() {
           <h2 className="text-4xl mb-6">A passion built into a craft.</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed overflow-y-auto pr-4 max-h-[520px] md:max-h-[450px] scroll-smooth founder-scroll">
             <p>
-              I am a Sisterlocks (TM) Consultant. I do Sisterlocks installations, re-tightenings and styling. I also
+              I am a Sisterlocks™ Consultant. I do Sisterlocks™ installations, re-tightenings and styling. I also
               install, retighten and style dreadlocks and micro locks. I’m based in East Manchester, a 5 minute bus/car
               drive from Manchester Piccadilly station.
             </p>
