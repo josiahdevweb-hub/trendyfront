@@ -353,7 +353,7 @@ function Home() {
                 </span>
               </div>
 
-              <div className="text-gold text-sm uppercase tracking-[0.2em] font-medium mb-2 md:mb-3">
+              <div className="inline-block text-gold text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-[0.15em] mb-2 md:mb-3 pb-1 border-b-2 border-gold/50">
                 TrendyLocs
               </div>
 
