@@ -86,31 +86,42 @@ export default function BeforeAfterShowcase() {
               className="animate-fade-in bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
-                <ReactCompareSlider
-                  itemOne={
-                    <ReactCompareSliderImage
-                      src={t.before}
-                      alt={`${t.title} before`}
-                      loading="lazy"
-                      style={{ objectFit: "cover" }}
+                {t.single ? (
+                  <img
+                    src={t.before}
+                    alt={`${t.title} before and after`}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <ReactCompareSlider
+                      itemOne={
+                        <ReactCompareSliderImage
+                          src={t.before}
+                          alt={`${t.title} before`}
+                          loading="lazy"
+                          style={{ objectFit: "cover" }}
+                        />
+                      }
+                      itemTwo={
+                        <ReactCompareSliderImage
+                          src={t.after}
+                          alt={`${t.title} after`}
+                          loading="lazy"
+                          style={{ objectFit: "cover" }}
+                        />
+                      }
+                      className="h-full w-full"
                     />
-                  }
-                  itemTwo={
-                    <ReactCompareSliderImage
-                      src={t.after}
-                      alt={`${t.title} after`}
-                      loading="lazy"
-                      style={{ objectFit: "cover" }}
-                    />
-                  }
-                  className="h-full w-full"
-                />
-                <span className="pointer-events-none absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 text-white text-[10px] uppercase tracking-[0.2em]">
-                  Before
-                </span>
-                <span className="pointer-events-none absolute top-3 right-3 px-3 py-1 rounded-full bg-gold text-gold-foreground text-[10px] uppercase tracking-[0.2em]">
-                  After
-                </span>
+                    <span className="pointer-events-none absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 text-white text-[10px] uppercase tracking-[0.2em]">
+                      Before
+                    </span>
+                    <span className="pointer-events-none absolute top-3 right-3 px-3 py-1 rounded-full bg-gold text-gold-foreground text-[10px] uppercase tracking-[0.2em]">
+                      After
+                    </span>
+                  </>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-xl mb-1">{t.title}</h3>
