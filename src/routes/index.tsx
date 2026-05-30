@@ -76,7 +76,7 @@ const testimonials = [
     quote:
       "Gina is an amazing! Professional, knowledge and absolutely top tier customer service. I've been using her service for over 5 years as she was the person who installed my current set of locs. Higy recommend..",
     name: "Maisha Marsh",
-    service: "SisterLocs",
+    service: "Sisterlocks™",
     initials: "KW",
     rating: 5,
   },
@@ -108,7 +108,7 @@ const faqs = [
   },
   {
     q: "Do you offer a consultation before installation?",
-    a: "Yes — every new client begins with a complimentary consultation to assess your hair type, discuss your goals, and recommend the best service for your hair journey.",
+    a: "Yes: every new client begins with a complimentary consultation to assess your hair type, discuss your goals, and recommend the best service for your hair journey.",
   },
   {
     q: "What products do you use?",
@@ -152,17 +152,17 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 const HERO_PAIRS = [
   {
     left: "/images/hero/wide.jpg",
-    leftAlt: "Trendylocs Manchester salon — client mid-service",
+    leftAlt: "Trendylocs Manchester salon client mid-service",
     right: "/images/hero/detail.jpg",
     rightAlt: "Precision microlocs being installed — close-up craftsmanship",
     split: 60, // left %
   },
   {
     left: "/images/hero/wide-2.jpg",
-    leftAlt: "Trendylocs Manchester studio — natural light, plants, styling chair",
+    leftAlt: "Trendylocs Manchester studio natural light, plants, styling chair",
     leftObjectPosition: "50% 55%",
     right: "/images/hero/detail-2.jpg",
-    rightAlt: "Stylist's hands working microlocs — craftsmanship close-up",
+    rightAlt: "Stylist's hands working microlocs craftsmanship close-up",
     rightObjectPosition: "72% 45%",
     split: 40,
   },
@@ -602,7 +602,7 @@ function Home() {
           {[
             {
               icon: GraduationCap,
-              title: "Certified Specialists",
+              title: "Certified Sisterlocks™ Consultant",
               desc: "Our stylists hold formal certification in Sisterlocks™ and are trained in the latest loc techniques not self-taught.",
             },
             {
@@ -639,7 +639,7 @@ function Home() {
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Follow Our Work</p>
           <h2 className="text-3xl md:text-4xl mb-3">See the transformations</h2>
           <a
-            href="https://instagram.com/trendylocs"
+            href="https://www.instagram.com/trendylocs_uk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors text-sm"
@@ -661,7 +661,7 @@ function Home() {
           ].map((src, i) => (
             <a
               key={i}
-              href="https://instagram.com/trendylocs"
+              href="https://www.instagram.com/trendylocs_uk"
               target="_blank"
               rel="noopener noreferrer"
               className="aspect-square overflow-hidden rounded-md bg-secondary/60 relative group"
