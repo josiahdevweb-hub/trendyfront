@@ -353,6 +353,10 @@ function Home() {
                 </span>
               </div>
 
+              <div className="text-gold text-sm uppercase tracking-[0.2em] font-medium mb-2 md:mb-3">
+                TrendyLocs
+              </div>
+
               <h1 className="font-serif text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-[1.05] mb-4 md:mb-5">
                 Premium Locs.
                 <br />
