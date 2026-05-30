@@ -144,11 +144,11 @@ function Header() {
             </a>
             <span className="flex items-center gap-2">
               <MapPin className="h-3.5 w-3.5 text-gold" />
-              <span>Location, 41 Cross Street. Sale. M33 7FT. Manchester</span>
+              <span> 41 Cross Street. Sale. M33 7FT. Manchester</span>
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-3.5 w-3.5 text-gold" />
-              <span>Mon–Fri · 9:30am – 5:30pm</span>
+              <span>Mon – Fri · 9:30am – 5:30pm</span>
             </span>
           </div>
         </div>
