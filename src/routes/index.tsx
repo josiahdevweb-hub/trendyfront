@@ -267,17 +267,17 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
         );
       })}
 
-      {/* Brand-tinted blend overlay — desktop only (mobile uses split panel) */}
+      {/* Subtle brand-tinted blend overlay — desktop only (mobile uses split panel) */}
       <div
-        className="hidden md:block absolute inset-0 pointer-events-none mix-blend-color opacity-40"
+        className="hidden md:block absolute inset-0 pointer-events-none mix-blend-color opacity-15"
         style={{ background: "linear-gradient(135deg, var(--dark) 0%, var(--gold) 100%)" }}
       />
       <div
-        className="hidden md:block absolute inset-0 pointer-events-none mix-blend-multiply opacity-30"
+        className="hidden md:block absolute inset-0 pointer-events-none mix-blend-multiply opacity-10"
         style={{ background: "linear-gradient(180deg, transparent 0%, var(--dark) 100%)" }}
       />
-      {/* Desktop readability gradient — bottom-left dark anchor for headline */}
-      <div className="hidden md:block absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/85 via-black/35 to-transparent" />
+      {/* Desktop readability gradient — light bottom-left anchor for headline */}
+      <div className="hidden md:block absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/45 via-black/15 to-transparent" />
 
       {/* Desktop gold hairline seam — slides with split ratio */}
       <div
