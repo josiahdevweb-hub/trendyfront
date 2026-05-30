@@ -156,30 +156,41 @@ export default function BeforeAfterShowcase() {
               style={{ animationDelay: `${(i + transformations.length) * 120}ms` }}
               className="animate-fade-in bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2">
-                <figure className="relative aspect-[4/3] overflow-hidden">
+              {t.single ? (
+                <div className="relative aspect-[2/1] overflow-hidden">
                   <img
                     src={t.before}
-                    alt={`${t.title} before`}
+                    alt={`${t.title} before and after`}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <figcaption className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 text-white text-[10px] uppercase tracking-[0.2em]">
-                    Before
-                  </figcaption>
-                </figure>
-                <figure className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={t.after}
-                    alt={`${t.title} after`}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <figcaption className="absolute top-3 right-3 px-3 py-1 rounded-full bg-gold text-gold-foreground text-[10px] uppercase tracking-[0.2em]">
-                    After
-                  </figcaption>
-                </figure>
-              </div>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2">
+                  <figure className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={t.before}
+                      alt={`${t.title} before`}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <figcaption className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 text-white text-[10px] uppercase tracking-[0.2em]">
+                      Before
+                    </figcaption>
+                  </figure>
+                  <figure className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={t.after}
+                      alt={`${t.title} after`}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <figcaption className="absolute top-3 right-3 px-3 py-1 rounded-full bg-gold text-gold-foreground text-[10px] uppercase tracking-[0.2em]">
+                      After
+                    </figcaption>
+                  </figure>
+                </div>
+              )}
               <div className="p-6">
                 <h3 className="text-xl mb-1">{t.title}</h3>
                 <p className="text-sm text-muted-foreground">{t.note}</p>
