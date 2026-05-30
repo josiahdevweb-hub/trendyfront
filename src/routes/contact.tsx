@@ -133,11 +133,28 @@ function Contact() {
           <div>
             <h2 className="text-4xl mb-4">Visit Our Salon</h2>
             <p className="text-muted-foreground mb-6">
-              Map integration available — Google Maps embed can be added here.
+              41 Cross Street, Sale, M33 7FT, Manchester, United Kingdom
             </p>
-            <div className="aspect-video bg-card border border-border rounded-md flex items-center justify-center text-muted-foreground">
-              <MapPin className="h-10 w-10 text-gold" />
+            <div className="aspect-video overflow-hidden rounded-md border border-border">
+              <iframe
+                title="Trendylocs salon location — 41 Cross Street, Sale, M33 7FT, Manchester"
+                src="https://www.google.com/maps?q=41+Cross+Street,+Sale,+M33+7FT,+Manchester,+United+Kingdom&output=embed"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0 }}
+                allowFullScreen
+              />
             </div>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=41+Cross+Street,+Sale,+M33+7FT,+Manchester,+United+Kingdom"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-4 text-sm text-gold hover:underline"
+            >
+              <MapPin className="h-4 w-4" /> Get Directions
+            </a>
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl mb-4">Have Questions?</h2>
