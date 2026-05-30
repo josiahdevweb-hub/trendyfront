@@ -302,10 +302,24 @@ function Home() {
     setMounted(true);
   }, []);
 
+  // Cycle through all hero images for the right-side portrait
+  const heroImages = HERO_PAIRS.flatMap((p) => [
+    { src: p.left, alt: p.leftAlt, pos: (p as any).leftObjectPosition ?? "50% 30%" },
+    { src: p.right, alt: p.rightAlt, pos: (p as any).rightObjectPosition ?? "center" },
+  ]);
+  const [heroIdx, setHeroIdx] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setHeroIdx((i) => (i + 1) % heroImages.length), 5000);
+    return () => clearInterval(t);
+  }, [heroImages.length]);
+
   return (
     <>
       {/* ── 1. HERO (Split: Text Left, Portrait Right) ───────── */}
-      <section className="relative w-full overflow-hidden bg-dark text-primary-foreground">
+      <section
+        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-center"
+        style={{ height: "min(80dvh, 80vh)", minHeight: 540 }}
+      >
         {/* Subtle dot pattern background */}
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none"
@@ -324,43 +338,43 @@ function Home() {
           }}
         />
 
-        <div className="relative mx-auto max-w-7xl px-6 md:px-10 pt-14 md:pt-20 pb-24 md:pb-28">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-8 items-center">
+        <div className="relative w-full mx-auto max-w-7xl px-6 md:px-10 py-8 md:py-10">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
             {/* LEFT — copy + CTAs + stats */}
             <div
               className={`relative z-10 transition-all duration-1000 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-4 md:mb-5">
                 <span className="h-px w-10 bg-gold" />
                 <span className="text-[11px] uppercase tracking-[0.25em] text-gold/90">
                   Manchester · Locs Specialists
                 </span>
               </div>
 
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-[1.05] mb-4 md:mb-5">
                 Premium Locs.
                 <br />
                 Crafted in <span className="text-gold italic">Manchester.</span>
               </h1>
 
-              <p className="text-base md:text-lg text-primary-foreground/80 max-w-md leading-relaxed mb-8">
+              <p className="text-sm md:text-base text-primary-foreground/80 max-w-md leading-relaxed mb-6">
                 Sisterlocks™, Microlocs &amp; Traditional Locs — precision installations
                 and gentle maintenance from certified specialists who treat every head of hair
                 like their own.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-10">
+              <div className="flex flex-col sm:flex-row gap-3 mb-6 md:mb-8">
                 <Link
                   to="/book"
-                  className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
+                  className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-6 py-3 rounded-md font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
                 >
                   Book Consultation <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center justify-center gap-2 border border-gold/40 bg-white/5 backdrop-blur px-7 py-3.5 rounded-md text-primary-foreground hover:bg-gold/10 hover:border-gold transition-all"
+                  className="inline-flex items-center justify-center gap-2 border border-gold/40 bg-white/5 backdrop-blur px-6 py-3 rounded-md text-primary-foreground hover:bg-gold/10 hover:border-gold transition-all"
                 >
                   Explore Services
                 </Link>
@@ -370,10 +384,10 @@ function Home() {
               <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-lg">
                 {stats.slice(0, 3).map(({ number, label }) => (
                   <div key={label}>
-                    <p className="font-serif text-2xl md:text-3xl text-gold leading-none mb-1.5">
+                    <p className="font-serif text-xl md:text-2xl text-gold leading-none mb-1">
                       {number}
                     </p>
-                    <p className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-primary-foreground/55 leading-snug">
+                    <p className="text-[9px] md:text-[10px] uppercase tracking-[0.18em] text-primary-foreground/55 leading-snug">
                       {label}
                     </p>
                   </div>
@@ -381,23 +395,29 @@ function Home() {
               </div>
             </div>
 
-            {/* RIGHT — portrait with floating quote chips */}
+            {/* RIGHT — cycling portrait */}
             <div
-              className={`relative h-[420px] md:h-[560px] lg:h-[620px] transition-all duration-1000 delay-200 ${
+              className={`relative h-[260px] sm:h-[340px] md:h-[460px] lg:h-[520px] transition-all duration-1000 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               <div className="absolute inset-0 md:inset-x-4">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                  <img
-                    src="/images/hero/wide.jpg"
-                    alt="Trendylocs Manchester client wearing precision Sisterlocks™"
-                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] ease-out ${
-                      mounted ? "scale-100" : "scale-110"
-                    }`}
-                    style={{ objectPosition: "50% 30%", filter: HERO_GRADE }}
-                    onError={onImgError}
-                  />
+                  {heroImages.map((img, i) => {
+                    const active = i === heroIdx;
+                    return (
+                      <img
+                        key={i}
+                        src={img.src}
+                        alt={img.alt}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1600ms] ease-in-out ${
+                          active ? "opacity-100 hero-kenburns" : "opacity-0"
+                        }`}
+                        style={{ objectPosition: img.pos, filter: HERO_GRADE }}
+                        onError={onImgError}
+                      />
+                    );
+                  })}
                   <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
@@ -407,46 +427,6 @@ function Home() {
                   />
                 </div>
               </div>
-
-              {/* Floating quote chip — top */}
-              <div
-                className={`hidden sm:flex absolute top-6 -left-2 md:-left-6 items-center gap-2 bg-white/95 text-foreground px-3.5 py-2 rounded-full shadow-lg backdrop-blur transition-all duration-700 delay-500 ${
-                  mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3"
-                }`}
-              >
-                <span className="flex">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="h-3 w-3 fill-gold text-gold" />
-                  ))}
-                </span>
-                <span className="text-xs font-medium">4.9 · 500+ clients</span>
-              </div>
-
-              {/* Floating quote chip — middle right */}
-              <div
-                className={`hidden sm:block absolute top-1/3 -right-2 md:-right-4 max-w-[200px] bg-white/95 text-foreground px-4 py-3 rounded-2xl rounded-tr-sm shadow-lg backdrop-blur transition-all duration-700 delay-700 ${
-                  mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-3"
-                }`}
-              >
-                <p className="text-xs leading-snug italic">
-                  &ldquo;Best Sisterlocks™ install I&rsquo;ve ever had.&rdquo;
-                </p>
-                <p className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">
-                  — Amara, Manchester
-                </p>
-              </div>
-
-              {/* Floating chip — bottom */}
-              <div
-                className={`hidden sm:flex absolute bottom-8 left-4 md:left-0 items-center gap-2 bg-gold text-gold-foreground px-3.5 py-2 rounded-full shadow-lg transition-all duration-700 delay-[900ms] ${
-                  mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-                }`}
-              >
-                <span className="h-2 w-2 rounded-full bg-foreground animate-pulse" />
-                <span className="text-xs font-semibold uppercase tracking-wider">
-                  Certified Consultant
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -454,18 +434,19 @@ function Home() {
         {/* Bottom wave — blends into next section */}
         <div className="absolute inset-x-0 bottom-0 pointer-events-none">
           <svg
-            viewBox="0 0 1440 80"
+            viewBox="0 0 1440 60"
             preserveAspectRatio="none"
-            className="w-full h-12 md:h-16 block"
+            className="w-full h-8 md:h-10 block"
             aria-hidden="true"
           >
             <path
-              d="M0,40 C240,80 480,0 720,30 C960,60 1200,20 1440,50 L1440,80 L0,80 Z"
+              d="M0,30 C240,60 480,0 720,20 C960,45 1200,15 1440,40 L1440,60 L0,60 Z"
               fill="var(--background)"
             />
           </svg>
         </div>
       </section>
+
 
 
       {/* ── 3. WELCOME ────────────────────────────────────────────────── */}
