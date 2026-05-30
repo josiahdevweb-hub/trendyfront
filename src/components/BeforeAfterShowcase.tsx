@@ -63,8 +63,9 @@ const sideBySide: Transformation[] = [
     style: "Styling",
     duration: "1–2 hours",
     maintenance: "As desired",
-    before: "/images/transformations/before-styling.jpg",
-    after: "/images/styles/updo.jpg",
+    before: "/images/transformations/loc-styling-before-after.jpg",
+    after: "/images/transformations/loc-styling-before-after.jpg",
+    single: true,
   },
 ];
 
