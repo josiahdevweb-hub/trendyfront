@@ -338,59 +338,59 @@ function Home() {
           }}
         />
 
-        <div className="relative w-full mx-auto max-w-7xl px-6 md:px-10 py-8 md:py-10">
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+        <div className="relative w-full mx-auto max-w-7xl px-6 md:px-10 py-6 md:py-8">
+          <div className="grid md:grid-cols-2 gap-5 md:gap-8 items-center">
             {/* LEFT — copy + CTAs + stats */}
             <div
               className={`relative z-10 transition-all duration-1000 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <div className="flex items-center gap-3 mb-4 md:mb-5">
-                <span className="h-px w-10 bg-gold" />
-                <span className="text-[11px] uppercase tracking-[0.25em] text-gold/90">
+              <div className="flex items-center gap-3 mb-3 md:mb-4">
+                <span className="h-px w-8 bg-gold" />
+                <span className="text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-gold/90">
                   Manchester · Locs Specialists
                 </span>
               </div>
 
-              <div className="relative inline-block text-gold font-serif text-xl md:text-2xl lg:text-[26px] tracking-[0.05em] mb-3 md:mb-4 pb-2">
+              <div className="relative inline-block text-gold font-serif text-lg md:text-xl lg:text-[22px] tracking-[0.04em] mb-2 md:mb-3 pb-1.5">
                 <span className="italic">Trendy</span><span className="font-semibold">Locs</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
-                <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rotate-45 bg-gold" />
+                <span className="absolute -bottom-[2px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rotate-45 bg-gold" />
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-[40px] lg:text-5xl leading-[1.08] tracking-tight mb-4 md:mb-5">
+              <h1 className="font-serif text-[26px] sm:text-3xl md:text-[34px] lg:text-[42px] leading-[1.08] tracking-tight mb-3 md:mb-4">
                 Premium Locs.
                 <br />
                 Crafted in <span className="text-gold italic">Manchester.</span>
               </h1>
 
-              <p className="text-sm md:text-[15px] text-primary-foreground/75 max-w-md leading-relaxed mb-6">
+              <p className="text-[13px] md:text-sm text-primary-foreground/75 max-w-md leading-relaxed mb-4 md:mb-5">
                 Sisterlocks™, Microlocs &amp; Traditional Locs — precision installations
                 and gentle maintenance from certified specialists who treat every head of hair
                 like their own.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-6 md:mb-8">
+              <div className="flex flex-col sm:flex-row gap-2.5 mb-4 md:mb-6">
                 <Link
                   to="/book"
-                  className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-6 py-3 rounded-md font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
+                  className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-5 py-2.5 rounded-md text-sm font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
                 >
                   Book Consultation <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center justify-center gap-2 border border-gold/40 bg-white/5 backdrop-blur px-6 py-3 rounded-md text-primary-foreground hover:bg-gold/10 hover:border-gold transition-all"
+                  className="inline-flex items-center justify-center gap-2 border border-gold/40 bg-white/5 backdrop-blur px-5 py-2.5 rounded-md text-sm text-primary-foreground hover:bg-gold/10 hover:border-gold transition-all"
                 >
                   Explore Services
                 </Link>
               </div>
 
               {/* Stats row — inline like the reference */}
-              <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-lg">
+              <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-md">
                 {stats.slice(0, 3).map(({ number, label }) => (
                   <div key={label}>
-                    <p className="font-serif text-xl md:text-2xl text-gold leading-none mb-1">
+                    <p className="font-serif text-lg md:text-xl text-gold leading-none mb-1">
                       {number}
                     </p>
                     <p className="text-[9px] md:text-[10px] uppercase tracking-[0.18em] text-primary-foreground/55 leading-snug">
@@ -403,7 +403,7 @@ function Home() {
 
             {/* RIGHT — cycling portrait */}
             <div
-              className={`relative h-[260px] sm:h-[340px] md:h-[460px] lg:h-[520px] transition-all duration-1000 delay-200 ${
+              className={`relative h-[240px] sm:h-[320px] md:h-[400px] lg:h-[460px] transition-all duration-1000 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
