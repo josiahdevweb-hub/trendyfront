@@ -31,6 +31,7 @@ const transformations: Transformation[] = [
     maintenance: "Every 5–7 weeks",
     before: "/images/transformations/microlocs-before-after.jpg",
     after: "/images/transformations/microlocs-before-after.jpg",
+    single: true,
   },
   {
     title: "Coloured Locs Transformation",
