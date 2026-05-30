@@ -28,8 +28,8 @@ const transformations: Transformation[] = [
     style: "Microlocs",
     duration: "6–8 hours",
     maintenance: "Every 5–7 weeks",
-    before: "/images/transformations/before-natural-2.jpg",
-    after: "/images/styles/microlocs.jpg",
+    before: "/images/transformations/microlocs-before-after.jpg",
+    after: "/images/transformations/microlocs-before-after.jpg",
   },
   {
     title: "Coloured Locs Transformation",
