@@ -440,7 +440,7 @@ function Home() {
             <div className="aspect-[3/4] overflow-hidden rounded-md row-span-2">
               <img
                 src="/images/salon/stylish-work.jpg"
-                alt="Trendylocs specialist installing sisterlocks on a client"
+                alt="Trendylocs specialist installing Sisterlocks™ on a client"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}

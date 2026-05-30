@@ -15,7 +15,7 @@ type Transformation = {
 const transformations: Transformation[] = [
   {
     title: "Sisterlocks™ Installation",
-    note: "Natural hair transformed into precision sisterlocks",
+    note: "Natural hair transformed into precision Sisterlocks™",
     style: "Sisterlocks™",
     duration: "8–10 hours",
     maintenance: "Every 4–6 weeks",

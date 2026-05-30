@@ -119,9 +119,9 @@ function About() {
               experience. I want to teach them to love their natural hair. I cannot do that while braiding or relaxing my hair.
             </p>
             <p>
-              I got introduced to sisterlocks and got hooked. I love that it is versatile. I feel I have come full 
-              circle and could not wait to have my sisterlocks installed after the damage caused by years of 
-              braiding. I then trained as as sisterlocks practioner and I have since become a sisterlocks consultant.
+              I got introduced to Sisterlocks™ and got hooked. I love that it is versatile. I feel I have come full 
+              circle and could not wait to have my Sisterlocks™ installed after the damage caused by years of 
+              braiding. I then trained as as Sisterlocks™ practioner and I have since become a Sisterlocks™ consultant.
             </p>
             <p>
               That is how I began my hair journey, let me help you start yours!
