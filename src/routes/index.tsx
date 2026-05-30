@@ -91,10 +91,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { number: "500+", label: "Happy Clients" },
+  { number: "300+", label: "Happy Clients" },
   { number: "8+", label: "Years Experience" },
   { number: "4.9★", label: "Average Rating" },
-  { number: "3", label: "Loc Specialists" },
+  { number: "2", label: "Loc Specialists" },
 ];
 
 const faqs = [
@@ -324,8 +324,7 @@ function Home() {
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none"
           style={{
-            backgroundImage:
-              "radial-gradient(rgba(212,165,116,0.6) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(rgba(212,165,116,0.6) 1px, transparent 1px)",
             backgroundSize: "22px 22px",
           }}
         />
@@ -354,7 +353,8 @@ function Home() {
               </div>
 
               <div className="relative inline-block text-gold font-serif text-lg md:text-xl lg:text-[22px] tracking-[0.04em] mb-2 md:mb-3 pb-1.5">
-                <span className="italic">Trendy</span><span className="font-semibold">Locs</span>
+                <span className="italic">Trendy</span>
+                <span className="font-semibold">Locs</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <span className="absolute -bottom-[2px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rotate-45 bg-gold" />
               </div>
@@ -366,9 +366,8 @@ function Home() {
               </h1>
 
               <p className="text-[13px] md:text-sm text-primary-foreground/75 max-w-md leading-relaxed mb-4 md:mb-5">
-                Sisterlocks™, Microlocs &amp; Traditional Locs — precision installations
-                and gentle maintenance from certified specialists who treat every head of hair
-                like their own.
+                Sisterlocks™, Microlocs &amp; Traditional Locs — precision installations and gentle maintenance from
+                certified specialists who treat every head of hair like their own.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-2.5 mb-4 md:mb-6">
@@ -390,9 +389,7 @@ function Home() {
               <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-md">
                 {stats.slice(0, 3).map(({ number, label }) => (
                   <div key={label}>
-                    <p className="font-serif text-lg md:text-xl text-gold leading-none mb-1">
-                      {number}
-                    </p>
+                    <p className="font-serif text-lg md:text-xl text-gold leading-none mb-1">{number}</p>
                     <p className="text-[9px] md:text-[10px] uppercase tracking-[0.18em] text-primary-foreground/55 leading-snug">
                       {label}
                     </p>
@@ -439,21 +436,11 @@ function Home() {
 
         {/* Bottom wave — blends into next section */}
         <div className="absolute inset-x-0 bottom-0 pointer-events-none">
-          <svg
-            viewBox="0 0 1440 60"
-            preserveAspectRatio="none"
-            className="w-full h-8 md:h-10 block"
-            aria-hidden="true"
-          >
-            <path
-              d="M0,30 C240,60 480,0 720,20 C960,45 1200,15 1440,40 L1440,60 L0,60 Z"
-              fill="var(--background)"
-            />
+          <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-8 md:h-10 block" aria-hidden="true">
+            <path d="M0,30 C240,60 480,0 720,20 C960,45 1200,15 1440,40 L1440,60 L0,60 Z" fill="var(--background)" />
           </svg>
         </div>
       </section>
-
-
 
       {/* ── 3. WELCOME ────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
