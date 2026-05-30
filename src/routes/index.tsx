@@ -304,112 +304,169 @@ function Home() {
 
   return (
     <>
-      {/* ── 1. HERO (Morphing diptych: 60/40 ↔ 40/60) ───────── */}
-      <section
-        className="relative w-full overflow-hidden bg-dark"
-        style={{ height: "min(92dvh, 92vh)", minHeight: 580 }}
-      >
-        <HeroDiptych mounted={mounted} />
-
-        {/* Grain */}
+      {/* ── 1. HERO (Split: Text Left, Portrait Right) ───────── */}
+      <section className="relative w-full overflow-hidden bg-dark text-primary-foreground">
+        {/* Subtle dot pattern background */}
         <div
-          className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
+          className="absolute inset-0 opacity-[0.08] pointer-events-none"
           style={{
             backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+              "radial-gradient(rgba(212,165,116,0.6) 1px, transparent 1px)",
+            backgroundSize: "22px 22px",
+          }}
+        />
+        {/* Warm gold glow behind portrait */}
+        <div
+          className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 w-[55%] h-[120%] pointer-events-none opacity-40"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, color-mix(in oklab, var(--gold) 35%, transparent) 0%, transparent 65%)",
           }}
         />
 
-        {/* Headline — anchored bottom-left in the "quiet zone" */}
-        <div className="relative h-full mx-auto max-w-7xl px-6 md:px-10 flex items-end pb-10 md:pb-20">
-          <div
-            className={`max-w-xl text-white transition-all duration-1000 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-gold" />
-              <span className="text-[11px] uppercase tracking-[0.25em] text-gold/90">
-                Manchester · Locs Specialists
-              </span>
-            </div>
-
-            <h1
-              className="font-serif text-5xl md:text-7xl mb-5 leading-[1.05]"
-              style={{ textShadow: "0 2px 24px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.35)" }}
-            >
-              Trendylocs
-              <br />
-              <span className="italic text-gold/90 text-4xl md:text-5xl">Manchester.</span>
-            </h1>
-
-            <p
-              className="text-base md:text-lg text-white/90 mb-5 max-w-md leading-relaxed"
-              style={{ textShadow: "0 1px 12px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3)" }}
-            >
-              Premium Sisterlocks™, Microlocs &amp; Traditional Locs crafted with precision for every hair journey.
-            </p>
-
+        <div className="relative mx-auto max-w-7xl px-6 md:px-10 pt-14 md:pt-20 pb-24 md:pb-28">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-8 items-center">
+            {/* LEFT — copy + CTAs + stats */}
             <div
-              className="flex items-center gap-1 mb-8"
-              style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
+              className={`relative z-10 transition-all duration-1000 ${
+                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
             >
-              {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className="h-3 w-3 fill-gold text-gold" />
-              ))}
-              <span className="text-white/80 text-xs ml-2">4.9 · 500+ happy clients</span>
-            </div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-gold" />
+                <span className="text-[11px] uppercase tracking-[0.25em] text-gold/90">
+                  Manchester · Locs Specialists
+                </span>
+              </div>
 
-            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
-              <Link
-                to="/book"
-                className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-6 py-3.5 rounded-md font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
-              >
-                Book Appointment <ArrowRight className="h-4 w-4" />
-              </Link>
-              <div className="flex gap-2">
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+                Premium Locs.
+                <br />
+                Crafted in <span className="text-gold italic">Manchester.</span>
+              </h1>
+
+              <p className="text-base md:text-lg text-primary-foreground/80 max-w-md leading-relaxed mb-8">
+                Sisterlocks™, Microlocs &amp; Traditional Locs — precision installations
+                and gentle maintenance from certified specialists who treat every head of hair
+                like their own.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-10">
                 <Link
-                  to="/gallery"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border border-white/30 px-4 py-3 rounded-md hover:bg-white/20 transition text-sm"
+                  to="/book"
+                  className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
                 >
-                  View Transformations
+                  Book Consultation <ArrowRight className="h-4 w-4" />
                 </Link>
-                <a
-                  href="https://www.instagram.com/trendylocs_uk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow Trendylocs on Instagram"
-                  className="inline-flex items-center gap-2 px-4 py-3 rounded-md border border-gold/40 bg-white/5 backdrop-blur text-white hover:bg-gold/10 hover:border-gold transition-all text-sm"
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center gap-2 border border-gold/40 bg-white/5 backdrop-blur px-7 py-3.5 rounded-md text-primary-foreground hover:bg-gold/10 hover:border-gold transition-all"
                 >
-                  <Instagram className="h-4 w-4 text-gold" />
-                  <span className="hidden xs:inline">Instagram</span>
-                </a>
+                  Explore Services
+                </Link>
+              </div>
+
+              {/* Stats row — inline like the reference */}
+              <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-lg">
+                {stats.slice(0, 3).map(({ number, label }) => (
+                  <div key={label}>
+                    <p className="font-serif text-2xl md:text-3xl text-gold leading-none mb-1.5">
+                      {number}
+                    </p>
+                    <p className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-primary-foreground/55 leading-snug">
+                      {label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Scroll cue */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="h-5 w-5 text-white/40" />
-        </div>
-      </section>
+            {/* RIGHT — portrait with floating quote chips */}
+            <div
+              className={`relative h-[420px] md:h-[560px] lg:h-[620px] transition-all duration-1000 delay-200 ${
+                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
+            >
+              <div className="absolute inset-0 md:inset-x-4">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                  <img
+                    src="/images/hero/wide.jpg"
+                    alt="Trendylocs Manchester client wearing precision Sisterlocks™"
+                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] ease-out ${
+                      mounted ? "scale-100" : "scale-110"
+                    }`}
+                    style={{ objectPosition: "50% 30%", filter: HERO_GRADE }}
+                    onError={onImgError}
+                  />
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, transparent 60%, color-mix(in oklab, var(--dark) 55%, transparent) 100%)",
+                    }}
+                  />
+                </div>
+              </div>
 
-      {/* ── 2. STATS STRIP (compact) ──────────────────────────────────── */}
-      <section className="bg-dark text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-4 divide-x divide-primary-foreground/10">
-            {stats.map(({ number, label }) => (
-              <div key={label} className="py-4 md:py-5 px-2 md:px-6 text-center">
-                <p className="font-serif text-lg md:text-2xl text-gold leading-none mb-1">{number}</p>
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50">
-                  {label}
+              {/* Floating quote chip — top */}
+              <div
+                className={`hidden sm:flex absolute top-6 -left-2 md:-left-6 items-center gap-2 bg-white/95 text-foreground px-3.5 py-2 rounded-full shadow-lg backdrop-blur transition-all duration-700 delay-500 ${
+                  mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3"
+                }`}
+              >
+                <span className="flex">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="h-3 w-3 fill-gold text-gold" />
+                  ))}
+                </span>
+                <span className="text-xs font-medium">4.9 · 500+ clients</span>
+              </div>
+
+              {/* Floating quote chip — middle right */}
+              <div
+                className={`hidden sm:block absolute top-1/3 -right-2 md:-right-4 max-w-[200px] bg-white/95 text-foreground px-4 py-3 rounded-2xl rounded-tr-sm shadow-lg backdrop-blur transition-all duration-700 delay-700 ${
+                  mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-3"
+                }`}
+              >
+                <p className="text-xs leading-snug italic">
+                  &ldquo;Best Sisterlocks™ install I&rsquo;ve ever had.&rdquo;
+                </p>
+                <p className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">
+                  — Amara, Manchester
                 </p>
               </div>
-            ))}
+
+              {/* Floating chip — bottom */}
+              <div
+                className={`hidden sm:flex absolute bottom-8 left-4 md:left-0 items-center gap-2 bg-gold text-gold-foreground px-3.5 py-2 rounded-full shadow-lg transition-all duration-700 delay-[900ms] ${
+                  mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+                }`}
+              >
+                <span className="h-2 w-2 rounded-full bg-foreground animate-pulse" />
+                <span className="text-xs font-semibold uppercase tracking-wider">
+                  Certified Consultant
+                </span>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Bottom wave — blends into next section */}
+        <div className="absolute inset-x-0 bottom-0 pointer-events-none">
+          <svg
+            viewBox="0 0 1440 80"
+            preserveAspectRatio="none"
+            className="w-full h-12 md:h-16 block"
+            aria-hidden="true"
+          >
+            <path
+              d="M0,40 C240,80 480,0 720,30 C960,60 1200,20 1440,50 L1440,80 L0,80 Z"
+              fill="var(--background)"
+            />
+          </svg>
+        </div>
       </section>
+
 
       {/* ── 3. WELCOME ────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
