@@ -53,8 +53,9 @@ const sideBySide: Transformation[] = [
     style: "Retightening",
     duration: "2–3 hours",
     maintenance: "Every 4 weeks",
-    before: "/images/transformations/before-retighten.jpg",
-    after: "/images/styles/retightening.jpg",
+    before: "/images/transformations/retightening-before-after.jpg",
+    after: "/images/transformations/retightening-before-after.jpg",
+    single: true,
   },
   {
     title: "Loc Styling Upgrade",
