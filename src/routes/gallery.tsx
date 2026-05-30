@@ -18,7 +18,7 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const items = [
-  { title: "Sisterlocks™ Installation", desc: "Fresh Sisterlocks™ with precision parting", cat: "Sisterlocks™", img: "/images/styles/sisterlocks.jpg" },
+  { title: "Sisterlocks™ Installation", desc: "Fresh Sisterlocks™ with precision parting", cat: "Sisterlocks™", img: "/images/Gallery/Microlocs1.jpeg" },
   { title: "Microlocs Transformation", desc: "Beautiful microlocs after 6 months", cat: "Microlocs", img: "/images/Gallery/Microlocs1.jpeg" },
   { title: "Traditional Locs", desc: "Mature locs with healthy shine", cat: "Traditional Locs", img: "/images/styles/traditional-locs.jpg" },
   { title: "Elegant Updo", desc: "Special occasion loc styling", cat: "Styling", img: "/images/styles/styling.jpg" },
