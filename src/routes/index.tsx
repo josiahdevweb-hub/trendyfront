@@ -334,21 +334,30 @@ function Home() {
               </span>
             </div>
 
-            <h1 className="font-serif text-5xl md:text-7xl mb-5 leading-[1.05]">
+            <h1
+              className="font-serif text-5xl md:text-7xl mb-5 leading-[1.05]"
+              style={{ textShadow: "0 2px 24px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.35)" }}
+            >
               Trendylocs
               <br />
               <span className="italic text-gold/90 text-4xl md:text-5xl">Manchester.</span>
             </h1>
 
-            <p className="text-base md:text-lg text-white/85 mb-5 max-w-md leading-relaxed">
+            <p
+              className="text-base md:text-lg text-white/90 mb-5 max-w-md leading-relaxed"
+              style={{ textShadow: "0 1px 12px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3)" }}
+            >
               Premium Sisterlocks™, Microlocs &amp; Traditional Locs crafted with precision for every hair journey.
             </p>
 
-            <div className="flex items-center gap-1 mb-8">
+            <div
+              className="flex items-center gap-1 mb-8"
+              style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
+            >
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star key={i} className="h-3 w-3 fill-gold text-gold" />
               ))}
-              <span className="text-white/70 text-xs ml-2">4.9 · 500+ happy clients</span>
+              <span className="text-white/80 text-xs ml-2">4.9 · 500+ happy clients</span>
             </div>
 
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
