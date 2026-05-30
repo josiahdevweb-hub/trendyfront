@@ -27,7 +27,7 @@ const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
 
 const services = [
   {
-    title: "Sisterlocks",
+    title: "Sisterlocks™",
     price: "From £350",
     desc: "Precision micro locs for a versatile, manageable style",
     img: "/images/styles/sisterlocks.jpg",
@@ -68,7 +68,7 @@ const testimonials = [
     quote:
       "I have been with Trendylocs since my installation in November 2018 and my daughter had her install in February February 2020. We are so pleased with Gina’s services. My eldest daughter has also decided she wants Sister locks so she will be going to Trendylocs.",
     name: "Edinah Ngwarati",
-    service: "Sisterlocks",
+    service: "Sisterlocks™",
     initials: "AJ",
     rating: 5,
   },
@@ -99,8 +99,8 @@ const stats = [
 
 const faqs = [
   {
-    q: "How long does a Sisterlocks installation take?",
-    a: "A full Sisterlocks installation typically takes 2–3 days depending on hair length and density. We split sessions across visits to ensure precision and your comfort.",
+    q: "How long does a Sisterlocks™ installation take?",
+    a: "A full Sisterlocks™ installation typically takes 2–3 days depending on hair length and density. We split sessions across visits to ensure precision and your comfort.",
   },
   {
     q: "How often do I need retightening?",
@@ -341,7 +341,7 @@ function Home() {
             </h1>
 
             <p className="text-base md:text-lg text-white/85 mb-5 max-w-md leading-relaxed">
-              Premium Sisterlocks, Microlocs &amp; Traditional Locs crafted with precision for every hair journey.
+              Premium Sisterlocks™, Microlocs &amp; Traditional Locs crafted with precision for every hair journey.
             </p>
 
             <div className="flex items-center gap-1 mb-8">
@@ -411,7 +411,7 @@ function Home() {
               Your hair. <span className="italic">Our expertise.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              We are Manchester's premier locs and natural hair salon specialising in Sisterlocks, Microlocs, and
+              We are Manchester's premier locs and natural hair salon specialising in Sisterlocks™, Microlocs, and
               Traditional Locs. Every visit is a personalised journey toward healthy, thriving hair.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -420,7 +420,7 @@ function Home() {
             </p>
             {/* Mini trust signals */}
             <div className="flex flex-wrap gap-3 mb-8">
-              {["Certified Sisterlocks(TM) Consultant", "Natural Products Only", "Free Consultation"].map((tag) => (
+              {["Certified Sisterlocks™ Consultant", "Natural Products Only", "Free Consultation"].map((tag) => (
                 <span key={tag} className="text-xs px-3 py-1.5 border border-gold/30 rounded-full text-gold bg-gold/5">
                   ✓ {tag}
                 </span>
@@ -440,7 +440,7 @@ function Home() {
             <div className="aspect-[3/4] overflow-hidden rounded-md row-span-2">
               <img
                 src="/images/salon/stylish-work.jpg"
-                alt="Trendylocs specialist installing sisterlocks on a client"
+                alt="Trendylocs specialist installing Sisterlocks™ on a client"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
@@ -603,7 +603,7 @@ function Home() {
             {
               icon: GraduationCap,
               title: "Certified Specialists",
-              desc: "Our stylists hold formal certification in Sisterlocks and are trained in the latest loc techniques not self-taught.",
+              desc: "Our stylists hold formal certification in Sisterlocks™ and are trained in the latest loc techniques not self-taught.",
             },
             {
               icon: Leaf,

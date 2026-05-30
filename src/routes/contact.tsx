@@ -105,7 +105,7 @@ function Contact() {
             <label className="block text-sm mb-2">Service Interested In</label>
             <select className="w-full px-4 py-2.5 rounded-md bg-background border border-border focus:outline-none focus:border-gold">
               <option>Select a service</option>
-              <option>Sisterlocks</option>
+              <option>Sisterlocks™</option>
               <option>Microlocs</option>
               <option>Traditional Locs</option>
               <option>Retightening</option>
