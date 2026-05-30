@@ -318,7 +318,7 @@ function Home() {
       {/* ── 1. HERO (Split: Text Left, Portrait Right) ───────── */}
       <section
         className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-center"
-        style={{ height: "min(80dvh, 80vh)", minHeight: 540 }}
+        style={{ height: "min(80dvh, 80vh)", minHeight: 480 }}
       >
         {/* Subtle dot pattern background */}
         <div
