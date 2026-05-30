@@ -21,7 +21,7 @@ function TopBar() {
           </a>
           <span className="hidden lg:flex items-center gap-1.5">
             <MapPin className="h-3 w-3 text-gold" />
-            <span>Location, 41 Cross Street. Sale. M33 7FT. Manchester</span>
+            <span> 41 Cross Street. Sale. M33 7FT. Manchester</span>
           </span>
         </div>
         <div className="flex items-center gap-5">
@@ -212,7 +212,7 @@ function Footer() {
         <div>
           <h4 className="font-serif text-lg mb-4">Contact</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
-            <li>Location, 41 Cross Street. Sale. M33 7FT. Manchester</li>
+            <li> 41 Cross Street. Sale. M33 7FT. Manchester</li>
             <li>
               <a href="tel:+44123456789" className="hover:text-gold">
                 +447983818010
