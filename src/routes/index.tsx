@@ -420,7 +420,7 @@ function Home() {
             </p>
             {/* Mini trust signals */}
             <div className="flex flex-wrap gap-3 mb-8">
-              {["Certified Loc Specialists", "Natural Products Only", "Free Consultation"].map((tag) => (
+              {["Certified Sisterlocks(TM) Consultant", "Natural Products Only", "Free Consultation"].map((tag) => (
                 <span key={tag} className="text-xs px-3 py-1.5 border border-gold/30 rounded-full text-gold bg-gold/5">
                   ✓ {tag}
                 </span>
