@@ -352,14 +352,14 @@ function Home() {
                 </span>
               </div>
 
-              <div className="relative inline-block text-gold font-serif text-3xl sm:text-4xl md:text-4xl lg:text-[40px] tracking-[0.02em] mb-3 md:mb-4 pb-2 leading-none">
+              <div className="relative inline-block text-gold font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
                 <span className="italic">Trendy</span>
                 <span className="font-semibold">Locs</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
-                <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-gold" />
+                <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
               </div>
 
-              <h1 className="font-serif text-[26px] sm:text-3xl md:text-[34px] lg:text-[42px] leading-[1.08] tracking-tight mb-3 md:mb-4">
+              <h1 className="font-serif text-xl sm:text-2xl md:text-[26px] lg:text-[28px] leading-[1.15] tracking-tight mb-3 md:mb-4 text-primary-foreground/80">
                 Premium Locs.
                 <br />
                 Crafted in <span className="text-gold italic">Manchester.</span>
