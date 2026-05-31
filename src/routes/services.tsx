@@ -21,7 +21,7 @@ const services = [
     price: "From £350",
     time: "8–12 hours",
     desc: "Precision micro locs created using a specialized tool and technique. Perfect for those seeking a versatile, low-manipulation protective style.",
-    img: "/images/styles/sisterlocks.jpg",
+    img: "/images/services/sisterlocks.jpg",
     features: [
       "Initial consultation included",
       "Precision parting and installation",
@@ -36,7 +36,7 @@ const services = [
     price: "From £280",
     time: "6–10 hours",
     desc: "Small, uniform locs installed using coiling, braiding, or interlocking. Offers styling flexibility with manageability.",
-    img: "/images/Gallery/Microlocs1.jpeg",
+    img: "/images/services/Microlocs1.jpeg",
     features: [
       "Consultation to determine best method",
       "Professional installation",
@@ -51,7 +51,7 @@ const services = [
     price: "From £180",
     time: "4–8 hours",
     desc: "Classic dreadlocks created through various methods including two-strand twists, coils, or freeform. A timeless protective style.",
-    img: "/images/styles/traditional-locs.jpg",
+    img: "/images/services/traditional-locs.jpg",
     features: [
       "Multiple installation methods available",
       "Customized parting pattern",
@@ -66,7 +66,7 @@ const services = [
     price: "From £85",
     time: "2–4 hours",
     desc: "Essential maintenance service to keep your locs neat, healthy, and mature properly. Recommended every 4–6 weeks.",
-    img: "/images/styles/retightening.jpg",
+    img: "/images/services/sisterlocs2.jpg",
     features: [
       "Root maintenance",
       "Scalp cleansing and treatment",
@@ -81,7 +81,7 @@ const services = [
     price: "From £150",
     time: "3–6 hours",
     desc: "Begin your loc journey with professional starter locs using your preferred method. Includes full consultation.",
-    img: "/images/styles/mature-locs.jpg",
+    img: "/images/services/microlocs2.jpg",
     features: [
       "In-depth consultation",
       "Method selection guidance",
@@ -96,7 +96,7 @@ const services = [
     price: "From £45",
     time: "1–2 hours",
     desc: "Creative styling services for special occasions or everyday wear. From updos to intricate designs.",
-    img: "/images/styles/styling.jpg",
+    img: "/images/services/microlocs5",
     features: [
       "Consultation on desired style",
       "Professional styling",
@@ -111,7 +111,7 @@ const services = [
     price: "From £120",
     time: "3–5 hours",
     desc: "Safe, professional colour services for locs. From subtle highlights to bold transformations.",
-    img: "/images/styles/color.jpg",
+    img: "/images/services/traditionallocs4.jpg",
     features: [
       "Colour consultation",
       "Strand testing",
