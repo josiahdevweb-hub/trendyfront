@@ -31,41 +31,41 @@ function Services() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((s) => (
-            <div
+            <article
               key={s.title}
-              className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col w-full max-w-sm text-center"
+              className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 flex flex-col border border-border/60"
             >
-              <div className="overflow-hidden bg-secondary/30 aspect-[4/3]">
+              <div className="aspect-square overflow-hidden bg-secondary/30">
                 <img
                   src={s.img}
                   alt={s.title}
                   loading="lazy"
                   decoding="async"
                   onError={(e) => { if (e.currentTarget.src.indexOf('/images/fallback.jpg') === -1) e.currentTarget.src = '/images/fallback.jpg'; }}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6 flex-1 flex flex-col items-center">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-gold mb-2 flex items-center gap-1.5">
+              <div className="p-6 flex-1 flex flex-col">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-gold mb-2 flex items-center gap-1.5">
                   <Clock className="h-3 w-3" /> {s.time}
                 </p>
-                <h3 className="font-serif text-xl mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground mb-5 line-clamp-3 max-w-xs">{s.desc}</p>
-                <div className="mt-auto flex flex-col items-center gap-3">
-                  <span className="text-base font-medium text-gold">{s.price}</span>
+                <h3 className="font-serif text-2xl mb-3 text-foreground">{s.title}</h3>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed mb-6 line-clamp-2">{s.desc}</p>
+                <div className="mt-auto flex items-center justify-between pt-4 border-t border-border/60">
+                  <span className="font-serif text-xl text-gold">{s.price}</span>
                   <Link
                     to="/book"
                     search={{ service: s.slug }}
-                    className="inline-flex items-center justify-center bg-dark text-primary-foreground px-6 py-2.5 rounded-full text-sm hover:bg-dark/90 transition-colors"
+                    className="inline-flex items-center justify-center bg-dark text-primary-foreground px-5 py-2.5 rounded-full text-xs uppercase tracking-[0.18em] hover:bg-dark/90 transition-colors"
                   >
                     Book Now
                   </Link>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
