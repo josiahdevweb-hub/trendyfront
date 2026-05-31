@@ -38,7 +38,7 @@ function Services() {
               key={s.title}
               className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 flex flex-col border border-border/60"
             >
-              <div className="aspect-square overflow-hidden bg-secondary/30">
+              <div className="aspect-[5/4] overflow-hidden bg-secondary/30">
                 <img
                   src={s.img}
                   alt={s.title}
