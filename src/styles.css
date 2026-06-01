@@ -144,3 +144,24 @@
   100% { transform: scale(1.18) translate3d(-2%, -3%, 0); transform-origin: 50% 45%; }
 }
 .hero-kenburns { animation: heroKenBurns 12s ease-in-out infinite alternate; will-change: transform; }
+
+/* Hero merge-fade — feathers image edges into the dark background while
+   preserving central detail. Uses a soft elliptical mask so the subject stays
+   crisp and the surrounding pixels dissolve into the bg-dark canvas. */
+.hero-merge-mask {
+  -webkit-mask-image:
+    radial-gradient(ellipse 78% 88% at 50% 48%, #000 38%, rgba(0,0,0,0.78) 62%, rgba(0,0,0,0.25) 88%, transparent 100%);
+  mask-image:
+    radial-gradient(ellipse 78% 88% at 50% 48%, #000 38%, rgba(0,0,0,0.78) 62%, rgba(0,0,0,0.25) 88%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.hero-merge-mask-portrait {
+  -webkit-mask-image:
+    radial-gradient(ellipse 92% 95% at 50% 45%, #000 45%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.35) 90%, transparent 100%);
+  mask-image:
+    radial-gradient(ellipse 92% 95% at 50% 45%, #000 45%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.35) 90%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
