@@ -317,9 +317,15 @@ function Home() {
     <>
       {/* ── 1. HERO (Split: Text Left, Portrait Right) ───────── */}
       <section
-        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center"
+        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center grain"
         style={{ height: "min(80dvh, 80vh)", minHeight: 480 }}
       >
+        {/* Editorial meta strip */}
+        <div className="absolute top-0 inset-x-0 z-20 hidden md:flex items-center justify-between px-10 py-5 text-[10px] uppercase tracking-[0.32em] text-primary-foreground/55">
+          <span>Est. 2018</span>
+          <span className="flex items-center gap-3"><span className="h-px w-6 bg-gold/60" /> By Appointment <span className="h-px w-6 bg-gold/60" /></span>
+          <span>Manchester · UK</span>
+        </div>
         {/* Subtle dot pattern background */}
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none"
