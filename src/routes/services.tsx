@@ -50,7 +50,7 @@ const services = [
     title: "Maintenance & Retightening",
     price: "From £200",
     time: "4 hrs 30 mins ",
-    desc: " Assess your and create a care plan"
+    desc: " Assess your and create a care plan",
     img: "/images/services/traditional-locs.jpg",
     features: [
       "Multiple installation methods available",
