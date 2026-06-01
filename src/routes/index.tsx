@@ -175,6 +175,15 @@ const HERO_PAIRS = [
     rightObjectPosition: "50% 50%",
     split: 55,
   },
+  {
+    left: heroBraids.url,
+    leftAlt: "Intricate feed-in braids with bantu knot crown — Trendylocs precision styling",
+    leftObjectPosition: "55% 40%",
+    right: heroOmbreLocs.url,
+    rightAlt: "Microlocs with warm copper ombre tips — Trendylocs colour craftsmanship",
+    rightObjectPosition: "50% 45%",
+    split: 50,
+  },
 ] as const;
 
 const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
