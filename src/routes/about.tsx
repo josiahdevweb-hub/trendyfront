@@ -132,6 +132,30 @@ function About() {
           </div>
         </section>
 
+        {/* ── Credentials Marquee ─────────────────────────────── */}
+        <section className="mb-28 md:mb-40 -mx-6 overflow-hidden bg-dark text-primary-foreground py-8">
+          <div className="flex marquee-track whitespace-nowrap">
+            {[0, 1].map((dup) => (
+              <div key={dup} className="flex items-center gap-12 px-6 font-serif italic text-2xl md:text-3xl text-primary-foreground/80 shrink-0">
+                {[
+                  "Sisterlocks™ Certified",
+                  "10+ Years Crafting",
+                  "East Manchester",
+                  "Natural Hair Care",
+                  "Plant-Based Products",
+                  "By Appointment",
+                  "Private Consultations",
+                ].map((label, i) => (
+                  <span key={`${dup}-${i}`} className="flex items-center gap-12">
+                    <span>{label}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* ── Founder Letter ─────────────────────────────── */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-28 md:mb-40">
           <div className="lg:col-span-4">
