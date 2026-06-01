@@ -317,15 +317,8 @@ function Home() {
     <>
       {/* ── 1. HERO (Split: Text Left, Portrait Right) ───────── */}
       <section
-        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center grain"
-        style={{ height: "min(80dvh, 80vh)", minHeight: 480 }}
+        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center grain md:h-[min(80dvh,80vh)] md:min-h-[480px]"
       >
-        {/* Editorial meta strip */}
-        <div className="absolute top-0 inset-x-0 z-20 hidden md:flex items-center justify-between px-10 py-5 text-[10px] uppercase tracking-[0.32em] text-primary-foreground/55">
-          <span>Est. 2018</span>
-          <span className="flex items-center gap-3"><span className="h-px w-6 bg-gold/60" /> By Appointment <span className="h-px w-6 bg-gold/60" /></span>
-          <span>Manchester · UK</span>
-        </div>
         {/* Subtle dot pattern background */}
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none"
@@ -351,12 +344,8 @@ function Home() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <div className="flex items-center gap-3 mb-3 md:mb-4">
-                <span className="h-px w-8 bg-gold" />
-                <span className="text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-gold/90">
-                  Manchester · Locs Specialists
-                </span>
-              </div>
+              <div className="hidden" />
+
 
               <div className="relative inline-block text-gold font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
                 <span>Trendy</span>
@@ -409,7 +398,7 @@ function Home() {
 
             {/* RIGHT — cycling portrait */}
             <div
-              className={`relative h-[240px] sm:h-[320px] md:h-[400px] lg:h-[460px] transition-all duration-1000 delay-200 ${
+              className={`relative w-full aspect-[4/5] sm:aspect-[5/6] md:aspect-auto md:h-[400px] lg:h-[460px] transition-all duration-1000 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
