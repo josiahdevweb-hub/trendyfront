@@ -95,29 +95,34 @@ function Header() {
         </nav>
         <div className="flex items-center gap-4 text-primary-foreground">
           <a
-            href="tel:+44123456789"
-            aria-label="Call Trendylocs"
-            className="md:hidden hover:text-gold transition-colors"
+            href="https://wa.me/447983818010"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp Trendylocs"
+            className="hidden sm:inline-flex hover:text-gold transition-colors"
           >
-            <Phone className="h-5 w-5" />
+            <MessageCircle className="h-5 w-5" />
           </a>
-          <button className="relative" aria-label="Cart">
-            <ShoppingBag className="h-5 w-5" />
-            <span className="absolute -top-2 -right-2 h-4 w-4 rounded-full bg-gold text-[10px] flex items-center justify-center text-gold-foreground">
-              0
-            </span>
-          </button>
           <Link
             to="/book"
-            className="hidden md:inline-flex bg-gold text-gold-foreground px-5 py-2.5 rounded-md text-sm hover:opacity-90 transition-opacity"
+            aria-label="Book appointment"
+            className="md:hidden hover:text-gold transition-colors"
           >
-            Book Appointment
+            <CalendarCheck className="h-5 w-5" />
           </Link>
-          <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
-            <div className="space-y-1.5">
-              <span className="block w-5 h-px bg-primary-foreground" />
-              <span className="block w-5 h-px bg-primary-foreground" />
-            </div>
+          <Link
+            to="/book"
+            className="hidden md:inline-flex items-center gap-2 bg-gold text-gold-foreground px-5 py-2.5 rounded-md text-sm hover:opacity-90 transition-opacity"
+          >
+            <Scissors className="h-4 w-4" /> Book Appointment
+          </Link>
+          <button
+            className="lg:hidden inline-flex items-center justify-center h-9 w-9 rounded-md hover:bg-primary-foreground/10 transition-colors"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
