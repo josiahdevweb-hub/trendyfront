@@ -9,7 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logo from "@/assets/trendylocs-logo-global.png.asset.json";
 import { Layout } from "@/components/Layout";
+
 
 function NotFoundComponent() {
   return (
@@ -88,9 +90,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
-      { rel: "apple-touch-icon", href: "/favicon.png" },
+      { rel: "icon", type: "image/png", href: logo.url },
+      { rel: "apple-touch-icon", href: logo.url },
     ],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,

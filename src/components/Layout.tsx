@@ -1,7 +1,8 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { CalendarCheck, Instagram, Facebook, MessageCircle, Phone, Mail, MapPin, Clock, Menu, X, Scissors } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/trendylocs-logo.png";
+import logo from "@/assets/trendylocs-logo-global.png.asset.json";
+
 
 function TopBar() {
   return (
@@ -67,19 +68,18 @@ function Header() {
       <TopBar />
       <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
         <Link to="/" aria-label="Trendylocs — home" className="flex items-center gap-3 group">
-          <span className="inline-flex items-center justify-center h-12 w-12 md:h-14 md:w-14 rounded-full bg-primary-foreground/95 ring-1 ring-gold/40 shadow-md transition-transform group-hover:scale-105">
-            <img
-              src={logo}
-              alt="Trendylocs logo"
-              width={48}
-              height={48}
-              className="h-10 w-10 md:h-12 md:w-12 object-contain"
-            />
-          </span>
-          <span className="hidden sm:inline font-serif text-base md:text-lg tracking-[0.28em] text-primary-foreground">
+          <img
+            src={logo.url}
+            alt="Trendylocs logo"
+            width={64}
+            height={64}
+            className="h-12 w-12 md:h-16 md:w-16 object-contain transition-transform group-hover:scale-105"
+          />
+          <span className="hidden sm:inline text-sm md:text-base font-medium tracking-[0.16em] text-primary-foreground/90">
             TRENDYLOCS
           </span>
         </Link>
+
         <nav className="hidden lg:flex items-center gap-8">
           {nav.map((n) => (
             <Link
@@ -169,15 +169,16 @@ function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img
-              src={logo}
+              src={logo.url}
               alt="Trendylocs logo"
-              width={48}
-              height={48}
+              width={56}
+              height={56}
               loading="lazy"
-              className="h-12 w-12 object-contain"
+              className="h-14 w-14 object-contain"
             />
-            <div className="font-serif text-lg tracking-[0.28em]">TRENDYLOCS</div>
+            <div className="text-base font-medium tracking-[0.16em] text-primary-foreground/90">TRENDYLOCS</div>
           </div>
+
           <p className="text-sm text-primary-foreground/70 leading-relaxed">
             Manchester's premier natural hair and locs salon. Celebrating the beauty of textured hair.
           </p>
