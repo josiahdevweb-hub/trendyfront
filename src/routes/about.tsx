@@ -166,6 +166,14 @@ function About() {
               same feeling — versatility, health, and a deep peace with their
               natural texture.
             </p>
+            <blockquote className="not-italic my-10 pl-6 border-l-2 border-gold">
+              <p className="font-serif italic text-3xl md:text-4xl leading-[1.1] text-foreground">
+                "She gave me my hair&nbsp;back."
+              </p>
+              <span className="block mt-3 text-[10px] uppercase tracking-[0.3em] text-gold">
+                The moment everything changed
+              </span>
+            </blockquote>
             <p className="font-serif italic text-xl text-foreground pt-2">
               That is how I began my hair journey. Let me help you start yours.
             </p>
