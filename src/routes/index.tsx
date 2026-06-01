@@ -15,6 +15,8 @@ import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+import heroBraids from "@/assets/hero/hero-braids.asset.json";
+import heroOmbreLocs from "@/assets/hero/hero-ombre-locs.asset.json";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -175,6 +177,15 @@ const HERO_PAIRS = [
     rightObjectPosition: "50% 50%",
     split: 55,
   },
+  {
+    left: heroBraids.url,
+    leftAlt: "Intricate feed-in braids with bantu knot crown — Trendylocs precision styling",
+    leftObjectPosition: "55% 40%",
+    right: heroOmbreLocs.url,
+    rightAlt: "Microlocs with warm copper ombre tips — Trendylocs colour craftsmanship",
+    rightObjectPosition: "50% 45%",
+    split: 50,
+  },
 ] as const;
 
 const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
@@ -205,7 +216,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
               <img
                 src={p.left}
                 alt={p.leftAlt}
-                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                className={`hero-merge-mask absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
                   mounted && active ? "scale-100" : "scale-105"
                 }`}
                 style={{ filter: HERO_GRADE, objectPosition: (p as any).leftObjectPosition ?? "center" }}
@@ -220,7 +231,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
               <img
                 src={p.right}
                 alt={p.rightAlt}
-                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                className={`hero-merge-mask absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
                   mounted && active ? "scale-100" : "scale-105"
                 }`}
                 style={{ filter: HERO_GRADE, objectPosition: (p as any).rightObjectPosition ?? "center" }}
@@ -416,7 +427,7 @@ function Home() {
                         key={i}
                         src={img.src}
                         alt={img.alt}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1600ms] ease-in-out ${
+                        className={`hero-merge-mask-portrait absolute inset-0 w-full h-full object-cover transition-opacity duration-[1600ms] ease-in-out ${
                           active ? "opacity-100 hero-kenburns" : "opacity-0"
                         }`}
                         style={{ objectPosition: img.pos, filter: HERO_GRADE }}
