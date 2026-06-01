@@ -216,7 +216,7 @@ function HeroDiptych({ mounted }: { mounted: boolean }) {
               <img
                 src={p.left}
                 alt={p.leftAlt}
-                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
+                className={`hero-merge-mask absolute inset-0 w-full h-full object-cover transition-transform duration-[6500ms] ease-out ${
                   mounted && active ? "scale-100" : "scale-105"
                 }`}
                 style={{ filter: HERO_GRADE, objectPosition: (p as any).leftObjectPosition ?? "center" }}
