@@ -15,6 +15,8 @@ import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+import heroBraids from "@/assets/hero/hero-braids.asset.json";
+import heroOmbreLocs from "@/assets/hero/hero-ombre-locs.asset.json";
 
 export const Route = createFileRoute("/")({ component: Home });
 
