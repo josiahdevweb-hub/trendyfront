@@ -398,7 +398,7 @@ function Home() {
 
             {/* RIGHT — cycling portrait */}
             <div
-              className={`relative h-[240px] sm:h-[320px] md:h-[400px] lg:h-[460px] transition-all duration-1000 delay-200 ${
+              className={`relative w-full aspect-[4/5] sm:aspect-[5/6] md:aspect-auto md:h-[400px] lg:h-[460px] transition-all duration-1000 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
