@@ -16,11 +16,19 @@ export const Route = createFileRoute("/services")({
 
 const services = [
   {
-    slug: "Maintenance",
-    title: "Maintenance/Loc repair",
+    slug: "sisterlocks",
+    title: "Sisterlocs",
     price: "From £100",
     time: "2 hr",
-    desc: "Essential maintenance service to keep your locs neat, healthy, and mature properly. Recommended every 4–6 weeks.",
+    desc: "Sisterlocks (TM) are small locks made by precision sectioning of hair using a special locking tool. It is a trademarked hair style which was started and patented by Dr. Joanne Cornwell in the United States. Sisterlocks is a celebration of natural hair, freeing you from the numerous hair products created to straighten your hair. Its installation and maintenance is therefore as natural as can be.
+If you are interested in installing Sisterlocks, we will initially invite you to come for a consultation during which we determine your hair type, discuss locking patterns and install samples.
+We will then book your installation as well as book your first re-tightening session, normally after 4 weeks. Following your sisterlocks installation, we advise on a re-tightening schedule. This is usually after every 4-6 weeks.
+Why Sisterlocks ™ ? 
+-	 Freedom/ Versatility/Light
+-	Endless styling possibilities
+-	Thinnest of loose hair looks fuller
+Duration: 8 hrs but exact duration is determined during consultation Cost: Determined during consultation and depends on length of hair.
+.",
     img: "/images/transformations/microlocs-before-after.jpg",
     features: [
       "Initial consultation included",
