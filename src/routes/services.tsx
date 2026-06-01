@@ -21,7 +21,7 @@ const services = [
     price: "From £100",
     time: "2 hr",
     desc: "Essential maintenance service to keep your locs neat, healthy, and mature properly. Recommended every 4–6 weeks.",
-    img: "/images/services/sisterlocks.jpg",
+    img: "/images/transformations/microlocs-before-after.jpg"
     features: [
       "Initial consultation included",
       "Precision parting and installation",
@@ -36,7 +36,7 @@ const services = [
     price: "From £50",
     time: "1 hr",
     desc: "Creative styling services for special occasions or everyday wear. From updos to intricate designs..",
-    img: "/images/services/Microlocs1.jpeg",
+    img: "/images/services/Styling.png"
     features: [
       "Consultation to determine best method",
       "Professional installation",
