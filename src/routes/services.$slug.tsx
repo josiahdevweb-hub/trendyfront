@@ -94,7 +94,7 @@ function ServiceDetail() {
 
             <h3 className="font-serif text-xl mb-3">What's included</h3>
             <ul className="space-y-2 mb-8">
-              {s.features.map((f) => (
+              {s.features.map((f: string) => (
                 <li key={f} className="flex items-start gap-2 text-sm text-foreground/80">
                   <Check className="h-4 w-4 text-gold mt-0.5 shrink-0" />
                   <span>{f}</span>
