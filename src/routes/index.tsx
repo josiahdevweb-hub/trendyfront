@@ -317,9 +317,15 @@ function Home() {
     <>
       {/* ── 1. HERO (Split: Text Left, Portrait Right) ───────── */}
       <section
-        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center"
+        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center grain"
         style={{ height: "min(80dvh, 80vh)", minHeight: 480 }}
       >
+        {/* Editorial meta strip */}
+        <div className="absolute top-0 inset-x-0 z-20 hidden md:flex items-center justify-between px-10 py-5 text-[10px] uppercase tracking-[0.32em] text-primary-foreground/55">
+          <span>Est. 2018</span>
+          <span className="flex items-center gap-3"><span className="h-px w-6 bg-gold/60" /> By Appointment <span className="h-px w-6 bg-gold/60" /></span>
+          <span>Manchester · UK</span>
+        </div>
         {/* Subtle dot pattern background */}
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none"
@@ -359,10 +365,13 @@ function Home() {
                 <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
               </div>
 
-              <h1 className="font-serif text-xl sm:text-2xl md:text-[26px] lg:text-[28px] leading-[1.15] tracking-tight mb-3 md:mb-4 text-primary-foreground/80">
-                Premium Locs.
+              <h1 className="font-serif text-xl sm:text-2xl md:text-[26px] lg:text-[28px] leading-[1.15] tracking-tight mb-3 md:mb-4 text-primary-foreground/85 word-rise">
+                <span style={{ animationDelay: "120ms" }}>Premium</span>{" "}
+                <span style={{ animationDelay: "260ms" }}>Locs.</span>
                 <br />
-                Crafted in <span className="text-gold italic">Manchester.</span>
+                <span style={{ animationDelay: "420ms" }}>Crafted</span>{" "}
+                <span style={{ animationDelay: "540ms" }}>in</span>{" "}
+                <span className="text-gold italic" style={{ animationDelay: "700ms" }}>Manchester.</span>
               </h1>
 
               <p className="text-[13px] md:text-sm text-primary-foreground/75 max-w-md leading-relaxed mb-4 md:mb-5">
@@ -404,8 +413,13 @@ function Home() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <div className="absolute inset-0 md:inset-x-4">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 md:inset-x-4" style={{ boxShadow: "var(--shadow-elegant)" }}>
+                <div className="relative w-full h-full rounded-2xl overflow-hidden ring-1 ring-gold/20">
+                  {/* corner gold accents */}
+                  <span className="absolute top-3 left-3 z-10 w-6 h-px bg-gold/70" />
+                  <span className="absolute top-3 left-3 z-10 h-6 w-px bg-gold/70" />
+                  <span className="absolute bottom-3 right-3 z-10 w-6 h-px bg-gold/70" />
+                  <span className="absolute bottom-3 right-3 z-10 h-6 w-px bg-gold/70" />
                   {heroImages.map((img, i) => {
                     const active = i === heroIdx;
                     return (
@@ -432,6 +446,12 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Scroll cue */}
+        <div className="hidden md:flex absolute bottom-12 left-10 z-20 flex-col items-center gap-3 text-primary-foreground/55">
+          <span className="text-[9px] uppercase tracking-[0.4em] [writing-mode:vertical-rl] rotate-180">Scroll</span>
+          <span className="block w-px h-12 bg-gold/70 origin-top scroll-cue-line" />
         </div>
 
         {/* Bottom wave — blends into next section */}

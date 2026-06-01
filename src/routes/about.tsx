@@ -85,20 +85,26 @@ function About() {
           </div>
 
           <div className="lg:col-span-5 relative">
-            <div className="w-full aspect-[4/5] overflow-hidden bg-muted">
+            <div
+              className="w-full aspect-[4/5] overflow-hidden bg-muted ring-1 ring-gold/20"
+              style={{ boxShadow: "var(--shadow-elegant)" }}
+            >
               <img
                 src="/images/salon/founder.jpg"
                 alt="Gina, founder of Trendylocs"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale-[0.25] hover:grayscale-0 transition-all duration-[1200ms]"
                 onError={(e) => {
                   if (e.currentTarget.src.indexOf("/images/fallback.jpg") === -1)
                     e.currentTarget.src = "/images/fallback.jpg";
                 }}
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 hidden md:flex w-52 h-52 border border-gold bg-background p-5 flex-col justify-center shadow-lg">
+            <div
+              className="absolute -bottom-8 -left-8 hidden md:flex w-52 h-52 border border-gold bg-background p-5 flex-col justify-center"
+              style={{ boxShadow: "var(--shadow-gold)" }}
+            >
               <p className="text-[10px] uppercase tracking-[0.2em] text-gold mb-2">
                 Our Process
               </p>
@@ -121,6 +127,30 @@ function About() {
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {desc}
                 </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Credentials Marquee ─────────────────────────────── */}
+        <section className="mb-28 md:mb-40 -mx-6 overflow-hidden bg-dark text-primary-foreground py-8">
+          <div className="flex marquee-track whitespace-nowrap">
+            {[0, 1].map((dup) => (
+              <div key={dup} className="flex items-center gap-12 px-6 font-serif italic text-2xl md:text-3xl text-primary-foreground/80 shrink-0">
+                {[
+                  "Sisterlocks™ Certified",
+                  "10+ Years Crafting",
+                  "East Manchester",
+                  "Natural Hair Care",
+                  "Plant-Based Products",
+                  "By Appointment",
+                  "Private Consultations",
+                ].map((label, i) => (
+                  <span key={`${dup}-${i}`} className="flex items-center gap-12">
+                    <span>{label}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                  </span>
+                ))}
               </div>
             ))}
           </div>
@@ -160,6 +190,14 @@ function About() {
               same feeling — versatility, health, and a deep peace with their
               natural texture.
             </p>
+            <blockquote className="not-italic my-10 pl-6 border-l-2 border-gold">
+              <p className="font-serif italic text-3xl md:text-4xl leading-[1.1] text-foreground">
+                "She gave me my hair&nbsp;back."
+              </p>
+              <span className="block mt-3 text-[10px] uppercase tracking-[0.3em] text-gold">
+                The moment everything changed
+              </span>
+            </blockquote>
             <p className="font-serif italic text-xl text-foreground pt-2">
               That is how I began my hair journey. Let me help you start yours.
             </p>
