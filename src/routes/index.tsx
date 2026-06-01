@@ -413,8 +413,13 @@ function Home() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <div className="absolute inset-0 md:inset-x-4">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 md:inset-x-4" style={{ boxShadow: "var(--shadow-elegant)" }}>
+                <div className="relative w-full h-full rounded-2xl overflow-hidden ring-1 ring-gold/20">
+                  {/* corner gold accents */}
+                  <span className="absolute top-3 left-3 z-10 w-6 h-px bg-gold/70" />
+                  <span className="absolute top-3 left-3 z-10 h-6 w-px bg-gold/70" />
+                  <span className="absolute bottom-3 right-3 z-10 w-6 h-px bg-gold/70" />
+                  <span className="absolute bottom-3 right-3 z-10 h-6 w-px bg-gold/70" />
                   {heroImages.map((img, i) => {
                     const active = i === heroIdx;
                     return (
