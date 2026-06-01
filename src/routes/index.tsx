@@ -345,12 +345,8 @@ function Home() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <div className="flex items-center gap-3 mb-3 md:mb-4">
-                <span className="h-px w-8 bg-gold" />
-                <span className="text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-gold/90">
-                  Manchester · Locs Specialists
-                </span>
-              </div>
+              <div className="hidden" />
+
 
               <div className="relative inline-block text-gold font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
                 <span>Trendy</span>
