@@ -347,9 +347,9 @@ function Home() {
               <div className="hidden" />
 
 
-              <div className="relative inline-block text-gold font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
+              <div className="relative inline-block text-primary-foreground font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
                 <span>Trendy</span>
-                <span className="font-semibold">Locs</span>
+                <span className="font-semibold italic">Locs</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
               </div>
@@ -398,7 +398,7 @@ function Home() {
 
             {/* RIGHT — cycling portrait */}
             <div
-              className={`relative w-full aspect-[4/5] sm:aspect-[5/6] md:aspect-auto md:h-[400px] lg:h-[460px] transition-all duration-1000 delay-200 ${
+              className={`relative w-full mx-auto max-w-[280px] sm:max-w-sm md:max-w-none aspect-[4/5] sm:aspect-[5/6] md:aspect-auto md:h-[400px] lg:h-[460px] transition-all duration-1000 delay-200 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -437,11 +437,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Scroll cue */}
-        <div className="hidden md:flex absolute bottom-12 left-10 z-20 flex-col items-center gap-3 text-primary-foreground/55">
-          <span className="text-[9px] uppercase tracking-[0.4em] [writing-mode:vertical-rl] rotate-180">Scroll</span>
-          <span className="block w-px h-12 bg-gold/70 origin-top scroll-cue-line" />
-        </div>
 
         {/* Bottom wave — blends into next section */}
         <div className="absolute inset-x-0 bottom-0 pointer-events-none">
