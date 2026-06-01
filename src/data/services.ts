@@ -33,6 +33,8 @@ export const services: Service[] = [
     price: "£50",
     time: "1 hr",
     desc: "Creative styling for special occasions or everyday wear — from updos to intricate designs.",
+    longDesc:
+      "Our styling service is designed to make your locs feel fresh, intentional and ready for any occasion. Whether you are preparing for a wedding, a photoshoot, or simply want a refreshed everyday look, our stylists work with the natural texture and length of your hair to create looks that flatter your face and last.\n\nEvery session begins with a short consultation so we can understand the style you have in mind and recommend options that suit your hair density, length and maturity. We use loc-safe products and accessories, and finish with care tips so you can keep the style looking polished for as long as possible.",
     img: "/images/services/hero-ombre-locs.png",
     features: [
       "Consultation to determine best method",
@@ -48,6 +50,8 @@ export const services: Service[] = [
     price: "£200",
     time: "4 hr 30 min",
     desc: "Full maintenance session — assess your locs and create a tailored care plan.",
+    longDesc:
+      "Our Maintenance & Retightening service is a complete care session designed for clients who want their locs to stay healthy, neat and well-shaped over the long term. We carefully assess the condition of your scalp and locs, address any thinning or weak spots, and retighten new growth using the technique that best matches your loc type.\n\nBeyond retightening, the session includes a gentle scalp cleanse, conditioning where appropriate, and a personalised care plan that covers washing schedules, products and the ideal interval before your next visit. You leave with locs that feel lighter, look uniform, and are set up for the next stage of their journey.",
     img: "/images/services/traditional-locs.jpg",
     features: [
       "Multiple installation methods available",
@@ -63,6 +67,8 @@ export const services: Service[] = [
     price: "£100",
     time: "2 hr 30 min",
     desc: "Essential maintenance to keep your locs neat, healthy and maturing properly. Every 4–6 weeks.",
+    longDesc:
+      "Retightening is the core maintenance service that keeps your locs looking crisp and supports them through every stage of maturity. During the session we work systematically through your hair, tightening new growth at the roots so each loc maintains its shape, direction and size without becoming over-stressed.\n\nWe recommend booking a retightening session every 4 to 6 weeks depending on your hair type and how quickly your roots grow out. Consistent retightening prevents matting between locs, reduces breakage, and ensures your locs continue to mature evenly over the months and years.",
     img: "/images/services/sisterlocs2.jpg",
     features: [
       "Root maintenance",
@@ -78,6 +84,8 @@ export const services: Service[] = [
     price: "£100",
     time: "8 hr",
     desc: "Begin your loc journey with professional starter locs using your preferred method.",
+    longDesc:
+      "Locs Establishment is the starting point of your loc journey. We begin with an in-depth consultation to understand your goals, assess your hair type and density, and recommend the installation method that will give you the best long-term results — whether that is two-strand twists, comb coils, interlocking or another technique suited to your texture.\n\nThe installation itself is done with precision parting and careful tension so your locs start uniform and balanced. You leave with a starter care package, written aftercare instructions, and a clear schedule for your first few maintenance visits so the early weeks of your loc journey feel guided rather than uncertain.",
     img: "/images/services/microlocs2.jpg",
     features: [
       "In-depth consultation",
@@ -93,6 +101,8 @@ export const services: Service[] = [
     price: "£50",
     time: "1 hr",
     desc: "Creative styling for special occasions or everyday wear — from updos to intricate designs.",
+    longDesc:
+      "Loc Styling transforms your existing locs into a look that feels intentional and event-ready. From elegant updos and braided crowns to intricate barrel rolls and pinned designs, our stylists shape your locs into styles that flatter your face and showcase the texture you have grown.\n\nEach styling session starts with a short discussion about the occasion and the look you want. We use loc-safe accessories and finishing techniques designed to hold without damaging your roots, and we share simple tips for taking the style down so your locs stay healthy after the event.",
     img: "/images/services/microlocs5.jpg",
     features: [
       "Consultation on desired style",
@@ -108,6 +118,8 @@ export const services: Service[] = [
     price: "£80",
     time: "2 hr 30 min",
     desc: "Safe, professional colour services for locs — from subtle highlights to bold transformations.",
+    longDesc:
+      "Retighten With Phyllis is a dedicated maintenance session with one of our senior stylists, combining a precise retightening with optional safe colour services. Phyllis brings years of experience working with locs of every maturity, and tailors each session to the unique pattern and condition of your hair.\n\nIf you are adding colour, we start with a strand test and a full consultation so you understand how the colour will behave on your locs. The service includes a deep conditioning treatment and a clear plan for maintaining both the colour and the integrity of your locs between visits.",
     img: "/images/services/traditionallocs4.jpg",
     features: [
       "Colour consultation",
@@ -123,6 +135,8 @@ export const services: Service[] = [
     price: "£20",
     time: "1 hr",
     desc: "One-on-one consultation to discuss your hair goals, assess your hair and create a care plan.",
+    longDesc:
+      "Our Consultation service is a relaxed, one-on-one session designed to help you make confident decisions about your hair before committing to a service. We assess the condition of your scalp and hair, talk through your lifestyle and styling preferences, and recommend the installation method or maintenance routine that best suits you.\n\nBy the end of the consultation you will have a clear understanding of the time, cost and aftercare involved in your chosen direction, along with a written plan and recommended product list. First-time clients can apply the consultation fee toward any installation service booked afterwards.",
     img: "/images/styles/consultation.jpg",
     features: [
       "Hair and scalp assessment",
