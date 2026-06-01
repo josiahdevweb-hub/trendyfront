@@ -36,7 +36,7 @@ const services = [
     price: "From £50",
     time: "1 hr",
     desc: "Creative styling services for special occasions or everyday wear. From updos to intricate designs..",
-    img: "/images/services/Styling.png",
+    img: "/images/services/hero-ombre-locs.png",
 
     features: [
       "Consultation to determine best method",
