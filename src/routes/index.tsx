@@ -427,7 +427,7 @@ function Home() {
                         key={i}
                         src={img.src}
                         alt={img.alt}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1600ms] ease-in-out ${
+                        className={`hero-merge-mask-portrait absolute inset-0 w-full h-full object-cover transition-opacity duration-[1600ms] ease-in-out ${
                           active ? "opacity-100 hero-kenburns" : "opacity-0"
                         }`}
                         style={{ objectPosition: img.pos, filter: HERO_GRADE }}
