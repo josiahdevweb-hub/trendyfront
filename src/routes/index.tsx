@@ -365,10 +365,13 @@ function Home() {
                 <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
               </div>
 
-              <h1 className="font-serif text-xl sm:text-2xl md:text-[26px] lg:text-[28px] leading-[1.15] tracking-tight mb-3 md:mb-4 text-primary-foreground/80">
-                Premium Locs.
+              <h1 className="font-serif text-xl sm:text-2xl md:text-[26px] lg:text-[28px] leading-[1.15] tracking-tight mb-3 md:mb-4 text-primary-foreground/85 word-rise">
+                <span style={{ animationDelay: "120ms" }}>Premium</span>{" "}
+                <span style={{ animationDelay: "260ms" }}>Locs.</span>
                 <br />
-                Crafted in <span className="text-gold italic">Manchester.</span>
+                <span style={{ animationDelay: "420ms" }}>Crafted</span>{" "}
+                <span style={{ animationDelay: "540ms" }}>in</span>{" "}
+                <span className="text-gold italic" style={{ animationDelay: "700ms" }}>Manchester.</span>
               </h1>
 
               <p className="text-[13px] md:text-sm text-primary-foreground/75 max-w-md leading-relaxed mb-4 md:mb-5">
