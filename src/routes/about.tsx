@@ -85,20 +85,26 @@ function About() {
           </div>
 
           <div className="lg:col-span-5 relative">
-            <div className="w-full aspect-[4/5] overflow-hidden bg-muted">
+            <div
+              className="w-full aspect-[4/5] overflow-hidden bg-muted ring-1 ring-gold/20"
+              style={{ boxShadow: "var(--shadow-elegant)" }}
+            >
               <img
                 src="/images/salon/founder.jpg"
                 alt="Gina, founder of Trendylocs"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale-[0.25] hover:grayscale-0 transition-all duration-[1200ms]"
                 onError={(e) => {
                   if (e.currentTarget.src.indexOf("/images/fallback.jpg") === -1)
                     e.currentTarget.src = "/images/fallback.jpg";
                 }}
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 hidden md:flex w-52 h-52 border border-gold bg-background p-5 flex-col justify-center shadow-lg">
+            <div
+              className="absolute -bottom-8 -left-8 hidden md:flex w-52 h-52 border border-gold bg-background p-5 flex-col justify-center"
+              style={{ boxShadow: "var(--shadow-gold)" }}
+            >
               <p className="text-[10px] uppercase tracking-[0.2em] text-gold mb-2">
                 Our Process
               </p>
