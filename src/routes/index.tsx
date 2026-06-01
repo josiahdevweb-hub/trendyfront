@@ -448,6 +448,12 @@ function Home() {
           </div>
         </div>
 
+        {/* Scroll cue */}
+        <div className="hidden md:flex absolute bottom-12 left-10 z-20 flex-col items-center gap-3 text-primary-foreground/55">
+          <span className="text-[9px] uppercase tracking-[0.4em] [writing-mode:vertical-rl] rotate-180">Scroll</span>
+          <span className="block w-px h-12 bg-gold/70 origin-top scroll-cue-line" />
+        </div>
+
         {/* Bottom wave — blends into next section */}
         <div className="absolute inset-x-0 bottom-0 pointer-events-none">
           <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-8 md:h-10 block" aria-hidden="true">
