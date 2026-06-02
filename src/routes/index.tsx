@@ -547,13 +547,13 @@ function Home() {
               <CarouselContent className="-ml-4">
                 {services.map((s) => (
                   <CarouselItem key={s.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                    <div className="bg-card rounded-md overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:shadow-xl h-full relative">
+                    <Link to="/services" className="group block h-full relative">
                       {s.badge && (
                         <div className="absolute top-3 left-3 z-10 bg-gold text-gold-foreground text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full">
                           {s.badge}
                         </div>
                       )}
-                      <div className="aspect-[4/3] w-full overflow-hidden bg-secondary/40">
+                      <div className="aspect-[4/3] overflow-hidden rounded-md mb-4 bg-secondary/40">
                         <img
                           src={s.img}
                           alt={`${s.title} at Trendylocs salon Manchester`}
@@ -561,24 +561,19 @@ function Home() {
                           decoding="async"
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                           onError={onImgError}
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
-                      <div className="p-6">
-                        <h3 className="text-xl mb-2">{s.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-4">{s.desc}</p>
-                        <div className="flex items-center justify-between pt-2 border-t border-border/60">
-                          <p className="text-gold font-medium">{s.price}</p>
-                          <Link
-                            to="/services"
-                            className="group/cta inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-foreground border-b border-gold/50 pb-0.5 hover:text-gold hover:border-gold transition-colors"
-                          >
-                            View Details
-                            <ArrowRight className="h-3.5 w-3.5 group-hover/cta:translate-x-0.5 transition-transform" />
-                          </Link>
-                        </div>
+                      <h3 className="text-xl mb-2">{s.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-3">{s.desc}</p>
+                      <div className="flex items-center justify-between mt-4">
+                        <span className="text-sm text-gold font-medium">{s.price}</span>
+                        <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-foreground border-b border-gold/40 pb-0.5 group-hover:border-gold group-hover:text-gold transition-colors">
+                          View Details
+                          <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+                        </span>
                       </div>
-                    </div>
+                    </Link>
                   </CarouselItem>
                 ))}
               </CarouselContent>
