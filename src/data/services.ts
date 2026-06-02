@@ -136,17 +136,7 @@ export const services: Service[] = [
     time: "1 hr",
     desc: "One-on-one consultation to discuss your hair goals, assess your hair and create a care plan.",
     longDesc:
-      "We offer consultation to assess your hair texture, density, and scalp health to design a tailored loc journey. Typically lasting 15–30 minutes, it is essential to determining the best locs method, size, cost, and maintenance schedule for your hair.
-What to Expect During a Consultation
-Hair & Scalp Analysis:  
-We will check your curl pattern, density, length, and history of chemical or heat damage to ensure your hair is healthy enough for locs.
-Method & Size Matching:  
-We will recommend a starting method (e.g., comb coils, two-strand twists, or interlocking) and discuss sizing to fit your lifestyle, hair density and hair texture.
-Maintenance: 
-We will discuss the locs stages, care routines, and how often you will need retightening.
-Cost & Time Estimates:
- A full quote and time estimate for installation will be provided
-",
+      "Your consultation is a relaxed one-to-one session where we assess your hair texture, density and scalp health, then map out the loc journey that best suits your goals. We talk through your lifestyle, the look you want, and any concerns you may have so you leave with clarity on the right method, size, pricing and maintenance rhythm for your hair.\n\nDuring the appointment, we explain what to expect at each stage of the process, from installation through maturity, and answer any questions about upkeep, products and long-term care. You’ll leave with a clear recommendation, a realistic time estimate and the confidence to move forward with the service that fits you best.",
     img: "/images/styles/consultation.jpg",
     features: [
       "Hair and scalp assessment",
