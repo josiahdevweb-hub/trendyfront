@@ -362,7 +362,7 @@ function Home() {
 
               <div className="relative inline-block text-primary-foreground font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
                 <span>Trendy</span>
-                <span className="font-semibold">Locs</span>
+                <span className="font-semibold text-gold/90">Locs</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
               </div>
@@ -496,32 +496,32 @@ function Home() {
           <div className="grid grid-cols-2 gap-4">
             <div className="aspect-[3/4] overflow-hidden rounded-md row-span-2">
               <img
-                src="/images/salon/stylish-work.jpg"
-                alt="Trendylocs specialist installing Sisterlocks™ on a client"
+                src="/images/salon/founder.jpg"
+                alt="Gina, founder of Trendylocs"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-md">
               <img
-                src="/images/salon/loc-detail.jpg"
-                alt="Close-up of freshly installed microlocs"
+                src={heroBantuKnots.url}
+                alt="Freshly styled microlocs with bantu knots at Trendylocs"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover object-[50%_32%] hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-md">
               <img
-                src="/images/salon/interior.jpg"
-                alt="Trendylocs salon interior in Manchester, UK"
+                src={heroMicrolocsTop.url}
+                alt="Top-down view of precise microlocs parting at Trendylocs"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover object-[50%_42%] hover:scale-105 transition-transform duration-700"
               />
             </div>
           </div>
