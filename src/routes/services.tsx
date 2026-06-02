@@ -172,9 +172,10 @@ function Services() {
                     </div>
                     <button
                       onClick={() => setActiveSlug(featured.slug)}
-                      className="inline-flex items-center gap-2 border-b border-gold pb-1"
+                      className="group/cta inline-flex items-center gap-2 bg-gold text-gold-foreground px-6 py-3 rounded-md text-xs uppercase tracking-[0.18em] hover:opacity-90 transition-all shadow-sm hover:shadow-md"
                     >
-                      Explore More <ArrowRight className="h-4 w-4" />
+                      View Service Details
+                      <ArrowRight className="h-4 w-4 group-hover/cta:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 </article>
