@@ -17,6 +17,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import heroBraids from "@/assets/hero/hero-braids.asset.json";
 import heroOmbreLocs from "@/assets/hero/hero-ombre-locs.asset.json";
+import heroBantuKnots from "@/assets/hero/hero-bantu-knots.png.asset.json";
+import heroMicrolocsTop from "@/assets/hero/hero-microlocs-top.png.asset.json";
 
 export const Route = createFileRoute("/")({ component: Home });
 
