@@ -567,13 +567,14 @@ function Home() {
                       <div className="p-6">
                         <h3 className="text-xl mb-2">{s.title}</h3>
                         <p className="text-sm text-muted-foreground mb-4">{s.desc}</p>
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between pt-2 border-t border-border/60">
                           <p className="text-gold font-medium">{s.price}</p>
                           <Link
-                            to="/book"
-                            className="text-xs text-muted-foreground hover:text-gold transition-colors inline-flex items-center gap-1"
+                            to="/services"
+                            className="group/cta inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-foreground border-b border-gold/50 pb-0.5 hover:text-gold hover:border-gold transition-colors"
                           >
-                            Book <ArrowRight className="h-3 w-3" />
+                            View Details
+                            <ArrowRight className="h-3.5 w-3.5 group-hover/cta:translate-x-0.5 transition-transform" />
                           </Link>
                         </div>
                       </div>

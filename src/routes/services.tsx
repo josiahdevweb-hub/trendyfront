@@ -172,9 +172,10 @@ function Services() {
                     </div>
                     <button
                       onClick={() => setActiveSlug(featured.slug)}
-                      className="inline-flex items-center gap-2 border-b border-gold pb-1"
+                      className="group/cta inline-flex items-center gap-2 bg-gold text-gold-foreground px-6 py-3 rounded-md text-xs uppercase tracking-[0.18em] hover:opacity-90 transition-all shadow-sm hover:shadow-md"
                     >
-                      Explore More <ArrowRight className="h-4 w-4" />
+                      View Service Details
+                      <ArrowRight className="h-4 w-4 group-hover/cta:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 </article>
@@ -210,9 +211,12 @@ function Services() {
                       <p className="text-xs uppercase tracking-wider text-gold mb-2">{s.time}</p>
                       <h3 className="text-xl mb-2">{s.title}</h3>
                       <p className="text-sm text-muted-foreground mb-3">{s.desc}</p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground">
-                        <span>{s.price}</span>
-                        <span className="text-foreground group-hover:text-gold">Explore More →</span>
+                      <div className="flex items-center justify-between mt-4">
+                        <span className="text-sm text-gold font-medium">{s.price}</span>
+                        <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-foreground border-b border-gold/40 pb-0.5 group-hover:border-gold group-hover:text-gold transition-colors">
+                          View Details
+                          <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+                        </span>
                       </div>
                     </article>
                   ))}
