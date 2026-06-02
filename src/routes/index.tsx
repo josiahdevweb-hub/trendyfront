@@ -17,6 +17,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import heroBraids from "@/assets/hero/hero-braids.asset.json";
 import heroOmbreLocs from "@/assets/hero/hero-ombre-locs.asset.json";
+import heroBantuKnots from "@/assets/hero/hero-bantu-knots.png.asset.json";
+import heroMicrolocsTop from "@/assets/hero/hero-microlocs-top.png.asset.json";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -178,11 +180,11 @@ const HERO_PAIRS = [
     split: 55,
   },
   {
-    left: heroBraids.url,
-    leftAlt: "Intricate feed-in braids with bantu knot crown — Trendylocs precision styling",
-    leftObjectPosition: "55% 40%",
-    right: heroOmbreLocs.url,
-    rightAlt: "Microlocs with warm copper ombre tips — Trendylocs colour craftsmanship",
+    left: heroBantuKnots.url,
+    leftAlt: "Bantu knots over microlocs — Trendylocs protective styling",
+    leftObjectPosition: "50% 35%",
+    right: heroMicrolocsTop.url,
+    rightAlt: "Top-down view of freshly retightened microlocs — Trendylocs precision",
     rightObjectPosition: "50% 45%",
     split: 50,
   },
@@ -360,7 +362,7 @@ function Home() {
 
               <div className="relative inline-block text-primary-foreground font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
                 <span>Trendy</span>
-                <span className="font-semibold italic">Locs</span>
+                <span className="font-semibold">Locs</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
               </div>
