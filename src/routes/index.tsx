@@ -496,32 +496,32 @@ function Home() {
           <div className="grid grid-cols-2 gap-4">
             <div className="aspect-[3/4] overflow-hidden rounded-md row-span-2">
               <img
-                src="/images/salon/stylish-work.jpg"
-                alt="Trendylocs specialist installing Sisterlocks™ on a client"
+                src="/images/salon/founder.jpg"
+                alt="Gina, founder of Trendylocs"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-md">
               <img
-                src="/images/salon/loc-detail.jpg"
-                alt="Close-up of freshly installed microlocs"
+                src={heroBantuKnots.url}
+                alt="Freshly styled microlocs with bantu knots at Trendylocs"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover object-[50%_32%] hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-md">
               <img
-                src="/images/salon/interior.jpg"
-                alt="Trendylocs salon interior in Manchester, UK"
+                src={heroMicrolocsTop.url}
+                alt="Top-down view of precise microlocs parting at Trendylocs"
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover object-[50%_42%] hover:scale-105 transition-transform duration-700"
               />
             </div>
           </div>
