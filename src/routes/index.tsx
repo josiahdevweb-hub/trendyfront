@@ -19,6 +19,7 @@ import heroBraids from "@/assets/hero/hero-braids.asset.json";
 import heroOmbreLocs from "@/assets/hero/hero-ombre-locs.asset.json";
 import heroBantuKnots from "@/assets/hero/hero-bantu-knots.png.asset.json";
 import heroMicrolocsTop from "@/assets/hero/hero-microlocs-top.png.asset.json";
+import { services } from "@/data/services";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -29,48 +30,10 @@ const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
-const services = [
-  {
-    title: "Sisterlocks™",
-    price: "From £350",
-    desc: "Precision micro locs for a versatile, manageable style",
-    img: "/images/styles/sisterlocks.jpg",
-    badge: "Most Popular",
-  },
-  {
-    title: "Microlocs",
-    price: "From £280",
-    desc: "Small, uniform locs perfect for styling flexibility",
-    img: "/images/styles/microlocs.jpg",
-    badge: null,
-  },
-  {
-    title: "Traditional Locs",
-    price: "From £180",
-    desc: "Classic freeform or cultivated dreadlocks",
-    img: "/images/styles/traditional-locs.jpg",
-    badge: null,
-  },
-  {
-    title: "Retightening",
-    price: "From £85",
-    desc: "Maintenance sessions for healthy, neat locs",
-    img: "/images/styles/retightening.jpg",
-    badge: "Book Monthly",
-  },
-  {
-    title: "Loc Styling",
-    price: "From £120",
-    desc: "Special occasion updos and creative styling",
-    img: "/images/styles/styling.jpg",
-    badge: null,
-  },
-];
-
 const testimonials = [
   {
     quote:
-      "I have been with Trendylocs since my installation in November 2018 and my daughter had her install in February February 2020. We are so pleased with Gina’s services. My eldest daughter has also decided she wants Sister locks so she will be going to Trendylocs.",
+      "I have been with Trendylocs since my installation in November 2018 and my daughter had her install in February February 2020. We are so pleased with Gina's services. My eldest daughter has also decided she wants Sister locks so she will be going to Trendylocs.",
     name: "Edinah Ngwarati",
     service: "Sisterlocks™",
     initials: "AJ",
@@ -86,7 +49,7 @@ const testimonials = [
   },
   {
     quote:
-      "Great service, accessible location, comfortable environment. I tried a few others before settling on Trendylocs and so far it’s been great.",
+      "Great service, accessible location, comfortable environment. I tried a few others before settling on Trendylocs and so far it's been great.",
     name: "Yinks x",
     service: "Natural Hair Care",
     initials: "NT",
@@ -329,9 +292,7 @@ function Home() {
   return (
     <>
       {/* ── 1. HERO (Split: Text Left, Portrait Right) ───────── */}
-      <section
-        className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center grain md:h-[min(80dvh,80vh)] md:min-h-[480px]"
-      >
+      <section className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center grain md:h-[min(80dvh,80vh)] md:min-h-[480px]">
         {/* Subtle dot pattern background */}
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none"
@@ -359,7 +320,6 @@ function Home() {
             >
               <div className="hidden" />
 
-
               <div className="relative inline-block text-primary-foreground font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
                 <span>Trendy</span>
                 <span className="font-semibold text-gold/90">Locs</span>
@@ -373,7 +333,9 @@ function Home() {
                 <br />
                 <span style={{ animationDelay: "420ms" }}>Crafted</span>{" "}
                 <span style={{ animationDelay: "540ms" }}>in</span>{" "}
-                <span className="text-gold italic" style={{ animationDelay: "700ms" }}>Manchester.</span>
+                <span className="text-gold italic" style={{ animationDelay: "700ms" }}>
+                  Manchester.
+                </span>
               </h1>
 
               <p className="text-[13px] md:text-sm text-primary-foreground/75 max-w-md leading-relaxed mb-4 md:mb-5">
@@ -449,7 +411,6 @@ function Home() {
             </div>
           </div>
         </div>
-
 
         {/* Bottom wave — blends into next section */}
         <div className="absolute inset-x-0 bottom-0 pointer-events-none">
@@ -546,13 +507,8 @@ function Home() {
             >
               <CarouselContent className="-ml-4">
                 {services.map((s) => (
-                  <CarouselItem key={s.title} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                    <Link to="/services" className="group block h-full relative">
-                      {s.badge && (
-                        <div className="absolute top-3 left-3 z-10 bg-gold text-gold-foreground text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full">
-                          {s.badge}
-                        </div>
-                      )}
+                  <CarouselItem key={s.slug} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                    <Link to="/services/$slug" params={{ slug: s.slug }} className="group block h-full relative">
                       <div className="aspect-[4/3] overflow-hidden rounded-md mb-4 bg-secondary/40">
                         <img
                           src={s.img}
