@@ -18,7 +18,7 @@ export const services: Service[] = [
     desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
     longDesc:
       "Sisterlocks (TM) are small locks made by precision sectioning of hair using a special locking tool. It is a trademarked hair style which was started and patented by Dr. Joanne Cornwell in the United States. Sisterlocks is a celebration of natural hair, freeing you from the numerous hair products created to straighten your hair. Its installation and maintenance is therefore as natural as can be.\n\nIf you are interested in installing Sisterlocks, we will initially invite you to come for a consultation during which we determine your hair type, discuss locking patterns and install samples. We will then book your installation as well as book your first re-tightening session, normally after 4 weeks. Following your sisterlocks installation, we advise on a re-tightening schedule. This is usually after every 4-6 weeks.\n\nWhy Sisterlocks™ ?\n• Freedom / Versatility / Light\n• Endless styling possibilities\n• Thinnest of loose hair looks fuller\n\nDuration: 8 hrs but exact duration is determined during consultation. Cost: Determined during consultation and depends on length of hair.",
-    img: "/images/transformations/microlocs-before-after.jpg",
+    img: "/images/services/sisterlocs1.jpg",
     features: [
       "Initial consultation included",
       "Precision parting and installation",
