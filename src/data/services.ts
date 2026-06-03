@@ -69,7 +69,7 @@ export const services: Service[] = [
     desc: "Full maintenance session — assess your locs and create a tailored care plan.",
     longDesc:
       "Our Maintenance & Retightening service is a complete care session designed for clients who want their locs to stay healthy, neat and well-shaped over the long term. We carefully assess the condition of your scalp and locs, address any thinning or weak spots, and retighten new growth using the technique that best matches your loc type.\n\nBeyond retightening, the session includes a gentle scalp cleanse, conditioning where appropriate, and a personalised care plan that covers washing schedules, products and the ideal interval before your next visit. You leave with locs that feel lighter, look uniform, and are set up for the next stage of their journey.",
-    img: "/images/services/traditional-locs.jpg",
+    img: "/images/services/retightening.jpg",
     features: [
       "Multiple installation methods available",
       "Customized parting pattern",
@@ -86,7 +86,7 @@ export const services: Service[] = [
     desc: "Essential maintenance to keep your locs neat, healthy and maturing properly. Every 4–6 weeks.",
     longDesc:
       "Retightening is the core maintenance service that keeps your locs looking crisp and supports them through every stage of maturity. During the session we work systematically through your hair, tightening new growth at the roots so each loc maintains its shape, direction and size without becoming over-stressed.\n\nWe recommend booking a retightening session every 4 to 6 weeks depending on your hair type and how quickly your roots grow out. Consistent retightening prevents matting between locs, reduces breakage, and ensures your locs continue to mature evenly over the months and years.",
-    img: "/images/services/sisterlocs2.jpg",
+    img: "/images/services/retightening.jpg",
     features: [
       "Root maintenance",
       "Scalp cleansing and treatment",
@@ -137,7 +137,7 @@ export const services: Service[] = [
     desc: "Safe, professional colour services for locs — from subtle highlights to bold transformations.",
     longDesc:
       "Retighten With Phyllis is a dedicated maintenance session with one of our senior stylists, combining a precise retightening with optional safe colour services. Phyllis brings years of experience working with locs of every maturity, and tailors each session to the unique pattern and condition of your hair.\nIf you are adding colour, we start with a strand test and a full consultation so you understand how the colour will behave on your locs. The service includes a deep conditioning treatment and a clear plan for maintaining both the colour and the integrity of your locs between visits.",
-    img: "/images/services/traditionallocs4.jpg",
+    img: "/images/services/retightening.jpg",
     features: [
       "Colour consultation",
       "Strand testing",
