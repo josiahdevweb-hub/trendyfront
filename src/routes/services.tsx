@@ -131,7 +131,7 @@ function Services() {
       ) : (
         /* ── GRID VIEW ─────────────────────────────────────────────── */
         <section className="mx-auto max-w-7xl px-6 py-12">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s) => (
               <article
                 key={s.slug}
