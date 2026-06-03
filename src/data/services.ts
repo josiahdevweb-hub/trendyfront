@@ -18,7 +18,7 @@ export const services: Service[] = [
     desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
     longDesc:
       "Sisterlocks (TM) are small locks made by precision sectioning of hair using a special locking tool. It is a trademarked hair style which was started and patented by Dr. Joanne Cornwell in the United States. Sisterlocks is a celebration of natural hair, freeing you from the numerous hair products created to straighten your hair. Its installation and maintenance is therefore as natural as can be.\n\nIf you are interested in installing Sisterlocks, we will initially invite you to come for a consultation during which we determine your hair type, discuss locking patterns and install samples. We will then book your installation as well as book your first re-tightening session, normally after 4 weeks. Following your sisterlocks installation, we advise on a re-tightening schedule. This is usually after every 4-6 weeks.\n\nWhy Sisterlocks™ ?\n• Freedom / Versatility / Light\n• Endless styling possibilities\n• Thinnest of loose hair looks fuller\n\nDuration: 8 hrs but exact duration is determined during consultation. Cost: Determined during consultation and depends on length of hair.",
-    img: "/images/transformations/microlocs-before-after.jpg",
+    img: "/images/services/sisterlocs1.jpg",
     features: [
       "Initial consultation included",
       "Precision parting and installation",
@@ -35,7 +35,7 @@ export const services: Service[] = [
     desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
     longDesc:
       "We install dreadlocks of varying sizes from small to large using interlocking method. The cost will depend on the size of locks you would like and the length of your hair. The price can be confirmed during your consultation.\nTo install new dreadlocks takes on average 5-6 hours depending on the length, the desired size of your dreads and if you are adding extensions.\nHow long should your hair be to install dreadlocks? Due to the size of the locks, the hair should be at least 6 inches.\nWe only use a crotchet hook to maintain your dreadlocks. We do not use any products , chemicals , wax or glue.\nMaintenance\nOur traditional locks maintenance services include re-tightening the new growth, crocheting loose hair using a crotchet hook\nWhy dreadlocks?\n•Low maintenance\n•Variety of sizes\n•Hip",
-    img: "/images/transformations/microlocs-before-after.jpg",
+    img: "/images/services/traditionallocs1.png",
     features: [
       "Initial consultation included",
       "Precision parting and installation",
@@ -52,7 +52,7 @@ export const services: Service[] = [
     desc: "Creative styling for special occasions or everyday wear — from updos to intricate designs.",
     longDesc:
       "Our styling service is designed to make your locs feel fresh, intentional and ready for any occasion. Whether you are preparing for a wedding, a photoshoot, or simply want a refreshed everyday look, our stylists work with the natural texture and length of your hair to create looks that flatter your face and last.\n\nEvery session begins with a short consultation so we can understand the style you have in mind and recommend options that suit your hair density, length and maturity. We use loc-safe products and accessories, and finish with care tips so you can keep the style looking polished for as long as possible.",
-    img: "/images/services/hero-bantu-knots.png",
+    img: "/images/services/Styling.png",
     features: [
       "Consultation to determine best method",
       "Professional installation",
@@ -103,7 +103,7 @@ export const services: Service[] = [
     desc: "Begin your loc journey with professional starter locs using your preferred method.",
     longDesc:
       "Locs Establishment is the starting point of your loc journey. We begin with an in-depth consultation to understand your goals, assess your hair type and density, and recommend the installation method that will give you the best long-term results — whether that is two-strand twists, comb coils, interlocking or another technique suited to your texture.\n\nThe installation itself is done with precision parting and careful tension so your locs start uniform and balanced. You leave with a starter care package, written aftercare instructions, and a clear schedule for your first few maintenance visits so the early weeks of your loc journey feel guided rather than uncertain.",
-    img: "/images/services/microlocs2.jpg",
+    img: "/images/services/microlocs2.jpeg",
     features: [
       "In-depth consultation",
       "Method selection guidance",
