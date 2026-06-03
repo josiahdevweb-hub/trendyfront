@@ -34,7 +34,7 @@ export const services: Service[] = [
     time: "5 - 6 hrs",
     desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
     longDesc:
-      "We install dreadlocks of varying sizes from small to large using interlocking method. The cost will depend on the size of locks you would like and the length of your hair. The price can be confirmed during your consultation.\n\nTo install new dreadlocks takes on average 5-6 hours depending on the length, the desired size of your dreads and if you are adding extensions.\n\nHow long should your hair be to install dreadlocks? Due to the size of the locks, the hair should be at least 6 inches.\n\nWe only use a crotchet hook to maintain your dreadlocks. We do not use any products , chemicals , wax or glue.\n\nMaintenance\n\nOur traditional locks maintenance services include re-tightening the new growth, crocheting loose hair using a crotchet hook\n\nWhy dreadlocks?\n•Low maintenance\n•Variety of sizes\n•Hip",
+      "We install dreadlocks of varying sizes from small to large using interlocking method. The cost will depend on the size of locks you would like and the length of your hair. The price can be confirmed during your consultation.\nTo install new dreadlocks takes on average 5-6 hours depending on the length, the desired size of your dreads and if you are adding extensions.\nHow long should your hair be to install dreadlocks? Due to the size of the locks, the hair should be at least 6 inches.\nWe only use a crotchet hook to maintain your dreadlocks. We do not use any products , chemicals , wax or glue.\nMaintenance\nOur traditional locks maintenance services include re-tightening the new growth, crocheting loose hair using a crotchet hook\nWhy dreadlocks?\n•Low maintenance\n•Variety of sizes\n•Hip",
     img: "/images/transformations/microlocs-before-after.jpg",
     features: [
       "Initial consultation included",
@@ -136,7 +136,7 @@ export const services: Service[] = [
     time: "2 hr 30 min",
     desc: "Safe, professional colour services for locs — from subtle highlights to bold transformations.",
     longDesc:
-      "Retighten With Phyllis is a dedicated maintenance session with one of our senior stylists, combining a precise retightening with optional safe colour services. Phyllis brings years of experience working with locs of every maturity, and tailors each session to the unique pattern and condition of your hair.\n\nIf you are adding colour, we start with a strand test and a full consultation so you understand how the colour will behave on your locs. The service includes a deep conditioning treatment and a clear plan for maintaining both the colour and the integrity of your locs between visits.",
+      "Retighten With Phyllis is a dedicated maintenance session with one of our senior stylists, combining a precise retightening with optional safe colour services. Phyllis brings years of experience working with locs of every maturity, and tailors each session to the unique pattern and condition of your hair.\nIf you are adding colour, we start with a strand test and a full consultation so you understand how the colour will behave on your locs. The service includes a deep conditioning treatment and a clear plan for maintaining both the colour and the integrity of your locs between visits.",
     img: "/images/services/traditionallocs4.jpg",
     features: [
       "Colour consultation",
