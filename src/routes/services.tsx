@@ -142,12 +142,12 @@ function Services() {
                 }}
               >
                 {/* Image */}
-                <div className="h-64 md:h-72 overflow-hidden shrink-0 bg-secondary/40 flex items-center justify-center">
+                <div className="h-64 md:h-72 overflow-hidden shrink-0">
                   <img
                     src={s.img}
                     alt={s.title}
                     onError={onImgError}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
