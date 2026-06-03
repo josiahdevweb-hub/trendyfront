@@ -28,6 +28,23 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "Dreadlocs",
+    title: "Dreadlocs",
+    price: "To be determined",
+    time: "5 - 6 hrs",
+    desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
+    longDesc:
+      "We install dreadlocks of varying sizes from small to large using interlocking method. The cost will depend on the size of locks you would like and the length of your hair. The price can be confirmed during your consultation.\n\nTo install new dreadlocks takes on average 5-6 hours depending on the length, the desired size of your dreads and if you are adding extensions.\n\nHow long should your hair be to install dreadlocks? Due to the size of the locks, the hair should be at least 6 inches.\n\nWe only use a crotchet hook to maintain your dreadlocks. We do not use any products , chemicals , wax or glue.\n\nMaintenance\n\nOur traditional locks maintenance services include re-tightening the new growth, crocheting loose hair using a crotchet hook\n\nWhy dreadlocks?\n•Low maintenance\n•Variety of sizes\n•Hip",
+    img: "/images/transformations/microlocs-before-after.jpg",
+    features: [
+      "Initial consultation included",
+      "Precision parting and installation",
+      "Aftercare kit and instructions",
+      "Follow-up appointment guidance",
+      "Lifetime installation warranty",
+    ],
+  },
+  {
     slug: "styling",
     title: "Styling",
     price: "£50",
@@ -136,7 +153,8 @@ export const services: Service[] = [
     time: "1 hr",
     desc: "One-on-one consultation to discuss your hair goals, assess your hair and create a care plan.",
     longDesc:
-      "Your consultation is a relaxed one-to-one session where we assess your hair texture, density and scalp health, then map out the loc journey that best suits your goals. We talk through your lifestyle, the look you want, and any concerns you may have so you leave with clarity on the right method, size, pricing and maintenance rhythm for your hair.\n\nDuring the appointment, we explain what to expect at each stage of the process, from installation through maturity, and answer any questions about upkeep, products and long-term care. You’ll leave with a clear recommendation, a realistic time estimate and the confidence to move forward with the service that fits you best.",
+      "We offer consultation to assess your hair texture, density, and scalp health to design a tailored loc journey. Typically lasting 15–30 minutes, it is essential to determining the best locs method, size, cost, and maintenance schedule for your hair.\n\nWhat to Expect During a Consultation\n\nHair & Scalp Analysis:\n\nWe will check your curl pattern, density, length, and history of chemical or heat damage to ensure your hair is healthy enough for locs.\n\nMethod & Size Matching: We will recommend a starting method (e.g.comb coils, two-strand twists, or interlocking) and discuss sizing to fit your lifestyle, hair density and hair tex\n\nture.\n\nMaintenance: \n\nWe will discuss the locs stages, care routines, and how often you will need retightening.\n\nCost & Time Estimates:\n\nA full quote and time estimate for installation will be provided
+",
     img: "/images/styles/consultation.jpg",
     features: [
       "Hair and scalp assessment",
