@@ -35,7 +35,7 @@ export const services: Service[] = [
     desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
     longDesc:
       "We install dreadlocks of varying sizes from small to large using interlocking method. The cost will depend on the size of locks you would like and the length of your hair. The price can be confirmed during your consultation.\nTo install new dreadlocks takes on average 5-6 hours depending on the length, the desired size of your dreads and if you are adding extensions.\nHow long should your hair be to install dreadlocks? Due to the size of the locks, the hair should be at least 6 inches.\nWe only use a crotchet hook to maintain your dreadlocks. We do not use any products , chemicals , wax or glue.\nMaintenance\nOur traditional locks maintenance services include re-tightening the new growth, crocheting loose hair using a crotchet hook\nWhy dreadlocks?\n•Low maintenance\n•Variety of sizes\n•Hip",
-    img: "/images/transformations/microlocs-before-after.jpg",
+    img: "/images/services/traditionallocs1.png",
     features: [
       "Initial consultation included",
       "Precision parting and installation",
