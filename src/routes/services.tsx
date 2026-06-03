@@ -142,7 +142,7 @@ function Services() {
                 }}
               >
                 {/* Image */}
-                <div className="h-44 overflow-hidden shrink-0">
+                <div className="h-64 md:h-72 overflow-hidden shrink-0">
                   <img
                     src={s.img}
                     alt={s.title}
