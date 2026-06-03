@@ -103,7 +103,7 @@ export const services: Service[] = [
     desc: "Begin your loc journey with professional starter locs using your preferred method.",
     longDesc:
       "Locs Establishment is the starting point of your loc journey. We begin with an in-depth consultation to understand your goals, assess your hair type and density, and recommend the installation method that will give you the best long-term results — whether that is two-strand twists, comb coils, interlocking or another technique suited to your texture.\n\nThe installation itself is done with precision parting and careful tension so your locs start uniform and balanced. You leave with a starter care package, written aftercare instructions, and a clear schedule for your first few maintenance visits so the early weeks of your loc journey feel guided rather than uncertain.",
-    img: "/images/services/microlocs2.jpg",
+    img: "/images/services/microlocs2.jpeg",
     features: [
       "In-depth consultation",
       "Method selection guidance",
