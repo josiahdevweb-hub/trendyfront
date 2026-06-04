@@ -46,7 +46,7 @@ function BookPage() {
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/60">
           <span className="flex items-center gap-1.5">
-            <Clock className="h-3.5 w-3.5 text-gold" /> Tue–Sat · 9am–7pm
+            <Clock className="h-3.5 w-3.5 text-gold" /> Mon - Fri · 9:30am – 5:30pm
           </span>
           <span className="flex items-center gap-1.5">
             <ShieldCheck className="h-3.5 w-3.5 text-gold" /> Free cancellation 24h before
@@ -62,7 +62,7 @@ function BookPage() {
               href="tel:+44123456789"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-primary-foreground/20 text-sm hover:border-gold hover:text-gold transition-colors"
             >
-              <Phone className="h-4 w-4" /> +447983818010
+              <Phone className="h-4 w-4" /> +447838328131
             </a>
             <a
               href="https://wa.me/44123456789"
