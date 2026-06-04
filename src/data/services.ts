@@ -129,23 +129,7 @@ export const services: Service[] = [
       "Photo-ready finish",
     ],
   },
-  {
-    slug: "retighten-with-phyllis",
-    title: "Retighten With Phyllis",
-    price: "£80",
-    time: "2 hr 30 min",
-    desc: "Safe, professional colour services for locs — from subtle highlights to bold transformations.",
-    longDesc:
-      "Retighten With Phyllis is a dedicated maintenance session with one of our senior stylists, combining a precise retightening with optional safe colour services. Phyllis brings years of experience working with locs of every maturity, and tailors each session to the unique pattern and condition of your hair.\nIf you are adding colour, we start with a strand test and a full consultation so you understand how the colour will behave on your locs. The service includes a deep conditioning treatment and a clear plan for maintaining both the colour and the integrity of your locs between visits.",
-    img: "/images/services/retightening.jpg",
-    features: [
-      "Colour consultation",
-      "Strand testing",
-      "Professional application",
-      "Deep conditioning treatment",
-      "Colour maintenance guidance",
-    ],
-  },
+
   {
     slug: "consultation",
     title: "Consultation",
