@@ -33,13 +33,13 @@ const items = [
     title: "Microlocs Transformation",
     desc: "Beautiful microlocs after 6 months",
     cat: "Microlocs",
-    img: "/images/Gallery/microlocs2.jpg",
+    img: "/images/Gallery/microlocs2.jpeg",
   },
   {
     title: "Microlocs Transformation",
     desc: "Beautiful microlocs after 6 months",
     cat: "Microlocs",
-    img: "/images/Gallery/microlocs3.jpg",
+    img: "/images/Gallery/microlocs3.JPG",
   },
   {
     title: "Traditional Locs",
