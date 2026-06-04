@@ -517,12 +517,12 @@ function Home() {
 
         <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-6">
           {[
-            "/images/styles/goddess-locs.jpg",
+            "/images/Gallery/microlocs1.jpg",
             "/images/styles/microlocs.jpg",
-            "/images/styles/loc-color.jpg",
+            "/images/Gallery/traditionallocs2.jpg",
             "/images/styles/sisterlocks.jpg",
-            "/images/styles/updo.jpg",
-            "/images/styles/traditional-locs.jpg",
+            "/images/Gallery/styling1.jpg",
+            "/images/Gallery/sisterlocs1.jpg",
           ].map((src, i) => (
             <a
               key={i}
