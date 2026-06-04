@@ -64,7 +64,7 @@ const HERO_PAIRS = [
     left: "/images/hero/wide.jpg",
     leftAlt: "Trendylocs Manchester salon client mid-service",
     right: "/images/hero/detail.jpg",
-    rightAlt: "Precision microlocs being installed — close-up craftsmanship",
+    rightAlt: "Precision microlocs being installed close-up craftsmanship",
     split: 60,
   },
   {
@@ -78,7 +78,7 @@ const HERO_PAIRS = [
   },
   {
     left: "/images/hero/wide-3.jpg",
-    leftAlt: "Fresh microlocs install — clean uniform parting lines down the back",
+    leftAlt: "Fresh microlocs install clean uniform parting lines down the back",
     leftObjectPosition: "50% 55%",
     right: "/images/hero/detail-3.jpg",
     rightAlt: "Close-up of precise grid partings on microlocs with copper-tipped ends",
@@ -87,10 +87,10 @@ const HERO_PAIRS = [
   },
   {
     left: heroBantuKnots.url,
-    leftAlt: "Bantu knots over microlocs — Trendylocs protective styling",
+    leftAlt: "Bantu knots over microlocs - Trendylocs protective styling",
     leftObjectPosition: "50% 35%",
     right: heroMicrolocsTop.url,
-    rightAlt: "Top-down view of freshly retightened microlocs — Trendylocs precision",
+    rightAlt: "Top-down view of freshly retightened microlocs Trendylocs precision",
     rightObjectPosition: "50% 45%",
     split: 50,
   },
@@ -190,7 +190,7 @@ function Home() {
               </h1>
 
               <p className="text-[13px] md:text-sm text-primary-foreground/75 max-w-md leading-relaxed mb-4 md:mb-5">
-                Sisterlocks™, Microlocs &amp; Traditional Locs — precision installations and gentle maintenance from
+                Sisterlocks™, Microlocs &amp; Traditional Locs: precision installations and gentle maintenance from
                 certified specialists.
               </p>
 
@@ -577,7 +577,7 @@ function Home() {
               Book Free Consultation <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="https://wa.me/447983818010"
+              href="https://wa.me/447838328131"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/20 border border-gold-foreground/30 text-gold-foreground px-7 py-3.5 rounded-md hover:bg-white/30 transition"
