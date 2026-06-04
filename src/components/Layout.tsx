@@ -1,8 +1,19 @@
 import { Link, Outlet } from "@tanstack/react-router";
-import { CalendarCheck, Instagram, Facebook, MessageCircle, Phone, Mail, MapPin, Clock, Menu, X, Scissors } from "lucide-react";
+import {
+  CalendarCheck,
+  Instagram,
+  Facebook,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Menu,
+  X,
+  Scissors,
+} from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/trendylocs-logo-global.png.asset.json";
-
 
 function TopBar() {
   return (
@@ -11,7 +22,7 @@ function TopBar() {
         <div className="flex items-center gap-5">
           <a href="tel:+44123456789" className="flex items-center gap-1.5 hover:text-gold transition-colors">
             <Phone className="h-3 w-3 text-gold" />
-            <span>+447983818010</span>
+            <span>+447838328131</span>
           </a>
           <a
             href="mailto:info@trendylocs.com"
@@ -95,7 +106,7 @@ function Header() {
         </nav>
         <div className="flex items-center gap-4 text-primary-foreground">
           <a
-            href="https://wa.me/447983818010"
+            href="https://wa.me/447838328131"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp Trendylocs"
@@ -103,11 +114,7 @@ function Header() {
           >
             <MessageCircle className="h-5 w-5" />
           </a>
-          <Link
-            to="/book"
-            aria-label="Book appointment"
-            className="md:hidden hover:text-gold transition-colors"
-          >
+          <Link to="/book" aria-label="Book appointment" className="md:hidden hover:text-gold transition-colors">
             <CalendarCheck className="h-5 w-5" />
           </Link>
           <Link
@@ -141,7 +148,7 @@ function Header() {
           <div className="mt-3 pt-4 border-t border-primary-foreground/10 flex flex-col gap-2 text-xs text-primary-foreground/60">
             <a href="tel:+44123456789" className="flex items-center gap-2 hover:text-gold">
               <Phone className="h-3.5 w-3.5 text-gold" />
-              <span>+447983818010</span>
+              <span>+447838328131</span>
             </a>
             <a href="mailto:info@trendylocs.com" className="flex items-center gap-2 hover:text-gold">
               <Mail className="h-3.5 w-3.5 text-gold" />
@@ -220,8 +227,8 @@ function Footer() {
           <ul className="space-y-2 text-sm text-primary-foreground/70">
             <li> 41 Cross Street. Sale. M33 7FT. Manchester</li>
             <li>
-              <a href="tel:+44123456789" className="hover:text-gold">
-                +447983818010
+              <a href="tel:+447838328131" className="hover:text-gold">
+                +447838328131
               </a>
             </li>
             <li>
@@ -229,7 +236,7 @@ function Footer() {
                 gina@trendylocs.com
               </a>
             </li>
-            <li>Mon – Fri: 9:30am–5:30pm</li>
+            <li>Mon – Fri: 9:30am – 5:30pm</li>
           </ul>
         </div>
       </div>
@@ -263,5 +270,4 @@ export function Layout() {
       <Footer />
     </div>
   );
-
 }
