@@ -105,7 +105,7 @@ export const services: Service[] = [
       "In-depth consultation",
       "Method selection guidance",
       "Professional installation",
-     
+    ],
   },
   {
     slug: "loc-styling",
