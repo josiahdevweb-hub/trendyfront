@@ -87,7 +87,7 @@ const items = [
     title: "Half-Up Style",
     desc: "Casual half-up loc styling",
     cat: "Styling",
-    img: "/images/services/styling",
+    img: "/images/services/styling.jpg",
   },
   {
     title: "Mature Sisterlocks™",
