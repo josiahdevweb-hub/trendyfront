@@ -9,8 +9,7 @@ export const Route = createFileRoute("/gallery")({
       { title: "Gallery — Trendylocs" },
       {
         name: "description",
-        content:
-          "Explore our portfolio of beautiful transformations and styling work.",
+        content: "Explore our portfolio of beautiful transformations and styling work.",
       },
     ],
   }),
@@ -18,16 +17,56 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const items = [
-  { title: "Sisterlocks™ Installation", desc: "Fresh Sisterlocks™ with precision parting", cat: "Sisterlocks™", img: "/images/Gallery/Microlocs1.jpeg" },
-  { title: "Microlocs Transformation", desc: "Beautiful microlocs after 6 months", cat: "Microlocs", img: "/images/Gallery/Microlocs1.jpeg" },
-  { title: "Traditional Locs", desc: "Mature locs with healthy shine", cat: "Traditional Locs", img: "/images/styles/traditional-locs.jpg" },
+  {
+    title: "Sisterlocks™ Installation",
+    desc: "Fresh Sisterlocks™ with precision parting",
+    cat: "Sisterlocks™",
+    img: "/images/Gallery/Microlocs1.jpeg",
+  },
+  {
+    title: "Microlocs Transformation",
+    desc: "Beautiful microlocs after 6 months",
+    cat: "Microlocs",
+    img: "/images/Gallery/Microlocs1.jpeg",
+  },
+  {
+    title: "Traditional Locs",
+    desc: "Mature locs with healthy shine",
+    cat: "Sisterlocks™",
+    img: "/images/styles/traditional-locs.jpg",
+  },
   { title: "Elegant Updo", desc: "Special occasion loc styling", cat: "Styling", img: "/images/styles/styling.jpg" },
-  { title: "Sisterlocks™ Styling", desc: "Versatile Sisterlocks™ everyday wear", cat: "Sisterlocks™", img: "/images/styles/sisterlocks.jpg" },
-  { title: "Microlocs Journey", desc: "1-year microlocs growth progress", cat: "Microlocs", img: "/images/styles/microlocs.jpg" },
-  { title: "Freeform Locs", desc: "Natural freeform organic texture", cat: "Traditional Locs", img: "/images/styles/traditional-locs.jpg" },
+  {
+    title: "Sisterlocks™ Styling",
+    desc: "Versatile Sisterlocks™ everyday wear",
+    cat: "Sisterlocks™",
+    img: "/images/styles/sisterlocks.jpg",
+  },
+  {
+    title: "Microlocs Journey",
+    desc: "1-year microlocs growth progress",
+    cat: "Sisterlocks™",
+    img: "/images/styles/microlocs.jpg",
+  },
+  {
+    title: "Freeform Locs",
+    desc: "Natural freeform organic texture",
+    cat: "Traditional Locs",
+    img: "/images/styles/traditional-locs.jpg",
+  },
   { title: "Half-Up Style", desc: "Casual half-up loc styling", cat: "Styling", img: "/images/styles/updo.jpg" },
-  { title: "Mature Sisterlocks™", desc: "3-year Sisterlocks™ beautiful texture", cat: "Sisterlocks™", img: "/images/styles/mature-locs.jpg" },
-  { title: "Long Locs", desc: "Long, healthy traditional locs", cat: "Traditional Locs", img: "/images/styles/long-locs.jpg" },
+  {
+    title: "Mature Sisterlocks™",
+    desc: "3-year Sisterlocks™ beautiful texture",
+    cat: "Sisterlocks™",
+    img: "/images/styles/mature-locs.jpg",
+  },
+  {
+    title: "Long Locs",
+    desc: "Long, healthy traditional locs",
+    cat: "Traditional Locs",
+    img: "/images/styles/long-locs.jpg",
+  },
   { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "/images/salon/interior.jpg" },
 ];
 const cats = ["All", "Sisterlocks™", "Microlocs", "Traditional Locs", "Styling"];
@@ -56,9 +95,7 @@ function Gallery() {
               key={c}
               onClick={() => setCat(c)}
               className={`px-5 py-2 rounded-full text-sm border transition-colors ${
-                cat === c
-                  ? "bg-dark text-primary-foreground border-dark"
-                  : "border-border hover:border-gold"
+                cat === c ? "bg-dark text-primary-foreground border-dark" : "border-border hover:border-gold"
               }`}
             >
               {c}
@@ -105,9 +142,7 @@ function Gallery() {
       <section className="bg-secondary/40 py-20 text-center">
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="text-4xl mb-4">Ready for Your Transformation?</h2>
-          <p className="text-muted-foreground mb-8">
-            Book your consultation today and let's create your dream locs
-          </p>
+          <p className="text-muted-foreground mb-8">Book your consultation today and let's create your dream locs</p>
           <Link
             to="/contact"
             className="inline-flex bg-dark text-primary-foreground px-8 py-3.5 rounded-md hover:bg-dark/90"
@@ -161,14 +196,20 @@ function Lightbox({
         <X className="h-5 w-5" />
       </button>
       <button
-        onClick={(e) => { e.stopPropagation(); onPrev(); }}
+        onClick={(e) => {
+          e.stopPropagation();
+          onPrev();
+        }}
         aria-label="Previous"
         className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
-        onClick={(e) => { e.stopPropagation(); onNext(); }}
+        onClick={(e) => {
+          e.stopPropagation();
+          onNext();
+        }}
         aria-label="Next"
         className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
       >
@@ -186,7 +227,9 @@ function Lightbox({
         <div className="text-center text-white pt-5">
           <p className="font-serif text-xl md:text-2xl">{item.title}</p>
           <p className="text-sm text-white/70 mt-1">{item.desc}</p>
-          <p className="text-[11px] text-white/40 mt-2">{index + 1} / {items.length}</p>
+          <p className="text-[11px] text-white/40 mt-2">
+            {index + 1} / {items.length}
+          </p>
         </div>
       </div>
     </div>
