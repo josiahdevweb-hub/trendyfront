@@ -24,27 +24,27 @@ const items = [
     img: "/images/Gallery/sisterlocs.jpg",
   },
   {
-    title: "Microlocs Transformation",
+    title: "Microlocs Transformation I",
     desc: "Beautiful microlocs after 6 months",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs1.jpg",
   },
   {
-    title: "Microlocs Transformation",
+    title: "Microlocs Transformation II",
     desc: "Microlocs at the 6-month mark — side profile",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs6.jpg",
   },
   {
-    title: "Microlocs Transformation",
+    title: "Microlocs Transformation III",
     desc: "Microlocs at the 6-month mark — back view",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs3.jpg",
   },
   {
-    title: "Traditional Locs",
+    title: "Traditional Locs I",
     desc: "Mature locs with healthy shine",
-    cat: "Sisterlocks™",
+    cat: "Traditional Locs",
     img: "/images/Gallery/traditionallocs1.jpg",
   },
   {
@@ -72,16 +72,16 @@ const items = [
     img: "/images/Gallery/traditionallocs3.jpg",
   },
   {
-    title: "Traditional Locs ",
+    title: "Traditional Locs II",
     desc: "Well-defined traditional locs in full bloom",
     cat: "Traditional Locs",
     img: "/images/Gallery/traditionallocs2.jpg",
   },
   {
-    title: "Traditional Locs",
+    title: "Traditional Locs III",
     desc: "Long traditional locs with rich natural texture",
     cat: "Traditional Locs",
-    img: "/images/Gallery/traditionallocs3.jpg",
+    img: "/images/Gallery/traditionallocs4.jpg",
   },
   {
     title: "Half-Up Style",
