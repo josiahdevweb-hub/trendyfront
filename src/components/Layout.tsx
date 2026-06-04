@@ -1,4 +1,5 @@
 import { Link, Outlet } from "@tanstack/react-router";
+import { PageLoader } from "@/components/PageLoader";
 import {
   CalendarCheck,
   Instagram,
