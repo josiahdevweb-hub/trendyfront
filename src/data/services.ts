@@ -52,7 +52,7 @@ export const services: Service[] = [
     desc: "Creative styling for special occasions or everyday wear — from updos to intricate designs.",
     longDesc:
       "Our styling service is designed to make your locs feel fresh, intentional and ready for any occasion. Whether you are preparing for a wedding, a photoshoot, or simply want a refreshed everyday look, our stylists work with the natural texture and length of your hair to create looks that flatter your face and last.\n\nEvery session begins with a short consultation so we can understand the style you have in mind and recommend options that suit your hair density, length and maturity. We use loc-safe products and accessories, and finish with care tips so you can keep the style looking polished for as long as possible.",
-    img: "/images/services/Styling.png",
+    img: "/images/hero/detail.jpg",
     features: [
       "Consultation to determine best method",
       "Professional installation",
@@ -120,7 +120,7 @@ export const services: Service[] = [
     desc: "Creative styling for special occasions or everyday wear — from updos to intricate designs.",
     longDesc:
       "Loc Styling transforms your existing locs into a look that feels intentional and event-ready. From elegant updos and braided crowns to intricate barrel rolls and pinned designs, our stylists shape your locs into styles that flatter your face and showcase the texture you have grown.\n\nEach styling session starts with a short discussion about the occasion and the look you want. We use loc-safe accessories and finishing techniques designed to hold without damaging your roots, and we share simple tips for taking the style down so your locs stay healthy after the event.",
-    img: "/images/services/hero-microlocs-top.png",
+    img: "/images/hero/detail.jpg",
     features: [
       "Consultation on desired style",
       "Professional styling",
