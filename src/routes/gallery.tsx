@@ -33,13 +33,13 @@ const items = [
     title: "Microlocs Transformation",
     desc: "Beautiful microlocs after 6 months",
     cat: "Microlocs",
-    img: "/images/Gallery/microlocs2.jpeg",
+    img: "/images/Gallery/microlocs2.jpg",
   },
   {
     title: "Microlocs Transformation",
     desc: "Beautiful microlocs after 6 months",
     cat: "Microlocs",
-    img: "/images/Gallery/microlocs3.JPG",
+    img: "/images/Gallery/microlocs3.jpg",
   },
   {
     title: "Traditional Locs",
@@ -51,7 +51,7 @@ const items = [
     title: "Elegant Updo",
     desc: "Special occasion loc styling",
     cat: "Styling",
-    img: "/images/services/sisterlocs.jpg",
+    img: "/images/services/detail.jpg",
   },
   {
     title: "Sisterlocks™ Styling",
@@ -75,7 +75,7 @@ const items = [
     title: "Half-Up Style",
     desc: "Casual half-up loc styling",
     cat: "Styling",
-    img: "/images/services/sisterlocs.jpg",
+    img: "/images/services/styling",
   },
   {
     title: "Mature Sisterlocks™",
@@ -84,12 +84,12 @@ const items = [
     img: "/images/Gallery/sisterlocs3.jpg",
   },
   {
-    title: "Long Locs",
-    desc: "Long, healthy traditional locs",
-    cat: "Traditional Locs",
-    img: "/images/Gallery/traditionallocs2.jpg",
+    title: "natural hairstyling",
+    desc: "natural hairstyling where strands of hair are matted and locked",
+    cat: "Styling",
+    img: "/images/Gallery/styling1.jpg",
   },
-  { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "/images/services/sisterlocs.jpg" },
+  { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "/images/Gallery/styling2.jpg" },
 ];
 const cats = ["All", "Sisterlocks™", "Microlocs", "Traditional Locs", "Styling"];
 
