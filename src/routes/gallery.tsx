@@ -27,12 +27,24 @@ const items = [
     title: "Microlocs Transformation",
     desc: "Beautiful microlocs after 6 months",
     cat: "Microlocs",
-    img: "/images/Gallery/microlocs1.jpeg",
+    img: "/images/Gallery/microlocs1.jpg",
+  },
+  {
+    title: "Microlocs Transformation",
+    desc: "Beautiful microlocs after 6 months",
+    cat: "Microlocs",
+    img: "/images/Gallery/microlocs2.jpg",
+  },
+  {
+    title: "Microlocs Transformation",
+    desc: "Beautiful microlocs after 6 months",
+    cat: "Microlocs",
+    img: "/images/Gallery/microlocs3.jpg",
   },
   {
     title: "Traditional Locs",
     desc: "Mature locs with healthy shine",
-    cat: "Traditional Locs",
+    cat: "Sisterlocks™",
     img: "/images/Gallery/traditionallocs1.jpg",
   },
   {
@@ -48,7 +60,7 @@ const items = [
     img: "/images/Gallery/sisterlocs4.jpg",
   },
   {
-    title: "Sisterlocks™ Journey",
+    title: "Microlocs Journey",
     desc: "1-year microlocs growth progress",
     cat: "Sisterlocks™",
     img: "/images/Gallery/sisterlocs5.jpg",
