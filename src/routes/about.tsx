@@ -37,20 +37,20 @@ function About() {
     {
       title: "Sisterlocks™",
       tag: "The Grid System",
-      price: "From £350",
+      price: "From £100",
       img: "/images/salon/loc-detail.jpg",
     },
     {
       title: "Microlocs",
       tag: "Small & Flexible",
-      price: "From £280",
-      img: "/images/salon/stylish-work.jpg",
+      price: "From £200",
+      img: "/images/Gallery/microlocs1.jpg",
     },
     {
-      title: "Traditional",
+      title: "Traditional Locs",
       tag: "Classic Artistry",
-      price: "From £180",
-      img: "/images/salon/in-studio.jpg",
+      price: "From £100",
+      img: "/images/Gallery/traditionallocs2.jpg",
     },
   ];
 
@@ -149,18 +149,17 @@ function About() {
           <div className="lg:col-span-7 lg:col-start-6 space-y-4 text-foreground/80 leading-relaxed text-sm md:text-base">
             <p>
               <span className="font-serif italic text-5xl float-left mr-3 leading-[0.85] text-gold">I</span>
-              am a Sisterlocks™ Consultant based in East Manchester — five minutes from Piccadilly. I do Sisterlocks™
+              am a Sisterlocks™ Consultant based in East Manchester five minutes from Piccadilly. I do Sisterlocks™
               installations, re-tightenings and styling, and I work with traditional locs and microlocs too.
             </p>
             <p>
-              For years I ran away from my own hair. Relaxers, tiny braids, weaves, crochet braids — I tried it all. The
+              For years I ran away from my own hair. Relaxers, tiny braids, weaves, crochet braids - I tried it all. The
               wake-up call came after my first baby, when I retouched my hair and it fell out. A friend suggested locs,
               and that conversation changed everything.
             </p>
             <p>
               Sisterlocks™ gave me my hair back. I trained as a practitioner and became a certified consultant so I
-              could give other women the same feeling — versatility, health, and a deep peace with their natural
-              texture.
+              could give other women the same feeling versatility, health, and a deep peace with their natural texture.
             </p>
             <blockquote className="not-italic my-6 pl-5 border-l-2 border-gold">
               <p className="font-serif italic text-2xl md:text-3xl leading-[1.1] text-foreground">
