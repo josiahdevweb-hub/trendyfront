@@ -24,19 +24,19 @@ const items = [
     img: "/images/Gallery/sisterlocs.jpg",
   },
   {
-    title: "Microlocs Transformation I",
+    title: "Microlocs Transformation",
     desc: "Beautiful microlocs after 6 months",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs1.jpg",
   },
   {
-    title: "Microlocs Transformation II",
+    title: "Microlocs Transformation",
     desc: "Microlocs at the 6-month mark — side profile",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs6.jpg",
   },
   {
-    title: "Microlocs Transformation III",
+    title: "Microlocs Transformation",
     desc: "Microlocs at the 6-month mark — back view",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs3.jpg",
@@ -68,6 +68,18 @@ const items = [
   {
     title: "Freeform Locs",
     desc: "Natural freeform organic texture",
+    cat: "Traditional Locs",
+    img: "/images/Gallery/traditionallocs3.jpg",
+  },
+  {
+    title: "Traditional Locs ",
+    desc: "Well-defined traditional locs in full bloom",
+    cat: "Traditional Locs",
+    img: "/images/Gallery/traditionallocs2.jpg",
+  },
+  {
+    title: "Traditional Locs",
+    desc: "Long traditional locs with rich natural texture",
     cat: "Traditional Locs",
     img: "/images/Gallery/traditionallocs3.jpg",
   },
