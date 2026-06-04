@@ -35,7 +35,12 @@ const items = [
     cat: "Sisterlocks™",
     img: "/images/Gallery/sisterlocs1.jpg",
   },
-  { title: "Elegant Updo", desc: "Special occasion loc styling", cat: "Styling", img: "/images/styles/styling.jpg" },
+  {
+    title: "Elegant Updo",
+    desc: "Special occasion loc styling",
+    cat: "Styling",
+    img: "/images/services/sisterlocs.jpg",
+  },
   {
     title: "Sisterlocks™ Styling",
     desc: "Versatile Sisterlocks™ everyday wear",
@@ -54,7 +59,12 @@ const items = [
     cat: "Traditional Locs",
     img: "/images/Gallery/traditionallocs.jpg",
   },
-  { title: "Half-Up Style", desc: "Casual half-up loc styling", cat: "Styling", img: "/images/styles/updo.jpg" },
+  {
+    title: "Half-Up Style",
+    desc: "Casual half-up loc styling",
+    cat: "Styling",
+    img: "/images/services/sisterlocs.jpg",
+  },
   {
     title: "Mature Sisterlocks™",
     desc: "3-year Sisterlocks™ beautiful texture",
@@ -67,7 +77,7 @@ const items = [
     cat: "Traditional Locs",
     img: "/images/Gallery/traditionallocs2.jpg",
   },
-  { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "/images/salon/interior.jpg" },
+  { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "/images/services/sisterlocs.jpg" },
 ];
 const cats = ["All", "Sisterlocks™", "Microlocs", "Traditional Locs", "Styling"];
 
