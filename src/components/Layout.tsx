@@ -1,5 +1,6 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { PageLoader } from "@/components/PageLoader";
+import { useSmartImages } from "@/hooks/use-smart-images";
 import {
   CalendarCheck,
   Instagram,
@@ -262,6 +263,7 @@ function MobileBookBar() {
 }
 
 export function Layout() {
+  useSmartImages();
   return (
     <div className="min-h-screen flex flex-col">
       <PageLoader />
