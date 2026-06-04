@@ -1,4 +1,5 @@
 import { Link, Outlet } from "@tanstack/react-router";
+import { PageLoader } from "@/components/PageLoader";
 import {
   CalendarCheck,
   Instagram,
@@ -263,6 +264,7 @@ function MobileBookBar() {
 export function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
+      <PageLoader />
       <Header />
       <main className="flex-1">
         <Outlet />
