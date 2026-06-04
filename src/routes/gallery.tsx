@@ -24,20 +24,20 @@ const items = [
     img: "/images/Gallery/sisterlocs.jpg",
   },
   {
-    title: "Microlocs Transformation",
+    title: "Microlocs Transformation I",
     desc: "Beautiful microlocs after 6 months",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs1.jpg",
   },
   {
-    title: "Microlocs Transformation",
-    desc: "Beautiful microlocs after 6 months",
+    title: "Microlocs Transformation II",
+    desc: "Microlocs at the 6-month mark — side profile",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs2.jpg",
   },
   {
-    title: "Microlocs Transformation",
-    desc: "Beautiful microlocs after 6 months",
+    title: "Microlocs Transformation III",
+    desc: "Microlocs at the 6-month mark — back view",
     cat: "Microlocs",
     img: "/images/Gallery/microlocs3.jpg",
   },
@@ -84,12 +84,17 @@ const items = [
     img: "/images/Gallery/sisterlocs3.jpg",
   },
   {
-    title: "natural hairstyling",
-    desc: "natural hairstyling where strands of hair are matted and locked",
+    title: "Natural Hairstyling",
+    desc: "Natural hairstyling where strands of hair are matted and locked",
     cat: "Styling",
     img: "/images/Gallery/styling1.jpg",
   },
-  { title: "Salon Interior", desc: "Our luxury salon space", cat: "Styling", img: "/images/Gallery/styling2.jpg" },
+  {
+    title: "Salon Interior",
+    desc: "Our luxury salon space",
+    cat: "Styling",
+    img: "/images/Gallery/styling2.jpg",
+  },
 ];
 const cats = ["All", "Sisterlocks™", "Microlocs", "Traditional Locs", "Styling"];
 
