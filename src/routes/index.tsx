@@ -172,7 +172,7 @@ function Home() {
               className={`relative z-10 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
               <div className="relative inline-block text-primary-foreground font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
-                <span>TrendyLocs</span>
+                <span>Trendylocs</span>
 
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
