@@ -29,7 +29,7 @@ function Contact() {
           <div className="grid sm:grid-cols-2 gap-6 mb-10">
             {[
               { icon: MapPin, title: "Location", lines: ["41 Cross Street. Sale. M33 7FT. Manchester"] },
-              { icon: Phone, title: "Phone", lines: ["+44 7 983 818 010"] },
+              { icon: Phone, title: "Phone", lines: ["+44 7838328131"] },
               { icon: Mail, title: "Email", lines: ["gina@trendylocs.com"] },
               { icon: Clock, title: "Hours", lines: ["Mon – Fri: 9:30am – 5:30pm", "Sat – Fri: Closed"] },
             ].map(({ icon: Icon, title, lines }) => (
@@ -132,9 +132,7 @@ function Contact() {
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-10">
           <div>
             <h2 className="text-4xl mb-4">Visit Our Salon</h2>
-            <p className="text-muted-foreground mb-6">
-              41 Cross Street, Sale, M33 7FT, Manchester, United Kingdom
-            </p>
+            <p className="text-muted-foreground mb-6">41 Cross Street, Sale, M33 7FT, Manchester, United Kingdom</p>
             <div className="aspect-video overflow-hidden rounded-md border border-border">
               <iframe
                 title="Trendylocs salon location — 41 Cross Street, Sale, M33 7FT, Manchester"
