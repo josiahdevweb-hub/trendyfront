@@ -32,7 +32,7 @@ const items = [
   {
     title: "Traditional Locs",
     desc: "Mature locs with healthy shine",
-    cat: "Sisterlocks™",
+    cat: "Traditional Locs",
     img: "/images/Gallery/traditionallocs1.jpg",
   },
   {
@@ -48,7 +48,7 @@ const items = [
     img: "/images/Gallery/sisterlocs4.jpg",
   },
   {
-    title: "Microlocs Journey",
+    title: "Sisterlocks™ Journey",
     desc: "1-year microlocs growth progress",
     cat: "Sisterlocks™",
     img: "/images/Gallery/sisterlocs5.jpg",
