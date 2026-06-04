@@ -33,7 +33,7 @@ const items = [
     title: "Microlocs Transformation II",
     desc: "Microlocs at the 6-month mark — side profile",
     cat: "Microlocs",
-    img: "/images/Gallery/microlocs2.jpg",
+    img: "/images/Gallery/microlocs6.jpg",
   },
   {
     title: "Microlocs Transformation III",
