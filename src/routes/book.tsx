@@ -65,7 +65,7 @@ function BookPage() {
               <Phone className="h-4 w-4" /> +447838328131
             </a>
             <a
-              href="https://wa.me/44123456789"
+              href="https://wa.me/447838328131"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-primary-foreground/20 text-sm hover:border-gold hover:text-gold transition-colors"
