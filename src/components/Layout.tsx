@@ -263,6 +263,7 @@ function MobileBookBar() {
 }
 
 export function Layout() {
+  useSmartImages();
   return (
     <div className="min-h-screen flex flex-col">
       <PageLoader />
