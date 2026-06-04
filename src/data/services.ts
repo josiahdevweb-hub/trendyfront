@@ -35,7 +35,7 @@ export const services: Service[] = [
     desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
     longDesc:
       "We install dreadlocks of varying sizes from small to large using interlocking method. The cost will depend on the size of locks you would like and the length of your hair. The price can be confirmed during your consultation.\nTo install new dreadlocks takes on average 5-6 hours depending on the length, the desired size of your dreads and if you are adding extensions.\nHow long should your hair be to install dreadlocks? Due to the size of the locks, the hair should be at least 6 inches.\nWe only use a crotchet hook to maintain your dreadlocks. We do not use any products , chemicals , wax or glue.\nMaintenance\nOur traditional locks maintenance services include re-tightening the new growth, crocheting loose hair using a crotchet hook\nWhy dreadlocks?\n•Low maintenance\n•Variety of sizes\n•Hip",
-    img: "/images/services/sisterlocs.jpg",
+    img: "/images/services/dreadlocs.jpg",
     features: [
       "Initial consultation included",
       "Precision parting and installation",
@@ -86,7 +86,7 @@ export const services: Service[] = [
     desc: "Essential maintenance to keep your locs neat, healthy and maturing properly. Every 4 – 6 weeks.",
     longDesc:
       "Retightening is the core maintenance service that keeps your locs looking crisp and supports them through every stage of maturity. During the session we work systematically through your hair, tightening new growth at the roots so each loc maintains its shape, direction and size without becoming over-stressed.\n\nWe recommend booking a retightening session every 4 to 6 weeks depending on your hair type and how quickly your roots grow out. Consistent retightening prevents matting between locs, reduces breakage, and ensures your locs continue to mature evenly over the months and years.",
-    img: "/images/services/retight.jpg",
+    img: "/images/services/loc.jpg",
     features: [
       "Root maintenance",
       "Scalp cleansing and treatment",
