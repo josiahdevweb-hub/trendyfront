@@ -86,7 +86,7 @@ export const services: Service[] = [
     desc: "Essential maintenance to keep your locs neat, healthy and maturing properly. Every 4 – 6 weeks.",
     longDesc:
       "Retightening is the core maintenance service that keeps your locs looking crisp and supports them through every stage of maturity. During the session we work systematically through your hair, tightening new growth at the roots so each loc maintains its shape, direction and size without becoming over-stressed.\n\nWe recommend booking a retightening session every 4 to 6 weeks depending on your hair type and how quickly your roots grow out. Consistent retightening prevents matting between locs, reduces breakage, and ensures your locs continue to mature evenly over the months and years.",
-    img: "/images/services/retightening.jpg",
+    img: "/images/services/retight.jpg",
     features: [
       "Root maintenance",
       "Scalp cleansing and treatment",
