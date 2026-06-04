@@ -33,7 +33,7 @@ const items = [
     title: "Traditional Locs",
     desc: "Mature locs with healthy shine",
     cat: "Sisterlocks™",
-    img: "/images/Gallery/sisterlocs1.jpg",
+    img: "/images/Gallery/traditionallocs1.jpg",
   },
   {
     title: "Elegant Updo",
@@ -57,7 +57,7 @@ const items = [
     title: "Freeform Locs",
     desc: "Natural freeform organic texture",
     cat: "Traditional Locs",
-    img: "/images/Gallery/traditionallocs.jpg",
+    img: "/images/Gallery/traditionallocs3.jpg",
   },
   {
     title: "Half-Up Style",
