@@ -22,9 +22,8 @@ export const services: Service[] = [
     features: [
       "Initial consultation included",
       "Precision parting and installation",
-      "Aftercare kit and instructions",
       "Follow-up appointment guidance",
-      "Lifetime installation warranty",
+      
     ],
   },
   {
@@ -39,9 +38,8 @@ export const services: Service[] = [
     features: [
       "Initial consultation included",
       "Precision parting and installation",
-      "Aftercare kit and instructions",
       "Follow-up appointment guidance",
-      "Lifetime installation warranty",
+      
     ],
   },
   {
@@ -57,8 +55,7 @@ export const services: Service[] = [
       "Consultation to determine best method",
       "Professional installation",
       "Styling recommendations",
-      "Maintenance schedule planning",
-      "Product recommendations",
+      
     ],
   },
   {
@@ -108,9 +105,7 @@ export const services: Service[] = [
       "In-depth consultation",
       "Method selection guidance",
       "Professional installation",
-      "Starter care package",
-      "Educational resources",
-    ],
+     
   },
   {
     slug: "loc-styling",
@@ -124,7 +119,6 @@ export const services: Service[] = [
     features: [
       "Consultation on desired style",
       "Professional styling",
-      "Loc-safe accessories",
       "Style longevity tips",
       "Photo-ready finish",
     ],
