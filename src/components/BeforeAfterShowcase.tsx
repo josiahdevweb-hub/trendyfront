@@ -58,7 +58,7 @@ const sideBySide: Transformation[] = [
     single: true,
   },
   {
-    title: "Loc Styling Upgrade",
+    title: "Loc Styling",
     note: "Elegant updo for a special occasion",
     style: "Styling",
     duration: "1–2 hours",
