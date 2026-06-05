@@ -93,7 +93,7 @@ function Header() {
               TRENDYLOCS
             </span>
             <span className="text-[10px] tracking-[0.18em] uppercase text-gold/80 md:hidden">
-              Manchester · Locs Studio
+              Manchester
             </span>
           </div>
         </Link>
