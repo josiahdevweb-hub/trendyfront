@@ -52,7 +52,7 @@ export const services: Service[] = [
     desc: "Classic locs installed using the interlocking method — low maintenance, timeless and versatile in size.",
     longDesc:
       "Traditional Locs — often called dreadlocks — are the original and most widely recognised loc style. We use the interlocking method with a crochet hook only: no wax, no glue, no chemicals. Just your natural hair, carefully encouraged to loc.\n\nWe install locs in a range of sizes from small to large. The right size for you depends on your hair density, desired look and how much maintenance you want to commit to. All of this is discussed and confirmed at your consultation before anything is started.\n\nFor a clean installation, your hair needs to be at least 6 inches long. Duration varies depending on length and chosen size — typically 6 to 8 hours.\n\nOngoing maintenance includes re-tightening new growth and crocheting any loose hair back into the loc — again using a crochet hook only.\n\nWhy Traditional Locs?\n• One of the most low-maintenance loc styles once established\n• Available in a wide range of sizes\n• Suits almost every hair type and density",
-    img: "/images/services/dreadlocs (2).jpg",
+    img: "/images/services/dreadlocss.jpg",
     features: [
       "Consultation on size and style",
       "Interlocking method — no wax or glue",
