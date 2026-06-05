@@ -1,6 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
+import sisterlocksAsset from "@/assets/transformations/sisterlocks.png.asset.json";
+import microlocsAsset from "@/assets/transformations/microlocs.png.asset.json";
+import traditionalAsset from "@/assets/transformations/traditional.png.asset.json";
 
 type Transformation = {
   title: string;
@@ -20,8 +23,8 @@ const transformations: Transformation[] = [
     style: "Sisterlocks™",
     duration: "8–10 hours",
     maintenance: "Every 4–6 weeks",
-    before: "/images/transformations/sisterlocks-before-after.jpg",
-    after: "/images/transformations/sisterlocks-before-after.jpg",
+    before: sisterlocksAsset.url,
+    after: sisterlocksAsset.url,
     single: true,
   },
   {
@@ -30,8 +33,8 @@ const transformations: Transformation[] = [
     style: "Microlocs",
     duration: "6–8 hours",
     maintenance: "Every 5 – 7 weeks",
-    before: "/images/transformations/microlocs-before-after.jpg",
-    after: "/images/transformations/microlocs-before-after.jpg",
+    before: microlocsAsset.url,
+    after: microlocsAsset.url,
     single: true,
   },
   {
@@ -40,31 +43,8 @@ const transformations: Transformation[] = [
     style: "Traditional Locs",
     duration: "8–10 hours",
     maintenance: "Every 6 – 8 weeks",
-    before: "/images/transformations/traditional-locs-before-after.jpg",
-    after: "/images/transformations/traditional-locs-before-after.jpg",
-    single: true,
-  },
-];
-
-const sideBySide: Transformation[] = [
-  {
-    title: "Retightening Refresh",
-    note: "Neat, clean partings restored",
-    style: "Retightening",
-    duration: "2 – 3 hours",
-    maintenance: "Every 4 weeks",
-    before: "/images/transformations/retightening-before-after.jpg",
-    after: "/images/transformations/retightening-before-after.jpg",
-    single: true,
-  },
-  {
-    title: "Loc Styling",
-    note: "Elegant updo for a special occasion",
-    style: "Styling",
-    duration: "1–2 hours",
-    maintenance: "As desired",
-    before: "/images/transformations/loc-styling-before-after.jpg",
-    after: "/images/transformations/loc-styling-before-after.jpg",
+    before: traditionalAsset.url,
+    after: traditionalAsset.url,
     single: true,
   },
 ];
