@@ -62,33 +62,6 @@ function About() {
           </div>
         </section>
 
-        {/* ── Credentials Marquee ─────────────────────────────── */}
-        <section className="mb-16 md:mb-20 -mx-6 overflow-hidden bg-dark text-primary-foreground py-5">
-          <div className="flex marquee-track whitespace-nowrap">
-            {[0, 1].map((dup) => (
-              <div
-                key={dup}
-                className="flex items-center gap-10 px-6 font-serif text-base md:text-lg text-primary-foreground/70 shrink-0"
-              >
-                {[
-                  "Sisterlocks™ Certified",
-                  "10+ Years",
-                  "East Manchester & Sale",
-                  "Natural Hair Care",
-                  "Plant-Based Products",
-                  "By Appointment",
-                  "Private Consultations",
-                ].map((label, i) => (
-                  <span key={`${dup}-${i}`} className="flex items-center gap-10">
-                    <span>{label}</span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* ── Gina's Story ─────────────────────────────── */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 md:mb-20">
           <div className="lg:col-span-4">
@@ -154,72 +127,61 @@ function About() {
           </div>
         </section>
 
-        {/* ── Gallery CTA ─────────────────────────────── */}
+        {/* ── Gallery teaser ─────────────────────────────── */}
         <section className="mb-16 md:mb-20">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-3 mb-6">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl leading-none">See the work</h2>
-              <p className="text-sm text-muted-foreground mt-2">Real clients, real results — no staged photography.</p>
+              <p className="text-sm text-muted-foreground mt-1.5">Real clients, real results.</p>
             </div>
-            <Link
-              to="/gallery"
-              className="text-[10px] uppercase tracking-[0.3em] font-semibold border-b border-foreground pb-1 self-start hover:text-gold hover:border-gold transition-colors shrink-0"
-            >
-              Full gallery
-            </Link>
           </div>
 
-          {/* Preview grid — 6 images teasing the gallery */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
-            {[
-              { src: "/images/Gallery/microlocs1.jpg", alt: "Microlocs installation" },
-              { src: "/images/Gallery/traditionallocs2.jpg", alt: "Traditional locs" },
-              { src: "/images/styles/sisterlocks.jpg", alt: "Sisterlocks™ style" },
-              { src: "/images/Gallery/styling1.jpg", alt: "Loc styling" },
-              { src: "/images/Gallery/sisterlocs1.jpg", alt: "Sisterlocks™ close-up" },
-              { src: "/images/styles/microlocs.jpg", alt: "Microlocs style" },
-            ].map(({ src, alt }, i) => (
-              <Link
-                key={i}
-                to="/gallery"
-                className={`group relative overflow-hidden bg-muted rounded-sm ${i === 5 ? "hidden sm:block" : ""}`}
-              >
-                <div className="aspect-square">
+          {/* Compact blurred teaser — intentionally withholds the full picture */}
+          <Link
+            to="/gallery"
+            className="group block relative overflow-hidden rounded-md bg-muted"
+            style={{ height: "clamp(180px, 30dvh, 300px)" }}
+          >
+            {/* Mosaic of 4 images side by side */}
+            <div className="absolute inset-0 grid grid-cols-4 gap-0">
+              {[
+                "/images/Gallery/microlocs1.jpg",
+                "/images/Gallery/traditionallocs2.jpg",
+                "/images/Gallery/styling1.jpg",
+                "/images/Gallery/sisterlocs1.jpg",
+              ].map((src, i) => (
+                <div key={i} className="relative overflow-hidden">
                   <img
                     src={src}
-                    alt={alt}
+                    alt=""
+                    aria-hidden="true"
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-600"
+                    className="w-full h-full object-cover object-top scale-110"
+                    style={{ filter: "blur(6px) saturate(0.7) brightness(0.6)" }}
                     onError={(e) => {
                       if (e.currentTarget.src.indexOf("/images/fallback.jpg") === -1)
                         e.currentTarget.src = "/images/fallback.jpg";
                     }}
                   />
-                  {/* Last visible tile gets an overlay CTA */}
-                  {i === 4 && (
-                    <div className="absolute inset-0 bg-dark/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-primary-foreground text-[10px] uppercase tracking-[0.25em] font-semibold">
-                        View gallery
-                      </span>
-                    </div>
-                  )}
                 </div>
-              </Link>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div className="mt-5 text-center">
-            <Link
-              to="/gallery"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors"
-            >
-              Browse the full gallery
-              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
+            {/* Overlay gradient + CTA */}
+            <div className="absolute inset-0 bg-dark/30 group-hover:bg-dark/20 transition-colors duration-300" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+              <span className="text-primary-foreground font-serif text-lg sm:text-xl md:text-2xl tracking-wide">
+                View the gallery
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/70 border border-primary-foreground/30 rounded-full px-4 py-1.5 group-hover:border-gold group-hover:text-gold transition-colors duration-300">
+                Browse all work
+                <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </div>
+          </Link>
         </section>
       </div>
 
