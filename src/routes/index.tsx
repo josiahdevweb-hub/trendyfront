@@ -332,8 +332,8 @@ function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-2 lg:-left-5" />
-              <CarouselNext className="right-2 lg:-right-5" />
+              <CarouselPrevious className="left-2 lg:-left-6 h-11 w-11 bg-gold text-gold-foreground border-gold shadow-lg shadow-gold/30 hover:bg-gold/90 hover:text-gold-foreground [&_svg]:size-5" />
+              <CarouselNext className="right-2 lg:-right-6 h-11 w-11 bg-gold text-gold-foreground border-gold shadow-lg shadow-gold/30 hover:bg-gold/90 hover:text-gold-foreground [&_svg]:size-5" />
             </Carousel>
           </div>
 
