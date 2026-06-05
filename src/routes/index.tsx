@@ -242,13 +242,14 @@ function Home() {
       </section>
 
       {/* ── 2. OUR STORY ──────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-14 md:py-18">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Founder image — only image in this section */}
-          <div className="relative">
+      <section className="mx-auto max-w-7xl px-6 py-12 md:py-16">
+        {/* Mobile: stacked. Desktop: side by side */}
+        <div className="flex flex-col md:flex-row gap-8 md:gap-14 md:items-start">
+          {/* Founder image — fixed square-ish, never stretched */}
+          <div className="relative shrink-0 w-full max-w-[260px] mx-auto md:mx-0 md:w-[240px] lg:w-[280px]">
             <div
-              className="w-full overflow-hidden rounded-md ring-1 ring-gold/20"
-              style={{ height: "clamp(300px, 45dvh, 520px)", boxShadow: "var(--shadow-elegant)" }}
+              className="w-full aspect-square overflow-hidden rounded-md ring-1 ring-gold/20"
+              style={{ boxShadow: "var(--shadow-elegant)" }}
             >
               <img
                 src="/images/salon/founder.jpg"
@@ -256,39 +257,36 @@ function Home() {
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
-                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-[50%_20%] hover:scale-105 transition-transform duration-700"
               />
             </div>
             {/* Gold corner accents */}
-            <span className="absolute top-3 left-3 w-6 h-px bg-gold/60" />
-            <span className="absolute top-3 left-3 h-6 w-px bg-gold/60" />
-            <span className="absolute bottom-3 right-3 w-6 h-px bg-gold/60" />
-            <span className="absolute bottom-3 right-3 h-6 w-px bg-gold/60" />
+            <span className="absolute top-2.5 left-2.5 w-5 h-px bg-gold/60" />
+            <span className="absolute top-2.5 left-2.5 h-5 w-px bg-gold/60" />
+            <span className="absolute bottom-2.5 right-2.5 w-5 h-px bg-gold/60" />
+            <span className="absolute bottom-2.5 right-2.5 h-5 w-px bg-gold/60" />
           </div>
 
           {/* Story + team note */}
-          <div>
-            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Story</p>
-            <h2 className="text-3xl md:text-4xl mb-5 leading-tight">Who we are.</h2>
+          <div className="flex-1 min-w-0">
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Our Story</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 leading-tight">Who we are.</h2>
 
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed mb-3 text-sm md:text-base">
               Trendylocs was born from a personal journey. Gina — our founder and a certified Sisterlocks™ Consultant —
               spent years chasing styles that weren't meant for her hair. Relaxers, braids, weaves: everything except
               letting her natural hair be. When it finally broke after a retouch, she stopped.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              A friend suggested locs. That conversation changed everything. Gina discovered Sisterlocks™, fell in love
-              with the freedom and versatility, trained as a practitioner and eventually became a certified consultant.
-              She opened Trendylocs so other women wouldn't have to take the long road she did.
+            <p className="text-muted-foreground leading-relaxed mb-3 text-sm md:text-base">
+              A friend suggested locs. That conversation changed everything. She trained as a practitioner, became a
+              certified consultant, and opened Trendylocs so other women wouldn't have to take the long road she did.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Today we are a small, tight-knit team of locs consultants — each one genuinely invested in your hair
-              health, not just your appointment slot. Every visit is a personalised journey toward healthy, natural
-              hair.
+            <p className="text-muted-foreground leading-relaxed mb-5 text-sm md:text-base">
+              We are a small, tight-knit team of locs consultants — each one genuinely invested in your hair health.
+              Every visit is a personalised journey toward healthy, natural hair.
             </p>
 
-            {/* Certification badge — only one, as requested */}
-            <div className="flex flex-wrap gap-3 mb-7">
+            <div className="flex flex-wrap gap-3 mb-6">
               <span className="text-xs px-3 py-1.5 border border-gold/30 rounded-full text-gold bg-gold/5">
                 ✓ Certified Sisterlocks™ Consultancy
               </span>
@@ -296,7 +294,7 @@ function Home() {
 
             <Link
               to="/about"
-              className="group inline-flex items-center gap-2 bg-dark text-primary-foreground px-6 py-3 rounded-md transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_var(--gold)] hover:bg-dark/90"
+              className="group inline-flex items-center gap-2 bg-dark text-primary-foreground px-5 py-2.5 text-sm rounded-md transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_-5px_var(--gold)] hover:bg-dark/90"
             >
               Read Our Full Story <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
