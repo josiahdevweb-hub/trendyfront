@@ -518,3 +518,54 @@ function Home() {
     </>
   );
 }
+
+type ServiceItem = (typeof services)[number];
+
+function ServiceCard({ s }: { s: ServiceItem }) {
+  return (
+    <div className="group flex flex-col bg-card border border-border/60 rounded-xl overflow-hidden hover:border-gold/50 hover:shadow-lg transition-all duration-300 h-full">
+      <Link to="/services/$slug" params={{ slug: s.slug }} className="block shrink-0">
+        <div className="h-36 sm:h-40 overflow-hidden">
+          <img
+            src={s.img}
+            alt={`${s.title} at Trendylocs`}
+            loading="lazy"
+            decoding="async"
+            onError={onImgError}
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+      </Link>
+      <div className="flex flex-col flex-1 p-3 sm:p-4 gap-2">
+        <div>
+          <h3 className="font-serif text-[14px] sm:text-[15px] font-semibold leading-snug mb-1">{s.title}</h3>
+          <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
+            <Clock className="h-3 w-3 shrink-0" />
+            <span>{s.time}</span>
+          </div>
+        </div>
+        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 flex-1 hidden sm:block">{s.desc}</p>
+        <div className="flex items-center justify-between pt-2 border-t border-border/50 gap-2">
+          <span className="font-serif text-base sm:text-lg text-primary font-medium leading-none">{s.price}</span>
+          <div className="flex items-center gap-1.5">
+            <Link
+              to="/services/$slug"
+              params={{ slug: s.slug }}
+              className="text-[10px] uppercase tracking-[0.15em] text-foreground/60 hover:text-foreground transition-colors px-1.5 py-1.5 hidden sm:block"
+            >
+              Details
+            </Link>
+            <Link
+              to="/book"
+              search={{ service: s.slug }}
+              className="inline-flex items-center gap-1 bg-gold text-gold-foreground text-[10px] uppercase tracking-[0.15em] font-medium px-2.5 py-1.5 rounded-md hover:opacity-90 transition-opacity whitespace-nowrap"
+            >
+              <CalendarCheck className="h-3 w-3" />
+              Book
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
