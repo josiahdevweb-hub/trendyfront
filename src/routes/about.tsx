@@ -154,58 +154,71 @@ function About() {
           </div>
         </section>
 
-        {/* ── Services snapshot ─────────────────────────────── */}
+        {/* ── Gallery CTA ─────────────────────────────── */}
         <section className="mb-16 md:mb-20">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-8">
-            <h2 className="font-serif text-3xl md:text-4xl leading-none">What we do</h2>
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl leading-none">See the work</h2>
+              <p className="text-sm text-muted-foreground mt-2">Real clients, real results — no staged photography.</p>
+            </div>
             <Link
-              to="/services"
-              className="text-[10px] uppercase tracking-[0.3em] font-semibold border-b border-foreground pb-1 self-start hover:text-gold hover:border-gold transition-colors"
+              to="/gallery"
+              className="text-[10px] uppercase tracking-[0.3em] font-semibold border-b border-foreground pb-1 self-start hover:text-gold hover:border-gold transition-colors shrink-0"
             >
-              Full services list
+              Full gallery
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {/* Preview grid — 6 images teasing the gallery */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
             {[
-              {
-                title: "Sisterlocks™",
-                tag: "Certified installation & re-tightening",
-                price: "From £100",
-                img: "/images/salon/loc-detail.jpg",
-              },
-              {
-                title: "Microlocs",
-                tag: "Small, flexible, versatile",
-                price: "From £200",
-                img: "/images/Gallery/microlocs1.jpg",
-              },
-              {
-                title: "Traditional Locs",
-                tag: "All sizes, interlocking method",
-                price: "From £100",
-                img: "/images/Gallery/traditionallocs2.jpg",
-              },
-            ].map(({ title, tag, price, img }) => (
-              <div key={title} className="group">
-                <div className="w-full aspect-[3/4] overflow-hidden bg-muted">
+              { src: "/images/Gallery/microlocs1.jpg", alt: "Microlocs installation" },
+              { src: "/images/Gallery/traditionallocs2.jpg", alt: "Traditional locs" },
+              { src: "/images/styles/sisterlocks.jpg", alt: "Sisterlocks™ style" },
+              { src: "/images/Gallery/styling1.jpg", alt: "Loc styling" },
+              { src: "/images/Gallery/sisterlocs1.jpg", alt: "Sisterlocks™ close-up" },
+              { src: "/images/styles/microlocs.jpg", alt: "Microlocs style" },
+            ].map(({ src, alt }, i) => (
+              <Link
+                key={i}
+                to="/gallery"
+                className={`group relative overflow-hidden bg-muted rounded-sm ${i === 5 ? "hidden sm:block" : ""}`}
+              >
+                <div className="aspect-square">
                   <img
-                    src={img}
-                    alt={title}
+                    src={src}
+                    alt={alt}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700"
+                    className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-600"
+                    onError={(e) => {
+                      if (e.currentTarget.src.indexOf("/images/fallback.jpg") === -1)
+                        e.currentTarget.src = "/images/fallback.jpg";
+                    }}
                   />
+                  {/* Last visible tile gets an overlay CTA */}
+                  {i === 4 && (
+                    <div className="absolute inset-0 bg-dark/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-primary-foreground text-[10px] uppercase tracking-[0.25em] font-semibold">
+                        View gallery
+                      </span>
+                    </div>
+                  )}
                 </div>
-                <div className="pt-4 flex justify-between items-start gap-4">
-                  <div>
-                    <h4 className="font-serif text-xl">{title}</h4>
-                    <p className="text-[10px] uppercase tracking-[0.2em] mt-1 text-muted-foreground">{tag}</p>
-                  </div>
-                  <span className="text-sm font-serif text-gold whitespace-nowrap">{price}</span>
-                </div>
-              </div>
+              </Link>
             ))}
+          </div>
+
+          <div className="mt-5 text-center">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors"
+            >
+              Browse the full gallery
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </section>
       </div>
