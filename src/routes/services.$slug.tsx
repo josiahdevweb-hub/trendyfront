@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { Clock, Tag, Check, ArrowLeft } from "lucide-react";
+import { Clock, Tag, Check, ArrowLeft, CalendarCheck } from "lucide-react";
 import { getServiceBySlug, services } from "@/data/services";
 
 export const Route = createFileRoute("/services/$slug")({
@@ -40,13 +40,17 @@ export const Route = createFileRoute("/services/$slug")({
   component: ServiceDetail,
 });
 
+const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+  if (e.currentTarget.src.indexOf("/images/fallback.jpg") === -1) e.currentTarget.src = "/images/fallback.jpg";
+};
+
 function ServiceDetail() {
   const { service: s } = Route.useLoaderData();
   const related = services.filter((r) => r.slug !== s.slug).slice(0, 3);
 
   return (
     <>
-      {/* Header */}
+      {/* ── Header ────────────────────────────────────────────────── */}
       <section className="bg-dark text-primary-foreground py-12">
         <div className="mx-auto max-w-5xl px-6">
           <Link
@@ -56,26 +60,26 @@ function ServiceDetail() {
             <ArrowLeft className="h-3 w-3" /> All Services
           </Link>
           <h1 className="font-serif text-4xl md:text-5xl mb-4">{s.title}</h1>
-          <p className="text-primary-foreground/70 max-w-2xl">{s.desc}</p>
+          <p className="text-primary-foreground/70 max-w-2xl text-sm leading-relaxed">{s.desc}</p>
         </div>
       </section>
 
-      {/* Detail */}
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      {/* ── Detail ────────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          <div className="rounded-2xl overflow-hidden bg-secondary/30 aspect-[4/3]">
-            <img
-              src={s.img}
-              alt={s.title}
-              onError={(e) => {
-                if (e.currentTarget.src.indexOf("/images/fallback.jpg") === -1)
-                  e.currentTarget.src = "/images/fallback.jpg";
+          {/* Image — full head visible, lightweight vignette */}
+          <div className="relative rounded-2xl overflow-hidden bg-secondary/30 aspect-[4/3]">
+            <img src={s.img} alt={s.title} onError={onImgError} className="w-full h-full object-cover object-center" />
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: "linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.32) 100%)",
               }}
-              className="w-full h-full object-cover"
             />
           </div>
 
           <div>
+            {/* Time + price badges */}
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/40 bg-gold/10 text-xs font-medium text-primary">
                 <Clock className="h-3.5 w-3.5" />
@@ -88,7 +92,7 @@ function ServiceDetail() {
             </div>
 
             <h2 className="font-serif text-2xl mb-3">About this service</h2>
-            <div className="text-muted-foreground leading-relaxed whitespace-pre-line mb-8">
+            <div className="text-muted-foreground leading-relaxed whitespace-pre-line text-sm mb-8">
               {s.longDesc ?? s.desc}
             </div>
 
@@ -102,6 +106,7 @@ function ServiceDetail() {
               ))}
             </ul>
 
+            {/* Booking bar */}
             <div className="flex items-center justify-between p-5 rounded-xl bg-secondary/40 border border-border/60">
               <div>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Starting from</p>
@@ -110,8 +115,9 @@ function ServiceDetail() {
               <Link
                 to="/book"
                 search={{ service: s.slug }}
-                className="inline-flex bg-primary text-primary-foreground px-6 py-3 rounded-md text-xs uppercase tracking-[0.18em] hover:bg-primary/90"
+                className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-6 py-3 rounded-md text-xs uppercase tracking-[0.18em] hover:opacity-90 transition-opacity"
               >
+                <CalendarCheck className="h-4 w-4" />
                 Book Now
               </Link>
             </div>
@@ -119,8 +125,8 @@ function ServiceDetail() {
         </div>
       </section>
 
-      {/* Related */}
-      <section className="bg-secondary/30 py-16">
+      {/* ── Related ───────────────────────────────────────────────── */}
+      <section className="bg-secondary/30 py-14">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="font-serif text-2xl md:text-3xl mb-8 text-center">Other Services</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -129,22 +135,28 @@ function ServiceDetail() {
                 key={r.slug}
                 to="/services/$slug"
                 params={{ slug: r.slug }}
-                className="group bg-card rounded-2xl overflow-hidden border border-border/60 hover:shadow-lg transition-all"
+                className="group bg-card rounded-2xl overflow-hidden border border-border/60 hover:border-gold/40 hover:shadow-lg transition-all"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={r.img}
                     alt={r.title}
-                    onError={(e) => {
-                      if (e.currentTarget.src.indexOf("/images/fallback.jpg") === -1)
-                        e.currentTarget.src = "/images/fallback.jpg";
+                    onError={onImgError}
+                    className="w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
+                  />
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: "linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.2) 100%)",
                     }}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-serif text-lg mb-2">{r.title}</h3>
-                  <p className="text-sm text-primary">{r.price}</p>
+                  <h3 className="font-serif text-lg mb-1">{r.title}</h3>
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm text-gold font-medium">{r.price}</p>
+                    <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{r.time}</span>
+                  </div>
                 </div>
               </Link>
             ))}
