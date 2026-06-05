@@ -80,17 +80,22 @@ function Header() {
     <header className="sticky top-0 z-40 bg-dark text-primary-foreground border-b border-primary-foreground/10 shadow-sm">
       <TopBar />
       <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
-        <Link to="/" aria-label="Trendylocs — home" className="flex items-center gap-3 group">
+        <Link to="/" aria-label="Trendylocs — home" className="flex items-center gap-2.5 group min-w-0">
           <img
             src={logo.url}
             alt="Trendylocs logo"
             width={64}
             height={64}
-            className="h-12 w-12 md:h-16 md:w-16 object-contain transition-transform group-hover:scale-105"
+            className="h-11 w-11 md:h-16 md:w-16 object-contain transition-transform group-hover:scale-105 shrink-0"
           />
-          <span className="hidden sm:inline text-sm md:text-base font-medium tracking-[0.16em] text-primary-foreground/90">
-            TRENDYLOCS
-          </span>
+          <div className="flex flex-col leading-tight min-w-0">
+            <span className="text-sm md:text-base font-medium tracking-[0.16em] text-primary-foreground/90 truncate">
+              TRENDYLOCS
+            </span>
+            <span className="text-[10px] tracking-[0.18em] uppercase text-gold/80 md:hidden">
+              Manchester · Locs Studio
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
