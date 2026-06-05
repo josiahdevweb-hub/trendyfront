@@ -247,8 +247,8 @@ function Home() {
           {/* Founder image — only image in this section */}
           <div className="relative">
             <div
-              className="w-full aspect-[3/4] overflow-hidden rounded-md ring-1 ring-gold/20"
-              style={{ boxShadow: "var(--shadow-elegant)" }}
+              className="w-full overflow-hidden rounded-md ring-1 ring-gold/20"
+              style={{ height: "clamp(300px, 45dvh, 520px)", boxShadow: "var(--shadow-elegant)" }}
             >
               <img
                 src="/images/salon/founder.jpg"
@@ -256,7 +256,7 @@ function Home() {
                 loading="lazy"
                 decoding="async"
                 onError={onImgError}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
               />
             </div>
             {/* Gold corner accents */}
