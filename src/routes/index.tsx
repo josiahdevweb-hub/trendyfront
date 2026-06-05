@@ -1,16 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  Star,
-  Instagram,
-  Phone,
-  ChevronDown,
-  GraduationCap,
-  Leaf,
-  Heart,
-  Clock,
-  CalendarCheck,
-} from "lucide-react";
+import { ArrowRight, Star, Instagram, Phone, ChevronDown, GraduationCap, CalendarCheck, Clock } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
@@ -26,12 +15,13 @@ const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   if (e.currentTarget.src.indexOf(FALLBACK_IMG) === -1) e.currentTarget.src = FALLBACK_IMG;
 };
 
+// Real Google reviews — names & quotes kept verbatim
 const testimonials = [
   {
     quote:
       "I have been with Trendylocs since my installation in November 2018 and my daughter had her install in February 2020. We are so pleased with Gina's services.",
     name: "Edinah Ngwarati",
-    service: "Sisterlocks™",
+    service: "Sisterlocks™ · client since 2018",
     initials: "EN",
     rating: 5,
   },
@@ -39,7 +29,7 @@ const testimonials = [
     quote:
       "Gina is amazing! Professional, knowledgeable and absolutely top tier customer service. I've been using her service for over 5 years.",
     name: "Maisha Marsh",
-    service: "Sisterlocks™",
+    service: "Sisterlocks™ · 5+ years",
     initials: "MM",
     rating: 5,
   },
@@ -59,6 +49,7 @@ const stats = [
   { number: "4.9★", label: "Average Rating" },
 ];
 
+// Removed wide-2.jpg, detail-2.jpg and detail-3.jpg as requested
 const HERO_PAIRS = [
   {
     left: "/images/hero/wide.jpg",
@@ -68,30 +59,21 @@ const HERO_PAIRS = [
     split: 60,
   },
   {
-    left: "/images/hero/wide-2.jpg",
-    leftAlt: "Trendylocs Manchester studio natural light, plants, styling chair",
-    leftObjectPosition: "50% 55%",
-    right: "/images/hero/detail-2.jpg",
-    rightAlt: "Stylist's hands working microlocs craftsmanship close-up",
-    rightObjectPosition: "72% 45%",
-    split: 40,
-  },
-  {
     left: "/images/hero/wide-3.jpg",
     leftAlt: "Fresh microlocs install clean uniform parting lines down the back",
     leftObjectPosition: "50% 55%",
-    right: "/images/hero/detail-3.jpg",
-    rightAlt: "Close-up of precise grid partings on microlocs with copper-tipped ends",
-    rightObjectPosition: "50% 50%",
+    right: heroBantuKnots.url,
+    rightAlt: "Bantu knots over microlocs - Trendylocs protective styling",
+    rightObjectPosition: "50% 35%",
     split: 55,
   },
   {
-    left: heroBantuKnots.url,
-    leftAlt: "Bantu knots over microlocs - Trendylocs protective styling",
-    leftObjectPosition: "50% 35%",
-    right: heroMicrolocsTop.url,
-    rightAlt: "Top-down view of freshly retightened microlocs Trendylocs precision",
-    rightObjectPosition: "50% 45%",
+    left: heroMicrolocsTop.url,
+    leftAlt: "Top-down view of freshly retightened microlocs Trendylocs precision",
+    leftObjectPosition: "50% 45%",
+    right: "/images/hero/detail.jpg",
+    rightAlt: "Precision microlocs being installed close-up craftsmanship",
+    rightObjectPosition: "center",
     split: 50,
   },
 ] as const;
@@ -173,7 +155,6 @@ function Home() {
             >
               <div className="relative inline-block text-primary-foreground font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
                 <span>Trendylocs</span>
-
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
               </div>
@@ -183,15 +164,15 @@ function Home() {
                 <span style={{ animationDelay: "260ms" }}>Locs.</span>
                 <br />
                 <span style={{ animationDelay: "420ms" }}>Crafted</span>{" "}
-                <span style={{ animationDelay: "540ms" }}>in</span>{" "}
-                <span className="text-gold italic" style={{ animationDelay: "700ms" }}>
+                <span style={{ animationDelay: "540ms" }}>in</span> {/* Manchester — no italic as requested */}
+                <span className="text-gold" style={{ animationDelay: "700ms" }}>
                   Manchester.
                 </span>
               </h1>
 
               <p className="text-[13px] md:text-sm text-primary-foreground/75 max-w-md leading-relaxed mb-4 md:mb-5">
                 Sisterlocks™, Microlocs &amp; Traditional Locs: precision installations and gentle maintenance from
-                certified specialists.
+                certified consultants.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-2.5 mb-4 md:mb-6">
@@ -260,39 +241,15 @@ function Home() {
         </div>
       </section>
 
-      {/* ── 2. WELCOME ────────────────────────────────────────────── */}
+      {/* ── 2. OUR STORY ──────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-6 py-14 md:py-18">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div>
-            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Welcome to Trendylocs</p>
-            <h2 className="text-3xl md:text-4xl mb-5 leading-tight">
-              Your hair. <span className="italic">Our expertise.</span>
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Manchester's premier locs salon specialising in Sisterlocks™, Microlocs, and Traditional Locs. Every visit
-              is a personalised journey toward healthy, thriving hair.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-7">
-              Our certified specialists combine proven techniques and genuine care to give your hair the attention it
-              deserves.
-            </p>
-            <div className="flex flex-wrap gap-3 mb-7">
-              {["Certified Sisterlocks™ Consultant", "Natural Products Only", "Free Consultation"].map((tag) => (
-                <span key={tag} className="text-xs px-3 py-1.5 border border-gold/30 rounded-full text-gold bg-gold/5">
-                  ✓ {tag}
-                </span>
-              ))}
-            </div>
-            <Link
-              to="/about"
-              className="group inline-flex items-center gap-2 bg-dark text-primary-foreground px-6 py-3 rounded-md transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_var(--gold)] hover:bg-dark/90"
+          {/* Founder image — only image in this section */}
+          <div className="relative">
+            <div
+              className="w-full aspect-[3/4] overflow-hidden rounded-md ring-1 ring-gold/20"
+              style={{ boxShadow: "var(--shadow-elegant)" }}
             >
-              Our Story <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div className="aspect-[3/4] overflow-hidden rounded-md row-span-2">
               <img
                 src="/images/salon/founder.jpg"
                 alt="Gina, founder of Trendylocs"
@@ -302,26 +259,47 @@ function Home() {
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="aspect-square overflow-hidden rounded-md">
-              <img
-                src={heroBantuKnots.url}
-                alt="Freshly styled microlocs with bantu knots"
-                loading="lazy"
-                decoding="async"
-                onError={onImgError}
-                className="w-full h-full object-cover object-[50%_32%] hover:scale-105 transition-transform duration-700"
-              />
+            {/* Gold corner accents */}
+            <span className="absolute top-3 left-3 w-6 h-px bg-gold/60" />
+            <span className="absolute top-3 left-3 h-6 w-px bg-gold/60" />
+            <span className="absolute bottom-3 right-3 w-6 h-px bg-gold/60" />
+            <span className="absolute bottom-3 right-3 h-6 w-px bg-gold/60" />
+          </div>
+
+          {/* Story + team note */}
+          <div>
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Our Story</p>
+            <h2 className="text-3xl md:text-4xl mb-5 leading-tight">Who we are.</h2>
+
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Trendylocs was born from a personal journey. Gina — our founder and a certified Sisterlocks™ Consultant —
+              spent years chasing styles that weren't meant for her hair. Relaxers, braids, weaves: everything except
+              letting her natural hair be. When it finally broke after a retouch, she stopped.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A friend suggested locs. That conversation changed everything. Gina discovered Sisterlocks™, fell in love
+              with the freedom and versatility, trained as a practitioner and eventually became a certified consultant.
+              She opened Trendylocs so other women wouldn't have to take the long road she did.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Today we are a small, tight-knit team of locs consultants — each one genuinely invested in your hair
+              health, not just your appointment slot. Every visit is a personalised journey toward healthy, natural
+              hair.
+            </p>
+
+            {/* Certification badge — only one, as requested */}
+            <div className="flex flex-wrap gap-3 mb-7">
+              <span className="text-xs px-3 py-1.5 border border-gold/30 rounded-full text-gold bg-gold/5">
+                ✓ Certified Sisterlocks™ Consultancy
+              </span>
             </div>
-            <div className="aspect-square overflow-hidden rounded-md">
-              <img
-                src={heroMicrolocsTop.url}
-                alt="Top-down view of precise microlocs parting"
-                loading="lazy"
-                decoding="async"
-                onError={onImgError}
-                className="w-full h-full object-cover object-[50%_42%] hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+
+            <Link
+              to="/about"
+              className="group inline-flex items-center gap-2 bg-dark text-primary-foreground px-6 py-3 rounded-md transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_var(--gold)] hover:bg-dark/90"
+            >
+              Read Our Full Story <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </section>
@@ -329,7 +307,6 @@ function Home() {
       {/* ── 3. SERVICES ───────────────────────────────────────────── */}
       <section className="bg-secondary/40 py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-6">
-          {/* Header row */}
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8">
             <div>
               <p className="uppercase tracking-[0.3em] text-xs text-gold mb-2">Our Services</p>
@@ -343,68 +320,61 @@ function Home() {
             </Link>
           </div>
 
-          <div className="relative">
-            <Carousel
-              opts={{ align: "start", loop: true, dragFree: true }}
-              plugins={[autoplay.current]}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-3">
-                {services.map((s) => (
-                  <CarouselItem key={s.slug} className="pl-3 basis-[78%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                    <div className="group flex flex-col bg-card border border-border/60 rounded-xl overflow-hidden hover:border-gold/50 hover:shadow-lg transition-all duration-300 h-full">
-                      {/* Image */}
-                      <Link to="/services/$slug" params={{ slug: s.slug }} className="block shrink-0">
-                        <div className="h-40 overflow-hidden">
-                          <img
-                            src={s.img}
-                            alt={`${s.title} at Trendylocs`}
-                            loading="lazy"
-                            decoding="async"
-                            onError={onImgError}
-                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                      </Link>
-                      {/* Body */}
-                      <div className="flex flex-col flex-1 p-4 gap-2.5">
-                        <div>
-                          <h3 className="font-serif text-[15px] font-semibold leading-snug mb-1">{s.title}</h3>
-                          <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
-                            <Clock className="h-3 w-3 shrink-0" />
-                            <span>{s.time}</span>
-                          </div>
-                        </div>
-                        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 flex-1">{s.desc}</p>
-                        {/* Price + CTAs */}
-                        <div className="flex items-center justify-between pt-2.5 border-t border-border/50 gap-2">
-                          <span className="font-serif text-lg text-primary font-medium leading-none">{s.price}</span>
-                          <div className="flex items-center gap-1.5">
-                            <Link
-                              to="/services/$slug"
-                              params={{ slug: s.slug }}
-                              className="text-[10px] uppercase tracking-[0.15em] text-foreground/60 hover:text-foreground transition-colors px-2 py-1.5"
-                            >
-                              Details
-                            </Link>
-                            <Link
-                              to="/book"
-                              search={{ service: s.slug }}
-                              className="inline-flex items-center gap-1 bg-gold text-gold-foreground text-[10px] uppercase tracking-[0.15em] font-medium px-3 py-1.5 rounded-md hover:opacity-90 transition-opacity whitespace-nowrap"
-                            >
-                              <CalendarCheck className="h-3 w-3" />
-                              Book
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
+          {/* Services grid — 2 cols mobile, 3 desktop; no carousel */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {services.map((s) => (
+              <div
+                key={s.slug}
+                className="group flex flex-col bg-card border border-border/60 rounded-xl overflow-hidden hover:border-gold/50 hover:shadow-lg transition-all duration-300 h-full"
+              >
+                <Link to="/services/$slug" params={{ slug: s.slug }} className="block shrink-0">
+                  <div className="h-36 sm:h-40 overflow-hidden">
+                    <img
+                      src={s.img}
+                      alt={`${s.title} at Trendylocs`}
+                      loading="lazy"
+                      decoding="async"
+                      onError={onImgError}
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </Link>
+                <div className="flex flex-col flex-1 p-3 sm:p-4 gap-2">
+                  <div>
+                    <h3 className="font-serif text-[14px] sm:text-[15px] font-semibold leading-snug mb-1">{s.title}</h3>
+                    <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
+                      <Clock className="h-3 w-3 shrink-0" />
+                      <span>{s.time}</span>
                     </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex -left-4 h-8 w-8 bg-card border-border hover:bg-gold hover:text-gold-foreground hover:border-gold transition-colors" />
-              <CarouselNext className="hidden md:flex -right-4 h-8 w-8 bg-card border-border hover:bg-gold hover:text-gold-foreground hover:border-gold transition-colors" />
-            </Carousel>
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 flex-1 hidden sm:block">
+                    {s.desc}
+                  </p>
+                  <div className="flex items-center justify-between pt-2 border-t border-border/50 gap-2">
+                    <span className="font-serif text-base sm:text-lg text-primary font-medium leading-none">
+                      {s.price}
+                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <Link
+                        to="/services/$slug"
+                        params={{ slug: s.slug }}
+                        className="text-[10px] uppercase tracking-[0.15em] text-foreground/60 hover:text-foreground transition-colors px-1.5 py-1.5 hidden sm:block"
+                      >
+                        Details
+                      </Link>
+                      <Link
+                        to="/book"
+                        search={{ service: s.slug }}
+                        className="inline-flex items-center gap-1 bg-gold text-gold-foreground text-[10px] uppercase tracking-[0.15em] font-medium px-2.5 py-1.5 rounded-md hover:opacity-90 transition-opacity whitespace-nowrap"
+                      >
+                        <CalendarCheck className="h-3 w-3" />
+                        Book
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -416,9 +386,19 @@ function Home() {
       <section className="bg-dark text-primary-foreground py-14 md:py-18">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-12">
-            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Client Stories</p>
-            <h2 className="text-3xl md:text-4xl mb-2">Real results. Real clients.</h2>
-            <p className="text-primary-foreground/50 text-xs">Verified Google reviews</p>
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">In Their Words</p>
+            <h2 className="text-3xl md:text-4xl mb-2">What our clients say</h2>
+            <p className="text-primary-foreground/50 text-xs">
+              From verified Google reviews —{" "}
+              <a
+                href="https://share.google/3nMtasjIEjeuD7AnL"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-gold transition-colors"
+              >
+                read them yourself
+              </a>
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5">
@@ -428,14 +408,14 @@ function Home() {
                 className="border border-primary-foreground/10 rounded-xl p-6 hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
                 <StarRating count={t.rating} />
-                <p className="font-serif italic text-sm mb-5 leading-relaxed flex-1">"{t.quote}"</p>
+                <p className="font-serif text-sm mb-5 leading-relaxed flex-1">"{t.quote}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t border-primary-foreground/10">
                   <div className="h-8 w-8 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center text-gold text-xs font-semibold shrink-0">
                     {t.initials}
                   </div>
                   <div>
                     <p className="font-medium text-sm">{t.name}</p>
-                    <p className="text-xs text-gold">{t.service}</p>
+                    <p className="text-xs text-gold/80">{t.service}</p>
                   </div>
                 </div>
               </div>
@@ -450,123 +430,91 @@ function Home() {
               className="inline-flex items-center gap-2 text-sm text-primary-foreground/50 hover:text-gold transition-colors"
             >
               <Star className="h-3.5 w-3.5" />
-              Read all reviews on Google
+              See all reviews on Google
               <ArrowRight className="h-3.5 w-3.5" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* ── 6. WHY TRENDYLOCS ─────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 py-14 md:py-18">
-        <div className="text-center mb-12">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Why Choose Trendylocs</p>
-          <h2 className="text-3xl md:text-4xl mb-3">A premium experience</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-light text-sm">
-            Every visit is crafted around your hair, your time, and your comfort.
-          </p>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {[
-            {
-              icon: GraduationCap,
-              title: "Certified Sisterlocks™ Consultant",
-              desc: "Our stylists hold formal Sisterlocks™ certification and are trained in the latest loc techniques.",
-            },
-            {
-              icon: Leaf,
-              title: "Natural Products Only",
-              desc: "Every product is free from sulphates, parabens, and harmful chemicals. Your hair's health first.",
-            },
-            {
-              icon: Heart,
-              title: "Personalised Consultations",
-              desc: "We start every new client relationship with a free consultation — your hair journey is unique.",
-            },
-          ].map(({ icon: Icon, title, desc }, i) => (
-            <div
-              key={title}
-              style={{ animationDelay: `${i * 80}ms` }}
-              className="group bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-gold/40 animate-fade-in"
-            >
-              <div className="w-10 h-10 rounded-lg bg-gold/15 flex items-center justify-center mb-4">
-                <Icon className="w-5 h-5 text-gold" />
-              </div>
-              <h3 className="text-base mb-2 font-semibold">{title}</h3>
-              <p className="text-muted-foreground font-light leading-relaxed text-sm">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── 7. INSTAGRAM ──────────────────────────────────────────── */}
-      <section className="py-12 md:py-16 mx-auto max-w-7xl px-6">
-        <div className="text-center mb-8">
-          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Follow Our Work</p>
-          <h2 className="text-2xl md:text-3xl mb-3">See the transformations</h2>
-          <a
-            href="https://www.instagram.com/trendylocs_uk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors text-sm"
-          >
-            <Instagram className="h-4 w-4" />
-            @trendylocs
-          </a>
-        </div>
-
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-6">
-          {[
-            "/images/Gallery/microlocs1.jpg",
-            "/images/styles/microlocs.jpg",
-            "/images/Gallery/traditionallocs2.jpg",
-            "/images/styles/sisterlocks.jpg",
-            "/images/Gallery/styling1.jpg",
-            "/images/Gallery/sisterlocs1.jpg",
-          ].map((src, i) => (
+      {/* ── 6. INSTAGRAM ──────────────────────────────────────────── */}
+      <section className="py-14 md:py-20 mx-auto max-w-7xl px-6">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center mb-10">
+          <div>
+            <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Follow Along</p>
+            <h2 className="text-3xl md:text-4xl mb-4 leading-tight">The work speaks for itself.</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+              Every photo is a real client, a real transformation. No filters — just honest before-and-afters from our
+              consultations and maintenance sessions.
+            </p>
             <a
-              key={i}
               href="https://www.instagram.com/trendylocs_uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="aspect-square overflow-hidden rounded-md bg-secondary/60 relative group"
+              className="inline-flex items-center gap-2 border border-border rounded-md px-5 py-2.5 text-sm hover:border-gold hover:text-gold transition-all group"
             >
-              <img
-                src={src}
-                alt={`Trendylocs Instagram post ${i + 1}`}
-                loading="lazy"
-                decoding="async"
-                onError={onImgError}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                <Instagram className="h-5 w-5 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              <Instagram className="h-4 w-4 group-hover:text-gold transition-colors" />
+              Follow @trendylocs_uk
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </a>
-          ))}
+          </div>
+
+          <div className="grid grid-cols-3 gap-2">
+            {[
+              "/images/Gallery/microlocs1.jpg",
+              "/images/styles/microlocs.jpg",
+              "/images/Gallery/traditionallocs2.jpg",
+              "/images/styles/sisterlocks.jpg",
+              "/images/Gallery/styling1.jpg",
+              "/images/Gallery/sisterlocs1.jpg",
+            ].map((src, i) => (
+              <a
+                key={i}
+                href="https://www.instagram.com/trendylocs_uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="aspect-square overflow-hidden rounded-md bg-secondary/60 relative group"
+              >
+                <img
+                  src={src}
+                  alt={`Trendylocs work ${i + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  onError={onImgError}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
+                  <Instagram className="h-5 w-5 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
 
-        <div className="text-center">
+        {/* Subtle persistent Instagram nudge */}
+        <div className="flex items-center gap-4 pt-6 border-t border-border/40">
+          <span className="h-px flex-1 bg-border/40" />
           <a
             href="https://www.instagram.com/trendylocs_uk"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-border rounded-md px-6 py-3 text-sm hover:border-gold hover:text-gold transition-all"
+            className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-gold transition-colors"
           >
-            <Instagram className="h-4 w-4" />
-            Follow @trendylocs for daily inspiration
+            <Instagram className="h-3.5 w-3.5" />
+            @trendylocs_uk on Instagram
           </a>
+          <span className="h-px flex-1 bg-border/40" />
         </div>
       </section>
 
-      {/* ── 8. BOOKING CTA ────────────────────────────────────────── */}
+      {/* ── 7. BOOKING CTA ────────────────────────────────────────── */}
       <section className="bg-gold py-12">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-gold-foreground mb-3">
             Ready to start your loc journey?
           </h2>
           <p className="text-gold-foreground/70 mb-7 text-sm">
-            Book a free consultation today — no commitment, just great advice.
+            Book a free consultation today — no commitment, just honest advice about what's right for your hair.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
