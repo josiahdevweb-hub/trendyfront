@@ -1,13 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, Check, Clock, Tag, CalendarCheck } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ArrowLeft, Check, Clock, Tag, CalendarCheck } from "lucide-react";
+import { useState } from "react";
 import { services } from "@/data/services";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Trendylocs" },
-      { name: "description", content: "Sisterlocks™, Microlocs, Traditional Locs, retightening, styling and more." },
+      {
+        name: "description",
+        content:
+          "Sisterlocks™, Microlocs, Traditional Locs, retightening, styling and more. Certified locs consultancy in Manchester.",
+      },
     ],
   }),
   component: Services,
@@ -25,7 +29,7 @@ function Services() {
 
   return (
     <>
-      {/* Hero */}
+      {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="bg-dark text-primary-foreground py-10">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">What We Offer</p>
@@ -34,7 +38,7 @@ function Services() {
         </div>
       </section>
 
-      {/* ── DETAIL VIEW ─────────────────────────────────────────────── */}
+      {/* ── DETAIL VIEW ───────────────────────────────────────────── */}
       {active ? (
         <section className="mx-auto max-w-6xl px-6 py-12">
           <button
@@ -47,15 +51,28 @@ function Services() {
           <div className="grid lg:grid-cols-[1fr_380px] gap-10">
             {/* Left — image + description */}
             <article>
-              <div className="aspect-[16/9] overflow-hidden rounded-xl mb-7">
-                <img src={active.img} alt={active.title} onError={onImgError} className="w-full h-full object-cover" />
+              {/* Image with subtle dark overlay so text legibility isn't needed on top */}
+              <div className="relative aspect-[16/9] overflow-hidden rounded-xl mb-7">
+                <img
+                  src={active.img}
+                  alt={active.title}
+                  onError={onImgError}
+                  className="w-full h-full object-cover object-center"
+                />
+                {/* lightweight vignette overlay */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: "linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.28) 100%)",
+                  }}
+                />
               </div>
 
               <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground mb-5">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 bg-gold/8">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 bg-gold/5">
                   <Clock className="h-3.5 w-3.5 text-gold" /> {active.time}
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 bg-gold/8">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 bg-gold/5">
                   <Tag className="h-3.5 w-3.5 text-gold" /> {active.price}
                 </span>
               </div>
@@ -112,7 +129,7 @@ function Services() {
                           src={s.img}
                           alt={s.title}
                           onError={onImgError}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform"
                         />
                       </div>
                       <div className="flex-1 min-w-0 py-0.5">
@@ -129,7 +146,7 @@ function Services() {
           </div>
         </section>
       ) : (
-        /* ── GRID VIEW ─────────────────────────────────────────────── */
+        /* ── GRID VIEW ──────────────────────────────────────────── */
         <section className="mx-auto max-w-7xl px-6 py-12">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s) => (
@@ -141,13 +158,20 @@ function Services() {
                   scrollTop();
                 }}
               >
-                {/* Image */}
-                <div className="h-64 md:h-72 overflow-hidden shrink-0">
+                {/* Image — object-center so full head is visible */}
+                <div className="h-56 md:h-64 overflow-hidden shrink-0 relative">
                   <img
                     src={s.img}
                     alt={s.title}
                     onError={onImgError}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
+                  />
+                  {/* subtle bottom vignette */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: "linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.18) 100%)",
+                    }}
                   />
                 </div>
 
@@ -195,13 +219,14 @@ function Services() {
         </section>
       )}
 
-      {/* ── Bottom CTA ──────────────────────────────────────────────── */}
+      {/* ── Bottom CTA ────────────────────────────────────────────── */}
       {!active && (
-        <section className="bg-dark text-primary-foreground py-16 text-center">
+        <section className="bg-dark text-primary-foreground py-14 text-center">
           <div className="mx-auto max-w-3xl px-6">
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to Get Started?</h2>
-            <p className="text-primary-foreground/70 mb-7 text-sm">
-              Book your free consultation today and let's discuss your hair goals.
+            <h2 className="font-serif text-3xl md:text-4xl mb-3">Not sure where to start?</h2>
+            <p className="text-primary-foreground/70 mb-7 text-sm max-w-md mx-auto">
+              A consultation is the best first step — 20 minutes to understand your hair, answer your questions and map
+              out exactly what's right for you.
             </p>
             <Link
               to="/book"
@@ -209,7 +234,7 @@ function Services() {
               className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md hover:opacity-90 transition-opacity"
             >
               <CalendarCheck className="h-4 w-4" />
-              Book Free Consultation
+              Book a Consultation — £20
             </Link>
           </div>
         </section>
