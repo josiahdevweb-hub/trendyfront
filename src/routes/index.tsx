@@ -9,6 +9,7 @@ import heroMicrolocsTop from "@/assets/hero/hero-microlocs-top.png.asset.json";
 import hero1 from "@/assets/hero/1.png";
 import hero2 from "@/assets/hero/2.png";
 import hero3 from "@/assets/hero/3.png";
+
 import { services } from "@/data/services";
 
 export const Route = createFileRoute("/")({ component: Home });
