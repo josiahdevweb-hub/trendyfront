@@ -28,10 +28,15 @@ function Contact() {
         <div>
           <div className="grid sm:grid-cols-2 gap-6 mb-10">
             {[
+              {
+                icon: MapPin,
+                title: "Main Location",
+                lines: ["15 Pollard Street East. Pollard Yard.  M40 7QX.  Unit 105"],
+              },
               { icon: MapPin, title: "Location", lines: ["41 Cross Street. Sale. M33 7FT. Manchester"] },
               { icon: Phone, title: "Phone", lines: ["+44 7838328131"] },
               { icon: Mail, title: "Email", lines: ["gina@trendylocs.com"] },
-              { icon: Clock, title: "Hours", lines: ["Mon – Fri: 9:30am – 5:30pm", "Sat – Fri: Closed"] },
+              { icon: Clock, title: "Hours", lines: ["Mon – Fri: 9:30am – 5:30pm", "Sat – Sun: Closed"] },
             ].map(({ icon: Icon, title, lines }) => (
               <div key={title} className="bg-card border border-border rounded-md p-6">
                 <Icon className="h-5 w-5 text-gold mb-3" />
