@@ -544,7 +544,7 @@ function ServiceCard({ s }: { s: ServiceItem }) {
             <span>{s.time}</span>
           </div>
         </div>
-        <p className="text-xs text-muted-foreground leading-relaxed flex-1 hidden sm:block line-clamp-2 sm:group-hover:line-clamp-none transition-all">{s.desc}</p>
+        <p className="text-xs text-muted-foreground leading-relaxed flex-1 hidden sm:block line-clamp-2">{s.desc}</p>
         <div className="flex items-center justify-between pt-2 border-t border-border/50 gap-2">
           <span className="font-serif text-base sm:text-lg text-primary font-medium leading-none">{s.price}</span>
           <div className="flex items-center gap-1.5">
