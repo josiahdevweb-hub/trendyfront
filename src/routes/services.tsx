@@ -152,42 +152,46 @@ function Services() {
             {services.map((s) => (
               <article
                 key={s.slug}
-                className="group relative rounded-xl overflow-hidden border border-border/60 hover:border-gold/50 hover:shadow-xl transition-all duration-500 cursor-pointer"
-                style={{ height: "320px" }}
+                className="group flex flex-col bg-card border border-border/60 rounded-xl overflow-hidden hover:border-gold/50 hover:shadow-lg transition-all duration-300 cursor-pointer"
                 onClick={() => {
                   setActiveSlug(s.slug);
                   scrollTop();
                 }}
               >
-                {/* Image — always fills card, zooms on hover */}
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  onError={onImgError}
-                  className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-                />
+                {/* Image — object-center so full head is visible */}
+                <div className="h-56 md:h-64 overflow-hidden shrink-0 relative">
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    onError={onImgError}
+                    className="w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
+                  />
+                  {/* subtle bottom vignette */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: "linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.18) 100%)",
+                    }}
+                  />
+                </div>
 
-                {/* Default gradient — room for text strip at bottom */}
-                <div
-                  className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-0"
-                  style={{ background: "linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.72) 100%)" }}
-                />
-
-                {/* Hover gradient — deeper */}
-                <div
-                  className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.82) 100%)" }}
-                />
-
-                {/* Default footer — title + time + price + buttons */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:invisible group-hover:translate-y-3">
-                  <h3 className="font-serif text-base text-white leading-snug mb-1 drop-shadow">{s.title}</h3>
-                  <div className="flex items-center gap-1.5 text-[11px] text-white/60 mb-2.5">
-                    <Clock className="h-3 w-3 shrink-0" />
-                    <span>{s.time}</span>
+                {/* Body */}
+                <div className="flex flex-col flex-1 p-4 gap-2.5">
+                  <div>
+                    <h3 className="font-serif text-[15px] font-semibold leading-snug mb-1">{s.title}</h3>
+                    <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
+                      <Clock className="h-3 w-3 shrink-0" />
+                      <span>{s.time}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-serif text-xl text-gold drop-shadow">{s.price}</span>
+
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 flex-1 transition-all duration-300 group-hover:opacity-0 group-hover:invisible group-hover:max-h-0 group-hover:mb-0 group-hover:mt-0">
+                    {s.desc}
+                  </p>
+
+                  {/* Price + CTAs */}
+                  <div className="flex items-center justify-between pt-2.5 border-t border-border/50 gap-2">
+                    <span className="font-serif text-lg text-primary font-medium leading-none">{s.price}</span>
                     <div className="flex items-center gap-1.5">
                       <button
                         onClick={(e) => {
@@ -195,7 +199,7 @@ function Services() {
                           setActiveSlug(s.slug);
                           scrollTop();
                         }}
-                        className="text-[10px] uppercase tracking-[0.15em] text-white/60 hover:text-white transition-colors px-2 py-1.5"
+                        className="text-[10px] uppercase tracking-[0.15em] text-foreground/60 hover:text-foreground transition-colors px-2 py-1.5"
                       >
                         Details
                       </button>
@@ -210,11 +214,6 @@ function Services() {
                       </Link>
                     </div>
                   </div>
-                </div>
-
-                {/* Hover footer — price only */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
-                  <p className="font-serif text-3xl text-gold drop-shadow-lg">{s.price}</p>
                 </div>
               </article>
             ))}
