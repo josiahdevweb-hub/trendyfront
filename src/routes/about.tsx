@@ -98,41 +98,11 @@ function About() {
           </div>
         </section>
 
-        {/* ── Our Approach — 3 short points ─────────────────────── */}
-        <section className="border-y border-foreground/10 py-10 md:py-14 mb-16 md:mb-20">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12">
-            {[
-              {
-                n: "01",
-                title: "Consultation first",
-                desc: "We never skip the consultation. Understanding your hair texture, history, and lifestyle shapes everything from method to maintenance.",
-              },
-              {
-                n: "02",
-                title: "No harsh products",
-                desc: "We use natural, sulphate-free products only. Your hair should leave healthier than it arrived.",
-              },
-              {
-                n: "03",
-                title: "Long-term thinking",
-                desc: "Locs are a commitment. We guide you through every stage from installation to maturity so you always know what to expect.",
-              },
-            ].map(({ n, title, desc }) => (
-              <div key={n} className="space-y-3">
-                <span className="block font-serif text-xl text-gold">{n}</span>
-                <h3 className="font-serif text-xl leading-none">{title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* ── Gallery teaser ─────────────────────────────── */}
         <section className="mb-16 md:mb-20">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-3 mb-6">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl leading-none">See the work</h2>
-              <p className="text-sm text-muted-foreground mt-1.5">Real clients, real results.</p>
             </div>
           </div>
 
