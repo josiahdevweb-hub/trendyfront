@@ -51,7 +51,6 @@ function Services() {
           <div className="grid lg:grid-cols-[1fr_380px] gap-10">
             {/* Left — image + description */}
             <article>
-              {/* Image with subtle dark overlay so text legibility isn't needed on top */}
               <div className="relative aspect-[16/9] overflow-hidden rounded-xl mb-7">
                 <img
                   src={active.img}
@@ -59,12 +58,9 @@ function Services() {
                   onError={onImgError}
                   className="w-full h-full object-cover object-center"
                 />
-                {/* lightweight vignette overlay */}
                 <div
                   className="absolute inset-0 pointer-events-none"
-                  style={{
-                    background: "linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.28) 100%)",
-                  }}
+                  style={{ background: "linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.28) 100%)" }}
                 />
               </div>
 
@@ -114,7 +110,6 @@ function Services() {
                   <CalendarCheck className="h-4 w-4" />
                   Book Now
                 </Link>
-              </div>
               </div>
             </article>
 
@@ -167,7 +162,6 @@ function Services() {
                   scrollTop();
                 }}
               >
-                {/* Image — object-center so full head is visible */}
                 <div className="min-h-56 md:min-h-64 flex-1 overflow-hidden relative transition-all duration-500 ease-in-out">
                   <img
                     src={s.img}
@@ -175,16 +169,12 @@ function Services() {
                     onError={onImgError}
                     className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
                   />
-                  {/* subtle bottom vignette */}
                   <div
                     className="absolute inset-0 pointer-events-none"
-                    style={{
-                      background: "linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.18) 100%)",
-                    }}
+                    style={{ background: "linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.18) 100%)" }}
                   />
                 </div>
 
-                {/* Body */}
                 <div className="flex flex-col shrink-0 p-4 gap-2.5">
                   <div>
                     <h3 className="font-serif text-[15px] font-semibold leading-snug mb-1">{s.title}</h3>
@@ -198,7 +188,6 @@ function Services() {
                     {s.desc}
                   </p>
 
-                  {/* Price + CTAs */}
                   <div className="flex items-center justify-between pt-2.5 border-t border-border/50 gap-2">
                     <span className="font-serif text-lg text-primary font-medium leading-none">{s.price}</span>
                     <div className="flex items-center gap-1.5">
