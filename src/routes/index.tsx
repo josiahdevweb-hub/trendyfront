@@ -273,7 +273,7 @@ function Home() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 leading-tight">Who we are.</h2>
 
             <p className="text-muted-foreground leading-relaxed mb-3 text-sm md:text-base">
-              Trendylocs was born from a personal journey. Gina — our founder and a certified Sisterlocks™ Consultant —
+              Trendylocs was born from a personal journey. Gina our founder and a certified Sisterlocks™ Consultant
               spent years chasing styles that weren't meant for her hair. Relaxers, braids, weaves: everything except
               letting her natural hair be. When it finally broke after a retouch, she stopped.
             </p>
@@ -282,8 +282,8 @@ function Home() {
               certified consultant, and opened Trendylocs so other women wouldn't have to take the long road she did.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-5 text-sm md:text-base">
-              We are a small, tight-knit team of locs consultants — each one genuinely invested in your hair health.
-              Every visit is a personalised journey toward healthy, natural hair.
+              We are a small, tight-knit team of locs consultants each one genuinely invested in your hair health. Every
+              visit is a personalised journey toward healthy, natural hair.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-6">
@@ -423,7 +423,7 @@ function Home() {
             <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">Follow Along</p>
             <h2 className="text-3xl md:text-4xl mb-4 leading-tight">The work speaks for itself.</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-              Every photo is a real client, a real transformation. No filters — just honest before-and-afters from our
+              Every photo is a real client, a real transformation. No filters just honest before-and-afters from our
               consultations and maintenance sessions.
             </p>
             <a
@@ -493,7 +493,7 @@ function Home() {
             Ready to start your loc journey?
           </h2>
           <p className="text-gold-foreground/70 mb-7 text-sm">
-            Book a free consultation today — no commitment, just honest advice about what's right for your hair.
+            Book a free consultation today no commitment, just honest advice about what's right for your hair.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
