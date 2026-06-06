@@ -445,7 +445,7 @@ function Home() {
               "/images/Gallery/traditionallocs2.jpg",
               "/images/styles/sisterlocks.jpg",
               "/images/Gallery/styling1.jpg",
-              "/images/Gallery/sisterlocs1.jpg",
+              "/images/Gallery/maintenance.jpg",
             ].map((src, i) => (
               <a
                 key={i}
