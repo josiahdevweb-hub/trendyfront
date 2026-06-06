@@ -159,7 +159,7 @@ function Services() {
                 }}
               >
                 {/* Image — object-center so full head is visible */}
-                <div className="h-56 md:h-64 overflow-hidden shrink-0 relative">
+                <div className="h-56 md:h-64 group-hover:h-72 overflow-hidden shrink-0 relative transition-all duration-500 ease-in-out">
                   <img
                     src={s.img}
                     alt={s.title}
