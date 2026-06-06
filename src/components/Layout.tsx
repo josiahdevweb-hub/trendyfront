@@ -36,11 +36,11 @@ function TopBar() {
           </a>
           <span className="hidden lg:flex items-center gap-1.5">
             <MapPin className="h-3 w-3 text-gold" />
-            <span>Main location: 15 Pollard Street East. Pollard Yard. M40 7QX. Unit 105</span>
+            <span>Main location: 41 Cross Street. Sale. M33 7FT. Manchester</span>
           </span>
           <span className="hidden lg:flex items-center gap-1.5">
             <MapPin className="h-3 w-3 text-gold" />
-            <span> 41 Cross Street. Sale. M33 7FT. Manchester</span>
+            <span> 415 Pollard Street East. Pollard Yard. M40 7QX. Unit 105</span>
           </span>
         </div>
         <div className="flex items-center gap-5">
