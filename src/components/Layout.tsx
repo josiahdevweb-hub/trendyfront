@@ -1,5 +1,6 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { PageLoader } from "@/components/PageLoader";
+import { RouteTransitionLoader } from "@/components/RouteTransitionLoader";
 import { useSmartImages } from "@/hooks/use-smart-images";
 import {
   CalendarCheck,
