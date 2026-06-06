@@ -308,7 +308,7 @@ function Home() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8">
             <div>
               <p className="uppercase tracking-[0.3em] text-xs text-gold mb-2">Our Services</p>
-              <h2 className="text-2xl md:text-3xl leading-tight">Expert care for every stage of your Locs journey</h2>
+              <h2 className="text-2xl md:text-3xl leading-tight">Expert care for every stage of your hair journey</h2>
             </div>
             <Link
               to="/services"
