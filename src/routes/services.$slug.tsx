@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { Clock, Tag, Check, ArrowLeft, CalendarCheck } from "lucide-react";
+import { Clock, Tag, Check, ArrowLeft, CalendarCheck, RefreshCw } from "lucide-react";
 import { getServiceBySlug, services } from "@/data/services";
 
 export const Route = createFileRoute("/services/$slug")({
@@ -67,7 +67,7 @@ function ServiceDetail() {
       {/* ── Detail ────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          {/* Image — full head visible, lightweight vignette */}
+          {/* Image */}
           <div className="relative rounded-2xl overflow-hidden bg-secondary/30 aspect-[4/3]">
             <img src={s.img} alt={s.title} onError={onImgError} className="w-full h-full object-cover object-center" />
             <div
@@ -111,6 +111,14 @@ function ServiceDetail() {
               <div>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Starting from</p>
                 <p className="font-serif text-3xl text-primary">{s.price}</p>
+                {s.upkeep && (
+                  <div className="flex items-center gap-1 mt-1">
+                    <RefreshCw className="h-3 w-3 text-muted-foreground" />
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                      Upkeep every {s.upkeep}
+                    </p>
+                  </div>
+                )}
               </div>
               <Link
                 to="/book"
@@ -135,10 +143,8 @@ function ServiceDetail() {
                 key={r.slug}
                 to="/services/$slug"
                 params={{ slug: r.slug }}
-                // Fixed height so the card doesn't shift layout on hover
                 className="group relative bg-card rounded-2xl overflow-hidden border border-border/60 hover:border-gold/40 hover:shadow-xl transition-all duration-500 h-[300px]"
               >
-                {/* Image — always fills card; zooms slightly on hover */}
                 <div className="absolute inset-0 overflow-hidden">
                   <img
                     src={r.img}
@@ -146,16 +152,12 @@ function ServiceDetail() {
                     onError={onImgError}
                     className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-
-                  {/* Default gradient — leaves room for text strip at bottom */}
                   <div
                     className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-0"
                     style={{
                       background: "linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.55) 100%)",
                     }}
                   />
-
-                  {/* Hover gradient — deeper, for price readability */}
                   <div
                     className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     style={{
@@ -164,7 +166,6 @@ function ServiceDetail() {
                   />
                 </div>
 
-                {/* Default footer — title + price + time */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 group-hover:opacity-0 group-hover:translate-y-1 transition-all duration-300">
                   <h3 className="font-serif text-lg text-white mb-1 drop-shadow">{r.title}</h3>
                   <div className="flex items-center justify-between">
@@ -173,7 +174,6 @@ function ServiceDetail() {
                   </div>
                 </div>
 
-                {/* Hover footer — price only, larger */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
                   <p className="font-serif text-3xl text-gold drop-shadow-lg">{r.price}</p>
                 </div>

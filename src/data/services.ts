@@ -3,6 +3,7 @@ export type Service = {
   title: string;
   price: string;
   time: string;
+  upkeep?: string;
   desc: string;
   longDesc?: string;
   img: string;
@@ -15,12 +16,11 @@ export const services: Service[] = [
     title: "Sisterlocks™",
     price: "From £800",
     time: "10 hrs+",
+    upkeep: "4–6 weeks",
     desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
     longDesc:
       "Sisterlocks™ are tiny locks created by precision sectioning of hair using a specialist locking tool. The system was founded and trademarked by Dr. Joanne Cornwell in the United States and is one of the most technical loc methods available which is why it must only be installed by a trained and certified consultant.\n\nSisterlocks™ free you from the products designed to alter your natural texture. Installation and maintenance are as close to natural as hair care can get.\n\nBefore we book your installation we invite you to a consultation where we assess your hair type, discuss locking patterns and install sample locs so you can see exactly how your hair will respond. Your first re-tightening is usually scheduled four weeks after installation, then every four to six weeks after that.\n\nWhy Sisterlocks™?\n• Thinnest hair looks fuller and more voluminous\n• Endless styling possibilities — updos, braids, curls and more\n• Light, free and low-product maintenance\n• No chemicals, no relaxers, no compromise",
     img: "/images/services/sisterlocsfar.jpg",
-    Upkeep: ["4 - 6 Weeks"],
-
     features: [
       "Certified Sisterlocks™ consultant",
       "Full consultation before installation",
@@ -34,6 +34,7 @@ export const services: Service[] = [
     title: "Microlocs",
     price: "From £500",
     time: "10 hrs",
+    upkeep: "7–10 weeks",
     desc: "Small, uniform locs with great styling flexibility — installed by sectioning and interlocking.",
     longDesc:
       "Microlocs are a modern take on traditional locs, characterised by their small uniform size — typically 6 to 9 mm. They offer far more styling flexibility than larger locs, allowing for braids, updos, curls and even colour treatment once the hair has matured.\n\nInstallation begins with your consultation where we map a parting grid suited to your hair density and scalp health. Each loc is then created by sectioning the hair into tiny strands and interlocking them. Over the following months they mature into clean, uniform locs with a distinct character.\n\nMicrolocs sit between Sisterlocks™ and Traditional Locs in terms of size and maintenance commitment — a good middle ground for clients who want the look of small locs without the full Sisterlocks™ system.\n\nExact cost and duration are confirmed at consultation and depend on hair length and density.",
@@ -51,6 +52,7 @@ export const services: Service[] = [
     title: "Traditional Locs",
     price: "From £300",
     time: "6–8 hrs",
+    upkeep: "10–12 weeks",
     desc: "Classic locs installed using the interlocking method — low maintenance, timeless and versatile in size.",
     longDesc:
       "Traditional Locs — often called dreadlocks — are the original and most widely recognised loc style. We use the interlocking method with a crochet hook only: no wax, no glue, no chemicals. Just your natural hair, carefully encouraged to loc.\n\nWe install locs in a range of sizes from small to large. The right size for you depends on your hair density, desired look and how much maintenance you want to commit to. All of this is discussed and confirmed at your consultation before anything is started.\n\nFor a clean installation, your hair needs to be at least 6 inches long. Duration varies depending on length and chosen size — typically 6 to 8 hours.\n\nOngoing maintenance includes re-tightening new growth and crocheting any loose hair back into the loc — again using a crochet hook only.\n\nWhy Traditional Locs?\n• One of the most low-maintenance loc styles once established\n• Available in a wide range of sizes\n• Suits almost every hair type and density",
@@ -116,9 +118,9 @@ export const services: Service[] = [
     title: "Consultation",
     price: "£20",
     time: "30 min",
-    desc: "A focused one-on-one assessment of your hair we discuss your goals, check your scalp health and map out your loc journey.",
+    desc: "A focused one-on-one assessment of your hair — we discuss your goals, check your scalp health and map out your locs journey.",
     longDesc:
-      "Every new client journey at Trendylocs begins with a consultation. In 30 minutes we cover what matters most: the condition of your hair and scalp, your goals, and the method and size that will serve you best long term.\n\nWhat to expect:\n\nHair & Scalp Analysis:\nWe check your curl pattern, density, length and any history of chemical or heat damage to confirm your hair is ready for locs.\n\nMethod & Size Matching:\nWe recommend a starting method  comb coils, two-strand twists or interlocking and discuss sizing based on your lifestyle, density and texture.\n\nMaintenance Overview:\nWe walk through the stages your locs will go through and how often you will need to come back in.\n\nCost & Time Estimates:\nYou leave with a clear quote and timeline for installation — no surprises.",
+      "Every new client journey at Trendylocs begins with a consultation. In 30 minutes we cover what matters most: the condition of your hair and scalp, your goals, and the method and size that will serve you best long term.\n\nWhat to expect:\n\nHair & Scalp Analysis:\nWe check your curl pattern, density, length and any history of chemical or heat damage to confirm your hair is ready for locs.\n\nMethod & Size Matching:\nWe recommend a starting method — comb coils, two-strand twists or interlocking — and discuss sizing based on your lifestyle, density and texture.\n\nMaintenance Overview:\nWe walk through the stages your locs will go through and how often you will need to come back in.\n\nCost & Time Estimates:\nYou leave with a clear quote and timeline for installation — no surprises.",
     img: "/images/services/consultation.jpg",
     features: [
       "Hair and scalp assessment",
