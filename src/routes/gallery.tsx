@@ -45,7 +45,7 @@ const items = [
     title: "Traditional Locs I",
     desc: "Mature locs with healthy shine",
     cat: "Traditional Locs",
-    img: "/images/Gallery/traditionallocs1.jpg",
+    img: "/images/Gallery/traditionallocs4.jpg",
   },
   {
     title: "Elegant Updo",
