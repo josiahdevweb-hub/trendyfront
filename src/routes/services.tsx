@@ -97,6 +97,14 @@ function Services() {
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Starting from</p>
                   <p className="font-serif text-3xl text-primary">{active.price}</p>
+                  {active.upkeep && (
+                    <div className="flex items-center gap-1 mt-1">
+                      <RefreshCw className="h-3 w-3 text-muted-foreground" />
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                        Upkeep every {active.upkeep}
+                      </p>
+                    </div>
+                  )}
                 </div>
                 <Link
                   to="/book"
@@ -106,6 +114,7 @@ function Services() {
                   <CalendarCheck className="h-4 w-4" />
                   Book Now
                 </Link>
+              </div>
               </div>
             </article>
 
