@@ -55,9 +55,9 @@ export default function BeforeAfterShowcase() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-14">
           <p className="uppercase tracking-[0.3em] text-xs text-gold mb-4">Before &amp; After</p>
-          <h2 className="text-3xl md:text-5xl mb-4">Real transformations, real results</h2>
+          <h2 className="text-3xl md:text-5xl mb-4">Trust the process</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-light">
-            Drag the slider to reveal the journey from start to finish.
+            Locs journey before and after Trendylocs.
           </p>
         </div>
 
@@ -128,7 +128,6 @@ export default function BeforeAfterShowcase() {
             </article>
           ))}
         </div>
-
 
         <div className="text-center mt-14">
           <Link
