@@ -102,7 +102,7 @@ export const services: Service[] = [
     desc: "Creative styling for special occasions or everyday wear — updos, braided crowns, pinned designs and more.",
     longDesc:
       "Our styling service is designed to make your locs feel fresh, intentional and ready for any occasion. Whether you are preparing for a wedding, a photoshoot, a special event or simply want a refreshed everyday look, we work with the natural texture and length of your locs to create styles that flatter your face and last.\n\nEvery session begins with a short consultation so we understand the look you have in mind and can recommend options that suit your hair density, length and maturity. We use loc-safe products and accessories, and finish with care tips so you can keep the style looking polished for as long as possible.",
-    img: "/images/services/styling1.jpg",
+    img: "/images/Gallery/styling1.jpg",
     features: [
       "Style consultation included",
       "Occasion-appropriate recommendations",
