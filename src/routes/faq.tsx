@@ -34,12 +34,9 @@ const sections = [
     items: [
       [
         "How much do locs cost?",
-        "Prices start from £150 for starter locs and £350 for Sisterlocks™. Final pricing depends on hair length, density, and complexity — we provide a detailed quote at consultation.",
+        "Prices start from £300 for starter locs and £800 for Sisterlocks™. Final pricing depends on hair length, density, and complexity — we provide a detailed quote at consultation.",
       ],
-      [
-        "Do you offer payment plans?",
-        "Yes, payment plans are available for installation services. Ask us at your consultation.",
-      ],
+      ["Do you offer payment plans?", "We will soon provide a payment plan."],
       [
         "How do I book an appointment?",
         "Book via the Contact page, the Setmore booking system, or directly by phone/WhatsApp.",
