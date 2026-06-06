@@ -288,7 +288,7 @@ function Home() {
 
             <div className="flex flex-wrap gap-3 mb-6">
               <span className="text-xs px-3 py-1.5 border border-gold/30 rounded-full text-gold bg-gold/5">
-                ✓ Certified Sisterlocks™ Consultancy
+                ✓ Certified Sisterlocks™ Consultant
               </span>
             </div>
 
