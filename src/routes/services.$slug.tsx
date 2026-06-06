@@ -3,7 +3,7 @@ import { Clock, Tag, Check, ArrowLeft, CalendarCheck, RefreshCw } from "lucide-r
 import { getServiceBySlug, services } from "@/data/services";
 
 export const Route = createFileRoute("/services/$slug")({
-  head: ({ params }) => {
+  head: ({ params }: { params: { slug: string } }) => {
     const s = getServiceBySlug(params.slug);
     return {
       meta: [
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/services/$slug")({
       ],
     };
   },
-  loader: ({ params }) => {
+  loader: ({ params }: { params: { slug: string } }) => {
     const service = getServiceBySlug(params.slug);
     if (!service) throw notFound();
     return { service };
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/services/$slug")({
       </div>
     </div>
   ),
-  errorComponent: ({ reset }) => (
+  errorComponent: ({ reset }: { reset: () => void }) => (
     <div className="min-h-[60vh] flex items-center justify-center px-6 text-center">
       <div>
         <h1 className="font-serif text-2xl mb-4">Something went wrong</h1>
@@ -67,19 +67,15 @@ function ServiceDetail() {
       {/* ── Detail ────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          {/* Image */}
           <div className="relative rounded-2xl overflow-hidden bg-secondary/30 aspect-[4/3]">
             <img src={s.img} alt={s.title} onError={onImgError} className="w-full h-full object-cover object-center" />
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{
-                background: "linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.32) 100%)",
-              }}
+              style={{ background: "linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.32) 100%)" }}
             />
           </div>
 
           <div>
-            {/* Time + price badges */}
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/40 bg-gold/10 text-xs font-medium text-primary">
                 <Clock className="h-3.5 w-3.5" />
@@ -154,15 +150,11 @@ function ServiceDetail() {
                   />
                   <div
                     className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-0"
-                    style={{
-                      background: "linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.55) 100%)",
-                    }}
+                    style={{ background: "linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.55) 100%)" }}
                   />
                   <div
                     className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    style={{
-                      background: "linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.78) 100%)",
-                    }}
+                    style={{ background: "linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.78) 100%)" }}
                   />
                 </div>
 
@@ -174,7 +166,7 @@ function ServiceDetail() {
                   </div>
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
+                <div className="absolute bottom-0 left-0 right-0 p-5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   <p className="font-serif text-3xl text-gold drop-shadow-lg">{r.price}</p>
                 </div>
               </Link>
