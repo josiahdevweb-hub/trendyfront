@@ -84,13 +84,12 @@ export const services: Service[] = [
     time: "4 hr 30 min",
     desc: "Full maintenance session combining loc repair and retightening for locs that need extra attention.",
     longDesc:
-      "Our Maintenance & Retightening service is a complete care session for clients whose locs need more than a standard retightening. We assess the condition of your scalp and locs, address any thinning, weak spots or over-matured sections, and retighten new growth using the technique that best matches your loc type.\n\nBeyond retightening, the session includes a gentle scalp cleanse, conditioning where appropriate, and a personalised care plan covering washing schedules, products and the ideal interval before your next visit. You leave with locs that feel lighter, look uniform and are set up for the next stage of their journey.",
+      "Our Maintenance & Retightening service is a complete care session for clients whose locs need more than a standard retightening. We assess the condition of your scalp and locs, address any thinning, weak spots or over-matured sections, and retighten new growth using the technique that best matches your loc type.",
     img: "/images/services/maintenance.jpg",
     features: [
       "Full loc and scalp assessment",
       "Repair of weak or thinning locs",
       "Root retightening throughout",
-      "Scalp cleanse and conditioning",
       "Personalised care plan",
     ],
   },
@@ -115,9 +114,9 @@ export const services: Service[] = [
     title: "Consultation",
     price: "£20",
     time: "20 min",
-    desc: "A focused one-on-one assessment of your hair — we discuss your goals, check your scalp health and map out your loc journey.",
+    desc: "A focused one-on-one assessment of your hair we discuss your goals, check your scalp health and map out your loc journey.",
     longDesc:
-      "Every new client journey at Trendylocs begins with a consultation. In 20 minutes we cover what matters most: the condition of your hair and scalp, your goals, and the method and size that will serve you best long term.\n\nWhat to expect:\n\nHair & Scalp Analysis:\nWe check your curl pattern, density, length and any history of chemical or heat damage to confirm your hair is ready for locs.\n\nMethod & Size Matching:\nWe recommend a starting method — comb coils, two-strand twists or interlocking — and discuss sizing based on your lifestyle, density and texture.\n\nMaintenance Overview:\nWe walk through the stages your locs will go through and how often you will need to come back in.\n\nCost & Time Estimates:\nYou leave with a clear quote and timeline for installation — no surprises.",
+      "Every new client journey at Trendylocs begins with a consultation. In 20 minutes we cover what matters most: the condition of your hair and scalp, your goals, and the method and size that will serve you best long term.\n\nWhat to expect:\n\nHair & Scalp Analysis:\nWe check your curl pattern, density, length and any history of chemical or heat damage to confirm your hair is ready for locs.\n\nMethod & Size Matching:\nWe recommend a starting method  comb coils, two-strand twists or interlocking and discuss sizing based on your lifestyle, density and texture.\n\nMaintenance Overview:\nWe walk through the stages your locs will go through and how often you will need to come back in.\n\nCost & Time Estimates:\nYou leave with a clear quote and timeline for installation — no surprises.",
     img: "/images/services/consultation.jpg",
     features: [
       "Hair and scalp assessment",
