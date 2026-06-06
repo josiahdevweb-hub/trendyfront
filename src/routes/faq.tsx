@@ -34,7 +34,7 @@ const sections = [
     items: [
       [
         "How much do locs cost?",
-        "Prices start from £300 for starter locs and £800 for Sisterlocks™. Final pricing depends on hair length, density, and complexity — we provide a detailed quote at consultation.",
+        "Prices start from £300 for starter locs and £800 for Sisterlocks™. Final pricing depends on hair length, density, and complexity we provide a detailed quote at consultation.",
       ],
       ["Do you offer payment plans?", "We will soon provide a payment plan."],
       [
@@ -70,7 +70,7 @@ const sections = [
     items: [
       [
         "Can I style my locs?",
-        "Absolutely. Locs are incredibly versatile — updos, braids, twists, accessories and more.",
+        "Absolutely. Locs are incredibly versatile updos, braids, twists, accessories and more.",
       ],
       ["Can I color my locs?", "Yes, with care."],
       ["Can I swim with locs?", "Yes- use a swimming cap and shampoo after with chlorine removal shampoo."],
@@ -85,11 +85,11 @@ const sections = [
       ],
       [
         'What is the "ugly stage"?',
-        "It's a phase early in the journey where locs look frizzy or unsettled. It passes — and many clients learn to love it.",
+        "It's a phase early in the journey where locs look frizzy or unsettled. It passes and many clients learn to love it.",
       ],
       [
         "Can I take my locs out if I change my mind?",
-        "Locs older than a year typically require cutting. Earlier stages may be combed out with patience.",
+        "Yes you can, but this depends on the size of the locks and the style used. The smaller the locks the more tedious the process.",
       ],
     ],
   },
@@ -128,7 +128,7 @@ function FAQ() {
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="text-4xl mb-4">Still Have Questions?</h2>
           <p className="text-muted-foreground mb-8">
-            We're here to help! Book a free consultation or get in touch with us directly.
+            We're here to help! Book a consultation or get in touch with us directly.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="bg-gold text-gold-foreground px-7 py-3.5 rounded-md hover:opacity-90">
