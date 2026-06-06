@@ -208,8 +208,8 @@ function About() {
       <section className="py-16 md:py-20 text-center px-6">
         <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">Start with a conversation.</h2>
         <p className="text-muted-foreground text-sm mb-8 max-w-md mx-auto">
-          A £20 consultation is how every new client journey begins. No pressure, no sales pitch just an honest look at
-          your hair and what would work for it.
+          A consultation is how every new client journey begins. No pressure, no sales pitch just an honest look at your
+          hair and what would work for it.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-3">
           <Link
