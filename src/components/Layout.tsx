@@ -93,9 +93,7 @@ function Header() {
             <span className="text-sm md:text-base font-medium tracking-[0.16em] text-primary-foreground/90 truncate">
               TRENDYLOCS
             </span>
-            <span className="text-[10px] tracking-[0.18em] uppercase text-gold/80 md:hidden">
-              Manchester
-            </span>
+            <span className="text-[10px] tracking-[0.18em] uppercase text-gold/80 md:hidden">Manchester</span>
           </div>
         </Link>
 
@@ -195,7 +193,7 @@ function Footer() {
           </div>
 
           <p className="text-sm text-primary-foreground/70 leading-relaxed">
-            Manchester's premier natural hair and locs salon. Celebrating the beauty of textured hair.
+            Manchester's premier natural hair and locs salon. Celebrating the beauty of natural hair.
           </p>
           <div className="flex gap-4 mt-6">
             <a href="#" aria-label="Instagram" className="hover:text-gold">
