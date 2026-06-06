@@ -107,7 +107,7 @@ function BookPage() {
             <Clock className="h-3.5 w-3.5 text-gold" /> Mon - Fri · 9:30am – 5:30pm
           </span>
           <span className="flex items-center gap-1.5">
-            <ShieldCheck className="h-3.5 w-3.5 text-gold" /> Free cancellation 24h before
+            <ShieldCheck className="h-3.5 w-3.5 text-gold" /> Free cancellation 48 hrs before
           </span>
         </div>
 
