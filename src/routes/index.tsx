@@ -525,14 +525,14 @@ function ServiceCard({ s }: { s: ServiceItem }) {
   return (
     <div className="group flex flex-col bg-card border border-border/60 rounded-xl overflow-hidden hover:border-gold/50 hover:shadow-lg transition-all duration-300 h-full">
       <Link to="/services/$slug" params={{ slug: s.slug }} className="block shrink-0">
-        <div className="h-36 sm:h-40 overflow-hidden">
+        <div className="h-36 sm:h-40 overflow-hidden bg-muted relative">
           <img
             src={s.img}
             alt={`${s.title} at Trendylocs`}
             loading="lazy"
             decoding="async"
             onError={onImgError}
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover object-top sm:group-hover:object-contain sm:group-hover:scale-100 transition-all duration-500 ease-out"
           />
         </div>
       </Link>
@@ -544,7 +544,7 @@ function ServiceCard({ s }: { s: ServiceItem }) {
             <span>{s.time}</span>
           </div>
         </div>
-        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 flex-1 hidden sm:block">{s.desc}</p>
+        <p className="text-xs text-muted-foreground leading-relaxed flex-1 hidden sm:block line-clamp-2 sm:group-hover:line-clamp-none transition-all">{s.desc}</p>
         <div className="flex items-center justify-between pt-2 border-t border-border/50 gap-2">
           <span className="font-serif text-base sm:text-lg text-primary font-medium leading-none">{s.price}</span>
           <div className="flex items-center gap-1.5">
