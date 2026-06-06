@@ -227,7 +227,7 @@ function Services() {
           <div className="mx-auto max-w-3xl px-6">
             <h2 className="font-serif text-3xl md:text-4xl mb-3">Not sure where to start?</h2>
             <p className="text-primary-foreground/70 mb-7 text-sm max-w-md mx-auto">
-              A consultation is the best first step 30 minutes to understand your hair, answer your questions and map
+              A consultation is the best first step to understanding your hair, answer your questions and map
               out exactly what's right for you.
             </p>
             <Link
