@@ -19,6 +19,8 @@ export const services: Service[] = [
     longDesc:
       "Sisterlocks™ are tiny locks created by precision sectioning of hair using a specialist locking tool. The system was founded and trademarked by Dr. Joanne Cornwell in the United States and is one of the most technical loc methods available which is why it must only be installed by a trained and certified consultant.\n\nSisterlocks™ free you from the products designed to alter your natural texture. Installation and maintenance are as close to natural as hair care can get.\n\nBefore we book your installation we invite you to a consultation where we assess your hair type, discuss locking patterns and install sample locs so you can see exactly how your hair will respond. Your first re-tightening is usually scheduled four weeks after installation, then every four to six weeks after that.\n\nWhy Sisterlocks™?\n• Thinnest hair looks fuller and more voluminous\n• Endless styling possibilities — updos, braids, curls and more\n• Light, free and low-product maintenance\n• No chemicals, no relaxers, no compromise",
     img: "/images/services/sisterlocsfar.jpg",
+    Upkeep: ["4 - 6 Weeks"],
+
     features: [
       "Certified Sisterlocks™ consultant",
       "Full consultation before installation",
