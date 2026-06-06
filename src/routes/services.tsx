@@ -180,7 +180,7 @@ function Services() {
                 />
 
                 {/* Default footer — title + time + price + buttons */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 group-hover:opacity-0 group-hover:translate-y-2 transition-all duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4 transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:invisible group-hover:translate-y-3">
                   <h3 className="font-serif text-base text-white leading-snug mb-1 drop-shadow">{s.title}</h3>
                   <div className="flex items-center gap-1.5 text-[11px] text-white/60 mb-2.5">
                     <Clock className="h-3 w-3 shrink-0" />
