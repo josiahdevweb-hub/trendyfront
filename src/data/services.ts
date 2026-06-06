@@ -52,7 +52,7 @@ export const services: Service[] = [
     desc: "Classic locs installed using the interlocking method — low maintenance, timeless and versatile in size.",
     longDesc:
       "Traditional Locs — often called dreadlocks — are the original and most widely recognised loc style. We use the interlocking method with a crochet hook only: no wax, no glue, no chemicals. Just your natural hair, carefully encouraged to loc.\n\nWe install locs in a range of sizes from small to large. The right size for you depends on your hair density, desired look and how much maintenance you want to commit to. All of this is discussed and confirmed at your consultation before anything is started.\n\nFor a clean installation, your hair needs to be at least 6 inches long. Duration varies depending on length and chosen size — typically 6 to 8 hours.\n\nOngoing maintenance includes re-tightening new growth and crocheting any loose hair back into the loc — again using a crochet hook only.\n\nWhy Traditional Locs?\n• One of the most low-maintenance loc styles once established\n• Available in a wide range of sizes\n• Suits almost every hair type and density",
-    img: "/images/services/dreadlocss.jpg",
+    img: "/images/services/traditionallocs2.jpg",
     features: [
       "Consultation on size and style",
       "Interlocking method — no wax or glue",
@@ -102,7 +102,7 @@ export const services: Service[] = [
     desc: "Creative styling for special occasions or everyday wear — updos, braided crowns, pinned designs and more.",
     longDesc:
       "Our styling service is designed to make your locs feel fresh, intentional and ready for any occasion. Whether you are preparing for a wedding, a photoshoot, a special event or simply want a refreshed everyday look, we work with the natural texture and length of your locs to create styles that flatter your face and last.\n\nEvery session begins with a short consultation so we understand the look you have in mind and can recommend options that suit your hair density, length and maturity. We use loc-safe products and accessories, and finish with care tips so you can keep the style looking polished for as long as possible.",
-    img: "/images/services/detail.jpg",
+    img: "/images/services/styling1.jpg",
     features: [
       "Style consultation included",
       "Occasion-appropriate recommendations",
