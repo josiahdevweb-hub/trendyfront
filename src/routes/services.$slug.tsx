@@ -135,28 +135,47 @@ function ServiceDetail() {
                 key={r.slug}
                 to="/services/$slug"
                 params={{ slug: r.slug }}
-                className="group bg-card rounded-2xl overflow-hidden border border-border/60 hover:border-gold/40 hover:shadow-lg transition-all"
+                // Fixed height so the card doesn't shift layout on hover
+                className="group relative bg-card rounded-2xl overflow-hidden border border-border/60 hover:border-gold/40 hover:shadow-xl transition-all duration-500 h-[300px]"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                {/* Image — always fills card; zooms slightly on hover */}
+                <div className="absolute inset-0 overflow-hidden">
                   <img
                     src={r.img}
                     alt={r.title}
                     onError={onImgError}
-                    className="w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
+
+                  {/* Default gradient — leaves room for text strip at bottom */}
                   <div
-                    className="absolute inset-0 pointer-events-none"
+                    className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-0"
                     style={{
-                      background: "linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.2) 100%)",
+                      background: "linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.55) 100%)",
+                    }}
+                  />
+
+                  {/* Hover gradient — deeper, for price readability */}
+                  <div
+                    className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: "linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.78) 100%)",
                     }}
                   />
                 </div>
-                <div className="p-5">
-                  <h3 className="font-serif text-lg mb-1">{r.title}</h3>
+
+                {/* Default footer — title + price + time */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 group-hover:opacity-0 group-hover:translate-y-1 transition-all duration-300">
+                  <h3 className="font-serif text-lg text-white mb-1 drop-shadow">{r.title}</h3>
                   <div className="flex items-center justify-between">
-                    <p className="text-sm text-gold font-medium">{r.price}</p>
-                    <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{r.time}</span>
+                    <p className="text-sm text-gold font-medium drop-shadow">{r.price}</p>
+                    <span className="text-[10px] text-white/60 uppercase tracking-wider">{r.time}</span>
                   </div>
+                </div>
+
+                {/* Hover footer — price only, larger */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
+                  <p className="font-serif text-3xl text-gold drop-shadow-lg">{r.price}</p>
                 </div>
               </Link>
             ))}
