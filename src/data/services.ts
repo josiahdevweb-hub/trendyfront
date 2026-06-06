@@ -85,7 +85,7 @@ export const services: Service[] = [
     desc: "Full maintenance session combining loc repair and retightening for locs that need extra attention.",
     longDesc:
       "Our Maintenance & Retightening service is a complete care session for clients whose locs need more than a standard retightening. We assess the condition of your scalp and locs, address any thinning, weak spots or over-matured sections, and retighten new growth using the technique that best matches your loc type.\n\nBeyond retightening, the session includes a gentle scalp cleanse, conditioning where appropriate, and a personalised care plan covering washing schedules, products and the ideal interval before your next visit. You leave with locs that feel lighter, look uniform and are set up for the next stage of their journey.",
-    img: "/images/services/maintenance and Retightening.jpg",
+    img: "/images/services/maintenance.jpg",
     features: [
       "Full loc and scalp assessment",
       "Repair of weak or thinning locs",
