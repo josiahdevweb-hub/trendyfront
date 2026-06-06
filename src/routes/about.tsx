@@ -28,7 +28,7 @@ function About() {
               Trendylocs.
             </h1>
             <p className="text-base md:text-lg font-light leading-relaxed mb-4 text-foreground/80 max-w-md">
-              A certified Sisterlocks™ consultancy based in Manchester. We install, re-tighten and style Sisterlocks™,
+              A certified Sisterlocks™ consultant based in Manchester. We install, re-tighten and style Sisterlocks™,
               Microlocs and Traditional Locs with genuine care for the health of your hair.
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground max-w-md">
