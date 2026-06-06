@@ -6,6 +6,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import heroBantuKnots from "@/assets/hero/hero-bantu-knots.png.asset.json";
 import heroMicrolocsTop from "@/assets/hero/hero-microlocs-top.png.asset.json";
+import hero1 from "@/assets/hero/1.png";
+import hero2 from "@/assets/hero/2.png";
+import hero3 from "@/assets/hero/3.png";
 import { services } from "@/data/services";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -71,6 +74,24 @@ const HERO_PAIRS = [
     left: heroMicrolocsTop.url,
     leftAlt: "Top-down view of freshly retightened microlocs Trendylocs precision",
     leftObjectPosition: "50% 45%",
+    right: "/images/hero/detail.jpg",
+    rightAlt: "Precision microlocs being installed close-up craftsmanship",
+    rightObjectPosition: "center",
+    split: 50,
+  },
+  {
+    left: hero1,
+    leftAlt: "Trendylocs locs journey before and after",
+    leftObjectPosition: "center",
+    right: hero2,
+    rightAlt: "Trendylocs locs journey transformation",
+    rightObjectPosition: "center",
+    split: 50,
+  },
+  {
+    left: hero3,
+    leftAlt: "Trendylocs locs journey result",
+    leftObjectPosition: "center",
     right: "/images/hero/detail.jpg",
     rightAlt: "Precision microlocs being installed close-up craftsmanship",
     rightObjectPosition: "center",
