@@ -110,7 +110,7 @@ function Contact() {
               <option>Traditional Locs</option>
               <option>Retightening</option>
               <option>Styling</option>
-              <option>Free Consultation</option>
+              <option>Consultation</option>
               <option>Other</option>
             </select>
           </div>
