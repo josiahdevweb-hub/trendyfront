@@ -55,7 +55,7 @@ export const services: Service[] = [
     img: "/images/Gallery/traditionallocs2.jpg",
     features: [
       "Consultation on size and style",
-      "Interlocking method — no wax or glue",
+      "Interlocking method - no wax or glue",
       "Available in small to large sizes",
       "Extensions available",
       "Aftercare and maintenance guidance",
