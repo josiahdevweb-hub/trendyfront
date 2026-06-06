@@ -159,12 +159,12 @@ function Services() {
                 }}
               >
                 {/* Image — object-center so full head is visible */}
-                <div className="h-56 md:h-64 group-hover:h-72 overflow-hidden shrink-0 relative transition-all duration-500 ease-in-out">
+                <div className="min-h-56 md:min-h-64 flex-1 overflow-hidden relative transition-all duration-500 ease-in-out">
                   <img
                     src={s.img}
                     alt={s.title}
                     onError={onImgError}
-                    className="w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
+                    className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
                   />
                   {/* subtle bottom vignette */}
                   <div
@@ -176,7 +176,7 @@ function Services() {
                 </div>
 
                 {/* Body */}
-                <div className="flex flex-col flex-1 p-4 gap-2.5">
+                <div className="flex flex-col shrink-0 p-4 gap-2.5">
                   <div>
                     <h3 className="font-serif text-[15px] font-semibold leading-snug mb-1">{s.title}</h3>
                     <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
@@ -185,7 +185,7 @@ function Services() {
                     </div>
                   </div>
 
-                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 flex-1 transition-all duration-300 group-hover:opacity-0 group-hover:invisible group-hover:max-h-0 group-hover:mb-0 group-hover:mt-0">
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 transition-all duration-300 group-hover:opacity-0 group-hover:invisible group-hover:max-h-0 group-hover:mb-0 group-hover:mt-0">
                     {s.desc}
                   </p>
 
