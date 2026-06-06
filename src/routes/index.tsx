@@ -493,7 +493,7 @@ function Home() {
             Ready to start your loc journey?
           </h2>
           <p className="text-gold-foreground/70 mb-7 text-sm">
-            Book a free consultation today no commitment, just honest advice about what's right for your hair.
+            Book a consultation today, just honest advice about what's right for your hair.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
@@ -501,7 +501,7 @@ function Home() {
               search={{ service: "consultation" }}
               className="inline-flex items-center gap-2 bg-gold-foreground text-primary-foreground px-7 py-3.5 rounded-md font-medium hover:opacity-90 transition-all hover:scale-[1.02]"
             >
-              Book Free Consultation <ArrowRight className="h-4 w-4" />
+              Book Consultation <ArrowRight className="h-4 w-4" />
             </Link>
             <a
               href="https://wa.me/447838328131"
