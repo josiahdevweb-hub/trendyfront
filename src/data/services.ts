@@ -17,7 +17,7 @@ export const services: Service[] = [
     time: "10 hrs+",
     desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
     longDesc:
-      "Sisterlocks™ are tiny locks created by precision sectioning of hair using a specialist locking tool. The system was founded and trademarked by Dr. Joanne Cornwell in the United States and is one of the most technical loc methods available — which is why it must only be installed by a trained and certified consultant.\n\nSisterlocks™ free you from the products designed to alter your natural texture. Installation and maintenance are as close to natural as hair care can get.\n\nBefore we book your installation we invite you to a consultation where we assess your hair type, discuss locking patterns and install sample locs so you can see exactly how your hair will respond. Your first re-tightening is usually scheduled four weeks after installation, then every four to six weeks after that.\n\nWhy Sisterlocks™?\n• Thinnest hair looks fuller and more voluminous\n• Endless styling possibilities — updos, braids, curls and more\n• Light, free and low-product maintenance\n• No chemicals, no relaxers, no compromise",
+      "Sisterlocks™ are tiny locks created by precision sectioning of hair using a specialist locking tool. The system was founded and trademarked by Dr. Joanne Cornwell in the United States and is one of the most technical loc methods available which is why it must only be installed by a trained and certified consultant.\n\nSisterlocks™ free you from the products designed to alter your natural texture. Installation and maintenance are as close to natural as hair care can get.\n\nBefore we book your installation we invite you to a consultation where we assess your hair type, discuss locking patterns and install sample locs so you can see exactly how your hair will respond. Your first re-tightening is usually scheduled four weeks after installation, then every four to six weeks after that.\n\nWhy Sisterlocks™?\n• Thinnest hair looks fuller and more voluminous\n• Endless styling possibilities — updos, braids, curls and more\n• Light, free and low-product maintenance\n• No chemicals, no relaxers, no compromise",
     img: "/images/services/sisterlocsfar.jpg",
     features: [
       "Certified Sisterlocks™ consultant",
@@ -113,7 +113,7 @@ export const services: Service[] = [
     slug: "consultation",
     title: "Consultation",
     price: "£20",
-    time: "30 min",
+    time: "20 min",
     desc: "A focused one-on-one assessment of your hair we discuss your goals, check your scalp health and map out your loc journey.",
     longDesc:
       "Every new client journey at Trendylocs begins with a consultation. In 20 minutes we cover what matters most: the condition of your hair and scalp, your goals, and the method and size that will serve you best long term.\n\nWhat to expect:\n\nHair & Scalp Analysis:\nWe check your curl pattern, density, length and any history of chemical or heat damage to confirm your hair is ready for locs.\n\nMethod & Size Matching:\nWe recommend a starting method  comb coils, two-strand twists or interlocking and discuss sizing based on your lifestyle, density and texture.\n\nMaintenance Overview:\nWe walk through the stages your locs will go through and how often you will need to come back in.\n\nCost & Time Estimates:\nYou leave with a clear quote and timeline for installation — no surprises.",
