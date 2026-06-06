@@ -29,7 +29,7 @@ function About() {
             </h1>
             <p className="text-base md:text-lg font-light leading-relaxed mb-4 text-foreground/80 max-w-md">
               A certified Sisterlocks™ consultancy based in Manchester. We install, re-tighten and style Sisterlocks™,
-              Microlocs and Traditional Locs — with genuine care for the health of your hair.
+              Microlocs and Traditional Locs with genuine care for the health of your hair.
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground max-w-md">
               We are a small team, and we like it that way. Fewer appointments, more attention. Every client gets a
@@ -76,12 +76,12 @@ function About() {
           <div className="lg:col-span-7 lg:col-start-6 space-y-4 text-foreground/80 leading-relaxed text-sm md:text-base">
             <p>
               <span className="font-serif text-4xl float-left mr-3 leading-[0.85] text-gold">I</span>
-              had been running away from my natural hair for as long as I can remember — relaxers, braids, weaves,
-              crochet braids. The wake-up call came after my first baby, when I retouched my hair and it fell out.
+              had been running away from my natural hair for as long as I can remember relaxers, braids, weaves, crochet
+              braids. The wake-up call came after my first baby, when I retouched my hair and it fell out.
             </p>
             <p>
               I stopped relaxing, but carried on hiding it. Braiding and styling were putting just as much tension on my
-              hair. A dear friend suggested locs. I wasn't ready to accept my natural texture — so I attached extensions
+              hair. A dear friend suggested locs. I wasn't ready to accept my natural texture so I attached extensions
               to the locks, which only caused more damage.
             </p>
             <p>
@@ -110,12 +110,12 @@ function About() {
               {
                 n: "02",
                 title: "No harsh products",
-                desc: "We use plant-based, sulphate-free products only. Your hair should leave healthier than it arrived.",
+                desc: "We use natural, sulphate-free products only. Your hair should leave healthier than it arrived.",
               },
               {
                 n: "03",
                 title: "Long-term thinking",
-                desc: "Locs are a commitment. We guide you through every stage — from installation to maturity — so you always know what to expect.",
+                desc: "Locs are a commitment. We guide you through every stage from installation to maturity so you always know what to expect.",
               },
             ].map(({ n, title, desc }) => (
               <div key={n} className="space-y-3">
@@ -194,7 +194,7 @@ function About() {
             <span className="w-1.5 h-1.5 rounded-full bg-gold" />
           </div>
           <blockquote className="font-serif text-xl md:text-3xl leading-[1.3] mb-7">
-            "I've been with Trendylocs for over 5 years — Gina installed my current set and has cared for them ever
+            "I've been with Trendylocs for over 5 years Gina installed my current set and has cared for them ever
             since."
           </blockquote>
           <cite className="not-italic block">
@@ -208,8 +208,8 @@ function About() {
       <section className="py-16 md:py-20 text-center px-6">
         <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">Start with a conversation.</h2>
         <p className="text-muted-foreground text-sm mb-8 max-w-md mx-auto">
-          A free consultation is how every new client journey begins. No pressure, no sales pitch — just an honest look
-          at your hair and what would work for it.
+          A free consultation is how every new client journey begins. No pressure, no sales pitch just an honest look at
+          your hair and what would work for it.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-3">
           <Link
