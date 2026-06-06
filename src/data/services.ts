@@ -1,137 +1,244 @@
-export type Service = {
-  slug: string;
-  title: string;
-  price: string;
-  time: string;
-  upkeep?: string;
-  desc: string;
-  longDesc?: string;
-  img: string;
-  features: string[];
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowLeft, Check, Clock, Tag, CalendarCheck, RefreshCw } from "lucide-react";
+import { useState } from "react";
+import { services } from "@/data/services";
+
+export const Route = createFileRoute("/services")({
+  head: () => ({
+    meta: [
+      { title: "Services — Trendylocs" },
+      {
+        name: "description",
+        content:
+          "Sisterlocks™, Microlocs, Traditional Locs, retightening, styling and more. Certified locs consultancy in Manchester.",
+      },
+    ],
+  }),
+  component: Services,
+});
+
+const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+  if (e.currentTarget.src.indexOf("/images/fallback.jpg") === -1) e.currentTarget.src = "/images/fallback.jpg";
 };
 
-export const services: Service[] = [
-  {
-    slug: "sisterlocks",
-    title: "Sisterlocks™",
-    price: "From £800",
-    time: "10 hrs+",
-    upkeep: "4–6 weeks",
-    desc: "Precision-installed Sisterlocks™ — a celebration of natural hair with endless styling versatility.",
-    longDesc:
-      "Sisterlocks™ are tiny locks created by precision sectioning of hair using a specialist locking tool. The system was founded and trademarked by Dr. Joanne Cornwell in the United States and is one of the most technical loc methods available which is why it must only be installed by a trained and certified consultant.\n\nSisterlocks™ free you from the products designed to alter your natural texture. Installation and maintenance are as close to natural as hair care can get.\n\nBefore we book your installation we invite you to a consultation where we assess your hair type, discuss locking patterns and install sample locs so you can see exactly how your hair will respond. Your first re-tightening is usually scheduled four weeks after installation, then every four to six weeks after that.\n\nWhy Sisterlocks™?\n• Thinnest hair looks fuller and more voluminous\n• Endless styling possibilities — updos, braids, curls and more\n• Light, free and low-product maintenance\n• No chemicals, no relaxers, no compromise",
-    img: "/images/services/sisterlocsfar.jpg",
-    features: [
-      "Certified Sisterlocks™ consultant",
-      "Full consultation before installation",
-      "Precision sectioning and locking",
-      "Sample locs installed at consultation",
-      "First re-tightening guidance included",
-    ],
-  },
-  {
-    slug: "microlocs",
-    title: "Microlocs",
-    price: "From £500",
-    time: "10 hrs",
-    upkeep: "7–10 weeks",
-    desc: "Small, uniform locs with great styling flexibility — installed by sectioning and interlocking.",
-    longDesc:
-      "Microlocs are a modern take on traditional locs, characterised by their small uniform size — typically 6 to 9 mm. They offer far more styling flexibility than larger locs, allowing for braids, updos, curls and even colour treatment once the hair has matured.\n\nInstallation begins with your consultation where we map a parting grid suited to your hair density and scalp health. Each loc is then created by sectioning the hair into tiny strands and interlocking them. Over the following months they mature into clean, uniform locs with a distinct character.\n\nMicrolocs sit between Sisterlocks™ and Traditional Locs in terms of size and maintenance commitment — a good middle ground for clients who want the look of small locs without the full Sisterlocks™ system.\n\nExact cost and duration are confirmed at consultation and depend on hair length and density.",
-    img: "/images/services/locsestablishment.jpg",
-    features: [
-      "Consultation and parting grid design",
-      "Precision sectioning and interlocking",
-      "Suitable for colour and varied styling",
-      "Maintenance schedule guidance",
-      "Follow-up appointment included",
-    ],
-  },
-  {
-    slug: "traditional-locs",
-    title: "Traditional Locs",
-    price: "From £300",
-    time: "6–8 hrs",
-    upkeep: "10–12 weeks",
-    desc: "Classic locs installed using the interlocking method — low maintenance, timeless and versatile in size.",
-    longDesc:
-      "Traditional Locs — often called dreadlocks — are the original and most widely recognised loc style. We use the interlocking method with a crochet hook only: no wax, no glue, no chemicals. Just your natural hair, carefully encouraged to loc.\n\nWe install locs in a range of sizes from small to large. The right size for you depends on your hair density, desired look and how much maintenance you want to commit to. All of this is discussed and confirmed at your consultation before anything is started.\n\nFor a clean installation, your hair needs to be at least 6 inches long. Duration varies depending on length and chosen size — typically 6 to 8 hours.\n\nOngoing maintenance includes re-tightening new growth and crocheting any loose hair back into the loc — again using a crochet hook only.\n\nWhy Traditional Locs?\n• One of the most low-maintenance loc styles once established\n• Available in a wide range of sizes\n• Suits almost every hair type and density",
-    img: "/images/Gallery/traditionallocs2.jpg",
-    features: [
-      "Consultation on size and style",
-      "Interlocking method - no wax or glue",
-      "Available in small to large sizes",
-      "Extensions available",
-      "Aftercare and maintenance guidance",
-    ],
-  },
-  {
-    slug: "retightening",
-    title: "Retightening",
-    price: "£100",
-    time: "2 hr 30 min",
-    desc: "Essential maintenance to keep your locs neat, healthy and maturing properly. Every 4–6 weeks.",
-    longDesc:
-      "Retightening is the core maintenance service that keeps your locs looking crisp and supports them through every stage of maturity. During the session we work systematically through your hair, tightening new growth at the roots so each loc maintains its shape, direction and size without becoming over-stressed.\n\nWe recommend booking every 4 to 6 weeks depending on your hair type and how quickly your roots grow out. Consistent retightening prevents matting between locs, reduces breakage, and ensures your locs continue to mature evenly.",
-    img: "/images/services/retighteningfar.jpg",
-    features: [
-      "Root retightening throughout",
-      "Scalp cleansing and health check",
-      "Loc integrity assessment",
-      "Next appointment scheduling",
-    ],
-  },
-  {
-    slug: "maintenance-retightening",
-    title: "Maintenance & Retightening",
-    price: "£200",
-    time: "4 hr 30 min",
-    desc: "Full maintenance session combining loc repair and retightening for locs that need extra attention.",
-    longDesc:
-      "Our Maintenance & Retightening service is a complete care session for clients whose locs need more than a standard retightening. We assess the condition of your scalp and locs, address any thinning, weak spots or over-matured sections, and retighten new growth using the technique that best matches your loc type.",
-    img: "/images/services/maintenance.jpg",
-    features: [
-      "Full loc and scalp assessment",
-      "Repair of weak or thinning locs",
-      "Root retightening throughout",
-      "Personalised care plan",
-    ],
-  },
-  {
-    slug: "styling",
-    title: "Styling",
-    price: "£50",
-    time: "1 hr",
-    desc: "Creative styling for special occasions or everyday wear — updos, braided crowns, pinned designs and more.",
-    longDesc:
-      "Our styling service is designed to make your locs feel fresh, intentional and ready for any occasion. Whether you are preparing for a wedding, a photoshoot, a special event or simply want a refreshed everyday look, we work with the natural texture and length of your locs to create styles that flatter your face and last.\n\nEvery session begins with a short consultation so we understand the look you have in mind and can recommend options that suit your hair density, length and maturity. We use loc-safe products and accessories, and finish with care tips so you can keep the style looking polished for as long as possible.",
-    img: "/images/Gallery/styling1.jpg",
-    features: [
-      "Style consultation included",
-      "Occasion-appropriate recommendations",
-      "Loc-safe products and accessories",
-      "Style longevity tips",
-    ],
-  },
-  {
-    slug: "consultation",
-    title: "Consultation",
-    price: "£20",
-    time: "30 min",
-    desc: "A focused one-on-one assessment of your hair — we discuss your goals, check your scalp health and map out your locs journey.",
-    longDesc:
-      "Every new client journey at Trendylocs begins with a consultation. In 30 minutes we cover what matters most: the condition of your hair and scalp, your goals, and the method and size that will serve you best long term.\n\nWhat to expect:\n\nHair & Scalp Analysis:\nWe check your curl pattern, density, length and any history of chemical or heat damage to confirm your hair is ready for locs.\n\nMethod & Size Matching:\nWe recommend a starting method — comb coils, two-strand twists or interlocking — and discuss sizing based on your lifestyle, density and texture.\n\nMaintenance Overview:\nWe walk through the stages your locs will go through and how often you will need to come back in.\n\nCost & Time Estimates:\nYou leave with a clear quote and timeline for installation — no surprises.",
-    img: "/images/services/consultation.jpg",
-    features: [
-      "Hair and scalp assessment",
-      "Method and size recommendation",
-      "Maintenance schedule overview",
-      "Full cost and time estimate",
-      "No obligation",
-    ],
-  },
-];
+function Services() {
+  const [activeSlug, setActiveSlug] = useState<string | null>(null);
+  const active = activeSlug ? (services.find((s) => s.slug === activeSlug) ?? null) : null;
 
-export function getServiceBySlug(slug: string): Service | undefined {
-  return services.find((s) => s.slug === slug);
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+  return (
+    <>
+      {/* ── Hero ──────────────────────────────────────────────────── */}
+      <section className="bg-dark text-primary-foreground py-10">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <p className="uppercase tracking-[0.3em] text-xs text-gold mb-3">What We Offer</p>
+          <h1 className="font-serif text-3xl md:text-4xl mb-3">Our Services</h1>
+          <p className="text-sm text-primary-foreground/70">Expert care for every stage of your natural hair journey</p>
+        </div>
+      </section>
+
+      {/* ── DETAIL VIEW ───────────────────────────────────────────── */}
+      {active ? (
+        <section className="mx-auto max-w-6xl px-6 py-12">
+          <button
+            onClick={() => setActiveSlug(null)}
+            className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground mb-8 uppercase tracking-[0.15em]"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" /> All Services
+          </button>
+
+          <div className="grid lg:grid-cols-[1fr_380px] gap-10">
+            {/* Left — image + description */}
+            <article>
+              <div className="relative aspect-[16/9] overflow-hidden rounded-xl mb-7">
+                <img
+                  src={active.img}
+                  alt={active.title}
+                  onError={onImgError}
+                  className="w-full h-full object-cover object-center"
+                />
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{ background: "linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.28) 100%)" }}
+                />
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground mb-5">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 bg-gold/5">
+                  <Clock className="h-3.5 w-3.5 text-gold" /> {active.time}
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 bg-gold/5">
+                  <Tag className="h-3.5 w-3.5 text-gold" /> {active.price}
+                </span>
+              </div>
+
+              <h2 className="font-serif text-3xl mb-2">{active.title}</h2>
+              <div className="text-muted-foreground leading-relaxed whitespace-pre-line text-sm mb-8">
+                {active.longDesc ?? active.desc}
+              </div>
+
+              <h3 className="font-serif text-lg mb-3">What's included</h3>
+              <ul className="space-y-2 mb-8">
+                {active.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2 text-sm text-foreground/80">
+                    <Check className="h-4 w-4 text-gold mt-0.5 shrink-0" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Booking bar */}
+              <div className="flex items-center justify-between p-5 rounded-xl bg-secondary/50 border border-border/60">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Starting from</p>
+                  <p className="font-serif text-3xl text-primary">{active.price}</p>
+                  {active.upkeep && (
+                    <div className="flex items-center gap-1 mt-1">
+                      <RefreshCw className="h-3 w-3 text-muted-foreground" />
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                        Upkeep every {active.upkeep}
+                      </p>
+                    </div>
+                  )}
+                </div>
+                <Link
+                  to="/book"
+                  search={{ service: active.slug }}
+                  className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-6 py-3 rounded-md text-xs uppercase tracking-[0.18em] hover:opacity-90 transition-opacity"
+                >
+                  <CalendarCheck className="h-4 w-4" />
+                  Book Now
+                </Link>
+              </div>
+            </article>
+
+            {/* Right sidebar — other services */}
+            <aside className="lg:border-l lg:pl-8 border-border">
+              <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-5">More Services</p>
+              <div className="space-y-3">
+                {services
+                  .filter((s) => s.slug !== active.slug)
+                  .map((s) => (
+                    <button
+                      key={s.slug}
+                      onClick={() => {
+                        setActiveSlug(s.slug);
+                        scrollTop();
+                      }}
+                      className="flex gap-3 text-left group w-full p-2 rounded-lg hover:bg-secondary/50 transition-colors"
+                    >
+                      <div className="w-20 h-16 shrink-0 overflow-hidden rounded-md">
+                        <img
+                          src={s.img}
+                          alt={s.title}
+                          onError={onImgError}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0 py-0.5">
+                        <p className="text-[10px] uppercase tracking-wider text-gold mb-0.5">{s.time}</p>
+                        <p className="text-sm font-medium leading-snug group-hover:text-gold transition-colors line-clamp-2">
+                          {s.title}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-0.5">{s.price}</p>
+                      </div>
+                    </button>
+                  ))}
+              </div>
+            </aside>
+          </div>
+        </section>
+      ) : (
+        /* ── GRID VIEW ──────────────────────────────────────────── */
+        <section className="mx-auto max-w-7xl px-6 py-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.map((s) => (
+              <article
+                key={s.slug}
+                className="group flex flex-col bg-card border border-border/60 rounded-xl overflow-hidden hover:border-gold/50 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                onClick={() => {
+                  setActiveSlug(s.slug);
+                  scrollTop();
+                }}
+              >
+                <div className="min-h-56 md:min-h-64 flex-1 overflow-hidden relative transition-all duration-500 ease-in-out">
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    onError={onImgError}
+                    className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
+                  />
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: "linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.18) 100%)" }}
+                  />
+                </div>
+
+                <div className="flex flex-col shrink-0 p-4 gap-2.5">
+                  <div>
+                    <h3 className="font-serif text-[15px] font-semibold leading-snug mb-1">{s.title}</h3>
+                    <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
+                      <Clock className="h-3 w-3 shrink-0" />
+                      <span>{s.time}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 transition-all duration-300 group-hover:opacity-0 group-hover:invisible group-hover:max-h-0 group-hover:mb-0 group-hover:mt-0">
+                    {s.desc}
+                  </p>
+
+                  <div className="flex items-center justify-between pt-2.5 border-t border-border/50 gap-2">
+                    <span className="font-serif text-lg text-primary font-medium leading-none">{s.price}</span>
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setActiveSlug(s.slug);
+                          scrollTop();
+                        }}
+                        className="text-[10px] uppercase tracking-[0.15em] text-foreground/60 hover:text-foreground transition-colors px-2 py-1.5"
+                      >
+                        Details
+                      </button>
+                      <Link
+                        to="/book"
+                        search={{ service: s.slug }}
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 bg-gold text-gold-foreground text-[10px] uppercase tracking-[0.15em] font-medium px-3 py-1.5 rounded-md hover:opacity-90 transition-opacity whitespace-nowrap"
+                      >
+                        <CalendarCheck className="h-3 w-3" />
+                        Book
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ── Bottom CTA ────────────────────────────────────────────── */}
+      {!active && (
+        <section className="bg-dark text-primary-foreground py-14 text-center">
+          <div className="mx-auto max-w-3xl px-6">
+            <h2 className="font-serif text-3xl md:text-4xl mb-3">Not sure where to start?</h2>
+            <p className="text-primary-foreground/70 mb-7 text-sm max-w-md mx-auto">
+              A consultation is the best first step to understand your hair, answer your questions and map out exactly
+              what's right for you.
+            </p>
+            <Link
+              to="/book"
+              search={{ service: "consultation" }}
+              className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md hover:opacity-90 transition-opacity"
+            >
+              <CalendarCheck className="h-4 w-4" />
+              Book a Consultation — £20
+            </Link>
+          </div>
+        </section>
+      )}
+    </>
+  );
 }
