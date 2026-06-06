@@ -72,14 +72,8 @@ const sections = [
         "Can I style my locs?",
         "Absolutely. Locs are incredibly versatile — updos, braids, twists, accessories and more.",
       ],
-      [
-        "Can I color my locs?",
-        "Yes, with care. We offer professional colour services formulated to be safe for loc'd hair.",
-      ],
-      [
-        "Can I swim with locs?",
-        "Yes — rinse with fresh water before and after and use a swim cap when possible to protect them.",
-      ],
+      ["Can I color my locs?", "Yes, with care."],
+      ["Can I swim with locs?", "Yes- use a swimming cap and shampoo after with chlorine removal shampoo."],
     ],
   },
   {
