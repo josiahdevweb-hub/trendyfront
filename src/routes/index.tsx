@@ -515,7 +515,7 @@ function Home() {
             Ready to start your loc journey?
           </h2>
           <p className="text-gold-foreground/70 mb-7 text-sm">
-            Book a consultation today, just honest advice about what's right for your hair.
+            Book an appointment today, just honest advice about what's right for your hair.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link

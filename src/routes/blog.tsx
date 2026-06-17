@@ -27,7 +27,7 @@ function articleBody(p: typeof posts[number]) {
     `${p.excerpt}`,
     `In this guide we go deep on ${p.title.toLowerCase()}. Whether you're new to your natural hair journey or a seasoned loc-wearer, the tips below will help you get the most from your routine.`,
     `Our stylists at Trendylocs have spent years refining these techniques in the salon. We've pulled together the most important takeaways so you can apply them at home between appointments.`,
-    `If you'd like a personalised plan, book a consultation and we'll tailor everything in this article to your hair type, lifestyle, and goals.`,
+    `If you'd like a personalised plan, book an appointment and we'll tailor everything in this article to your hair type, lifestyle, and goals.`,
   ];
 }
 
