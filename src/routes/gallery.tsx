@@ -181,7 +181,7 @@ function Gallery() {
             to="/contact"
             className="inline-flex bg-dark text-primary-foreground px-8 py-3.5 rounded-md hover:bg-dark/90"
           >
-            Book Consultation
+            Book Appointment
           </Link>
         </div>
       </section>

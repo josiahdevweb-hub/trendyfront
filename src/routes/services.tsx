@@ -234,7 +234,7 @@ function Services() {
               className="inline-flex items-center gap-2 bg-gold text-gold-foreground px-7 py-3.5 rounded-md hover:opacity-90 transition-opacity"
             >
               <CalendarCheck className="h-4 w-4" />
-              Book a Consultation — £20
+              Book Appointment — £20
             </Link>
           </div>
         </section>

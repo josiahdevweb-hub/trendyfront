@@ -128,11 +128,11 @@ function FAQ() {
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="text-4xl mb-4">Still Have Questions?</h2>
           <p className="text-muted-foreground mb-8">
-            We're here to help! Book a consultation or get in touch with us directly.
+            We're here to help! Book an appointment or get in touch with us directly.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="bg-gold text-gold-foreground px-7 py-3.5 rounded-md hover:opacity-90">
-              Book Consultation
+              Book Appointment
             </Link>
             <Link to="/contact" className="bg-dark text-primary-foreground px-7 py-3.5 rounded-md hover:bg-dark/90">
               Contact Us

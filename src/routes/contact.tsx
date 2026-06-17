@@ -31,9 +31,9 @@ function Contact() {
               {
                 icon: MapPin,
                 title: "Main Location",
-                lines: ["15 Pollard Street East. Pollard Yard.  M40 7QX.  Unit 105"],
+                lines: ["41 Cross Street. Sale. M33 7FT. Manchester"],
               },
-              { icon: MapPin, title: "Location", lines: ["41 Cross Street. Sale. M33 7FT. Manchester"] },
+              { icon: MapPin, title: "Location", lines: ["15 Pollard Street East. Pollard Yard. M40 7QX. Unit 105"] },
               { icon: Phone, title: "Phone", lines: ["+44 7838328131"] },
               { icon: Mail, title: "Email", lines: ["gina@trendylocs.com"] },
               { icon: Clock, title: "Hours", lines: ["Mon – Fri: 9:30am – 5:30pm", "Sat – Sun: Closed"] },
