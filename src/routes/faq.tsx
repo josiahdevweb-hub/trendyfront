@@ -132,7 +132,7 @@ function FAQ() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="bg-gold text-gold-foreground px-7 py-3.5 rounded-md hover:opacity-90">
-              Book Consultation
+              Book Appointment
             </Link>
             <Link to="/contact" className="bg-dark text-primary-foreground px-7 py-3.5 rounded-md hover:bg-dark/90">
               Contact Us

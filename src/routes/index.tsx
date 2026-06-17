@@ -202,7 +202,7 @@ function Home() {
                   to="/book"
                   className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-5 py-2.5 rounded-md text-sm font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
                 >
-                  Book Consultation <ArrowRight className="h-4 w-4" />
+                  Book Appointment <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/services"
@@ -523,7 +523,7 @@ function Home() {
               search={{ service: "consultation" }}
               className="inline-flex items-center gap-2 bg-gold-foreground text-primary-foreground px-7 py-3.5 rounded-md font-medium hover:opacity-90 transition-all hover:scale-[1.02]"
             >
-              Book Consultation <ArrowRight className="h-4 w-4" />
+              Book Appointment <ArrowRight className="h-4 w-4" />
             </Link>
             <a
               href="https://wa.me/447838328131"

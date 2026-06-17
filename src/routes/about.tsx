@@ -186,7 +186,7 @@ function About() {
             to="/book"
             className="bg-dark text-primary-foreground px-8 py-4 text-[10px] font-semibold uppercase tracking-[0.3em] hover:bg-gold hover:text-gold-foreground transition-colors"
           >
-            Book a Consultation
+            Book Appointment
           </Link>
           <Link
             to="/contact"
