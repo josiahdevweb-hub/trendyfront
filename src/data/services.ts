@@ -76,7 +76,6 @@ export const services: Service[] = [
     img: "/images/services/retighteningfar.jpg",
     features: [
       "Root retightening throughout",
-      "Scalp cleansing and health check",
       "Loc integrity assessment",
       "Next appointment scheduling",
     ],
