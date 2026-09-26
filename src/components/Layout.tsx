@@ -221,6 +221,11 @@ function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/booking-policy" className="hover:text-gold">
+                Booking Policy
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -250,8 +255,13 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-primary-foreground/10 py-6 text-center text-xs text-primary-foreground/50">
-        © {new Date().getFullYear()} Trendylocs. All rights reserved.
+      <div className="border-t border-primary-foreground/10">
+        <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-primary-foreground/50">
+          <span>© {new Date().getFullYear()} Trendylocs. All rights reserved.</span>
+          <Link to="/booking-policy" className="hover:text-gold transition-colors">
+            Booking Policy
+          </Link>
+        </div>
       </div>
     </footer>
   );
