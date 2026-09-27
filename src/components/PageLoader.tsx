@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/trendylocs-logo-global.png.asset.json";
+import logo from "@/assets/trendylocs-logo-global.png";
 
 const MESSAGES = [
   "Warming up the salon…",
@@ -83,7 +83,7 @@ export function PageLoader() {
       }`}
     >
       <img
-        src={logo.url}
+        src={logo}
         alt=""
         width={72}
         height={72}

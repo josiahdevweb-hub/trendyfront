@@ -16,7 +16,7 @@ import {
   Scissors,
 } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/trendylocs-logo-global.png.asset.json";
+import logo from "@/assets/trendylocs-logo-global.png";
 
 function TopBar() {
   return (
@@ -87,7 +87,7 @@ function Header() {
       <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
         <Link to="/" aria-label="Trendylocs — home" className="flex items-center gap-2.5 group min-w-0">
           <img
-            src={logo.url}
+            src={logo}
             alt="Trendylocs logo"
             width={64}
             height={64}
@@ -186,7 +186,7 @@ function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img
-              src={logo.url}
+              src={logo}
               alt="Trendylocs logo"
               width={56}
               height={56}

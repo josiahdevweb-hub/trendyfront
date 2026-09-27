@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
-import heroBantuKnots from "@/assets/hero/hero-bantu-knots.png.asset.json";
-import heroMicrolocsTop from "@/assets/hero/hero-microlocs-top.png.asset.json";
+import heroBantuKnots from "@/assets/hero/hero-bantu-knots.png";
+import heroMicrolocsTop from "@/assets/hero/hero-microlocs-top.png";
 import hero1 from "@/assets/hero/1.png";
 import hero2 from "@/assets/hero/2.png";
 import hero3 from "@/assets/hero/3.png";
@@ -66,13 +66,13 @@ const HERO_PAIRS = [
     left: "/images/hero/wide-3.jpg",
     leftAlt: "Fresh microlocs install clean uniform parting lines down the back",
     leftObjectPosition: "50% 55%",
-    right: heroBantuKnots.url,
+    right: heroBantuKnots,
     rightAlt: "Bantu knots over microlocs - Trendylocs protective styling",
     rightObjectPosition: "50% 35%",
     split: 55,
   },
   {
-    left: heroMicrolocsTop.url,
+    left: heroMicrolocsTop,
     leftAlt: "Top-down view of freshly retightened microlocs Trendylocs precision",
     leftObjectPosition: "50% 45%",
     right: "/images/hero/detail.jpg",

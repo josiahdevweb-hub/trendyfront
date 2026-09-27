@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
-import sisterlocksAsset from "@/assets/transformations/sisterlocks.png.asset.json";
-import microlocsAsset from "@/assets/transformations/microlocs.png.asset.json";
-import traditionalAsset from "@/assets/transformations/traditional.png.asset.json";
+import sisterlocksAsset from "@/assets/transformations/sisterlocks-before-after.png";
+import microlocsAsset from "@/assets/transformations/microlocs-before-after.png";
+import traditionalAsset from "@/assets/transformations/traditional-locs-before-after.png";
 
 type Transformation = {
   title: string;
@@ -23,8 +23,8 @@ const transformations: Transformation[] = [
     style: "Sisterlocks™",
     duration: "8–10 hours",
     maintenance: "Every 4–6 weeks",
-    before: sisterlocksAsset.url,
-    after: sisterlocksAsset.url,
+    before: sisterlocksAsset,
+    after: sisterlocksAsset,
     single: true,
   },
   {
@@ -33,8 +33,8 @@ const transformations: Transformation[] = [
     style: "Microlocs",
     duration: "6–8 hours",
     maintenance: "Every 5 – 7 weeks",
-    before: microlocsAsset.url,
-    after: microlocsAsset.url,
+    before: microlocsAsset,
+    after: microlocsAsset,
     single: true,
   },
   {
@@ -43,8 +43,8 @@ const transformations: Transformation[] = [
     style: "Traditional Locs",
     duration: "8–10 hours",
     maintenance: "Every 6 – 8 weeks",
-    before: traditionalAsset.url,
-    after: traditionalAsset.url,
+    before: traditionalAsset,
+    after: traditionalAsset,
     single: true,
   },
 ];

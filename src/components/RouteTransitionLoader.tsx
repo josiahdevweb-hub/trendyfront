@@ -1,6 +1,6 @@
 import { useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/trendylocs-logo-global.png.asset.json";
+import logo from "@/assets/trendylocs-logo-global.png";
 
 /**
  * Lightweight inter-page transition loader.
@@ -61,7 +61,7 @@ export function RouteTransitionLoader() {
       className="fixed inset-0 z-[90] flex flex-col items-center justify-center bg-dark/95 backdrop-blur-sm text-primary-foreground animate-fade-in"
     >
       <img
-        src={logo.url}
+        src={logo}
         alt=""
         width={64}
         height={64}

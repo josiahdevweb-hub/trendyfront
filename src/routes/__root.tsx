@@ -9,7 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import logo from "@/assets/trendylocs-logo-global.png.asset.json";
+import logo from "@/assets/trendylocs-logo-global.png";
 import { Layout } from "@/components/Layout";
 
 
@@ -89,8 +89,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: logo.url },
-      { rel: "apple-touch-icon", href: logo.url },
+      { rel: "icon", type: "image/png", href: logo },
+      { rel: "apple-touch-icon", href: logo },
     ],
 
   }),
