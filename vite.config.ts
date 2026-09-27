@@ -31,13 +31,8 @@ export default defineConfig(({ command }) => ({
         client: { files: ["**/server/**"], specifiers: ["server-only"] },
       },
     }),
-    // Bundle for Cloudflare Workers on build (deploy with `npx wrangler deploy`).
-    command === "build" &&
-      nitro({
-        preset: "cloudflare-module",
-        output: { dir: "dist", serverDir: "dist/server", publicDir: "dist/client" },
-        cloudflare: { nodeCompat: true, deployConfig: true },
-      }),
+    // Server bundle: Vercel output when built on Vercel, a Node server locally (`npm run preview`).
+    command === "build" && nitro({ preset: process.env.VERCEL ? "vercel" : "node-server" }),
     viteReact(),
   ],
 }));
