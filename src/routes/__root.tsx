@@ -82,11 +82,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Premium Sisterlocks™, Microlocs, Traditional Locs and natural hair care in Manchester." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Trendylocs — Manchester's Premier Locs & Natural Hair Specialist" },
       { name: "twitter:description", content: "Premium Sisterlocks™, Microlocs, Traditional Locs and natural hair care in Manchester." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c15b8191-b780-48cc-84dc-7ef74aa1264c/id-preview-097d2bb2--89ac2cd4-2dc0-4eaa-9ee0-9128b0143b0a.lovable.app-1779052347259.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c15b8191-b780-48cc-84dc-7ef74aa1264c/id-preview-097d2bb2--89ac2cd4-2dc0-4eaa-9ee0-9128b0143b0a.lovable.app-1779052347259.png" },
+      { property: "og:image", content: "https://trendylocs.com/og-image.png" },
+      { name: "twitter:image", content: "https://trendylocs.com/og-image.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
