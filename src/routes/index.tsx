@@ -53,52 +53,21 @@ const stats = [
   { number: "4.9★", label: "Average Rating" },
 ];
 
-// Removed wide-2.jpg, detail-2.jpg and detail-3.jpg as requested
-const HERO_PAIRS = [
+// Hero rotation, shown one image at a time.
+// Removed wide-2.jpg, detail.jpg, detail-2.jpg and detail-3.jpg as requested
+const HERO_IMAGES = [
+  { src: "/images/hero/wide.jpg", alt: "Trendylocs Manchester salon client mid-service", pos: "50% 30%" },
   {
-    left: "/images/hero/wide.jpg",
-    leftAlt: "Trendylocs Manchester salon client mid-service",
-    right: "/images/hero/detail.jpg",
-    rightAlt: "Precision microlocs being installed close-up craftsmanship",
-    split: 60,
+    src: "/images/hero/wide-3.jpg",
+    alt: "Fresh microlocs install clean uniform parting lines down the back",
+    pos: "50% 55%",
   },
-  {
-    left: "/images/hero/wide-3.jpg",
-    leftAlt: "Fresh microlocs install clean uniform parting lines down the back",
-    leftObjectPosition: "50% 55%",
-    right: heroBantuKnots,
-    rightAlt: "Bantu knots over microlocs - Trendylocs protective styling",
-    rightObjectPosition: "50% 35%",
-    split: 55,
-  },
-  {
-    left: heroMicrolocsTop,
-    leftAlt: "Top-down view of freshly retightened microlocs Trendylocs precision",
-    leftObjectPosition: "50% 45%",
-    right: "/images/hero/detail.jpg",
-    rightAlt: "Precision microlocs being installed close-up craftsmanship",
-    rightObjectPosition: "center",
-    split: 50,
-  },
-  {
-    left: hero1,
-    leftAlt: "Trendylocs locs journey before and after",
-    leftObjectPosition: "center",
-    right: hero2,
-    rightAlt: "Trendylocs locs journey transformation",
-    rightObjectPosition: "center",
-    split: 50,
-  },
-  {
-    left: hero3,
-    leftAlt: "Trendylocs locs journey result",
-    leftObjectPosition: "center",
-    right: "/images/hero/detail.jpg",
-    rightAlt: "Precision microlocs being installed close-up craftsmanship",
-    rightObjectPosition: "center",
-    split: 50,
-  },
-] as const;
+  { src: heroBantuKnots, alt: "Bantu knots over microlocs - Trendylocs protective styling", pos: "50% 35%" },
+  { src: heroMicrolocsTop, alt: "Top-down view of freshly retightened microlocs Trendylocs precision", pos: "50% 45%" },
+  { src: hero1, alt: "Trendylocs locs journey before and after", pos: "center" },
+  { src: hero2, alt: "Trendylocs locs journey transformation", pos: "center" },
+  { src: hero3, alt: "Trendylocs locs journey result", pos: "center" },
+];
 
 const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
 
@@ -141,10 +110,7 @@ function Home() {
     setMounted(true);
   }, []);
 
-  const heroImages = HERO_PAIRS.flatMap((p) => [
-    { src: p.left, alt: p.leftAlt, pos: (p as any).leftObjectPosition ?? "50% 30%" },
-    { src: p.right, alt: p.rightAlt, pos: (p as any).rightObjectPosition ?? "center" },
-  ]);
+  const heroImages = HERO_IMAGES;
 
   useEffect(() => {
     const t = setInterval(() => setHeroIdx((i) => (i + 1) % heroImages.length), 5000);
