@@ -118,7 +118,7 @@ function Home() {
   return (
     <>
       {/* ── 1. HERO ───────────────────────────────────────────────── */}
-      <section className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center grain md:h-[min(80dvh,80vh)] md:min-h-[480px]">
+      <section className="relative w-full overflow-hidden bg-dark text-primary-foreground flex items-start md:items-center grain">
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none"
           style={{
@@ -134,18 +134,18 @@ function Home() {
           }}
         />
 
-        <div className="relative w-full mx-auto max-w-7xl px-6 md:px-10 pt-24 pb-6 md:py-8">
+        <div className="relative w-full mx-auto max-w-7xl px-6 md:px-10 pt-24 pb-6 md:pt-14 md:pb-20">
           <div className="grid md:grid-cols-2 gap-5 md:gap-8 items-center">
             <div
               className={`relative z-10 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
-              <div className="relative inline-block text-primary-foreground font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] tracking-[0.01em] mb-2 md:mb-3 pb-2 leading-none">
+              <div className="relative inline-block text-primary-foreground font-serif text-4xl sm:text-5xl md:text-5xl lg:text-[56px] xl:text-[80px] tracking-[0.01em] mb-2 md:mb-3 xl:mb-5 pb-2 xl:pb-3 leading-none">
                 <span>Trendylocs</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
                 <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rotate-45 bg-gold" />
               </div>
 
-              <h1 className="font-serif text-xl sm:text-2xl md:text-[26px] lg:text-[28px] leading-[1.15] tracking-tight mb-3 md:mb-4 text-primary-foreground/85 word-rise">
+              <h1 className="font-serif text-xl sm:text-2xl md:text-[26px] lg:text-[28px] xl:text-[40px] leading-[1.15] tracking-tight mb-3 md:mb-4 xl:mb-6 text-primary-foreground/85 word-rise">
                 <span style={{ animationDelay: "120ms" }}>Premium</span>{" "}
                 <span style={{ animationDelay: "260ms" }}>Locs.</span>
                 <br />
@@ -156,31 +156,31 @@ function Home() {
                 </span>
               </h1>
 
-              <p className="text-[13px] md:text-sm text-primary-foreground/75 max-w-md leading-relaxed mb-4 md:mb-5">
+              <p className="text-[13px] md:text-sm xl:text-lg text-primary-foreground/75 max-w-md xl:max-w-xl leading-relaxed mb-4 md:mb-5 xl:mb-8">
                 Sisterlocks™, Microlocs &amp; Traditional Locs: precision installations and gentle maintenance from
                 certified consultants.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-2.5 mb-4 md:mb-6">
+              <div className="flex flex-col sm:flex-row gap-2.5 xl:gap-4 mb-4 md:mb-6 xl:mb-10">
                 <Link
                   to="/book"
-                  className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-5 py-2.5 rounded-md text-sm font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
+                  className="inline-flex items-center justify-center gap-2 bg-gold text-gold-foreground px-5 py-2.5 xl:px-7 xl:py-3.5 rounded-md text-sm xl:text-base font-medium hover:opacity-90 transition-all focus-visible:ring-2 focus-visible:ring-gold"
                 >
                   Book Appointment <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center justify-center gap-2 border border-gold/40 bg-white/5 backdrop-blur px-5 py-2.5 rounded-md text-sm text-primary-foreground hover:bg-gold/10 hover:border-gold transition-all"
+                  className="inline-flex items-center justify-center gap-2 border border-gold/40 bg-white/5 backdrop-blur px-5 py-2.5 xl:px-7 xl:py-3.5 rounded-md text-sm xl:text-base text-primary-foreground hover:bg-gold/10 hover:border-gold transition-all"
                 >
                   Explore Services
                 </Link>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-md">
+              <div className="grid grid-cols-3 gap-3 md:gap-6 xl:gap-10 max-w-md xl:max-w-xl">
                 {stats.map(({ number, label }) => (
                   <div key={label}>
-                    <p className="font-serif text-lg md:text-xl text-gold leading-none mb-1">{number}</p>
-                    <p className="text-[9px] md:text-[10px] uppercase tracking-[0.18em] text-primary-foreground/55 leading-snug">
+                    <p className="font-serif text-lg md:text-xl xl:text-3xl text-gold leading-none mb-1 xl:mb-2">{number}</p>
+                    <p className="text-[9px] md:text-[10px] xl:text-xs uppercase tracking-[0.18em] text-primary-foreground/55 leading-snug">
                       {label}
                     </p>
                   </div>
@@ -189,7 +189,7 @@ function Home() {
             </div>
 
             <div
-              className={`relative w-full mx-auto max-w-[280px] sm:max-w-sm md:max-w-none aspect-[4/5] sm:aspect-[5/6] md:aspect-auto md:h-[400px] lg:h-[460px] transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+              className={`relative w-full mx-auto max-w-[280px] sm:max-w-sm md:max-w-none aspect-[4/5] sm:aspect-[5/6] md:aspect-auto md:h-[400px] lg:h-[460px] xl:h-[560px] transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
               <div className="absolute inset-0 md:inset-x-4" style={{ boxShadow: "var(--shadow-elegant)" }}>
                 <div className="relative w-full h-full rounded-2xl overflow-hidden ring-1 ring-gold/20">
