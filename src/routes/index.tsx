@@ -8,7 +8,6 @@ import heroBantuKnots from "@/assets/hero/hero-bantu-knots.png";
 import heroMicrolocsTop from "@/assets/hero/hero-microlocs-top.png";
 import hero1 from "@/assets/hero/1.png";
 import hero2 from "@/assets/hero/2.png";
-import hero3 from "@/assets/hero/3.png";
 
 import { services } from "@/data/services";
 
@@ -54,7 +53,7 @@ const stats = [
 ];
 
 // Hero rotation, shown one image at a time.
-// Removed wide-2.jpg, detail.jpg, detail-2.jpg and detail-3.jpg as requested
+// Removed wide-2.jpg, detail.jpg, detail-2.jpg, detail-3.jpg and 3.png as requested
 const HERO_IMAGES = [
   { src: "/images/hero/wide.jpg", alt: "Trendylocs Manchester salon client mid-service", pos: "50% 30%" },
   {
@@ -66,7 +65,6 @@ const HERO_IMAGES = [
   { src: heroMicrolocsTop, alt: "Top-down view of freshly retightened microlocs Trendylocs precision", pos: "50% 45%" },
   { src: hero1, alt: "Trendylocs locs journey before and after", pos: "center" },
   { src: hero2, alt: "Trendylocs locs journey transformation", pos: "center" },
-  { src: hero3, alt: "Trendylocs locs journey result", pos: "center" },
 ];
 
 const HERO_GRADE = "saturate(0.82) contrast(1.06) brightness(0.92) sepia(0.16)";
